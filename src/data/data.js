@@ -5,7 +5,9 @@ import client3 from '../assets/images/team/03.jpg'
 import client4 from '../assets/images/team/04.jpg'
 import client5 from '../assets/images/team/05.jpg'
 import client6 from '../assets/images/team/06.jpg'
-
+import { CgWebsite } from "react-icons/cg";
+import { IoHomeOutline } from "react-icons/io5";
+import { MdOutlineCleaningServices } from "react-icons/md";
 import blog1 from '../assets/images/blog/01.jpg'
 import blog2 from '../assets/images/blog/02.jpg'
 import blog3 from '../assets/images/blog/03.jpg'
@@ -19,44 +21,19 @@ import company6 from '../assets/images/team/spotify.svg'
 
 export const servicesData = [
     {
-        icon:FiTrendingUp,
-        title:'Grow Your Business',
-        desc:'If the distribution of letters and words is random, the reader will not be distracted from making.'
+        icon:CgWebsite,
+        title:'Dynamic Website Design and Developmen',
+        desc:'We create dynamic web applications and custom websites tailored to your needs. Our solutions are responsive, user-friendly, and built with the latest technologies to help your business thrive online.'
     },
     {
-        icon:FiDollarSign,
-        title:'Drive More Sales',
-        desc:'If the distribution of letters and words is random, the reader will not be distracted from making.'
+        icon:MdOutlineCleaningServices,
+        title:'Cleaning the glasses',
+        desc:'Professional glass cleaning services that ensure spotless, streak-free results for a clear view every time.'
     },
     {
-        icon:FiCompass,
-        title:'Handled By Expert',
-        desc:'If the distribution of letters and words is random, the reader will not be distracted from making.'
-    },
-    {
-        icon:FiCommand,
-        title:'Discussion For Idea',
-        desc:'If the distribution of letters and words is random, the reader will not be distracted from making.'
-    },
-    {
-        icon:FiBox,
-        title:'Web Design',
-        desc:'If the distribution of letters and words is random, the reader will not be distracted from making.'
-    },
-    {
-        icon:FiCamera,
-        title:'Network Security',
-        desc:'If the distribution of letters and words is random, the reader will not be distracted from making.'
-    },
-    {
-        icon:FiBell,
-        title:'Social Media',
-        desc:'If the distribution of letters and words is random, the reader will not be distracted from making.'
-    },
-    {
-        icon:FiMonitor,
-        title:'Design & Branding',
-        desc:'If the distribution of letters and words is random, the reader will not be distracted from making.'
+        icon:IoHomeOutline,
+        title:'Domiciliation',
+        desc:'Get a prestigious address for your business.'
     },
 ]
 

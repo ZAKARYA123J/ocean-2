@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logoLight from '../assets/images/logo-light.png'
 import {FiShoppingCart, FiDribbble, FiLinkedin, FiFacebook, FiInstagram, FiTwitter, FiMail} from '../assets/icons/vander'
-
+import img from './ocean3.png'
 export default function Footer(){
     return(
         <footer className="footer bg-dark-footer relative text-gray-200 dark:text-gray-200">
@@ -11,7 +11,7 @@ export default function Footer(){
                     <div className="grid lg:grid-cols-12 md:grid-cols-3 grid-cols-1 items-center">
                         <div className="lg:col-span-3 md:text-start text-center">
                             <Link to="#" className="text-[22px] focus:outline-none">
-                                <img src={logoLight} className="mx-auto md:me-auto md:ms-0" alt=""/>
+                                <img src={img} className="mx-auto md:me-auto md:ms-0" alt="" style={{width:"100px"}}/>
                             </Link>
                         </div>
 

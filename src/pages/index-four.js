@@ -25,13 +25,13 @@ import { companyLogo } from "../data/data";
 export default function IndexFour(){
     return(
         <>
-        {/* <Navbar/> */}
+        <Navbar/>
         <section className="relative md:pt-44 py-36 bg-slate-50 dark:bg-slate-800" id="home">
             <div className="container relative">
                 <div className="grid grid-cols-1 justify-center text-center">
                     <div className="">
                         <h1 className="font-bold lg:leading-normal leading-normal tracking-wide text-4xl lg:text-5xl capitalize mb-5">Grow Sales with Our <br/> Strategy First Approach</h1>
-                        <p className="text-slate-400 text-lg max-w-xl mx-auto">This is just a simple text made for this unique and awesome template, you can replace it with any text.</p>
+                        <p className="text-slate-400 text-lg max-w-xl mx-auto">This dsis just a simple text made for this unique and awesome template, you can replace it with any text.</p>
                     
                         <div className="subcribe-form mt-6 mb-3">
                             <form className="relative max-w-xl mx-auto">

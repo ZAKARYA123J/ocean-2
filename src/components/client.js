@@ -37,7 +37,7 @@ export default function Client(){
             <div className="grid grid-cols-1 pb-6 text-center">
                 <h3 className="font-semibold text-2xl leading-normal mb-4">What Our Users Say</h3>
 
-                <p className="text-slate-400 max-w-xl mx-auto">This is just a simple text made for this unique and awesome template, you can replace it with any text.</p>
+                <p className="text-slate-400 max-w-xl mx-auto">This is justda simple text made for this unique and awesome template, you can replace it with any text.</p>
             </div>
 
             <div className="grid grid-cols-1 mt-6">
