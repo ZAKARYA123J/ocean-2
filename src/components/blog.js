@@ -60,9 +60,13 @@ export default function Blogs(){
                                     <Link to="" >Contact <i className="mdi mdi-chevron-right align-middle"></i></Link></CTA>
                                 </div>
                             </div>
+                           
                         </div>
                     )
                 })}
+            </div>
+            <div>
+                <button>show all</button>
             </div>
         </div>
     </section>
