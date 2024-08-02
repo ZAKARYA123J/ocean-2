@@ -10,3 +10,6 @@ ul li{
     -webkit-margin-start: 0px;
             margin-inline-start: 0px;
   }
+  html {
+        scroll-behavior: smooth;
+      }

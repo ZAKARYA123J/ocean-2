@@ -1596,11 +1596,11 @@ p{
   text-transform: uppercase;
   letter-spacing: 0.05em;
   --tw-text-opacity: 1;
-  color: rgb(22 28 45 / var(--tw-text-opacity));
+  color: #202324;
 }
 .navbar .navigation .navbar-nav .nav-link:hover{
   --tw-text-opacity: 1;
-  color: rgb(20 184 166 / var(--tw-text-opacity));
+  color: #00C0F0;
 }
 :is(:where(.dark) .navbar .navigation .navbar-nav .nav-link){
   color: rgb(255 255 255 / 0.6) !important;
@@ -1611,7 +1611,7 @@ p{
 }
 .navbar .navigation .navbar-nav .nav-link.active{
   --tw-text-opacity: 1;
-  color: rgb(20 184 166 / var(--tw-text-opacity));
+  color: #00C0F0;
 }
 :is(:where(.dark) .navbar .navigation .navbar-nav  .nav-link.active){
   --tw-text-opacity: 1;

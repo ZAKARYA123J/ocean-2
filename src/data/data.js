@@ -11,6 +11,10 @@ import { MdOutlineCleaningServices } from "react-icons/md";
 import blog1 from '../assets/images/blog/01.jpg'
 import blog2 from '../assets/images/blog/02.jpg'
 import blog3 from '../assets/images/blog/03.jpg'
+import blog4 from '../assets/images/blog/04.jpg'
+import blog6 from '../assets/images/blog/06.jpg'
+import blog7 from '../assets/images/blog/07.jpg'
+import blog5 from '../assets/images/blog/05.webp'
 
 import company1 from '../assets/images/team/amazon.svg'
 import company2 from '../assets/images/team/google.svg'
@@ -78,21 +82,21 @@ export const clientData = [
 
 export const blogData = [
     {
-        image:blog1,
-        title:'Design your apps in your own way',
-        desc:'This is required when, for example, the final text is not yet available.',
+        image:blog6,
+        title:'LearnEnglish',
+        desc:'Learn English and improve your skills through our high-quality courses and resources.We provide you with the right tools to help you interact confidently in the real world.',
         date:'13th March 2023'
     },
     {
-        image:blog2,
-        title:'How apps is changing the IT world',
-        desc:'This is required when, for example, the final text is not yet available.',
+        image:blog5,
+        title:'Arbitration Techniques Installation and Use',
+        desc:'We provide expert installation and guidance on arbitration techniques, ensuring efficient setup and effective use for resolving disputes. Our service helps streamline conflict resolution processes in your organization.',
         date:'5th May 2023'
     },
     {
-        image:blog3,
-        title:'Smartest Applications for Business',
-        desc:'This is required when, for example, the final text is not yet available.',
+        image:blog7,
+        title:'Learn music',
+        desc:"Discover and develop your musical talents with our personalized music lessons. Whether you're a beginner or looking to refine your skills, our expert instructors provide tailored guidance to help you achieve your musical goals.",
         date:'19th June 2023'
     },
 ]

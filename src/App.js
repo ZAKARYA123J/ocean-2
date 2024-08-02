@@ -21,7 +21,8 @@ function App() {
       <Route path='/index-five' element={<IndexFive/>}/>
       <Route path='/index-six' element={<IndexSix/>}/>
       <Route path='/index-seven' element={<IndexSeven/>}/> */}
-      <Route path='/Contact' element={<GetInTouch/>}/>
+      {/* <Route path='/Contact' element={<GetInTouch/>}/> */}
+   
     </Routes>
   );
 }

@@ -24,7 +24,7 @@ export default function Navbar(){
         <nav className={`navbar ${scroll ? 'is-sticky' : ''}`} id="navbar">
             <div className="container relative flex flex-wrap items-center justify-between">
                 
-                    <img src={img} className="inline-block dark:hidden" style={{width:"100px"}} alt=""/>
+                    <img src={img} className="inline-block dark:hidden" style={{width:"120px"}} alt=""/>
                   
                 <div className="nav-icons flex items-center lg_992:order-2 ms-auto md:ms-8">
                     {/* <ul className="list-none menu-social mb-0">
@@ -41,9 +41,8 @@ export default function Navbar(){
                 <div className={`navigation lg_992:order-1 lg_992:flex  ms-auto ${manu ? '' : 'hidden'}`} id="menu-collapse">
                     <ul className="navbar-nav" id="navbar-navlist">
                         <li className="nav-item ms-0">
-                            <Link1 className="nav-link" to="home" smooth={true} duration={1000} activeClass='active' spy={true}>Home</Link1>
+                            <Link1  className="nav-link" to="/" smooth={true} duration={1000} activeClass='active' spy={true}>Home</Link1>
                         </li>
-                       
                         <li className="nav-item ms-0">
                             <Link1 className="nav-link" to="services" smooth={true} duration={1000} activeClass='active' spy={true}>Services</Link1>
                         </li>
@@ -55,6 +54,9 @@ export default function Navbar(){
                         </li> */}
                         <li className="nav-item ms-0">
                             <Link1 className="nav-link" to="blog" smooth={true} duration={1000} activeClass='active' spy={true}>Formation</Link1>
+                        </li>
+                        <li className="nav-item ms-0">
+                            <Link1 className="nav-link" to="jobs" smooth={true} duration={1000} activeClass='active' spy={true}>Jobs</Link1>
                         </li>
                         <li className="nav-item ms-0">
                             <Link1 className="nav-link" to="about" smooth={true} duration={1000} activeClass='active' spy={true}>About</Link1>

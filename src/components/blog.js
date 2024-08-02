@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { blogData } from "../data/data";
-
+import styled, { keyframes } from "styled-components";
 import {FiCalendar, FiClock} from '../assets/icons/vander'
 
 export default function Blogs(){
@@ -9,7 +9,7 @@ export default function Blogs(){
         <section className="relative md:py-24 py-16" id="blog">
         <div className="container relative">
             <div className="grid grid-cols-1 pb-6 text-center">
-                <h3 className="font-semibold text-2xl leading-normal mb-4">Formations</h3>
+                <h3 className="font-semibold text-2xl leading-normal mb-4">Formations Trends</h3>
 
                 {/* <p className="text-slate-400 max-w-xl mx-auto">is judst a simple text made for this unique and awesome template, you can replace it with any text.</p> */}
             </div>
@@ -23,16 +23,16 @@ export default function Blogs(){
                             </div>
 
                             <div className="mt-6">
-                                <div className="flex mb-4">
+                                {/* <div className="flex mb-4">
                                     <span className="flex items-center text-slate-400 text-sm"><FiCalendar className="size-4 text-slate-900 dark:text-white me-1.5"/>{item.date}</span>
                                     <span className="flex items-center text-slate-400 text-sm ms-3"><FiClock className="size-4 text-slate-900 dark:text-white me-1.5"/>5 min read</span>
-                                </div>
+                                </div> */}
 
-                                <Link to="" className="title text-lg font-semibold hover:text-teal-500 duration-500 ease-in-out">{item.title}</Link>
+                                <Link to="" className="title text-lg font-semibold hover:text-sky-500 duration-500 ease-in-out">{item.title}</Link>
                                 <p className="text-slate-400 mt-2">{item.desc}</p>
 
                                 <div className="mt-3">
-                                    <Link to="" className="text-teal-500">Read More <i className="mdi mdi-chevron-right align-middle"></i></Link>
+                                    <Link to="" className="text-sky-500">Contact <i className="mdi mdi-chevron-right align-middle"></i></Link>
                                 </div>
                             </div>
                         </div>
