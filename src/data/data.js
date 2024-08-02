@@ -14,6 +14,7 @@ import blog3 from '../assets/images/blog/03.jpg'
 import blog4 from '../assets/images/blog/04.jpg'
 import blog6 from '../assets/images/blog/06.jpg'
 import blog7 from '../assets/images/blog/07.jpg'
+import blog8 from '../assets/images/blog/08.jpeg'
 import blog5 from '../assets/images/blog/05.webp'
 
 import company1 from '../assets/images/team/amazon.svg'
@@ -88,7 +89,7 @@ export const blogData = [
         date:'13th March 2023'
     },
     {
-        image:blog5,
+        image:blog8,
         title:'Arbitration Techniques Installation and Use',
         desc:'We provide expert installation and guidance on arbitration techniques, ensuring efficient setup and effective use for resolving disputes. Our service helps streamline conflict resolution processes in your organization.',
         date:'5th May 2023'
