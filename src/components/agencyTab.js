@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import blog1 from '../assets/images/blog/01.jpg'
 import blog2 from '../assets/images/blog/02.jpg'
 import blog3 from '../assets/images/blog/03.jpg'
+import blog4 from '../assets/images/blog/09.jpeg'
+import interv from '../assets/images/blog/interview.jpeg'
 import { Button } from "@material-tailwind/react";
 import styled, { keyframes } from "styled-components";
 const CTA = styled.button`
@@ -18,7 +20,7 @@ const CTA = styled.button`
   display: flex;
   align-items: center;
   transition: transform 0.2s;
-  border:solid 1px black;
+  border: solid 1px blue;
   @media only screen and (max-width: 48em) {
     padding: 0.2rem 1rem;
   }
@@ -72,7 +74,7 @@ export default function AgencyTab(){
                     <div className="lg:col-span-8 md:col-span-7">
                         <div id="myTabContent" className="p-6 bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-md">
                             <div className={activeIndex === 1 ? '' : 'hidden' }>
-                                <img src={blog1} className="shadow dark:shadow-gray-700 rounded-md" alt=""/>
+                                <img src={interv} className="shadow dark:shadow-gray-700 rounded-md" alt=""/>
 
                                 <div className="mt-6">
                                     <h5 className="text-lg font-medium">Ocean Connecting</h5>
@@ -85,11 +87,11 @@ export default function AgencyTab(){
                                 </div>
                             </div>
                             <div className={activeIndex === 2 ? '' : 'hidden' }>
-                                <img src={blog2} className="shadow dark:shadow-gray-700 rounded-md" alt=""/>
+                                <img src={blog4} className="shadow dark:shadow-gray-700 rounded-md" alt=""/>
 
                                 <div className="mt-6">
-                                    <h5 className="text-lg font-medium">Project Execution</h5>
-                                    <p className="text-slate-400 mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, impedit vitae. Nobis, similique omnis cumque sapiente laboriosam animi quod cupiditate?</p>
+                                    <h5 className="text-lg font-medium">International Recruitment Services</h5>
+                                    <p className="text-slate-400 mt-4">Our company specializes in connecting top talent with global opportunities. We provide comprehensive international recruitment solutions, including candidate sourcing, screening, and placement. By leveraging our extensive network and expertise in diverse markets, we help businesses find the right talent to drive their growth and success across borders.</p>
                                     <div className="mt-4">
                                     <Link to="" >
                                         <CTA color="blue"> Apply Now <i className="mdi mdi-chevron-right align-middle"></i></CTA>

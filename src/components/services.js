@@ -52,7 +52,7 @@ const CTA = styled.button`
   display: flex;
   align-items: center;
   transition: transform 0.2s;
-  border:solid 1px black;
+ border: solid 1px blue;
   @media only screen and (max-width: 48em) {
     padding: 0.2rem 1rem;
   }

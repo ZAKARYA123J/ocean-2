@@ -27,11 +27,11 @@ export default function About(){
                     <div className="md:col-span-6">
                         <div className="lg:ms-8">
                             <h6 className="text-sky-500 text-sm font-semibold uppercase mb-2">Who Are We ?</h6>
-                            <h3 className="font-semibold text-2xl leading-normal mb-4">We're a global stakeholder <br/> relations and partnership <br/> building consultancy.</h3>
+                            <h3 className="font-semibold text-2xl leading-normal mb-4">We specialize in global job placement and document assistance, <br/> offering tailored support in multiple languages <br/> to help you navigate international career opportunities.</h3>
 
-                            <p className="text-slate-400 max-w-xl mb-6">Get instant helpful resources about anything on the go, easily implement secure money transfer solutions, boost your daily efficiency, connect to other app users and create your own Techwind network, and much more with just a few taps. commodo consequat. Duis aute irure.</p>
+                            <p className="text-slate-400 max-w-xl mb-6">Our company provides international job placement services and expert support in multiple languages. We assist clients in finding global career opportunities and offer comprehensive help with document preparation in various languages. Our goal is to facilitate a smooth and effective transition to international careers.</p>
 
-                            <Link to="" className="h-10 px-6 tracking-wide inline-flex items-center justify-center font-medium rounded-md bg-sky-500 text-white">Read More <i className="mdi mdi-chevron-right align-middle ms-0.5"></i></Link>
+                            {/* <Link to="" className="h-10 px-6 tracking-wide inline-flex items-center justify-center font-medium rounded-md bg-sky-500 text-white">Read More <i className="mdi mdi-chevron-right align-middle ms-0.5"></i></Link> */}
                         </div>
                     </div>
                 </div>
