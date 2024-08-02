@@ -64,10 +64,9 @@ export default function Blogs(){
                         </div>
                     )
                 })}
+              
             </div>
-            <div>
-                <button>show all</button>
-            </div>
+            
         </div>
     </section>
     )

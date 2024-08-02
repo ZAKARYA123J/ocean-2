@@ -79,6 +79,10 @@ export default function Index(){
         
         <Services/>
         <Blogs/>
+        <div className="flex justify-center">
+  <button className="py-2 px-4 bg-sky-500 text-white rounded">Show all Formations<i className="mdi mdi-chevron-right ms-1"></i></button>
+</div>
+
         <AgencyTab/>
         <Cta/>
        
