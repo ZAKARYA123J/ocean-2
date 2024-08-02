@@ -1,6 +1,30 @@
 import React from "react";
 import contact from '../assets/images/contact.svg'
+import styled, { keyframes } from "styled-components";
+const CTA = styled.button`
+  background-color: var(--white);
+  color: #3a86ff;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s;
+ border: solid 1px blue;
 
+  @media only screen and (max-width: 48em) {
+    padding: 0.2rem 1rem;
+  }
+  &:hover {
+    transform: scale(1.1);
+  }
+  &:active {
+    transform: scale(0.9);
+  }
+`;
 export default function GetInTouch(){
     return(
         <section className="relative lg:py-24 py-16 bg-slate-50 dark:bg-slate-800" id="contact">
@@ -41,7 +65,8 @@ export default function GetInTouch(){
                                             <textarea name="comments" id="comments" className="mt-2 w-full py-2 px-3 h-28 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0" placeholder="Message :"></textarea>
                                         </div>
                                     </div>
-                                    <button type="submit" id="submit" name="send" className="h-10 px-6 tracking-wide inline-flex items-center justify-center font-medium rounded-md bg-sky-500 text-white mt-2">Send Message</button>
+                                    <CTA>
+                                    <button type="submit" id="submit" name="send">Send Message</button></CTA>
                                 </form>
                             </div>
                         </div>

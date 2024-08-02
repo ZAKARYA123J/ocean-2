@@ -4,6 +4,7 @@ import logoLight from '../assets/images/logo-light.png'
 import { MdOutlineEmail } from "react-icons/md";
 import {FiShoppingCart, FiDribbble, FiLinkedin, FiFacebook, FiInstagram, FiTwitter, FiMail} from '../assets/icons/vander'
 import img from './ocean3.png'
+
 export default function Footer(){
     return(
         <footer className="footer bg-dark-footer relative text-gray-200 dark:text-gray-200">

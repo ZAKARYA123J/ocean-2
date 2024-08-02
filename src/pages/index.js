@@ -15,6 +15,30 @@ import Footer from "../components/footer";
 import Switcher from "../components/switcher";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import styled, { keyframes } from "styled-components";
+const CTA = styled.button`
+  background-color: var(--white);
+  color: #3a86ff;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s;
+  border: solid 1px blue;
+  @media only screen and (max-width: 48em) {
+    padding: 0.2rem 1rem;
+  }
+  &:hover {
+    transform: scale(1.1);
+  }
+  &:active {
+    transform: scale(0.9);
+  }
+`;
 
 export default function Index(){
     useEffect(() => {
@@ -38,7 +62,8 @@ export default function Index(){
                         <p className="text-slate-400 text-lg max-w-xl"></p>
                         
                         <div className="mt-6">
-                            <Link1 to="contact" className="h-10 px-6 tracking-wide inline-flex items-center justify-center font-medium rounded-md bg-sky-500 text-white">Contact Us <i className="mdi mdi-chevron-right ms-1"></i></Link1>
+                            <CTA>
+                            <Link1 to="contact" >Contact Us <i className="mdi mdi-chevron-right ms-1"></i></Link1></CTA>
                         </div>
                     </div>
 

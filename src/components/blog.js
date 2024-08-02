@@ -3,6 +3,30 @@ import { Link } from "react-router-dom";
 import { blogData } from "../data/data";
 import styled, { keyframes } from "styled-components";
 import {FiCalendar, FiClock} from '../assets/icons/vander'
+const CTA = styled.button`
+  background-color: var(--white);
+  color: #3a86ff;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s;
+ border: solid 1px blue;
+
+  @media only screen and (max-width: 48em) {
+    padding: 0.2rem 1rem;
+  }
+  &:hover {
+    transform: scale(1.1);
+  }
+  &:active {
+    transform: scale(0.9);
+  }
+`;
 
 export default function Blogs(){
     return(
@@ -32,7 +56,8 @@ export default function Blogs(){
                                 <p className="text-slate-400 mt-2">{item.desc}</p>
 
                                 <div className="mt-3">
-                                    <Link to="" className="text-sky-500">Contact <i className="mdi mdi-chevron-right align-middle"></i></Link>
+                                    <CTA>
+                                    <Link to="" >Contact <i className="mdi mdi-chevron-right align-middle"></i></Link></CTA>
                                 </div>
                             </div>
                         </div>
