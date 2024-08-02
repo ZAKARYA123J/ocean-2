@@ -2,6 +2,7 @@ import React,{useState,useEffect} from "react";
 import { Link } from "react-router-dom";
 import logoDark from '../assets/images/logo-dark.png'
 import logoLight from '../assets/images/logo-light.png'
+import img from './ocean3.png'
 import { Link as Link1 } from "react-scroll";
 
 export default function NavLight(){
@@ -25,10 +26,10 @@ export default function NavLight(){
             <div className="container relative flex flex-wrap items-center justify-between">
                 <Link className="navbar-brand md:me-8" to="/">
                     <span className="inline-block dark:hidden">
-                        <img src={logoDark} className="l-dark" alt=""/>
-                        <img src={logoLight} className="l-light" alt=""/>
+                        <img src={img} className="l-dark" alt=""/>
+                        <img src={img} className="l-light" alt=""/>
                     </span>
-                    <img src={logoLight} className="hidden dark:inline-block" alt=""/>
+                    <img src={img} className="hidden dark:inline-block" alt=""/>
                 </Link>
 
                 <div className="nav-icons flex items-center lg_992:order-2 ms-auto md:ms-8">
