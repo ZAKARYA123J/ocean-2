@@ -35,22 +35,27 @@ const CourseCard = () => {
                     <h3 className="font-semibold text-2xl leading-normal mb-4">Formation</h3>
                     <p className="text-slate-400 max-w-xl mx-auto">This is just a simple text made for this unique and awesome template, you can replace it with any text.</p>
                     <div className="relative flex justify-center items-center mt-4">
-                        <input 
-                            type="text" 
-                            placeholder="Search by title" 
-                            value={searchTerm} 
-                            onChange={handleSearch} 
-                            className="absolute left-0 p-2 border border-gray-300 rounded-md focus:outline-none focus:border-teal-500"
-                        />
-                        <select 
-                            value={filter} 
-                            onChange={handleFilterChange} 
-                            className="p-2 border border-gray-300 rounded-md focus:outline-none focus:border-teal-500"
-                        >
+                       <div className="relative flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4 p-6">
+        <input 
+        type="text" 
+        placeholder="Search by title" 
+        value={searchTerm} 
+        onChange={handleSearch} 
+        className="w-full md:w-2/3 p-4 text-xl md:text-lg border border-gray-300 rounded-md focus:outline-none focus:border-teal-500 transform md:scale-100 scale-110"
+        style={{ minHeight: '50px' }}
+                            />
+                            
+    <select 
+        value={filter} 
+        onChange={handleFilterChange} 
+        className="w-full md:w-1/3 p-4 text-xl md:text-lg border border-gray-300 rounded-md focus:outline-none focus:border-teal-500 transform md:scale-100 scale-110"
+        style={{ minHeight: '50px' }}
+    >
                             {filterOptions.map(option => (
                                 <option key={option.value} value={option.value}>{option.label}</option>
                             ))}
-                        </select>
+                            </select>
+                        </div>
                     </div>
                 </div>
 
