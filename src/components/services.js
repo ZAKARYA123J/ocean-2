@@ -36,7 +36,7 @@ const skillsData = [
     icon: <SlNote className="text-4xl text-primary" />,
     link: "#",
     description:
-      "We offer expert-led training in various fields to boost your skills and knowledge. Tailored to meet your needs, our programs help you achieve your professional goals efficiently.",
+      "We offer expert-led training in various fields to boost your skills and knowledge.",
     aosDelay: "700",
   },
 ];

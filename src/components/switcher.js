@@ -1,7 +1,7 @@
 import React,{useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 import {FiSun, FiMoon} from '../assets/icons/vander'
-import img from './ocean3.png'
+// import img from './ocean3.png'
 export default function Switcher(){
     const [scroll, setScroll] = useState(false);
 

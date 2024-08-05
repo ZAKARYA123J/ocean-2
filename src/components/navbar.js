@@ -3,22 +3,26 @@ import { Link } from "react-router-dom";
 import logoDark from '../assets/images/logo-dark.png'
 import logoLight from '../assets/images/logo-light.png'
 import { Link as Link1 } from "react-scroll";
+import { useSaveScrollPosition } from './useSaveScrollPosition'; // Import hook
+import { useRestoreScrollPosition } from './useRestoreScrollPosition'; 
 import img from './ocean3.png'
 export default function Navbar(){
 
     let [scroll, setScroll] = useState(false);
     let [manu, setManu] = useState(false)
+    useSaveScrollPosition(); // Save scroll position on navigation
+    useRestoreScrollPosition(); 
 
     useEffect(() => {
-        window.addEventListener("scroll", () => {
-            setScroll(window.scrollY > 50);
-        });
-        return()=>{
-            window.removeEventListener("scroll", () => {
-                setScroll(window.scrollY > 50);
-            });
-        }
-    }, []);
+        const handleScroll = () => {
+          setScroll(window.scrollY > 50);
+        };
+    
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, []);
    
     return(
         <nav className={`navbar ${scroll ? 'is-sticky' : ''}`} id="navbar">

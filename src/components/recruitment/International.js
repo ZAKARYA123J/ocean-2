@@ -12,9 +12,9 @@ function International() {
 
   return (
     <div>
-      
+      <Link to="/" className="text-blue-500 underline">Back</Link>
       <div className="container mx-auto p-4">
-        <Link to="/" className="text-blue-500 underline">Back</Link>
+        
         
         <h1 className="text-2xl font-bold my-4">International Recruitment Opportunities</h1>
         
