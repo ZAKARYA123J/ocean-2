@@ -60,6 +60,7 @@ export const servicesData = [
     },
 ]
 
+
 export const clientData = [
     {
         image:client1,
@@ -99,6 +100,8 @@ export const clientData = [
     },
 ]
 
+
+
 export const blogData = [
     {
         image:blog1,
@@ -118,6 +121,29 @@ export const blogData = [
         desc:'This is required when, for example, the final text is not yet available.',
         date:'19th June 2023'
     },
+]
+export const serviceData = [
+        {
+            id : 1 ,
+            image:blog1,
+            title:'Design your apps in your own way',
+            desc:'This is required when, for example, the final text is not yet available.',
+            date:'13th March 2023'
+        },
+        {
+            id : 2 ,
+            image:blog2,
+            title:'How apps is changing the IT world',
+            desc:'This is required when, for example, the final text is not yet available.',
+            date:'5th May 2023'
+        },
+        {
+            id : 3 ,
+            image:blog3,
+            title:'Smartest Applications for Business',
+            desc:'This is required when, for example, the final text is not yet available.',
+            date:'19th June 2023'
+        },   
 ]
 
 export const companyLogo = [company1, company2, company3, company4, company5, company6]

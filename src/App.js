@@ -9,6 +9,9 @@ import IndexFour from './pages/index-four';
 import IndexFive from './pages/index-five';
 import IndexSix from './pages/index-six';
 import IndexSeven from './pages/index-seven';
+import Service from './pages/service';
+
+
 
 function App() {
   return (
@@ -20,6 +23,10 @@ function App() {
       <Route path='/index-five' element={<IndexFive/>}/>
       <Route path='/index-six' element={<IndexSix/>}/>
       <Route path='/index-seven' element={<IndexSeven/>}/>
+      <Route path='/service' element={<Service/>}/>
+      
+      
+      
     </Routes>
   );
 }

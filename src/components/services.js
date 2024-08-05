@@ -18,7 +18,7 @@ export default function Services(){
                         return(
                             <div className="group rounded-md shadow dark:shadow-gray-700 relative bg-white dark:bg-slate-900 p-6 overflow-hidden h-fit" key={index}>
                                 <div className="flex items-center justify-center size-14 -rotate-45 bg-gradient-to-r from-transparent to-teal-500/10 text-teal-500 text-center rounded-full group-hover:bg-teal-500/10 duration-500">
-                                    <Icon className="size-6 rotate-45"></Icon>
+                                    <Icon className="size-6 rotate-45"> </Icon>
                                 </div>
         
                                 <div className="content mt-6 relative z-1">
