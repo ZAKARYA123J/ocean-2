@@ -12,6 +12,7 @@ import IndexSeven from './pages/index-seven';
 import GetInTouch from './components/getInTuoch';
 import National from './components/recruitment/national';
 import International from './components/recruitment/International';
+import JobListings from './components/recruitment/Jobs';
 function App() {
   return (
     <Routes>
@@ -25,6 +26,7 @@ function App() {
       {/* <Route path='/Contact' element={<GetInTouch/>}/> */}
       <Route path='/national' element={<National/>}/>
       <Route path='/international' element={<International/>}/>
+      <Route path='/job' element={<JobListings/>}/>
     </Routes>
   );
 }

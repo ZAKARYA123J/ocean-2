@@ -5,9 +5,10 @@ import blog1 from '../assets/images/blog/01.jpg'
 import blog2 from '../assets/images/blog/02.jpg'
 import blog3 from '../assets/images/blog/03.jpg'
 import blog4 from '../assets/images/blog/09.jpeg'
+import { useNavigate } from 'react-router-dom';
 import interv from '../assets/images/blog/interview.jpeg'
-import { useSaveScrollPosition } from './useSaveScrollPosition'; // Import hook
-import { useRestoreScrollPosition } from './useRestoreScrollPosition'; 
+// import { useSaveScrollPosition } from './useSaveScrollPosition'; // Import hook
+// import { useRestoreScrollPosition } from './useRestoreScrollPosition'; 
 import { Button } from "@material-tailwind/react";
 import styled, { keyframes } from "styled-components";
 const CTA = styled.button`
@@ -35,21 +36,35 @@ const CTA = styled.button`
 `;
 export default function AgencyTab(){
     const [ activeIndex, setActiveIndex ] = useState(1)
-    let [scroll, setScroll] = useState(false);
-    let [manu, setManu] = useState(false)
-    useSaveScrollPosition(); // Save scroll position on navigation
-    useRestoreScrollPosition(); 
+    // let [scroll, setScroll] = useState(false);
+    // let [manu, setManu] = useState(false)
+    // useSaveScrollPosition(); // Save scroll position on navigation
+    // useRestoreScrollPosition(); 
+
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //       setScroll(window.scrollY > 50);
+    //     };
+    
+    //     window.addEventListener('scroll', handleScroll);
+    //     return () => {
+    //       window.removeEventListener('scroll', handleScroll);
+    //     };
+    //   }, []);
+    const navigate = useNavigate();
 
     useEffect(() => {
-        const handleScroll = () => {
-          setScroll(window.scrollY > 50);
-        };
-    
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-          window.removeEventListener('scroll', handleScroll);
-        };
-      }, []);
+      // Save the scroll position in local storage
+      const handleBeforeUnload = () => {
+        localStorage.setItem('scrollPosition', window.scrollY);
+      };
+      
+      window.addEventListener('beforeunload', handleBeforeUnload);
+      
+      return () => {
+        window.removeEventListener('beforeunload', handleBeforeUnload);
+      };
+    }, []);
     return(
         <section className="realtive md:py-24 py-16" id="jobs">
             <div className="container relative">
@@ -97,9 +112,9 @@ export default function AgencyTab(){
                                     <h5 className="text-lg font-medium">Ocean Connect</h5>
                                     <p className="text-slate-400 mt-4">We’re excited to invite you to apply for a position at our company. Join our team and contribute to our dynamic environment while advancing your career. Explore opportunities for growth, innovation, and impact with us.</p>
                                     <div className="mt-4">
-                                        <Link to="/national">
+                                        <button onClick={() => navigate('/job')}>
                                         <CTA > Apply Now <i className="mdi mdi-chevron-right align-middle"></i></CTA>
-                                       </Link>
+                                       </button>
                                     </div>
                                 </div>
                             </div>
