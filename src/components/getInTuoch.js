@@ -1,5 +1,6 @@
 import React from "react";
 import contact from '../assets/images/contact.svg'
+import contact2 from '../assets/images/done/contact.svg'
 import styled, { keyframes } from "styled-components";
 const CTA = styled.button`
   background-color: var(--white);
@@ -37,7 +38,7 @@ export default function GetInTouch(){
 
                 <div className="grid md:grid-cols-12 grid-cols-1 items-center gap-6">
                     <div className="lg:col-span-7 md:col-span-6">
-                        <img src={contact} alt=""/>
+                        <img src={contact2} alt=""/>
                     </div>
 
                     <div className="lg:col-span-5 md:col-span-6">
