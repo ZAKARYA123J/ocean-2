@@ -101,22 +101,48 @@ export const clientData = [
 
 export const blogData = [
     {
+        id:1,
         image:blog1,
-        title:'Design your apps in your own way',
-        desc:'This is required when, for example, the final text is not yet available.',
-        date:'13th March 2023'
+        title:'MEDICAL & HEALTH',
+        desc: 'This is required when, for example, the final text is not yet available.',
+        detail:"Medical and health formations encompass a wide range of training and education programs aimed at equipping individuals with the knowledge, skills, and competencies necessary for various careers in the healthcare sector. These programs cover diverse areas such as clinical practice, research, public health, health administration, and specialized medical fields. Here's an overview of what such formations typically include:",
+        type: 'Formation'
     },
     {
+        id:2,
         image:blog2,
-        title:'How apps is changing the IT world',
+        title:'CULTURES, ARTS & LIFESTYE',
         desc:'This is required when, for example, the final text is not yet available.',
-        date:'5th May 2023'
+        type: 'Formation'
     },
     {
+        id:3,
         image:blog3,
-        title:'Smartest Applications for Business',
+        title:'HOME & FAMILY',
+        desc: 'This is required when, for example, the final text is not yet available.',
+        detail:"La formation Home & Family est conçue pour offrir des compétences pratiques et des connaissances approfondies sur la gestion de la vie domestique et des relations familiales. Elle aborde des sujets variés allant de l'organisation du foyer à la gestion des finances familiales, en passant par les techniques de communication et de résolution de conflits. L'objectif est de fournir aux participants les outils nécessaires pour créer un environnement familial harmonieux et bien organisé.",
+        type:'Formation'
+    },
+    {
+        id:4,
+        image:blog1,
+        title:'PROTECTION & SECURITY',
         desc:'This is required when, for example, the final text is not yet available.',
-        date:'19th June 2023'
+        type:'Formation'
+    },
+    {
+        id:5,
+        image:blog2,
+        title:'SPORT & FITNESS',
+        desc:'This is required when, for example, the final text is not yet available.',
+        type:'Formation'
+    },
+    {
+        id:6,
+        image:blog3,
+        title:'language',
+        desc:'This is required when, for example, the final text is not yet available.',
+        type:'language'
     },
 ]
 

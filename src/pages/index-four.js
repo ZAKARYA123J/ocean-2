@@ -107,7 +107,8 @@ export default function IndexFour(){
         <Blogs/>
         <GetInTouch/>
         <Footer/>
-        <Switcher/>
+        <Switcher />
+            
         </>
     )
 }
