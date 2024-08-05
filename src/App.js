@@ -10,7 +10,8 @@ import IndexFive from './pages/index-five';
 import IndexSix from './pages/index-six';
 import IndexSeven from './pages/index-seven';
 import GetInTouch from './components/getInTuoch';
-
+import National from './components/recruitment/national';
+import International from './components/recruitment/International';
 function App() {
   return (
     <Routes>
@@ -22,7 +23,8 @@ function App() {
       <Route path='/index-six' element={<IndexSix/>}/>
       <Route path='/index-seven' element={<IndexSeven/>}/> */}
       {/* <Route path='/Contact' element={<GetInTouch/>}/> */}
-   
+      <Route path='/national' element={<National/>}/>
+      <Route path='/international' element={<International/>}/>
     </Routes>
   );
 }

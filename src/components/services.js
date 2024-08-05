@@ -12,7 +12,7 @@ const skillsData = [
     icon: <CgWebsite className="text-4xl text-primary" />,
     link: "#",
     description:
-      "We create dynamic web applications and custom websites tailored to your needs. Our solutions are responsive, user-friendly, and built with the latest technologies to help your business thrive online.",
+      "We create dynamic web applications and custom websites tailored to your needs. Our solutions are responsive.",
     aosDelay: "0",
   },
   {
