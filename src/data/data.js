@@ -113,6 +113,7 @@ export const blogData = [
         image:blog2,
         title:'CULTURES, ARTS & LIFESTYE',
         desc:'This is required when, for example, the final text is not yet available.',
+        detail:"Medical and health formations encompass a wide range of training and education programs aimed at equipping individuals with the knowledge, skills, and competencies necessary for various careers in the healthcare sector. These programs cover diverse areas such as clinical practice, research, public health, health administration, and specialized medical fields. Here's an overview of what such formations typically include:",
         type: 'Formation'
     },
     {
@@ -128,21 +129,24 @@ export const blogData = [
         image:blog1,
         title:'PROTECTION & SECURITY',
         desc:'This is required when, for example, the final text is not yet available.',
-        type:'Formation'
+        detail:"Medical and health formations encompass a wide range of training and education programs aimed at equipping individuals with the knowledge, skills, and competencies necessary for various careers in the healthcare sector. These programs cover diverse areas such as clinical practice, research, public health, health administration, and specialized medical fields. Here's an overview of what such formations typically include:",
+        type: 'Formation'
     },
     {
         id:5,
         image:blog2,
         title:'SPORT & FITNESS',
         desc:'This is required when, for example, the final text is not yet available.',
-        type:'Formation'
+        detail:"Medical and health formations encompass a wide range of training and education programs aimed at equipping individuals with the knowledge, skills, and competencies necessary for various careers in the healthcare sector. These programs cover diverse areas such as clinical practice, research, public health, health administration, and specialized medical fields. Here's an overview of what such formations typically include:",
+        type: 'Formation'
     },
     {
         id:6,
         image:blog3,
         title:'language',
         desc:'This is required when, for example, the final text is not yet available.',
-        type:'language'
+        detail:"Medical and health formations encompass a wide range of training and education programs aimed at equipping individuals with the knowledge, skills, and competencies necessary for various careers in the healthcare sector. These programs cover diverse areas such as clinical practice, research, public health, health administration, and specialized medical fields. Here's an overview of what such formations typically include:",
+        type: 'language'
     },
 ]
 

@@ -11,28 +11,25 @@ const BlogDetail = () => {
     }
 
     return (
-    <div className="flex items-center justify-center min-h-screen">
-            <div className="">
+        <div className=" flex-col items-center justify-center min-h-screen bg-gray-100">
+            <div className="max-w-4xl w-full p-6 bg-white rounded-lg shadow-lg">
                 <div className="mb-6">
-                    <h1 className="text-4xl font-extrabold text-gray-900 mb-4">{blogPost.title}</h1>
-                    <p className="text-lg text-gray-600 mb-2">{blogPost.date}</p>
+                    <h3 className="text-4xl font-extrabold text-gray-900 mb-4">{blogPost.title}</h3>
                 </div>
-            <div className="mb-6 ">
-                <img 
-                src={blogPost.image} 
-                alt={blogPost.title} 
-                className=""
-                />
-            </div>
+                <div className="mb-6">
+                    <div className="group relative overflow-hidden">
+                        <img 
+                            src={blogPost.image} 
+                            alt={blogPost.title} 
+                            className="w-full h-auto object-cover rounded-lg shadow-md transition-transform duration-500 transform group-hover:scale-110"
+                        />
+                    </div>
+                </div>
                 <div className="prose prose-gray">
-                     <p>{blogPost.detail}</p>
+                    <p>{blogPost.detail}</p>
                 </div>
-                
             </div>
         </div>
-
-
-
     );
 };
 
