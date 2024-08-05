@@ -30,7 +30,7 @@ import '../../node_modules/react-modal-video/scss/modal-video.scss';
 export default function Service(){
 
     return(
-        <>
+        <>\
         <Navbar/>
         <Detailservice/>
         <GetInTouch/>
