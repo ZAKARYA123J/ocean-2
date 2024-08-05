@@ -30,9 +30,9 @@ export default function GetInTouch(){
         <section className="relative lg:py-24 py-16 bg-slate-50 dark:bg-slate-800" id="contact">
             <div className="container relative">
                 <div className="grid grid-cols-1 pb-6 text-center">
-                    <h3 className="font-semibold text-2xl leading-normal mb-4">Get in touch </h3>
+                    <h3 className="font-semibold text-2xl leading-normal mb-4">CONTACT US </h3>
 
-                    <p className="text-slate-400 max-w-xl mx-auto">This is just a simple text made for this unique and awesome template, you can replace it with any text.</p>
+                    <p className="text-slate-400 max-w-xl mx-auto">We’d love to hear from you! Fill out the form below with your name, email, and message, and we’ll get back to you shortly. Thanks for reaching out!</p>
                 </div>
 
                 <div className="grid md:grid-cols-12 grid-cols-1 items-center gap-6">

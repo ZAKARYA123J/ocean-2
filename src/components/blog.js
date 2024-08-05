@@ -29,6 +29,7 @@ const CTA = styled.button`
 `;
 
 export default function Blogs(){
+    const limitedItems = blogData.slice(0, 3);
     return(
         <section className="relative md:py-24 py-16" id="blog">
         <div className="container relative">
@@ -39,7 +40,7 @@ export default function Blogs(){
             </div>
 
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mt-6 gap-6">
-                {blogData.map((item, index) =>{
+                {limitedItems.map((item, index) =>{
                     return(
                         <div className="group relative overflow-hidden" key={index}>
                             <div className="relative overflow-hidden rounded-md shadow dark:shadow-gray-800">

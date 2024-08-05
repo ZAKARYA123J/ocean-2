@@ -47,37 +47,31 @@ export const clientData = [
         image:client1,
         name:'Calvin Carlo',
         title:'Manager',
-        desc:'" It seems that only fragments of the original text remain in the Lorem Ipsum texts used today. "'
+        desc:'" I was blown away by the personalized support I received from this team. Their expertise in global job placement helped me land a fantastic position abroad. Highly recommend their services! "'
     },
     {
         image:client2,
         name:'Christa Smith',
         title:'Manager',
-        desc:'" The most well-known dummy text is the Lorem Ipsum, which is said to have originated in the 16th century. "'
+        desc:'"Navigating international job markets can be daunting, but this company made it so much easier. Their multilingual support and document assistance were top-notch. I couldn’t have done it without them!"'
     },
     {
         image:client3,
         name:'Jemina CLone',
         title:'Manager',
-        desc:'" One disadvantage of Lorum Ipsum is that in Latin certain letters appear more frequently than others"'
+        desc:'" needed help with job placements in several countries, and their tailored support was exceptional. The team’s attention to detail and professionalism made the entire process smooth and stress-free."'
     },
     {
         image:client4,
         name:'Smith Vodka',
         title:'Manager',
-        desc:'" Thus, Lorem Ipsum has only limited suitability as a visual filler for German texts "'
+        desc:'" The document assistance was a lifesaver for my international job search. Their guidance was clear and effective, and their ability to support in multiple languages was a huge bonus."'
     },
     {
         image:client5,
         name:'Cristino Murfi',
         title:'Manager',
-        desc:'" There is now an abundance of readable dummy texts. These are usually used when a text is required"'
-    },
-    {
-        image:client6,
-        name:'Cristino Murfi',
-        title:'Manager',
-        desc:'" According to most sources, Lorum Ipsum can be traced back to a text composed by Cicero "'
+        desc:'"I was impressed with how well they understood the complexities of global job placement. The support was personalized, and their multilingual team made sure I was well-prepared for every step of the process."'
     },
 ]
 
@@ -91,13 +85,13 @@ export const blogData = [
     {
         image:blog8,
         title:'Arbitration Techniques Installation and Use',
-        desc:'We provide expert installation and guidance on arbitration techniques, ensuring efficient setup and effective use for resolving disputes. Our service helps streamline conflict resolution processes in your organization.',
+        desc:'We provide expert installation and guidance on arbitration techniques, ensuring efficient setup and effective use for resolving disputes.',
         date:'5th May 2023'
     },
     {
         image:blog7,
         title:'Learn music',
-        desc:"Discover and develop your musical talents with our personalized music lessons. Whether you're a beginner or looking to refine your skills, our expert instructors provide tailored guidance to help you achieve your musical goals.",
+        desc:"Discover and develop your musical talents with our personalized music lessons. Whether you're a beginner or looking to refine your skills.",
         date:'19th June 2023'
     },
 ]
