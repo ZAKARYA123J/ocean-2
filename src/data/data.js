@@ -21,6 +21,7 @@ import company3 from '../assets/images/team/lenovo.svg'
 import company4 from '../assets/images/team/paypal.svg'
 import company5 from '../assets/images/team/shopify.svg'
 import company6 from '../assets/images/team/spotify.svg'
+import { Button } from 'react-scroll'
 
 export const servicesData = [
     {
@@ -143,7 +144,7 @@ export const serviceData = [
             desc_para4:"Chaque formation commence par une analyse des besoins, suivie d'un programme personnalisé dispensé par des experts. Nous combinons théorie et pratique pour garantir une assimilation efficace des connaissances.",
             para5:"Valeur Ajoutée",
             desc_para5:"Nos formations se distinguent par leur flexibilité et leur approche pratique, intégrant les dernières tendances et technologies pour offrir des solutions pertinentes et immédiatement applicables sur le terrain.",
-            action : "GET FORMATION",
+            Button : "GET FORMATION",
         },
         {
             id : 2 ,
@@ -160,7 +161,7 @@ export const serviceData = [
             desc_para4:"Nous utilisons des techniques de nettoyage adaptées à chaque type de surface, incluant le lavage haute pression et l'utilisation de produits écologiques. Nous commençons par une évaluation détaillée, suivie d'un nettoyage approfondi et d'un contrôle qualité final.",
             para5:"Valeur Ajoutée",
             desc_para5:"Notre expertise en nettoyage des façades garantit des résultats durables et une intervention rapide, tout en respectant les normes environnementales et de sécurité les plus strictes.",
-            action :"CONTACT US",
+            Button :"CONTACT US",
         },
        
         {
@@ -178,7 +179,7 @@ export const serviceData = [
             desc_para4:"Nous offrons un processus d'enregistrement facile, incluant la réception et la gestion du courrier, ainsi que des options de redirection selon vos besoins spécifiques. Vous pouvez accéder à vos documents en toute sécurité via notre plateforme en ligne.",
             para5:"Valeur Ajoutée",
             desc_para5:"Notre service se distingue par sa flexibilité, son support personnalisé et sa capacité à offrir une adresse prestigieuse qui renforce la crédibilité de votre entreprise tout en optimisant vos opérations administratives. ",
-            action:"CONTACT US",
+            Button:"CONTACT US",
         },  
         {
             id : 4 ,
@@ -195,7 +196,7 @@ export const serviceData = [
             desc_para4:"Nous commençons par une analyse approfondie de vos besoins, suivie de la création d’un design personnalisé. Ensuite, nous développons et testons le site pour garantir une performance optimale avant de le lancer.",
             para5:"Valeur Ajoutée",
             desc_para5:"Notre approche personnalisée et notre expertise technique garantissent des résultats qui non seulement répondent à vos attentes mais les dépassent, en offrant un site web fonctionnel, esthétiquement plaisant et optimisé pour les moteurs de recherche.",
-            action:"CONTACT US",
+            Button:"CONTACT US",
         }, 
         {
             id : 5 ,
@@ -212,7 +213,7 @@ export const serviceData = [
             desc_para4:"Nous utilisons des méthodes de recherche avancées et un réseau mondial pour sourcer des candidats. Le processus inclut une évaluation approfondie des compétences, des entretiens ciblés et une gestion proactive des candidatures pour garantir une correspondance optimale.",
             para5:"Valeur Ajoutée",
             desc_para5:"Notre expertise en recrutement international permet de trouver des talents adaptés aux exigences spécifiques de votre entreprise, tout en offrant un service personnalisé et un soutien tout au long du processus de recrutement pour assurer une intégration réussie. ",
-            action:"GET JOB",
+            Button:"GET JOB",
         },  
 ]
 
