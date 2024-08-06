@@ -9,11 +9,11 @@ import client6 from '../assets/images/team/06.jpg'
 import blog1 from '../assets/images/blog/01.jpg'
 import blog2 from '../assets/images/blog/02.jpg'
 import blog3 from '../assets/images/blog/03.jpg'
-import blog5 from '../assets/images/blog/05.png'
-import blog6 from '../assets/images/blog/06.png'
-import blog7 from '../assets/images/blog/07.png'
-import blog8 from '../assets/images/blog/08.png'
-import blog9 from '../assets/images/blog/09.png'
+import service1 from '../assets/images/service/service1.png'
+import service2 from '../assets/images/service/service2.png'
+import service3 from '../assets/images/service/service3.png'
+import service4 from '../assets/images/service/service4.png'
+import service5 from '../assets/images/service/service5.png'
 
 import company1 from '../assets/images/team/amazon.svg'
 import company2 from '../assets/images/team/google.svg'
@@ -133,7 +133,7 @@ export const serviceData = [
             id : 1 ,
             title:'Formation',
             desc:'This is required when, for example, the final text is not yet available.',
-            image:blog5,
+            image:service1,
             para1 :'Service de Formation',
             desc_para1 :"Nous offrons des formations professionnelles de haute qualité, adaptées à tous les niveaux d'expertise. Nos programmes sont conçus pour fournir des compétences pratiques et théoriques, vous permettant de progresser dans votre carrière et d'atteindre vos objectifs professionnels. Que vous soyez débutant ou expert, nos formateurs expérimentés vous accompagneront tout au long de votre parcours d'apprentissage.",
             para2 :"Avantages et Bénéfices",
@@ -150,7 +150,7 @@ export const serviceData = [
             id : 2 ,
             title:'Nettoyage des Façades',
             desc:'This is required when, for example, the final text is not yet available.',
-            image:blog6,
+            image:service2,
             para1 :'Service de Nettoyage des Façades',
             desc_para1 :"Notre service de nettoyage des façades vous garantit des résultats impeccables pour redonner éclat et propreté à vos bâtiments. Grâce à des techniques professionnelles et des produits respectueux de l'environnement, nous éliminons efficacement saletés, moisissures et polluants. Faites confiance à notre expertise pour préserver l'apparence et la durabilité de vos façades.",
             para2 :"Avantages et Bénéfices",
@@ -168,7 +168,7 @@ export const serviceData = [
             id : 3 ,
             title:'Domiciliation',
             desc:'This is required when, for example, the final text is not yet available.',
-            image:blog7,
+            image:service3,
             para1 :'Service de Domiciliation',
             desc_para1 :"Notre service de domiciliation vous offre une adresse professionnelle prestigieuse pour votre entreprise. En plus de simplifier la gestion administrative, nous assurons la réception de votre courrier et vous fournissons un support complet pour toutes vos démarches. Faites de notre adresse celle de votre entreprise pour renforcer votre image et optimiser votre organisation.",
             para2 :"Avantages et Bénéfices",
@@ -185,7 +185,7 @@ export const serviceData = [
             id : 4 ,
             title:'Developpement',
             desc:'This is required when, for example, the final text is not yet available.',
-            image:blog8,
+            image:service4,
             para1 :'Service de Developpement',
             desc_para1 :"Nous proposons un service complet de création de sites web sur mesure pour répondre à vos besoins spécifiques. De la conception à la mise en ligne, notre équipe d'experts utilise les dernières technologies pour développer des sites esthétiques, fonctionnels et optimisés pour le référencement. Que vous ayez besoin d'un site vitrine, d'une boutique en ligne ou d'une plateforme personnalisée, nous sommes là pour réaliser votre projet.",
             para2 :"Avantages et Bénéfices",
@@ -202,7 +202,7 @@ export const serviceData = [
             id : 5 ,
             title:'Recruitment',
             desc:'This is required when, for example, the final text is not yet available.',
-            image:blog9,
+            image:service5,
             para1:'Service de Recruitment',
             desc_para1 :"Notre service de recrutement pour entreprises internationales vous aide à identifier et à embaucher les meilleurs talents à l'échelle mondiale. Grâce à notre vaste réseau et à notre expertise en ressources humaines, nous trouvons des candidats qualifiés qui répondent parfaitement à vos exigences spécifiques. Simplifiez votre processus de recrutement et renforcez votre équipe avec des professionnels talentueux issus de divers horizons.",
             para2 :"Avantages et Bénéfices",
