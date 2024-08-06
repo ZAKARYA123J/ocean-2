@@ -1,18 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { servicesData } from "../data/data";
-import { Link as Link1 } from "react-scroll";
-
-import blog1 from '../assets/images/blog/01.jpg'
-import blog2 from '../assets/images/blog/02.jpg'
-import blog3 from '../assets/images/blog/03.jpg'
-import blog4 from '../assets/images/blog/04.jpg'
-import blog5 from '../assets/images/blog/05.png'
-import blog6 from '../assets/images/blog/06.png'
-import blog7 from '../assets/images/blog/07.png'
-import blog8 from '../assets/images/blog/08.png'
-import blog9 from '../assets/images/blog/09.png'
-import styled, { keyframes } from "styled-components";
+import { serviceData } from "../data/data";
+import styled from "styled-components";
 const CTA = styled.button`
   background-color: var(--white);
   color: #3a86ff;
@@ -49,7 +38,7 @@ export default function Daitalservice(){
                 <div className="grid md:grid-cols-12 grid-cols-1 mt-6 gap-6">
                     <div className="lg:col-span-4 md:col-span-5">
                         <div className="sticky top-20">
-                        {servicesData.map((item, index) =>{
+                        {serviceData.map((item, index) =>{
                     return(
                             <ul className="flex-column p-6 bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-md " key={index}>
                                 <li role="presentation">
@@ -66,7 +55,7 @@ export default function Daitalservice(){
                     </div>
                     <div className="lg:col-span-8 md:col-span-7">
                         <div id="myTabContent" className="p-6 bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-md">
-                        {servicesData.map((item, index) =>{
+                        {serviceData.map((item, index) =>{
                     return(
                             <div className={activeIndex === item.id ? '' : 'hidden' } key={index}>
                                 <img src={item.image} className="shadow dark:shadow-gray-700 rounded-md"  alt=""/>
