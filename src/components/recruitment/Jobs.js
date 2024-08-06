@@ -1,82 +1,35 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import image from '../../assets/images/ab1.jpg';
 
-// Sample job data
-const jobs = [
-  {
-    id: 1,
-    title: 'Senior Product Manager',
-    company: 'Paymentology',
-    type: 'Full-Time/Anywhere in the World',
-    tags: ['Top 100', 'Featured', 'NEW'],
-  },
-  {
-    id: 2,
-    title: 'Junior Product Manager',
-    company: 'Netguru S.A.',
-    type: 'Full-Time/EMEA Only',
-    tags: ['Top 100', 'Featured'],
-  },
-  {
-    id: 1,
-    title: 'Senior Product Manager',
-    company: 'Paymentology',
-    type: 'Full-Time/Anywhere in the World',
-    tags: ['Top 100', 'Featured', 'NEW'],
-  },
-  {
-    id: 2,
-    title: 'Junior Product Manager',
-    company: 'Netguru S.A.',
-    type: 'Full-Time/EMEA Only',
-    tags: ['Top 100', 'Featured'],
-  },
-  {
-    id: 1,
-    title: 'Senior Product Manager',
-    company: 'Paymentology',
-    type: 'Full-Time/Anywhere in the World',
-    tags: ['Top 100', 'Featured', 'NEW'],
-  },
-  {
-    id: 2,
-    title: 'Junior Product Manager',
-    company: 'Netguru S.A.',
-    type: 'Full-Time/EMEA Only',
-    tags: ['Top 100', 'Featured'],
-  },
-  // Add more jobs as needed
-];
+function International() {
+  // Sample data for the table
+  const recruitmentData = [
+    { id: 1, position: 'International Relations Officer', description: 'Manage international partnerships and relations.', image: image },
+    { id: 2, position: 'Global Marketing Specialist', description: 'Develop and execute global marketing strategies.', image: image },
+    { id: 3, position: 'International Sales Manager', description: 'Oversee sales operations in international markets.', image: image },
+  ];
 
-const JobCard = ({ job }) => {
   return (
-    <div className={`flex flex-col bg-white p-6 rounded-lg shadow-md m-4 ${job.tags.includes('Featured') ? 'border-l-4 border-yellow-500' : ''}`}>
-      <h3 className="text-xl font-bold text-gray-800">{job.title}</h3>
-      <p className="text-gray-600">{job.company}</p>
-      <p className="text-gray-500 text-sm">{job.type}</p>
-      <div className="flex mt-4">
-        {job.tags.map((tag, index) => (
-          <span key={index} className={`text-xs font-semibold mr-2 px-2.5 py-0.5 rounded ${tag === 'NEW' ? 'bg-green-500 text-white' : 'bg-gray-200 text-gray-800'}`}>
-            {tag}
-          </span>
+    <div>
+      <Link to="/" className="text-blue-500 underline">Back</Link>
+
+      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 mt-10">
+        {recruitmentData.map((item) => (
+          <div key={item.id} className="flex flex-col bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+            <img className="object-cover rounded-t-lg h-48 w-full" src={item.image} alt={item.position} />
+            <div className="flex flex-col justify-between p-4 leading-normal">
+              <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">{item.position}</h5>
+              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{item.description}</p>
+              <button className="px-3 py-1.5 bg-blue-500 text-white text-sm font-medium rounded-md shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                Download
+              </button>
+            </div>
+          </div>
         ))}
       </div>
     </div>
   );
-};
+}
 
-const JobListings = () => {
-  return (
-    <div className="bg-gray-100 min-h-screen p-8">
-      <h2 class="text-3xl font-bold text-black">Ocean Connect</h2>
-      <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {jobs.map((job) => (
-            <JobCard key={job.id} job={job} />
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default JobListings;
+export default International;

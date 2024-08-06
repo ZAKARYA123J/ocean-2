@@ -24,9 +24,9 @@ function App() {
       <Route path='/index-six' element={<IndexSix/>}/>
       <Route path='/index-seven' element={<IndexSeven/>}/> */}
       {/* <Route path='/Contact' element={<GetInTouch/>}/> */}
-      <Route path='/national' element={<National/>}/>
+      {/* <Route path='/national' element={<National/>}/> */}
       <Route path='/international' element={<International/>}/>
-      <Route path='/job' element={<JobListings/>}/>
+      <Route path='/national' element={<JobListings/>}/>
     </Routes>
   );
 }

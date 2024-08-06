@@ -112,7 +112,7 @@ export default function AgencyTab(){
                                     <h5 className="text-lg font-medium">Ocean Connect</h5>
                                     <p className="text-slate-400 mt-4">We’re excited to invite you to apply for a position at our company. Join our team and contribute to our dynamic environment while advancing your career. Explore opportunities for growth, innovation, and impact with us.</p>
                                     <div className="mt-4">
-                                        <button onClick={() => navigate('/job')}>
+                                        <button onClick={() => navigate('/national')}>
                                         <CTA > Apply Now <i className="mdi mdi-chevron-right align-middle"></i></CTA>
                                        </button>
                                     </div>
