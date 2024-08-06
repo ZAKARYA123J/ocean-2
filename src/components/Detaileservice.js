@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { serviceData } from "../data/data";
+import { servicesData } from "../data/data";
 import { Link as Link1 } from "react-scroll";
 
 import blog1 from '../assets/images/blog/01.jpg'
@@ -49,7 +49,7 @@ export default function Daitalservice(){
                 <div className="grid md:grid-cols-12 grid-cols-1 mt-6 gap-6">
                     <div className="lg:col-span-4 md:col-span-5">
                         <div className="sticky top-20">
-                        {serviceData.map((item, index) =>{
+                        {servicesData.map((item, index) =>{
                     return(
                             <ul className="flex-column p-6 bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-md " key={index}>
                                 <li role="presentation">
@@ -66,7 +66,7 @@ export default function Daitalservice(){
                     </div>
                     <div className="lg:col-span-8 md:col-span-7">
                         <div id="myTabContent" className="p-6 bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-md">
-                        {serviceData.map((item, index) =>{
+                        {servicesData.map((item, index) =>{
                     return(
                             <div className={activeIndex === item.id ? '' : 'hidden' } key={index}>
                                 <img src={item.image} className="shadow dark:shadow-gray-700 rounded-md"  alt=""/>
