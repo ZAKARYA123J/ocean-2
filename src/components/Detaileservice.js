@@ -1,18 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { serviceData } from "../data/data";
-import { Link as Link1 } from "react-scroll";
-
-import blog1 from '../assets/images/blog/01.jpg'
-import blog2 from '../assets/images/blog/02.jpg'
-import blog3 from '../assets/images/blog/03.jpg'
-import blog4 from '../assets/images/blog/04.jpg'
-import blog5 from '../assets/images/blog/05.png'
-import blog6 from '../assets/images/blog/06.png'
-import blog7 from '../assets/images/blog/07.png'
-import blog8 from '../assets/images/blog/08.png'
-import blog9 from '../assets/images/blog/09.png'
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 const CTA = styled.button`
   background-color: var(--white);
   color: #3a86ff;

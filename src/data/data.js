@@ -21,7 +21,7 @@ import company3 from '../assets/images/team/lenovo.svg'
 import company4 from '../assets/images/team/paypal.svg'
 import company5 from '../assets/images/team/shopify.svg'
 import company6 from '../assets/images/team/spotify.svg'
-import { Button } from 'react-scroll'
+
 
 export const servicesData = [
     {

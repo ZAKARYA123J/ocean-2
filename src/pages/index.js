@@ -14,6 +14,8 @@ import Blogs from "../components/blog";
 import GetInTouch from "../components/getInTuoch";
 import Footer from "../components/footer";
 import Switcher from "../components/switcher";
+import WhatsAppFloatingButton from '../components/WhatsAppFloatingButton';
+
 import img from './result.svg'
 export default function Index(){
     return(
@@ -48,6 +50,7 @@ export default function Index(){
         <Pricing/>
         <Blogs/>
         <GetInTouch/>
+        <WhatsAppFloatingButton/>
         <Footer/>
         <Switcher/>
         </>

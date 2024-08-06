@@ -2,6 +2,7 @@ import './App.css';
 import './assets/css/tailwind.css'
 import './assets/css/materialdesignicons.min.css'
 import { Route, Routes } from 'react-router-dom';
+import { lazy, Suspense } from "react";
 import Index from './pages';
 import IndexTwo from './pages/index-two';
 import IndexThree from './pages/index-three';
@@ -10,8 +11,6 @@ import IndexFive from './pages/index-five';
 import IndexSix from './pages/index-six';
 import IndexSeven from './pages/index-seven';
 import Service from './pages/service';
-
-
 
 function App() {
   return (
@@ -24,9 +23,6 @@ function App() {
       <Route path='/index-six' element={<IndexSix/>}/>
       <Route path='/index-seven' element={<IndexSeven/>}/>
       <Route path='/service' element={<Service/>}/>
-      
-      
-      
     </Routes>
   );
 }
