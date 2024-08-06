@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React,{useState,useEffect} from "react";
 import { Link } from "react-router-dom";
 import { serviceData } from "../data/data";
 import styled from "styled-components";
+
 const CTA = styled.button`
   background-color: var(--white);
   color: #3a86ff;
@@ -27,11 +28,14 @@ const CTA = styled.button`
 `;
 
 export default function Daitalservice(){
+
+
+
     const [ activeIndex, setActiveIndex ] = useState(1)
     return(
         <section className="realtive md:py-24 py-16">
             <div className="container relative">
-                <div className="grid grid-cols-1 pb-6 text-center">
+                <div className="grid grid-cols-1 pb-6 text-center" >
                     <h3 className="font-semibold text-2xl leading-normal mb-4">NO SERVICES</h3>
                     <p className="text-slate-400 max-w-xl mx-auto">Nous proposons des formations professionnelles adaptées à tous les niveaux, un service de nettoyage de glace pour assurer sécurité et propreté en hiver, ainsi qu'une domiciliation pour offrir à votre entreprise une adresse prestigieuse et une gestion administrative simplifiée.</p>
                 </div>
@@ -83,7 +87,7 @@ export default function Daitalservice(){
 
                                     <div className="mt-4">
                                         <CTA>
-                                        <Link to="" className="text-sky-500"smooth={true} duration={1000} activeClass='active' spy={true} >{item.Button}  <i className="mdi mdi-chevron-right align-middle"></i></Link>
+                                        <Link to="contact" className="text-sky-500"smooth={true} duration={1000} activeClass='active' spy={true} >{item.Button}  <i className="mdi mdi-chevron-right align-middle"></i></Link>
                                         </CTA>                                    </div>
                                 </div>
                             </div>
