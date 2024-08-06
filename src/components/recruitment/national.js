@@ -2,7 +2,7 @@ import React,{useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import styled, { keyframes } from "styled-components";
 import { IoIosArrowBack } from "react-icons/io";
-
+import Navbar from "../navbar";
 import img from '../../assets/images/blog/01.jpg'
 const CTA = styled.button`
   background-color: var(--white);
@@ -40,13 +40,14 @@ function National() {
   }, []);
   return (
     <>
-    <CTA>
+    {/* <CTA>
       <Link to="/" className="text-blue-500 " >  <button style={{ display: "flex", alignItems: "center", gap: "8px" }}>
       <IoIosArrowBack />
       Back
     </button></Link>
-      </CTA>
-      <div className="max-w-sm rounded overflow-hidden border border-sky-500  shadow-lg m-4">
+      </CTA> */}
+    
+      <div className="max-w-sm rounded overflow-hidden border border-sky-500  shadow-lg mt-20">
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">Card Title</div>
         <p className="text-gray-700 text-base mb-4">

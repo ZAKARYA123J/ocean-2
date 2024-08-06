@@ -1,35 +1,78 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import image from '../../assets/images/ab1.jpg';
+import image from '../../assets/images/ab3.jpg';
+import Navbar from "../navbar";
+// Sample job data
+const jobs = [
+  {
+    id: 1,
+    title: 'Senior Product Manager',
+    company: 'Paymentology',
+    type: 'Full-Time/Anywhere in the World',
+    tags: ['Top 100', 'Featured', 'NEW'],
+    image: image,
+  },
+  {
+    id: 2,
+    title: 'Junior Product Manager',
+    company: 'Netguru S.A.',
+    type: 'Full-Time/EMEA Only',
+    tags: ['Top 100', 'Featured'],
+    image: image,
+  },
+  {
+    id: 2,
+    title: 'Junior Product Manager',
+    company: 'Netguru S.A.',
+    type: 'Full-Time/EMEA Only',
+    tags: ['Top 100', 'Featured'],
+    image: image,
+  },
+  // Ensure each job has a unique id
+];
 
-function International() {
-  // Sample data for the table
-  const recruitmentData = [
-    { id: 1, position: 'International Relations Officer', description: 'Manage international partnerships and relations.', image: image },
-    { id: 2, position: 'Global Marketing Specialist', description: 'Develop and execute global marketing strategies.', image: image },
-    { id: 3, position: 'International Sales Manager', description: 'Oversee sales operations in international markets.', image: image },
-  ];
-
+const JobListings = () => {
   return (
-    <div>
-      <Link to="/" className="text-blue-500 underline">Back</Link>
-
-      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 mt-10">
-        {recruitmentData.map((item) => (
-          <div key={item.id} className="flex flex-col bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-            <img className="object-cover rounded-t-lg h-48 w-full" src={item.image} alt={item.position} />
-            <div className="flex flex-col justify-between p-4 leading-normal">
-              <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">{item.position}</h5>
-              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{item.description}</p>
-              <button className="px-3 py-1.5 bg-blue-500 text-white text-sm font-medium rounded-md shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400">
-                Download
-              </button>
+    <>
+    
+    <div className="p-10 bg-gray-100 ">
+    <Navbar/>
+     <h2 className="text-3xl font-bold text-black ml-10 mt-20">Job Placement Agencies <spam className="text-3xl font-bold text-blue-600">Ocean connect</spam></h2>
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-3 gap-5 mt-2">
+        {jobs.map((job) => (
+          <div key={job.id} className="w-full lg:max-w-full lg:flex bg-white shadow-md rounded-lg overflow-hidden">
+            <div
+              className="h-48 lg:h-auto lg:w-48 flex-none bg-cover"
+              style={{ backgroundImage: `url(${job.image})` }}
+              title={job.title}
+            >
+            </div>
+            <div className="p-4 flex flex-col justify-between leading-normal">
+              <div className="mb-8">
+                {/* <p className="text-sm text-gray-600 flex items-center">
+                    <svg className="fill-current text-gray-500 w-3 h-3 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                      <path d="M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z" />
+                    </svg>
+                  Members only
+                </p> */}
+                <div className="text-gray-900 font-bold text-xl mb-2">{job.title}</div>
+                <p className="text-gray-700 text-base">{`Company: ${job.company}`}</p>
+                <p className="text-gray-700 text-base">{`Type: ${job.type}`}</p>
+                <p className="text-gray-700 text-base">{`Tags: ${job.tags.join(', ')}`}</p>
+              </div>
+              <div className="flex items-center">
+                {/* <img className="w-10 h-10 rounded-full mr-4" src="/placeholder-avatar.png" alt="Avatar of Writer"/> */}
+                <div className="text-sm">
+                  {/* <p className="text-gray-900 leading-none">John Doe</p>
+                  <p className="text-gray-600">Aug 9</p> */}
+                </div>
+              </div>
             </div>
           </div>
         ))}
       </div>
     </div>
+    </>
   );
-}
+};
 
-export default International;
+export default JobListings;
