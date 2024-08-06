@@ -9,16 +9,10 @@ import IndexFour from './pages/index-four';
 import IndexFive from './pages/index-five';
 import Formation from './pages/formation';
 import IndexSeven from './pages/index-seven';
-<<<<<<< HEAD
 import GetInTouch from './components/getInTuoch';
 import National from './components/recruitment/national';
 import International from './components/recruitment/International';
 import JobListings from './components/recruitment/Jobs';
-=======
-
-
-
->>>>>>> 082da2a918cbc88f02bcb38a270da6118177005c
 function App() {
   return (
     <Routes>
@@ -26,7 +20,6 @@ function App() {
       {/* <Route path='/index-two' element={<IndexTwo/>}/>
       <Route path='/index-three' element={<IndexThree/>}/>
       <Route path='/index-four' element={<IndexFour/>}/>
-<<<<<<< HEAD
       <Route path='/index-five' element={<IndexFive/>}/>
       <Route path='/index-six' element={<IndexSix/>}/>
       <Route path='/index-seven' element={<IndexSeven/>}/> */}
@@ -34,12 +27,6 @@ function App() {
       {/* <Route path='/national' element={<National/>}/> */}
       <Route path='/international' element={<International/>}/>
       <Route path='/national' element={<JobListings/>}/>
-=======
-      <Route path='/formation/:id' element={<IndexFive/>}/>
-      <Route path='/formation' element={<Formation/>}/>
-      <Route path='/index-seven' element={<IndexSeven/>}/>
-   
->>>>>>> 082da2a918cbc88f02bcb38a270da6118177005c
     </Routes>
   );
 }

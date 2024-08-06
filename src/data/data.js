@@ -5,7 +5,6 @@ import client3 from '../assets/images/team/03.jpg'
 import client4 from '../assets/images/team/04.jpg'
 import client5 from '../assets/images/team/05.jpg'
 import client6 from '../assets/images/team/06.jpg'
-<<<<<<< HEAD
 import { CgWebsite } from "react-icons/cg";
 import { IoHomeOutline } from "react-icons/io5";
 import { MdOutlineCleaningServices } from "react-icons/md";
@@ -17,24 +16,6 @@ import blog6 from '../assets/images/blog/06.jpg'
 import blog7 from '../assets/images/blog/07.jpg'
 import blog8 from '../assets/images/blog/08.jpeg'
 import blog5 from '../assets/images/blog/05.webp'
-=======
-
-
-import blog2 from '../assets/images/blog/02.jpg'
-import blog4 from '../assets/images/blog/04.jpg'
-import blog5 from '../assets/images/blog/05.jpg'
-import blog6 from '../assets/images/blog/06.jpg'
-import blog7 from '../assets/images/blog/07.jpg'
-import blog8 from '../assets/images/blog/08.jpg'
-import blog9 from '../assets/images/blog/09.jpg'
-import blog10 from '../assets/images/blog/10.jpg'
-import blog11 from '../assets/images/blog/11.jpg'
-import blog12 from '../assets/images/blog/12.jpg'
-import blog13 from '../assets/images/blog/13.jpg'
-import blog14 from '../assets/images/blog/14.jpg'
-import blog15 from '../assets/images/blog/15.jpg'
-import blog16 from '../assets/images/blog/16.jpg'
->>>>>>> 082da2a918cbc88f02bcb38a270da6118177005c
 
 import company1 from '../assets/images/team/amazon.svg'
 import company2 from '../assets/images/team/google.svg'
@@ -96,7 +77,6 @@ export const clientData = [
 
 export const blogData = [
     {
-<<<<<<< HEAD
         image:blog6,
         title:'LearnEnglish',
         desc:'Learn English and improve your skills through our high-quality courses and resources.We provide you with the right tools to help you interact confidently in the real world.',
@@ -113,86 +93,6 @@ export const blogData = [
         title:'Learn music',
         desc:"Discover and develop your musical talents with our personalized music lessons. Whether you're a beginner or looking to refine your skills.",
         date:'19th June 2023'
-=======
-        id:1,
-        image:blog15,
-        title:'Formation de conduitendes bateaux et des voliers',
-        desc: 'Cette formation offre une expérience complète pour les passionnés de navigation...',
-        detail:"Cette formation offre une expérience complète pour les passionnés de navigation, incluant des cours théoriques et pratiques sur la sécurité, les techniques de voile, et la navigation côtière et hauturière. Les sessions sont dirigées par des instructeurs expérimentés et comprennent des pratiques intensives en mer. Les participants peuvent obtenir des certifications reconnues, leur permettant de piloter divers types de bateaux et de voiliers. Rejoignez-nous pour développer vos compétences nautiques et vivre une aventure maritime inoubliable!",
-        type: 'Formation'
-    },
-    {
-        id:2,
-        image:blog9,
-        title:'Formation Agent de Checkin Aeroport',
-        desc:'La formation pour un Agent de Check-in Aéroport prépare les professionnels ...',
-        detail:"La formation pour un Agent de Check-in Aéroport prépare les professionnels à gérer efficacement l'enregistrement des passagers et à assurer le bon déroulement des opérations aéroportuaires. Elle couvre l'accueil des passagers, la vérification des documents et la gestion des bagages, tout en utilisant des systèmes informatiques de réservation et de contrôle des bagages. Les participants apprennent également les procédures de sécurité aéroportuaire, les réglementations internationales, et les techniques de service client pour offrir une expérience agréable. La formation comprend des simulations pratiques pour appliquer les connaissances acquises et développer des compétences en communication et en gestion des situations d'urgence.",
-        type: 'Formation'
-    },
-    {
-        id:3,
-        image:blog16,
-        title:'HOME & FAMILY',
-        desc: 'La formation Home & Family est conçue pour offrir des compétences pratiques et ...',
-        detail:"La formation Home & Family est conçue pour offrir des compétences pratiques et des connaissances approfondies sur la gestion de la vie domestique et des relations familiales. Elle aborde des sujets variés allant de l'organisation du foyer à la gestion des finances familiales, en passant par les techniques de communication et de résolution de conflits. L'objectif est de fournir aux participants les outils nécessaires pour créer un environnement familial harmonieux et bien organisé.",
-        type:'Formation'
-    },
-    {
-        id:4,
-        image:blog14,
-        title:"Formation d'installation et Usilisation VAR",
-        desc:'La formation en installation et utilisation des VAR (Value Added Resellers)...',
-        detail:"La formation en installation et utilisation des VAR (Value Added Resellers) vise à fournir aux professionnels les compétences nécessaires pour installer, configurer et utiliser efficacement les solutions technologiques proposées par les VAR. Elle couvre les étapes d'installation des matériels et logiciels, la configuration avancée, ainsi que l'utilisation quotidienne des outils et applications. Les participants apprennent également à fournir un support technique, diagnostiquer et résoudre les problèmes, effectuer la maintenance préventive, et optimiser les performances des solutions. Cette formation est essentielle pour garantir une gestion efficace des solutions VAR et assurer une performance optimale des systèmes",
-        type: 'Formation'
-    },
-    {
-        id:5,
-        image:blog12,
-        title:'formation a la navigation maritime',
-        desc:'La formation à la navigation maritime enseigne aux participants les compétences ...',
-        detail:"La formation à la navigation maritime enseigne aux participants les compétences essentielles pour naviguer en toute sécurité en mer, en couvrant l'utilisation des outils de navigation comme les cartes maritimes et les systèmes GPS, ainsi que la compréhension des réglementations internationales. Les participants apprennent à planifier des trajets, à gérer les conditions météorologiques, et à assurer la sécurité du navire et de l'équipage. La formation inclut également des techniques de sauvetage et de gestion des situations d'urgence, garantissant une navigation efficace et sécurisée tout en respectant les règles maritimes.",
-        type: 'Formation'
-    },
-    {
-        id:6,
-        image:blog13,
-        title:'Pierres et métaux précieux',
-        desc:'La formation sur les pierres et métaux précieux fournit une compréhension ...',
-        detail:"La formation sur les pierres et métaux précieux fournit une compréhension approfondie des caractéristiques, de l'évaluation et de l'entretien de ces matériaux précieux. Les participants apprennent à identifier et évaluer les pierres précieuses et les métaux précieux, en utilisant des critères de qualité et de certification. La formation couvre également les techniques de traitement et d'entretien pour préserver leur valeur, ainsi que les tendances du marché et les pratiques commerciales. En outre, elle aborde les enjeux éthiques et les pratiques durables liés à l'extraction et au commerce de ces ressources.",
-        type: 'Formation'
-    },
-    {
-        id:7,
-        image:blog11,
-        title:"Développer l'argriculture et la pêche",
-        desc:"La formation pour développer l'agriculture et la pêche vise à optimiser...",
-        detail:"La formation pour développer l'agriculture et la pêche vise à optimiser les pratiques agricoles et halieutiques tout en garantissant la durabilité et la rentabilité. Elle couvre des techniques modernes de culture et de gestion des sols, ainsi que des méthodes de gestion durable des stocks de poissons et des écosystèmes aquatiques. Les participants apprennent à utiliser les dernières technologies et innovations, à adopter des pratiques respectueuses de l'environnement, et à élaborer des stratégies économiques pour améliorer la productivité et accéder aux marchés. Cette formation est essentielle pour les agriculteurs, pêcheurs, et gestionnaires de ressources naturelles souhaitant améliorer leurs pratiques et assurer un développement durable dans leurs secteurs respectifs.",
-        type: 'Formation'
-    },
-    {
-        id:8,
-        image:blog10,
-        title:"Sciences de la terre et Séismes",
-        desc:'La formation en sciences de la Terre et séismes offre une compréhension ...',
-        detail:"La formation en sciences de la Terre et séismes offre une compréhension approfondie des processus géologiques, des mécanismes des séismes, et des techniques d'évaluation des risques sismiques. Elle couvre les principes fondamentaux de la géologie, les mouvements des plaques tectoniques, et les causes des séismes, ainsi que les méthodes de surveillance et de prévision des tremblements de terre. Les participants apprennent également à évaluer les risques sismiques, développer des stratégies pour réduire les risques, et préparer les infrastructures et les communautés aux impacts des séismes. Cette formation est essentielle pour les chercheurs, ingénieurs, et professionnels en gestion des risques souhaitant renforcer leur expertise en sismologie et en réduction des risques.",
-        type: 'Formation'
-    },
-    {
-        id:9,
-        image:blog2,
-        title:"Etudes Formation recrutements national et international",
-        desc:'La formation en études et recrutement national et international prépare ...',
-        detail:"La formation en études et recrutement national et international prépare les participants à gérer les processus de recrutement dans divers contextes géographiques et culturels. Elle couvre les méthodes et techniques de recrutement adaptées aux réalités nationales et internationales, la compréhension des réglementations et des lois du travail, ainsi que l’adaptation des stratégies de recrutement aux différences culturelles. Les participants apprennent également à utiliser les outils modernes de recrutement, tels que les plateformes en ligne et les logiciels de gestion des candidatures. Cette formation est essentielle pour les professionnels des ressources humaines et les recruteurs cherchant à optimiser leurs processus de recrutement et à naviguer efficacement dans des environnements variés",
-        type: 'Formation'
-    },
-    {
-        id:10,
-        image:blog8,
-        title:"Formation DJ",
-        desc:'La formation DJ enseigne les compétences nécessaires pour devenir un DJ...',
-        detail:"La formation DJ enseigne les compétences nécessaires pour devenir un DJ professionnel, en couvrant les techniques de mixage, l'utilisation des équipements modernes comme les platines et les contrôleurs, ainsi que les bases de la production musicale pour créer des remixes et des morceaux originaux. Les participants apprennent également à gérer des événements, à organiser des sets, et à interagir avec le public. En plus des aspects techniques, la formation aide à développer une identité artistique personnelle, à promouvoir son travail en ligne et à construire un portfolio. Elle est idéale pour les débutants et les DJs souhaitant perfectionner leurs compétences et entrer dans le monde de la musique.",
-        type: 'Formation'
->>>>>>> 082da2a918cbc88f02bcb38a270da6118177005c
     },
     
     {
