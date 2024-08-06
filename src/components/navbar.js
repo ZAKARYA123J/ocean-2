@@ -52,7 +52,7 @@ export default function Navbar(){
                             <Link1 className="nav-link" to="pricing" smooth={true} duration={1000} activeClass='active' spy={true}>Pricing</Link1>
                         </li> */}
                         <li className="nav-item ms-0">
-                            <Link1 className="nav-link" to="blog" smooth={true} duration={1000} activeClass='active' spy={true}>Formation</Link1>
+                            <Link1 className="nav-link" to="/formation" smooth={true} duration={1000} activeClass='active' spy={true}>Formation</Link1>
                         </li>
                         <li className="nav-item ms-0">
                             <Link1 className="nav-link" to="jobs" smooth={true} duration={1000} activeClass='active' spy={true}>Jobs</Link1>
