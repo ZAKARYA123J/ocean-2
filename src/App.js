@@ -7,7 +7,7 @@ import IndexTwo from './pages/index-two';
 import IndexThree from './pages/index-three';
 import IndexFour from './pages/index-four';
 import IndexFive from './pages/index-five';
-import IndexSix from './pages/index-six';
+import Formation from './pages/formation';
 import IndexSeven from './pages/index-seven';
 
 
@@ -19,8 +19,8 @@ function App() {
       <Route path='/index-two' element={<IndexTwo/>}/>
       <Route path='/index-three' element={<IndexThree/>}/>
       <Route path='/index-four' element={<IndexFour/>}/>
-      <Route path='/blog/:id' element={<IndexFive/>}/>
-      <Route path='/index-six' element={<IndexSix/>}/>
+      <Route path='/formation/:id' element={<IndexFive/>}/>
+      <Route path='/formation' element={<Formation/>}/>
       <Route path='/index-seven' element={<IndexSeven/>}/>
    
     </Routes>

@@ -74,7 +74,7 @@ const CourseCard = () => {
                                     <p className="text-slate-400 mt-2">{item.desc}</p>
 
                                     <div className="mt-3">
-                                        <Link to={`/blog/${index+1}`} className="text-teal-500">Read More <i className="mdi mdi-chevron-right align-middle"></i></Link>
+                                        <Link to={`/formation/${index+1}`} className="text-teal-500">Read More <i className="mdi mdi-chevron-right align-middle"></i></Link>
                                     </div>
                                 </div>
                             </div>
