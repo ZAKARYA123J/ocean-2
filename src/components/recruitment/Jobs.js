@@ -1,6 +1,6 @@
 import React from 'react';
 import image from '../../assets/images/ab3.jpg';
-import Navbar from "../navbar";
+import Navbar from '../navbar';
 // Sample job data
 const jobs = [
   {
@@ -32,12 +32,10 @@ const jobs = [
 
 const JobListings = () => {
   return (
-    <>
-    
-    <div className="p-10 bg-gray-100 ">
-    <Navbar/>
-     <h2 className="text-3xl font-bold text-black ml-10 mt-20">Job Placement Agencies <spam className="text-3xl font-bold text-blue-600">Ocean connect</spam></h2>
-      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-3 gap-5 mt-2">
+    <div className="p-10 bg-gray-100">
+      <Navbar/>
+     <h2 class="text-3xl font-bold text-black mb-4 mt-20">Job Placement Agencies <spam className="text-3xl font-bold text-blue-600">Ocean connect</spam></h2>
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-3 gap-5">
         {jobs.map((job) => (
           <div key={job.id} className="w-full lg:max-w-full lg:flex bg-white shadow-md rounded-lg overflow-hidden">
             <div
@@ -64,6 +62,9 @@ const JobListings = () => {
                 <div className="text-sm">
                   {/* <p className="text-gray-900 leading-none">John Doe</p>
                   <p className="text-gray-600">Aug 9</p> */}
+                <button class="px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300">
+    Demande
+  </button>
                 </div>
               </div>
             </div>
@@ -71,7 +72,6 @@ const JobListings = () => {
         ))}
       </div>
     </div>
-    </>
   );
 };
 

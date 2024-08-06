@@ -22,32 +22,31 @@ function International() {
 
   return (
     <div>
-    <Navbar />
-    <h2 className="text-3xl font-bold text-black ml-10 mt-20">
-      Job Placement Agencies <span className="text-blue-600">International</span>
-    </h2>
-    {/* Update the grid layout classes for different screen sizes */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 mt-10 px-10">
-      {recruitmentData.map((job) => (
-        <div key={job.id} className="flex flex-col md:flex-row bg-white shadow-md rounded-lg overflow-hidden">
-          <img
-            src={job.image}
-            alt={job.position}
-            className="w-full md:w-1/3 h-48 object-cover"
-          />
-          <div className="p-4 flex flex-col justify-between w-full">
-            <div className="mb-4">
-              <div className="text-gray-900 font-bold text-xl mb-2">{job.position}</div>
-              <p className="text-gray-700 text-base">{job.description}</p>
+      <Navbar />
+      <h2 className="text-3xl font-bold text-black ml-10 mt-24">
+        Job Placement Agencies <span className="text-blue-600">International</span>
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-1 gap-4 mt-10 px-8">
+        {recruitmentData.map((job) => (
+          <div key={job.id} className="flex bg-white shadow-md rounded-lg overflow-hidden w-60">
+            <img
+              src={job.image}
+              alt={job.position}
+              className="w-16 h-16 object-cover"
+            />
+            <div className="p-4 flex flex-col justify-between">
+              <div className="mb-4">
+                <div className="text-gray-900 font-bold text-lg mb-2">{job.position}</div>
+                <p className="text-gray-700 text-sm">{job.description}</p>
+              </div>
+              <button className="flex items-center px-3 py-1.5 w-32 bg-blue-500 text-white text-xs font-medium rounded-md shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                Download<FaArrowCircleDown className="ml-1" />
+              </button>
             </div>
-            <button className="flex items-center px-3 py-1.5 w-full md:w-40 bg-blue-500 text-white text-xs font-medium rounded-md shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400">
-              Download <FaArrowCircleDown className="ml-1" />
-            </button>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
-  </div>
   );
 }
 
