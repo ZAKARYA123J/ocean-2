@@ -17,6 +17,9 @@ import Switcher from "../components/switcher";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import styled, { keyframes } from "styled-components";
+import WhatsAppFloatingButton from '../components/WhatsAppFloatingButton';
+import img from './result.svg';
+
 const CTA = styled.button`
   background-color: var(--white);
   color: #3a86ff;
@@ -41,6 +44,7 @@ const CTA = styled.button`
   }
 `;
 
+
 export default function Index(){
     useEffect(() => {
         AOS.init({
@@ -51,7 +55,6 @@ export default function Index(){
         });
         AOS.refresh();
       }, []);
-    
     return(
         <>
         <Navbar/>
@@ -92,7 +95,7 @@ export default function Index(){
         
         <About/>
         <GetInTouch/>
-        
+        <WhatsAppFloatingButton/>
         <Footer/>
         <Switcher/>
         

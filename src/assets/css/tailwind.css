@@ -2675,3 +2675,30 @@ html[dir=rtl] .tns-visually-hidden {
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
 }
+#buttonservice{
+ margin-top: 2px;
+}
+#buttonservice .hover{
+  background: #000;
+}
+#tittleandbutton{
+  display: inline;
+  position: relative;  
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

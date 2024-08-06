@@ -2,31 +2,28 @@ import './App.css';
 import './assets/css/tailwind.css'
 import './assets/css/materialdesignicons.min.css'
 import { Route, Routes } from 'react-router-dom';
+import { lazy, Suspense } from "react";
 import Index from './pages';
-import IndexTwo from './pages/index-two';
-import IndexThree from './pages/index-three';
-import IndexFour from './pages/index-four';
 import IndexFive from './pages/index-five';
 import Formation from './pages/formation';
 import IndexSeven from './pages/index-seven';
-import GetInTouch from './components/getInTuoch';
-import National from './components/recruitment/national';
+import Service from './pages/service';
+import Jobs from './components/recruitment/Jobs'
 import International from './components/recruitment/International';
-import JobListings from './components/recruitment/Jobs';
+
 function App() {
   return (
     <Routes>
       <Route path='/' element={<Index/>}/>
       {/* <Route path='/index-two' element={<IndexTwo/>}/>
       <Route path='/index-three' element={<IndexThree/>}/>
-      <Route path='/index-four' element={<IndexFour/>}/>
-      <Route path='/index-five' element={<IndexFive/>}/>
-      <Route path='/index-six' element={<IndexSix/>}/>
-      <Route path='/index-seven' element={<IndexSeven/>}/> */}
-      {/* <Route path='/Contact' element={<GetInTouch/>}/> */}
-      {/* <Route path='/national' element={<National/>}/> */}
+      <Route path='/index-four' element={<IndexFour/>}/> */}
+      <Route path='/formation/:id' element={<IndexFive/>}/>
+      <Route path='/formation' element={<Formation/>}/>
+      <Route path='/index-seven' element={<IndexSeven/>}/>
+      <Route path='/service' element={<Service/>}/>
+      <Route path='national' element={<Jobs/>}/>
       <Route path='/international' element={<International/>}/>
-      <Route path='/national' element={<JobListings/>}/>
     </Routes>
   );
 }

@@ -6,6 +6,8 @@ import { MdOutlineCleaningServices } from "react-icons/md";
 import { Button } from "@material-tailwind/react";
 import { MdStart } from "react-icons/md";
 import styled, { keyframes } from "styled-components";
+import { Link } from "react-router-dom";
+import { servicesData } from "../data/data";
 const skillsData = [
   {
     name: "Dynamic Website Design and Development",
@@ -65,9 +67,7 @@ const CTA = styled.button`
   }
 `;
 const Services = () => {
-  return (
-    <>
-      
+  return (      
       <div className="bg-white-100 dark:bg-black dark:text-white py-12 sm:grid sm:place-items-center" id="services">
         <div className="container">
           {/* Header */}
@@ -105,20 +105,8 @@ const Services = () => {
               </div>
             ))}
           </div>
-
-          {/* button */}
-          {/* <div
-            data-aos="fade-up"
-            data-aos-delay="900"
-            data-aos-offset="0"
-            className="text-center mt-4 sm:mt-8"
-          >
-            <button className="primary-btn">Learn More</button>
-          </div> */}
+            </div>
         </div>
-      </div>
-    </>
-  );
-};
-
+    )
+}
 export default Services;
