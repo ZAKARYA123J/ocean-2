@@ -1,53 +1,54 @@
-import React from 'react'
-import Navbar from '../navbar'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import criotaia from '../../assets/images/contries/criotain.png';
+import italy from '../../assets/images/contries/italy.png';
+import germany from '../../assets/images/contries/GERMANY.png';
+import spain from '../../assets/images/contries/spain.webp';
+import oman from '../../assets/images/contries/Oman.svg-1024x512.png';
+import kuwait from '../../assets/images/contries/KUWAIT.png';
+import Navbar from "../navbar";
+import { FaArrowCircleDown } from "react-icons/fa";
 
 function International() {
   // Sample data for the table
   const recruitmentData = [
-    { id: 1, position: 'International Relations Officer', description: 'Manage international partnerships and relations.' },
-    { id: 2, position: 'Global Marketing Specialist', description: 'Develop and execute global marketing strategies.' },
-    { id: 3, position: 'International Sales Manager', description: 'Oversee sales operations in international markets.' },
+    { id: 1, position: 'Kroatia', description: 'Manage international partnerships and relations.', image: criotaia },
+    { id: 2, position: 'ITALY', description: 'Develop and execute global marketing strategies.', image: italy },
+    { id: 3, position: 'GERMANY', description: 'Oversee sales operations in international markets.', image: germany },
+    { id: 4, position: 'SPAIN', description: 'Oversee sales operations in international markets.', image: spain },
+    { id: 5, position: 'OMAN', description: 'Oversee sales operations in international markets.', image: oman },
+    { id: 6, position: 'KUWAIT', description: 'Oversee sales operations in international markets.', image: kuwait },
   ];
 
   return (
     <div>
-      
-      <div className="container mx-auto p-4">
-        <Link to="/" className="text-blue-500 underline">Back</Link>
-        
-        <h1 className="text-2xl font-bold my-4">International Recruitment Opportunities</h1>
-        
-        <div className="overflow-x-auto">
-          <table className="min-w-full divide-y divide-gray-200">
-            <thead className="bg-gray-100">
-              <tr>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Position</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Description</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Action</th>
-              </tr>
-            </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
-              {recruitmentData.map((item) => (
-                <tr key={item.id}>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{item.position}</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{item.description}</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                    <button
-                      className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      onClick={() => alert(`Inscrire for ${item.position}`)}
-                    >
-                      Inscrire
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+    <Navbar />
+    <h2 className="text-3xl font-bold text-black ml-10 mt-20">
+      Job Placement Agencies <span className="text-blue-600">International</span>
+    </h2>
+    {/* Update the grid layout classes for different screen sizes */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 mt-10 px-10">
+      {recruitmentData.map((job) => (
+        <div key={job.id} className="flex flex-col md:flex-row bg-white shadow-md rounded-lg overflow-hidden">
+          <img
+            src={job.image}
+            alt={job.position}
+            className="w-full md:w-1/3 h-48 object-cover"
+          />
+          <div className="p-4 flex flex-col justify-between w-full">
+            <div className="mb-4">
+              <div className="text-gray-900 font-bold text-xl mb-2">{job.position}</div>
+              <p className="text-gray-700 text-base">{job.description}</p>
+            </div>
+            <button className="flex items-center px-3 py-1.5 w-full md:w-40 bg-blue-500 text-white text-xs font-medium rounded-md shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400">
+              Download <FaArrowCircleDown className="ml-1" />
+            </button>
+          </div>
         </div>
-      </div>
+      ))}
     </div>
-  )
+  </div>
+  );
 }
 
 export default International;

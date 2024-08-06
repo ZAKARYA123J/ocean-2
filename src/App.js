@@ -3,16 +3,9 @@ import './assets/css/tailwind.css'
 import './assets/css/materialdesignicons.min.css'
 import { Route, Routes } from 'react-router-dom';
 import Index from './pages';
-import IndexTwo from './pages/index-two';
-import IndexThree from './pages/index-three';
-import IndexFour from './pages/index-four';
 import IndexFive from './pages/index-five';
 import Formation from './pages/formation';
 import IndexSeven from './pages/index-seven';
-import Service from './pages/service';
-
-
-
 function App() {
   return (
     <Routes>
@@ -23,7 +16,7 @@ function App() {
       <Route path='/formation/:id' element={<IndexFive/>}/>
       <Route path='/formation' element={<Formation/>}/>
       <Route path='/index-seven' element={<IndexSeven/>}/>
-      <Route path='/service' element={<Service/>}/> 
+      {/* <Route path='/service' element={<Service/>}/>  */}
       
       
       
