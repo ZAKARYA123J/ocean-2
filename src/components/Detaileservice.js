@@ -80,7 +80,6 @@ export default function Daitalservice(){
                                     <br></br>
                                     <h5 className="text-lg font-medium"><strong>{item.para5} </strong></h5>
                                     <p className="text-slate-400 mt-4">{item.desc_para5}</p>
-
                                     <div className="mt-4">
                                         <CTA>
                                         <Link to="" className="text-sky-500"smooth={true} duration={1000} activeClass='active' spy={true} >{item.Button}  <i className="mdi mdi-chevron-right align-middle"></i></Link>

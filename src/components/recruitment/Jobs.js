@@ -5,7 +5,7 @@ import Navbar from '../navbar';
 import Footer from '../footer';
 import bahrain from '../../assets/images/contries/Bahrain.webp';
 import canada from '../../assets/images/bg/codifyformatter.jpg';
-
+import { FaAngleRight } from "react-icons/fa";
 // Sample job data
 const jobs = [
   {
@@ -94,11 +94,12 @@ const JobListings = () => {
                   <div className="text-gray-900 font-bold text-xl mb-2">{job.title}</div>
                 </div>
               </div>
-              <div className="flex justify-center lg:justify-end">
-                <p className="text-gray-700 lg:mt-4 lg:ml-10 text-base">{`${job.type}`}</p>
-                <button className="lg:ml-24 lg:mt-3 lg:h-12 p-2 bg-blue-500 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300">
-                  Demande
-                </button>
+              <div className="flex justify-center lg:ml-10 lg:justify-end">
+                <p className="text-gray-700 lg:mt-4 lg:ml-10 text-custom w-24">{`${job.type}`}</p>
+                <button className="lg:ml-24  lg:mt-3 lg:h-12 p-2 bg-blue-500 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300 flex items-center space-x-2">
+  <span>Demande</span>
+  <FaAngleRight />
+</button>
               </div>
             </div>
           ))}
