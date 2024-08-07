@@ -64,13 +64,15 @@ const CourseCard = () => {
                         return (
                             <div className="group relative overflow-hidden" key={index}>
                                 <div className="relative overflow-hidden rounded-md shadow dark:shadow-gray-800">
-                                    <img src={item.image}  className="group-hover:scale-110 transition-transform duration-500" alt=""/>
+                                <Link to={`/formation/${index+1}`} >
+                                    <img   src={item.image}  className="group-hover:scale-110 transition-transform duration-500" alt=""/>
+                                </Link>
                                 </div>
 
                                 <div className="mt-6">
                                     <div className="flex mb-4">
                                     </div>
-                                    <Link to="" className="title text-lg font-semibold hover:text-teal-500 duration-500 ease-in-out">{item.title}</Link>
+                                    <Link to={`/formation/${index+1}`} className="title text-lg font-semibold hover:text-teal-500 duration-500 ease-in-out">{item.title}</Link>
                                     <p className="text-slate-400 mt-2">{item.desc}</p>
 
                                     <div className="mt-3">
