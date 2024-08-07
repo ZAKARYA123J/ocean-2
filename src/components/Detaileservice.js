@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from "react";
 import { Link } from "react-router-dom";
 import { serviceData } from "../data/data";
+import { useParams } from "react-router-dom";
 import styled from "styled-components";
 
 const CTA = styled.button`

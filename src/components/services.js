@@ -8,6 +8,8 @@ import { MdStart } from "react-icons/md";
 import styled, { keyframes } from "styled-components";
 import { Link } from "react-router-dom";
 import { servicesData } from "../data/data";
+import {serviceData} from "../data/data"
+import { useParams } from "react-router-dom";
 const skillsData = [
   {
     name: "Dynamic Website Design and Development",
@@ -67,6 +69,8 @@ const CTA = styled.button`
   }
 `;
 const Services = () => {
+  const limitedItems=serviceData.slice(0,4)
+  const {id}=useParams()
   return (      
       <div className="bg-white-100 dark:bg-black dark:text-white py-12 sm:grid sm:place-items-center" id="services">
         <div className="container">
@@ -89,19 +93,22 @@ const Services = () => {
 
           {/* services cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
-            {skillsData.map((skill) => (
+            {limitedItems.map((skill) => (
               <div
-                key={skill.name}
+                key={skill.id}
                 data-aos="fade-up"
                 data-aos-delay={skill.aosDelay}
                 className="card space-y-3 sm:space-y-4 p-4"
               >
-                <div style={{color:'skyblue'}}>{skill.icon}</div>
-                <h1 className="text-lg font-semibold">{skill.name}</h1>
+                <div style={{color:'skyblue'}} className="text-4xl text-primary" >{skill.icon}</div>
+                <h1 className="text-lg font-semibold">{skill.title}</h1>
                 <p className="text-gray-600 dark:text-gray-400">
-                  {skill.description}
+                  {skill.desc}
                 </p>
-               <CTA>Get in touch</CTA>
+                <button>
+                <Link to={`/sevice/${skill.id}`}>
+                
+               <CTA>Get in touch</CTA></Link></button>
               </div>
             ))}
           </div>
