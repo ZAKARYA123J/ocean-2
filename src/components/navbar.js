@@ -1,7 +1,5 @@
 import React,{useState,useEffect} from "react";
 import { Link } from "react-router-dom";
-import logoDark from '../assets/images/logo-dark.png'
-import logoLight from '../assets/images/logo-light.png'
 import { Link as Link1 } from "react-scroll";
 import { useSaveScrollPosition } from './useSaveScrollPosition'; // Import hook
 import { useRestoreScrollPosition } from './useRestoreScrollPosition'; 
@@ -44,10 +42,10 @@ export default function Navbar(){
                 <div className={`navigation lg_992:order-1 lg_992:flex  ms-auto ${manu ? '' : 'hidden'}`} id="menu-collapse">
                     <ul className="navbar-nav" id="navbar-navlist">
                         <li className="nav-item ms-0">
-                            <Link1  className="nav-link" to="home" smooth={true} duration={1000} activeClass='active' spy={true}>Home</Link1>
+                            <Link  className="nav-link" to={"/"} >Home</Link>
                         </li>
                         <li className="nav-item ms-0">
-                            <Link1 className="nav-link" to="services" smooth={true} duration={1000} activeClass='active' spy={true}>Services</Link1>
+                            <Link className="nav-link" to={"/service"} >Services</Link>
                         </li>
                         {/* <li className="nav-item ms-0">
                             <Link1 className="nav-link" to="review" smooth={true} duration={1000} activeClass='active' spy={true}>Formation</Link1>
@@ -56,7 +54,7 @@ export default function Navbar(){
                             <Link1 className="nav-link" to="pricing" smooth={true} duration={1000} activeClass='active' spy={true}>Pricing</Link1>
                         </li> */}
                         <li className="nav-item ms-0">
-                            <Link1 className="nav-link" to="/formation" smooth={true} duration={1000} activeClass='active' spy={true}>Formation</Link1>
+                            <Link className="nav-link" to={"/formation"} >Formation</Link>
                         </li>
                         <li className="nav-item ms-0">
                             <Link1 className="nav-link" to="jobs" smooth={true} duration={1000} activeClass='active' spy={true}>Jobs</Link1>

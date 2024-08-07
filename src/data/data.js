@@ -243,7 +243,7 @@ export const serviceData = [
             desc_para5:"Notre expertise en nettoyage des façades garantit des résultats durables et une intervention rapide, tout en respectant les normes environnementales et de sécurité les plus strictes.",
             Button :"CONTACT US",
         },
-       
+
         {
             id : 3 ,
             title:'Domiciliation',
