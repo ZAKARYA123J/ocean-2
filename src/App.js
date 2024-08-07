@@ -22,7 +22,7 @@ function App() {
       <Route path='/formation' element={<Formation/>}/>
       <Route path='/index-seven' element={<IndexSeven/>}/>
       <Route path='/service' element={<Service/>}/>
-      <Route path='national' element={<Jobs/>}/>
+      <Route path='/jobs' element={<Jobs/>}/>
       <Route path='/international' element={<International/>}/>
     </Routes>
   );
