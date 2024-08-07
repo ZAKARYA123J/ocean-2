@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import { useParams } from "react-router-dom";
 import blog1 from '../assets/images/blog/01.jpg'
 import blog2 from '../assets/images/blog/02.jpg'
 import blog3 from '../assets/images/blog/03.jpg'
@@ -11,6 +11,7 @@ import interv from '../assets/images/blog/interview.jpeg'
 // import { useRestoreScrollPosition } from './useRestoreScrollPosition'; 
 import { Button } from "@material-tailwind/react";
 import styled, { keyframes } from "styled-components";
+import International from "./recruitment/International";
 const CTA = styled.button`
   background-color: var(--white);
   color: #3a86ff;
@@ -36,6 +37,7 @@ const CTA = styled.button`
 `;
 export default function AgencyTab(){
     const [ activeIndex, setActiveIndex ] = useState(1)
+    const {type}=useParams()
     // let [scroll, setScroll] = useState(false);
     // let [manu, setManu] = useState(false)
     // useSaveScrollPosition(); // Save scroll position on navigation
@@ -65,6 +67,8 @@ export default function AgencyTab(){
         window.removeEventListener('beforeunload', handleBeforeUnload);
       };
     }, []);
+    const national = "National";
+    const international="International"
     return(
         <section className="realtive md:py-24 py-16" id="jobs">
             <div className="container relative">
@@ -112,10 +116,10 @@ export default function AgencyTab(){
                                     <h5 className="text-lg font-medium">Ocean Connect</h5>
                                     <p className="text-slate-400 mt-4">We’re excited to invite you to apply for a position at our company. Join our team and contribute to our dynamic environment while advancing your career. Explore opportunities for growth, innovation, and impact with us.</p>
                                     <div className="mt-4">
-                                        <button onClick={() => navigate('/jobs')}>
-                                        <CTA > Apply Now <i className="mdi mdi-chevron-right align-middle"></i></CTA>
-                                       </button>
-                                    </div>
+                                    <Link to={`/jobs/${national}`}>
+  <CTA color="blue">Apply Now <i className="mdi mdi-chevron-right align-middle"></i></CTA>
+</Link>
+                        </div>
                                 </div>
                             </div>
                             <div className={activeIndex === 2 ? '' : 'hidden' }>
@@ -125,9 +129,10 @@ export default function AgencyTab(){
                                     <h5 className="text-lg font-medium">International Recruitment Services</h5>
                                     <p className="text-slate-400 mt-4">Our company specializes in connecting top talent with global opportunities. We provide comprehensive international recruitment solutions, including candidate sourcing, screening, and placement. By leveraging our extensive network and expertise in diverse markets, we help businesses find the right talent to drive their growth and success across borders.</p>
                                     <div className="mt-4">
-                                    <Link to="/international" >
-                                        <CTA color="blue"> Apply Now <i className="mdi mdi-chevron-right align-middle"></i></CTA>
-                                       </Link>
+                                    <Link to={`/jobs/${international}`}>
+  <CTA color="blue">Apply Now <i className="mdi mdi-chevron-right align-middle"></i></CTA>
+</Link>
+
                                     </div>
                                 </div>
                             </div>
