@@ -36,12 +36,14 @@ const JobListings = () => {
     
     <div className="p-10 bg-gray-100 ">
     <Navbar/>
+    <br></br>
      <h2 className="text-3xl font-bold text-black ml-10 mt-20">Job Placement Agencies <spam className="text-3xl font-bold text-blue-600">Ocean connect</spam></h2>
-      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-3 gap-5 mt-2">
+      <div className=" px-4 py-2 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-3 gap-5 mt-1">
+        <br></br>
         {jobs.map((job) => (
-          <div key={job.id} className="w-full lg:max-w-full lg:flex bg-white shadow-md rounded-lg overflow-hidden">
+          <div key={job.id} className="w-full sm:w-full md:w-3/4 lg:flex bg-white shadow-md rounded-lg overflow-hidden">
             <div
-              className="h-48 lg:h-auto lg:w-48 flex-none bg-cover"
+              className="h-32 sm:h-40 md:h-48 lg:h-auto lg:w-32 flex-none bg-cover"
               style={{ backgroundImage: `url(${job.image})` }}
               title={job.title}
             >
