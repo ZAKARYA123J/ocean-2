@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import { Link as Link1 } from "react-scroll";
 import { useSaveScrollPosition } from './useSaveScrollPosition'; // Import hook
 import { useRestoreScrollPosition } from './useRestoreScrollPosition'; 
+import { useParams } from "react-router-dom";
 import img from './ocean3.png'
 export default function Navbar(){
-
+    const {type}=useParams()
     let [scroll, setScroll] = useState(false);
     let [manu, setManu] = useState(false)
     useSaveScrollPosition(); // Save scroll position on navigation
@@ -21,7 +22,7 @@ export default function Navbar(){
           window.removeEventListener('scroll', handleScroll);
         };
       }, []);
-   
+      const all='All'
     return(
         <nav className={`navbar ${scroll ? 'is-sticky' : ''}`} id="navbar">
             <div className="container relative flex flex-wrap items-center justify-between" >
@@ -57,7 +58,7 @@ export default function Navbar(){
                             <Link className="nav-link" to={"/formation"} >Formation</Link>
                         </li>
                         <li className="nav-item ms-0">
-                            <Link1 className="nav-link" to="jobs" smooth={true} duration={1000} activeClass='active' spy={true}>Jobs</Link1>
+                        <Link to={`/jobs/${all}`}  className="nav-link">Jobs</Link>
                         </li>
                         <li className="nav-item ms-0">
                             <Link1 className="nav-link" to="about" smooth={true} duration={1000} activeClass='active' spy={true}>About</Link1>
