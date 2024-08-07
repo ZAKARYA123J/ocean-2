@@ -8,6 +8,7 @@ import client6 from '../assets/images/team/06.jpg'
 import { CgWebsite } from "react-icons/cg";
 import { IoHomeOutline } from "react-icons/io5";
 import { MdOutlineCleaningServices } from "react-icons/md";
+import { SlNote } from "react-icons/sl";
 import blog1 from '../assets/images/blog/01.jpg'
 import blog2 from '../assets/images/blog/02.jpg'
 import blog4 from '../assets/images/blog/04.jpg'
@@ -207,7 +208,8 @@ export const blogData = [
 ]
 export const serviceData = [
         {
-            id : 1 ,
+            id:1,
+            icon:<SlNote/>,
             title:'Formation',
             desc:'This is required when, for example, the final text is not yet available.',
             image:service1,
@@ -225,6 +227,7 @@ export const serviceData = [
         },
         {
             id : 2 ,
+            icon:<MdOutlineCleaningServices/>,
             title:'Nettoyage des Façades',
             desc:'This is required when, for example, the final text is not yet available.',
             image:service2,
@@ -243,6 +246,7 @@ export const serviceData = [
 
         {
             id : 3 ,
+            icon:<IoHomeOutline/>,
             title:'Domiciliation',
             desc:'This is required when, for example, the final text is not yet available.',
             image:service3,
@@ -261,6 +265,7 @@ export const serviceData = [
         {
             id : 4 ,
             title:'Developpement',
+            icon:<CgWebsite/>,
             desc:'This is required when, for example, the final text is not yet available.',
             image:service4,
             para1 :'Service de Developpement',
