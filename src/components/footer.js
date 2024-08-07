@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logoLight from '../assets/images/logo-light.png'
 import { MdOutlineEmail } from "react-icons/md";
 import {FiShoppingCart, FiDribbble, FiLinkedin, FiFacebook, FiInstagram, FiTwitter, FiMail} from '../assets/icons/vander'
 import img from './ocean3.png'
@@ -20,7 +19,7 @@ export default function Footer(){
                         <div className="lg:col-span-5 text-center mt-6 md:mt-0">
                             <p className="mb-0">© {new Date().getFullYear()} Ocean Connect</p>
                             <p className="mb-0">oceanconnecting.ma@gmail.com</p>
-                            <p>+212 657 236 635</p>
+                            <p>+212 704-309787</p>
                         </div>
 
                         <ul className="lg:col-span-4 list-none md:text-end text-center mt-6 md:mt-0">

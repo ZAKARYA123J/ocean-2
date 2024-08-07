@@ -1,6 +1,6 @@
 import React,{useEffect} from "react";
 import { Link as Link1 } from "react-scroll";
-
+import { Link } from "react-router-dom";
 import heroImg from "../assets/images/design-team.svg"
 import desayn from '../assets/images/done/design-team.svg'
 
@@ -84,7 +84,8 @@ export default function Index(){
         <Services/>
         <Blogs/>
         <div className="flex justify-center">
-  <button className="py-2 px-4 bg-sky-500 text-white rounded">Show all Formations<i className="mdi mdi-chevron-right ms-1"></i></button>
+        <Link to={"formation"}> <button className="py-2 px-4 bg-sky-500 text-white rounded">Show all Formations<i className="mdi mdi-chevron-right ms-1"></i></button></Link>
+ 
 </div>
 
         <AgencyTab/>
