@@ -11,7 +11,7 @@ import interv from '../assets/images/blog/interview.jpeg'
 // import { useRestoreScrollPosition } from './useRestoreScrollPosition'; 
 import { Button } from "@material-tailwind/react";
 import styled, { keyframes } from "styled-components";
-import International from "./recruitment/International";
+
 const CTA = styled.button`
   background-color: var(--white);
   color: #3a86ff;
