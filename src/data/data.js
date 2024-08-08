@@ -96,11 +96,11 @@ export const clientData = [
 export const blogData = [
     {
         id:1,
-        image:formation15,
-        title:'Formation de conduitendes bateaux et des voliers',
-        desc: 'Cette formation offre une expérience complète pour les passionnés de navigation...',
-        detail:"Cette formation offre une expérience complète pour les passionnés de navigation, incluant des cours théoriques et pratiques sur la sécurité, les techniques de voile, et la navigation côtière et hauturière. Les sessions sont dirigées par des instructeurs expérimentés et comprennent des pratiques intensives en mer. Les participants peuvent obtenir des certifications reconnues, leur permettant de piloter divers types de bateaux et de voiliers. Rejoignez-nous pour développer vos compétences nautiques et vivre une aventure maritime inoubliable!",
-        type: 'Formation'
+        image:formation6,
+        title:'language',
+        desc:'The Ocean Connecting offers a comprehensive language learning program covering...',
+        detail:'The Ocean Connecting offers a comprehensive language learning program covering levels A1 to C2. It features young teachers, engaging activities, educational trips, and flexible schedules. Students benefit from regular level assessments, free access to PCs and Wi-Fi, and air-conditioned classrooms. The program also provides psychological monitoring and guidance, ensuring a supportive learning environment.this program aims to enhance language proficiency through interactive and diverse methods, accommodating different learning paces and needs.',
+        type: 'language'
     },
     {
         id:2,
@@ -112,6 +112,22 @@ export const blogData = [
     },
     {
         id:3,
+        image:formation8,
+        title:"Formation DJ",
+        desc:'La formation DJ enseigne les compétences nécessaires pour devenir un DJ...',
+        detail:"La formation DJ enseigne les compétences nécessaires pour devenir un DJ professionnel, en couvrant les techniques de mixage, l'utilisation des équipements modernes comme les platines et les contrôleurs, ainsi que les bases de la production musicale pour créer des remixes et des morceaux originaux. Les participants apprennent également à gérer des événements, à organiser des sets, et à interagir avec le public. En plus des aspects techniques, la formation aide à développer une identité artistique personnelle, à promouvoir son travail en ligne et à construire un portfolio. Elle est idéale pour les débutants et les DJs souhaitant perfectionner leurs compétences et entrer dans le monde de la musique.",
+        type: 'Formation'
+    },
+    {
+        id:4,
+        image:formation15,
+        title:'Formation de conduitendes bateaux et des voliers',
+        desc: 'Cette formation offre une expérience complète pour les passionnés de navigation...',
+        detail:"Cette formation offre une expérience complète pour les passionnés de navigation, incluant des cours théoriques et pratiques sur la sécurité, les techniques de voile, et la navigation côtière et hauturière. Les sessions sont dirigées par des instructeurs expérimentés et comprennent des pratiques intensives en mer. Les participants peuvent obtenir des certifications reconnues, leur permettant de piloter divers types de bateaux et de voiliers. Rejoignez-nous pour développer vos compétences nautiques et vivre une aventure maritime inoubliable!",
+        type: 'Formation'
+    },
+    {
+        id:5,
         image:formation16,
         title:'HOME & FAMILY',
         desc: 'La formation Home & Family est conçue pour offrir des compétences pratiques et ...',
@@ -119,7 +135,7 @@ export const blogData = [
         type:'Formation'
     },
     {
-        id:4,
+        id:6,
         image:formation14,
         title:"Formation d'installation et Usilisation VAR",
         desc:'La formation en installation et utilisation des VAR (Value Added Resellers)...',
@@ -127,7 +143,7 @@ export const blogData = [
         type: 'Formation'
     },
     {
-        id:5,
+        id:7,
         image:formation12,
         title:'formation a la navigation maritime',
         desc:'La formation à la navigation maritime enseigne aux participants les compétences ...',
@@ -135,7 +151,7 @@ export const blogData = [
         type: 'Formation'
     },
     {
-        id:6,
+        id:8,
         image:formation13,
         title:'Pierres et métaux précieux',
         desc:'La formation sur les pierres et métaux précieux fournit une compréhension ...',
@@ -143,7 +159,7 @@ export const blogData = [
         type: 'Formation'
     },
     {
-        id:7,
+        id:9,
         image:formation11,
         title:"Développer l'argriculture et la pêche",
         desc:"La formation pour développer l'agriculture et la pêche vise à optimiser...",
@@ -151,7 +167,7 @@ export const blogData = [
         type: 'Formation'
     },
     {
-        id:8,
+        id:10,
         image:formation10,
         title:"Sciences de la terre et Séismes",
         desc:'La formation en sciences de la Terre et séismes offre une compréhension ...',
@@ -159,7 +175,7 @@ export const blogData = [
         type: 'Formation'
     },
     {
-        id:9,
+        id:11,
         image:formation19,
         title:"Etudes Formation Recrutements National Et International",
         desc:'Études Formation Recrutements National et International (EFRNI) est ...',
@@ -167,16 +183,7 @@ export const blogData = [
         type: 'Formation'
     },
     {
-        id:10,
-        image:formation8,
-        title:"Formation DJ",
-        desc:'La formation DJ enseigne les compétences nécessaires pour devenir un DJ...',
-        detail:"La formation DJ enseigne les compétences nécessaires pour devenir un DJ professionnel, en couvrant les techniques de mixage, l'utilisation des équipements modernes comme les platines et les contrôleurs, ainsi que les bases de la production musicale pour créer des remixes et des morceaux originaux. Les participants apprennent également à gérer des événements, à organiser des sets, et à interagir avec le public. En plus des aspects techniques, la formation aide à développer une identité artistique personnelle, à promouvoir son travail en ligne et à construire un portfolio. Elle est idéale pour les débutants et les DJs souhaitant perfectionner leurs compétences et entrer dans le monde de la musique.",
-        type: 'Formation'
-    },
-    
-    {
-        id:11,
+        id:12,
         image:formation17,
         title:"Apprendre le théatre pour les enfants",
         desc:'La formation « Apprendre le théâtre pour les enfants » initie les jeunes...',
@@ -184,7 +191,7 @@ export const blogData = [
         type: 'Formation'
     },
     {
-        id:12,
+        id:13,
         image:formation18,
         title:"Formation ascenseur",
         desc:'La formation sur les ascenseurs est conçue pour fournir aux participants...',
@@ -192,21 +199,14 @@ export const blogData = [
         type: 'Formation'
     },
     {
-        id:13,
+        id:14,
         image:formation5,
         title:"la conduite de train et de tramway",
         desc:'La formation à la conduite de train et de tramway prépare les participants...',
         detail:"La formation à la conduite de train et de tramway prépare les participants à piloter ces véhicules de manière sécurisée et efficace. Elle couvre les aspects techniques de la conduite, y compris le maniement des commandes, la gestion des systèmes de signalisation, et le respect des procédures de sécurité. Les participants apprennent également à gérer les situations d'urgence, à optimiser la consommation d'énergie et à assurer le confort des passagers. La formation inclut des simulations pratiques et théoriques pour développer des compétences approfondies en conduite et en gestion des opérations ferroviaires et de tramway, tout en respectant les normes réglementaires en vigueur.",
         type: 'Formation'
     },
-    {
-        id:14,
-        image:formation6,
-        title:'language',
-        desc:'The Ocean Connecting offers a comprehensive language learning program covering...',
-        detail:'The Ocean Connecting offers a comprehensive language learning program covering levels A1 to C2. It features young teachers, engaging activities, educational trips, and flexible schedules. Students benefit from regular level assessments, free access to PCs and Wi-Fi, and air-conditioned classrooms. The program also provides psychological monitoring and guidance, ensuring a supportive learning environment.this program aims to enhance language proficiency through interactive and diverse methods, accommodating different learning paces and needs.',
-        type: 'language'
-    }
+    
 ]
 export const serviceData = [
         {
