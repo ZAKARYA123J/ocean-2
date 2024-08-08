@@ -4,7 +4,7 @@ import watssap from '../assets/images/WhatsApp.svg'
 
 const WhatsAppFloatingButton = () => {
   const phoneNumber = '+212704309787'; // Replace with your WhatsApp number
-  const message = 'I need a Formation For Learning English'; // Replace with your default message
+  const message = 'Hi oceanconnecting! I need more info about Nos services https://oceanconnecting.ma/nos-services'; // Replace with your default message
 
   const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 

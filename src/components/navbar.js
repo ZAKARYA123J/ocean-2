@@ -46,7 +46,7 @@ export default function Navbar(){
                             <Link  className="nav-link" to={"/"} >Home</Link>
                         </li>
                         <li className="nav-item ms-0">
-                            <Link className="nav-link" to={"/service"} >Services</Link>
+                            <Link className="nav-link" to={"/service/1"} >Services</Link>
                         </li>
                         {/* <li className="nav-item ms-0">
                             <Link1 className="nav-link" to="review" smooth={true} duration={1000} activeClass='active' spy={true}>Formation</Link1>
