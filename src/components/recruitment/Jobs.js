@@ -82,11 +82,11 @@ const JobListings = () => {
           </select>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1  lg:grid-cols-1 xl:grid-cols-3 gap-5">
           {filteredJobs.map((job) => (
-            <div key={job.id} className="lg:w-2/3 mx-auto lg:ml-24 lg:h-24 lg:max-w-full lg:flex bg-white shadow-md rounded-lg overflow-hidden">
+            <div key={job.id} className="lg:w-2/3  mx-auto lg:ml-24 lg:h-24 lg:max-w-full lg:flex bg-white shadow-md rounded-lg overflow-hidden">
               <img
-                className="h-48 lg:w-24 object-cover lg:h-24"
+                className="h-48 lg:w-24  object-cover lg:h-24"
                 src={job.image}
                 alt={job.title}
               />
