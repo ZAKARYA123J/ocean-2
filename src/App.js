@@ -21,7 +21,7 @@ function App() {
       <Route path='/formation' element={<Formation/>}/>
       <Route path='/index-seven' element={<IndexSeven/>}/>
       {/* <Route path='/service' element={<Service/>}/> */}
-      <Route path='/service' element={<Service/>}/>
+      <Route path='/service/:id' element={<Service/>}/>
       {/* <Route path="/service" component={<Service/>} /> */}
       <Route path='/jobs/:type' element={<Jobs/>}/>
       {/* <Route path='/international' element={<International/>}/> */}
