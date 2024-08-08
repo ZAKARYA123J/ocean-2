@@ -39,6 +39,10 @@ import company4 from '../assets/images/team/paypal.svg'
 import company5 from '../assets/images/team/shopify.svg'
 import company6 from '../assets/images/team/spotify.svg'
 import image from '../assets/images/ab3.jpg'
+import allemagne from '../assets/images/contries/allemagne.png'
+import croatie from '../assets/images/contries/croatie.png'
+import italy from '../assets/images/contries/italy.png'
+import spain from '../assets/images/contries/spain.png'
 
 
 export const servicesData = [
@@ -305,7 +309,7 @@ export const serviceData = [
 export const jobs = [
     {
       id: 1,
-      image: image,
+      image: allemagne,
       title: 'Senior Product Manager',
       type: 'International',
       secteur:'Health and nursing/hotels/programming',
@@ -319,7 +323,7 @@ export const jobs = [
     },
     {
         id: 2,
-        image: image,
+        image: croatie,
         title: 'Senior Product Manager',
         type: 'International',
         secteur:'Health and nursing/hotels/programming',
@@ -331,7 +335,7 @@ export const jobs = [
     },
     {
         id: 3,
-        image: image,
+        image: italy,
         title: 'Senior Product Manager',
         type: 'International',
         secteur:'Health and nursing/hotels/programming',
@@ -343,7 +347,7 @@ export const jobs = [
     },
     {
         id: 4,
-        image: image,
+        image: spain,
         title: 'Senior Product Manager',
         type: 'International',
         secteur:'Health and nursing/hotels/programming',

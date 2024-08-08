@@ -9,7 +9,6 @@ import Formation from './pages/formation';
 import IndexSeven from './pages/index-seven';
 import Service from './pages/service';
 import Jobs from './components/recruitment/Jobs'
-import jobs from './components/recruitment/JobList'
 
 
 function App() {
