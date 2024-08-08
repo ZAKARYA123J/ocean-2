@@ -5,6 +5,7 @@ import bg from '../assets/images/bg/bg2.png'
 
 import Navbar from "../components/navbar";
 import BlogDetail from "../components/BlogDetail";
+import Footer from "../components/footer";
 
 export default function IndexFive(){
 
@@ -20,7 +21,7 @@ export default function IndexFive(){
         </div>
     </div>
 </section>
-
+<Footer/>
         </>
     )
 }
