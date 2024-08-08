@@ -1,16 +1,11 @@
 import React,{useState,useEffect} from "react";
 import { Link } from "react-router-dom";
 import { Link as Link1 } from "react-scroll";
-import { useSaveScrollPosition } from './useSaveScrollPosition'; // Import hook
-import { useRestoreScrollPosition } from './useRestoreScrollPosition'; 
 import { useParams } from "react-router-dom";
 import img from './ocean3.png'
 export default function Navbar(){
-    const {type}=useParams()
     let [scroll, setScroll] = useState(false);
     let [manu, setManu] = useState(false)
-    useSaveScrollPosition(); // Save scroll position on navigation
-    useRestoreScrollPosition(); 
 
     useEffect(() => {
         const handleScroll = () => {
