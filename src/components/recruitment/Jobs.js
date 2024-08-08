@@ -96,8 +96,8 @@ const JobListings = () => {
                 </div>
               </div>
               <div className="flex justify-center lg:ml-10 lg:justify-end">
-                <p className="text-gray-700 lg:mt-4 lg:ml-10 text-custom w-24">{`${job.type}`}</p>
-                <button className="lg:ml-24  lg:mt-3 lg:h-12 p-2 bg-blue-500 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300 flex items-center space-x-2">
+              <p className="text-gray-700 lg:mt-4 mr-10 lg:ml-10 text-custom text-lg font-semibold w-24">{`${job.type}`}</p>
+                <button className="lg:ml-24 mb-4  lg:mt-3 lg:h-12 p-2 bg-blue-500 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300 flex items-center space-x-2">
   <span>Demande</span>
   <FaAngleRight />
 </button>
