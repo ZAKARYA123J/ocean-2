@@ -38,6 +38,7 @@ import company3 from '../assets/images/team/lenovo.svg'
 import company4 from '../assets/images/team/paypal.svg'
 import company5 from '../assets/images/team/shopify.svg'
 import company6 from '../assets/images/team/spotify.svg'
+import image from '../assets/images/ab3.jpg'
 
 
 export const servicesData = [
@@ -301,6 +302,83 @@ export const serviceData = [
             Button:"GET JOB",
         },  
 ]
+export const jobs = [
+    {
+      id: 1,
+      image: image,
+      title: 'Senior Product Manager',
+      type: 'International',
+      secteur:'Health and nursing/hotels/programming',
+      niveaulanguage:'Required language B1 .',
+      timevisa:'The duration of obtaining a visa is 8 months.',
+      contratime:'One year employment contract.',
+      pricecontrat:'The contract price is 8 million',
+
+      
+     
+    },
+    {
+        id: 2,
+        image: image,
+        title: 'Senior Product Manager',
+        type: 'International',
+        secteur:'Health and nursing/hotels/programming',
+        niveaulanguage:'Required language B1 .',
+        timevisa:'The duration of obtaining a visa is 8 months.',
+        contratime:'One year employment contract.',
+        pricecontrat:'The contract price is 8 million',
+      
+    },
+    {
+        id: 3,
+        image: image,
+        title: 'Senior Product Manager',
+        type: 'International',
+        secteur:'Health and nursing/hotels/programming',
+        niveaulanguage:'Required language B1 .',
+        timevisa:'The duration of obtaining a visa is 8 months.',
+        contratime:'One year employment contract.',
+        pricecontrat:'The contract price is 8 million',
+      
+    },
+    {
+        id: 4,
+        image: image,
+        title: 'Senior Product Manager',
+        type: 'International',
+        secteur:'Health and nursing/hotels/programming',
+        niveaulanguage:'Required language B1 .',
+        timevisa:'The duration of obtaining a visa is 8 months.',
+        contratime:'One year employment contract.',
+        pricecontrat:'The contract price is 8 million',
+      
+    },
+    {
+        id: 5,
+        image: image,
+        title: 'Senior Product Manager',
+        type: 'International',
+        secteur:'Health and nursing/hotels/programming',
+        niveaulanguage:'Required language B1 .',
+        timevisa:'The duration of obtaining a visa is 8 months.',
+        contratime:'One year employment contract.',
+        pricecontrat:'The contract price is 8 million',
+      
+    },
+    {
+        id: 6,
+        image: image,
+        title: 'Senior Product Manager',
+        type: 'National',
+        secteur:'Health and nursing/hotels/programming',
+        niveaulanguage:'Required language B1 .',
+        timevisa:'The duration of obtaining a visa is 8 months.',
+        contratime:'One year employment contract.',
+        pricecontrat:'The contract price is 8 million',
+      
+    },
+    // Ensure each job has a unique id
+];
 
 
 export const companyLogo = [company1, company2, company3, company4, company5, company6]
