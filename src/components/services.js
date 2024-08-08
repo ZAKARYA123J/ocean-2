@@ -10,40 +10,6 @@ import { Link } from "react-router-dom";
 import { servicesData } from "../data/data";
 import {serviceData} from "../data/data"
 import { useParams } from "react-router-dom";
-const skillsData = [
-  {
-    name: "Dynamic Website Design and Development",
-    icon: <CgWebsite className="text-4xl text-primary" />,
-    link: "#",
-    description:
-      "We create dynamic web applications and custom websites tailored to your needs. Our solutions are responsive.",
-    aosDelay: "0",
-  },
-  {
-    name: "Cleaning the glasses",
-    icon:<MdOutlineCleaningServices className="text-4xl text-primary" />,
-    link: "#",
-    description:
-      "Professional glass cleaning services that ensure spotless, streak-free results for a clear view every time.",
-    aosDelay: "300",
-  },
-  {
-    name: "Domiciliation",
-    icon: <IoHomeOutline className="text-4xl text-primary" /> ,
-    link: "#",
-    description:
-      "Get a prestigious address for your business.",
-    aosDelay: "500",
-  },
-  {
-    name: "Formation",
-    icon: <SlNote className="text-4xl text-primary" />,
-    link: "#",
-    description:
-      "We offer expert-led training in various fields to boost your skills and knowledge.",
-    aosDelay: "700",
-  },
-];
 const CTA = styled.button`
   background-color: var(--white);
   color: #3a86ff;
@@ -106,7 +72,7 @@ const Services = () => {
                   {skill.desc}
                 </p>
                 <button>
-                <Link to={`/sevice/${skill.id}`}>
+                <Link to={`/service/${skill.id}`}>
                 
                <CTA>Get in touch</CTA></Link></button>
               </div>

@@ -70,7 +70,7 @@ const CourseCard = () => {
                                 <div className="mt-6">
                                     <div className="flex mb-4">
                                     </div>
-                                    <Link to="" className="title text-lg font-semibold hover:text-teal-500 duration-500 ease-in-out">{item.title}</Link>
+                                    <Link to={`/formation/${index+1}`} className="title text-lg font-semibold hover:text-teal-500 duration-500 ease-in-out">{item.title}</Link>
                                     <p className="text-slate-400 mt-2">{item.desc}</p>
 
                                     <div className="mt-3">
