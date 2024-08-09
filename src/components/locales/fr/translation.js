@@ -66,6 +66,8 @@ export const blogDataFR = [
     {
         id:1,
         image:formation6,
+        resrvedatail:"Pour chaque cours suivi, vous recevrez une certification que vous pourrez partager sur vos réseaux sociaux (par exemple, LinkedIn). Chaque certification possède un numéro d'authentification unique qui permet de la vérifier.",
+        resrveButton:"Réserver",
         blogetitle:"Formations Trends",
         title:'language',
         desc:'Ocean Connecting offers a comprehensive language learning program covering...',
@@ -179,7 +181,7 @@ export const blogDataFR = [
         desc:'La formation sur les ascenseurs est conçue pour fournir aux participants...',
         detail:"La formation sur les ascenseurs est conçue pour fournir aux participants une compréhension complète des systèmes d'ascenseurs, de leur installation à leur maintenance. Elle couvre les principes de fonctionnement des ascenseurs, les procédures de sécurité, et les techniques de dépannage. Les participants apprendront à installer, entretenir, et réparer les ascenseurs tout en respectant les normes de sécurité et de réglementation en vigueur. La formation est idéale pour les techniciens, ingénieurs, et toute personne impliquée dans le secteur des ascenseurs, offrant les compétences nécessaires pour assurer le bon fonctionnement et la sécurité des équipements.",
         type: 'Formation',
-             button:"En savoir plus"
+        button:"En savoir plus"
     },
     {
         id:14,

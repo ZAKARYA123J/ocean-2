@@ -76,6 +76,8 @@ export const blogDataEN = [
     {
         id:1,
         image:formation6,
+        resrvedatail:"For each course you complete, you will receive a certification that you can share on your social networks (for example, LinkedIn). Each certification has a unique authentication number that allows it to be verified.",
+        resrveButton:"Réserver",
         blogetitle:"Trends Trainings",
         title:'language',
         desc:'Ocean Connecting offers a comprehensive language learning program covering...',

@@ -67,6 +67,8 @@ export const blogDataAR = [
     {
         id: 1,
         image: formation6,
+        resrvedatail:"لكل دورة تكملها، ستحصل على شهادة يمكنك مشاركتها على شبكات التواصل الاجتماعي الخاصة بك (على سبيل المثال، LinkedIn). تحتوي كل شهادة على رقم مصادقة فريد يسمح بالتحقق منها.",
+        resrveButton:"للحجز",
         blogetitle:"التدريب أكثر طلبا",
         title: 'اللغة',
         desc: 'تقدم  Ocean Connecting برنامجًا شاملًا لتعلم اللغة يشمل...',
