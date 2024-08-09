@@ -18,6 +18,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import styled, { keyframes } from "styled-components";
 import WhatsAppFloatingButton from '../components/WhatsAppFloatingButton';
+import LanguageSwitcher from "../components/LanguageSwitcher";
 import img from './result.svg';
 
 const CTA = styled.button`
@@ -80,7 +81,7 @@ export default function Index(){
                 </div>
             </div>
         </section>
-        
+        <LanguageSwitcher/>
         <Services/>
         <Blogs/>
         <div className="flex justify-center">
@@ -90,7 +91,7 @@ export default function Index(){
 
         <AgencyTab/>
         <Cta/>
-       
+    
         <Client/>
         {/* <Pricing/> */}
         

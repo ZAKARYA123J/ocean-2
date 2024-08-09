@@ -86,7 +86,7 @@ const JobListings = () => {
           {filteredJobs.map((job) => (
             <div key={job.id} className="lg:w-2/3  mx-auto lg:ml-24 lg:h-24 lg:max-w-full lg:flex bg-white shadow-md rounded-lg overflow-hidden">
               <img
-                className="h-48 lg:w-24  object-cover lg:h-24"
+                className="h-48 lg:w-24 object-cover lg:h-24"
                 src={job.image}
                 alt={job.title}
               />
