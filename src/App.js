@@ -8,6 +8,8 @@ import IndexFive from './pages/index-five';
 import Formation from './pages/formation';
 import IndexSeven from './pages/index-seven';
 import Service from './pages/service';
+import Jobs from './components/recruitment/Jobs'
+
 
 function App() {
   return (
@@ -22,6 +24,9 @@ function App() {
       {/* <Route path='/service' element={<Service/>}/> */}
       <Route path='/service/:id' element={<Service/>}/>
       {/* <Route path="/service" component={<Service/>} /> */}
+      <Route path='/jobs/:type' element={<Jobs/>}/>
+      {/* <Route path='/international' element={<International/>}/> */}
+
     </Routes>
   );
 }
