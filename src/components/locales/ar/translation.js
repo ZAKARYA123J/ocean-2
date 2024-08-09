@@ -285,3 +285,13 @@ export const TitleAR=[
         button:"اتصل بنا"
     }
 ]
+export const NavbarAR=
+[
+{
+    Home:"منزل",
+    Services:"خدمات",
+    Formation:"التدريب",
+    Jobs:"وظائف",
+    About:"معلومات عنا",
+    Contact_us:"اتصل بنا"
+}]

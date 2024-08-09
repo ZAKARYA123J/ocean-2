@@ -287,6 +287,13 @@ export const TitleEN=[
         button:"Contact Us"
     }
 ]
-
+export const NavbarEN=[{
+    Home:"Home",
+    Services:"Services",
+    Formation:"Training",
+    Jobs:"Jobs",
+    About:"About",
+    Contact_us:"Contact us"
+}]
 
 export const companyLogo = [company1, company2, company3, company4, company5, company6]

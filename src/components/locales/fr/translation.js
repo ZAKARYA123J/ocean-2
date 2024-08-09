@@ -208,7 +208,7 @@ export const serviceDataFR = [
         id : 2 ,
         icon:<MdOutlineCleaningServices/>,
         title:'Nettoyage des Façades',
-        desc:'This is required when, for example, the final text is not yet available.',
+        desc:"Ceci est requis lorsque, par exemple, le texte final n'est pas encore disponible.",
         image:service2,
         para1 :'Service de Nettoyage des Façades',
         desc_para1 :"Notre service de nettoyage des façades vous garantit des résultats impeccables pour redonner éclat et propreté à vos bâtiments. Grâce à des techniques professionnelles et des produits respectueux de l'environnement, nous éliminons efficacement saletés, moisissures et polluants. Faites confiance à notre expertise pour préserver l'apparence et la durabilité de vos façades.",
@@ -227,7 +227,7 @@ export const serviceDataFR = [
         id : 3 ,
         icon:<IoHomeOutline/>,
         title:'Domiciliation',
-        desc:'This is required when, for example, the final text is not yet available.',
+        desc:"Ceci est requis lorsque, par exemple, le texte final n'est pas encore disponible.",
         image:service3,
         para1 :'Service de Domiciliation',
         desc_para1 :"Notre service de domiciliation vous offre une adresse professionnelle prestigieuse pour votre entreprise. En plus de simplifier la gestion administrative, nous assurons la réception de votre courrier et vous fournissons un support complet pour toutes vos démarches. Faites de notre adresse celle de votre entreprise pour renforcer votre image et optimiser votre organisation.",
@@ -245,7 +245,7 @@ export const serviceDataFR = [
         id : 4 ,
         title:'Developpement',
         icon:<CgWebsite/>,
-        desc:'This is required when, for example, the final text is not yet available.',
+        desc:"Ceci est requis lorsque, par exemple, le texte final n'est pas encore disponible.",
         image:service4,
         para1 :'Service de Developpement',
         desc_para1 :"Nous proposons un service complet de création de sites web sur mesure pour répondre à vos besoins spécifiques. De la conception à la mise en ligne, notre équipe d'experts utilise les dernières technologies pour développer des sites esthétiques, fonctionnels et optimisés pour le référencement. Que vous ayez besoin d'un site vitrine, d'une boutique en ligne ou d'une plateforme personnalisée, nous sommes là pour réaliser votre projet.",
@@ -262,7 +262,7 @@ export const serviceDataFR = [
     {
         id : 5 ,
         title:'Recruitment',
-        desc:'This is required when, for example, the final text is not yet available.',
+        desc:"Ceci est requis lorsque, par exemple, le texte final n'est pas encore disponible.",
         image:service5,
         para1:'Service de Recruitment',
         desc_para1 :"Notre service de recrutement pour entreprises internationales vous aide à identifier et à embaucher les meilleurs talents à l'échelle mondiale. Grâce à notre vaste réseau et à notre expertise en ressources humaines, nous trouvons des candidats qualifiés qui répondent parfaitement à vos exigences spécifiques. Simplifiez votre processus de recrutement et renforcez votre équipe avec des professionnels talentueux issus de divers horizons.",
@@ -283,5 +283,13 @@ export const Titlefr=[
         button:"Contactez-nous"
     }
 ]
-
+export const NavbarFR=[{
+    Home:"Maison",
+    Services:"Services",
+    Formation:"Formation",
+    Jobs:"Emplois",
+    About:"À propos",
+    Contact_us:"Contactez-nous"
+}
+]
 

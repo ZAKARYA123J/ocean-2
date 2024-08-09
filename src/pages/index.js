@@ -105,7 +105,7 @@ export default function Index(){
     </div>
   </div>
 </section>
-        <LanguageSwitcher/>
+        {/* <LanguageSwitcher/> */}
         <Services/>
         <Blogs/>
         <div className="flex justify-center">
