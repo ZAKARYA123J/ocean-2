@@ -7,6 +7,7 @@ import bahrain from '../../assets/images/contries/Bahrain.webp';
 import canada from '../../assets/images/bg/codifyformatter.jpg';
 import { FaAngleRight } from "react-icons/fa";
 import Whatp from '../WhatsAppFloatingButton'
+import LanguageSwitcher from '../LanguageSwitcher';
 // Sample job data
 const jobs = [
   {
@@ -86,7 +87,7 @@ const JobListings = () => {
           {filteredJobs.map((job) => (
             <div key={job.id} className="lg:w-2/3  mx-auto lg:ml-24 lg:h-24 lg:max-w-full lg:flex bg-white shadow-md rounded-lg overflow-hidden">
               <img
-                className="h-48 lg:w-24  object-cover lg:h-24"
+                className="h-48 lg:w-24 object-cover lg:h-24"
                 src={job.image}
                 alt={job.title}
               />
@@ -106,7 +107,9 @@ const JobListings = () => {
           ))}
         </div>
       </div>
+      <LanguageSwitcher/>
       <Whatp/>
+     
       <Footer />
     </>
   );

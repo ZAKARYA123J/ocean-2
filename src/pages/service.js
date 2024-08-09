@@ -7,6 +7,7 @@ import Detailservice from "../components/Detaileservice";
 import '../../node_modules/react-modal-video/scss/modal-video.scss';
 import WhatsAppFloatingButton from '../components/WhatsAppFloatingButton';
 import { useParams } from "react-router-dom";
+import LanguageSwitcher from "../components/LanguageSwitcher";
 export default function Service(){
     const {id}=useParams()
 
@@ -15,6 +16,7 @@ export default function Service(){
         <Navbar/>
         <Detailservice id={id}/>
         <WhatsAppFloatingButton/>
+        <LanguageSwitcher/>
         <GetInTouch/>
         <Footer/>
         <Switcher/>

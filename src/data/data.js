@@ -59,38 +59,38 @@ export const servicesData = [
 ]
 
 
-export const clientData = [
-    {
-        image:client1,
-        name:'Calvin Carlo',
-        title:'Manager',
-        desc:'" I was blown away by the personalized support I received from this team. Their expertise in global job placement helped me land a fantastic position abroad. Highly recommend their services! "'
-    },
-    {
-        image:client2,
-        name:'Christa Smith',
-        title:'Manager',
-        desc:'"Navigating international job markets can be daunting, but this company made it so much easier. Their multilingual support and document assistance were top-notch. I couldn’t have done it without them!"'
-    },
-    {
-        image:client3,
-        name:'Jemina CLone',
-        title:'Manager',
-        desc:'" needed help with job placements in several countries, and their tailored support was exceptional. The team’s attention to detail and professionalism made the entire process smooth and stress-free."'
-    },
-    {
-        image:client4,
-        name:'Smith Vodka',
-        title:'Manager',
-        desc:'" The document assistance was a lifesaver for my international job search. Their guidance was clear and effective, and their ability to support in multiple languages was a huge bonus."'
-    },
-    {
-        image:client5,
-        name:'Cristino Murfi',
-        title:'Manager',
-        desc:'"I was impressed with how well they understood the complexities of global job placement. The support was personalized, and their multilingual team made sure I was well-prepared for every step of the process."'
-    },
-]
+// export const clientData = [
+//     {
+//         image:client1,
+//         name:'Calvin Carlo',
+//         title:'Manager',
+//         desc:'" I was blown away by the personalized support I received from this team. Their expertise in global job placement helped me land a fantastic position abroad. Highly recommend their services! "'
+//     },
+//     {
+//         image:client2,
+//         name:'Christa Smith',
+//         title:'Manager',
+//         desc:'"Navigating international job markets can be daunting, but this company made it so much easier. Their multilingual support and document assistance were top-notch. I couldn’t have done it without them!"'
+//     },
+//     {
+//         image:client3,
+//         name:'Jemina CLone',
+//         title:'Manager',
+//         desc:'" needed help with job placements in several countries, and their tailored support was exceptional. The team’s attention to detail and professionalism made the entire process smooth and stress-free."'
+//     },
+//     {
+//         image:client4,
+//         name:'Smith Vodka',
+//         title:'Manager',
+//         desc:'" The document assistance was a lifesaver for my international job search. Their guidance was clear and effective, and their ability to support in multiple languages was a huge bonus."'
+//     },
+//     {
+//         image:client5,
+//         name:'Cristino Murfi',
+//         title:'Manager',
+//         desc:'"I was impressed with how well they understood the complexities of global job placement. The support was personalized, and their multilingual team made sure I was well-prepared for every step of the process."'
+//     },
+// ]
 
 
 
