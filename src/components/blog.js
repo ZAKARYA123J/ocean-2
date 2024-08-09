@@ -58,7 +58,7 @@ export default function Blogs(){
 
                                 <div className="mt-3">
                                     <CTA>
-                                    <Link to="" >Contact <i className="mdi mdi-chevron-right align-middle"></i></Link></CTA>
+                                    <Link to={`/formation/${item.id}`} >Contact <i className="mdi mdi-chevron-right align-middle"></i></Link></CTA>
                                 </div>
                             </div>
                            
