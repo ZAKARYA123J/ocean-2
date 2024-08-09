@@ -1,35 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate,Link } from 'react-router-dom';
 import image from '../../assets/images/ab3.jpg';
 import Navbar from '../navbar';
 import Footer from '../footer';
-import bahrain from '../../assets/images/contries/Bahrain.webp';
-import canada from '../../assets/images/bg/codifyformatter.jpg';
 import { FaAngleRight } from "react-icons/fa";
-import Whatp from '../WhatsAppFloatingButton'
 import LanguageSwitcher from '../LanguageSwitcher';
+import Whatp from '../WhatsAppFloatingButton';
+import { jobs } from '../../data/data';
+import WhatsAppFloatingButton from '../WhatsAppFloatingButton';
+
+
+
 // Sample job data
-const jobs = [
-  {
-    id: 1,
-    title: 'Senior Product Manager',
-    type: 'International',
-    image: bahrain,
-  },
-  {
-    id: 2,
-    title: 'Junior Product Manager',
-    type: 'National',
-    image: canada,
-  },
-  {
-    id: 3,
-    title: 'Junior Product Manager',
-    type: 'International',
-    image: image,
-  },
-  // Ensure each job has a unique id
-];
+
 
 const JobListings = () => {
   const [selectedType, setSelectedType] = useState('All');
@@ -83,29 +66,49 @@ const JobListings = () => {
           </select>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1  lg:grid-cols-1 xl:grid-cols-3 gap-5">
-          {filteredJobs.map((job) => (
-            <div key={job.id} className="lg:w-2/3  mx-auto lg:ml-24 lg:h-24 lg:max-w-full lg:flex bg-white shadow-md rounded-lg overflow-hidden">
-              <img
-                className="h-48 lg:w-24 object-cover lg:h-24"
-                src={job.image}
-                alt={job.title}
-              />
-              <div className="p-4 flex flex-col justify-between leading-normal">
-                <div className="mb-8">
-                  <div className="text-gray-900 font-bold text-xl mb-2">{job.title}</div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-3 gap-8 p-3">
+                        {filteredJobs.map((job) => (
+                    <div key={job.id} className="flex flex-col lg:flex-row bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+                    <div className="lg:w-1/4">
+                    <img
+                    className="w-full h-32 lg:h-full object-cover"
+                    src={job.image}
+                    alt={`${job.title} company logo`}
+                    />
                 </div>
-              </div>
-              <div className="flex justify-center lg:ml-10 lg:justify-end">
-              <p className="text-gray-700 lg:mt-4 mr-10 lg:ml-10 text-custom text-lg font-semibold w-24">{`${job.type}`}</p>
-                <button className="lg:ml-24 mb-4  lg:mt-3 lg:h-12 p-2 bg-blue-500 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300 flex items-center space-x-2">
-  <span>Demande</span>
-  <FaAngleRight />
-</button>
+                <div className="p-4 flex flex-col justify-between lg:w-3/4">
+                <div>
+                 <h3 className="text-blue-600  font-bold text-lg mb-1 ">{job.title}</h3>
+                 <p className="text-gray-600 text-sm mb-1"><strong>Secteur:</strong> {job.secteur}</p>
+                 <p className="text-gray-600 text-sm mb-1"><strong>Niveau Langue:</strong> {job.niveaulanguage}</p>
+                 <p className="text-gray-600 text-sm mb-1"><strong>Time Visa:</strong> {job.timevisa}</p>
+                 <p className="text-gray-600 text-sm mb-1"><strong>Contrat:</strong> {job.contratime}</p>
+                 <p className="text-gray-600 text-sm mb-3"><strong>Price Contrat:</strong> {job.pricecontrat}</p>
+                 <p className="text-gray-600 text-sm mb-3"><strong>More:</strong> {job.more}</p>
+                </div>
+                <div className="flex items-center justify-between">
+                 <p className="text-blue-600 font-semibold text-sm">{job.type}</p>
+                 {/* if  (job.id === 1 ) { */}
+                 <Link to={`${job.link}`} className="inline-flex items-center justify-center px-3 py-2 bg-blue-500 text-white text-sm font-semibold rounded-md shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300">
+                   <span>Demande</span>
+                           <FaAngleRight className="ml-2" />
+                  </Link>
+                  {/* // } 
+                  // else if ( ) {
+                  //   <Link to="https://api.whatsapp.com/send/?phone=%2B212704309787&text=Hi+oceanconnecting%21+I+need+more+info+about+Nos+services+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0" className="inline-flex items-center justify-center px-3 py-2 bg-blue-500 text-white text-sm font-semibold rounded-md shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300">
+                  //   <span>Demande</span>
+                  //           <FaAngleRight className="ml-2" />
+                  //  </Link>
+                  //  } */}
+                  
+                </div>
               </div>
             </div>
           ))}
         </div>
+
+
       </div>
       {/* <LanguageSwitcher/> */}
       <Whatp/>
@@ -115,4 +118,4 @@ const JobListings = () => {
   );
 };
 
-export default JobListings;
+export default JobListings;

@@ -9,7 +9,8 @@ import Formation from './pages/formation';
 import IndexSeven from './pages/index-seven';
 import Service from './pages/service';
 import Jobs from './components/recruitment/Jobs'
-import International from './components/recruitment/International';
+
+
 function App() {
   return (
     <Routes>
@@ -25,6 +26,7 @@ function App() {
       {/* <Route path="/service" component={<Service/>} /> */}
       <Route path='/jobs/:type' element={<Jobs/>}/>
       {/* <Route path='/international' element={<International/>}/> */}
+
     </Routes>
   );
 }

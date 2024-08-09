@@ -5,6 +5,8 @@ import { CgWebsite } from "react-icons/cg";
 import { IoHomeOutline } from "react-icons/io5";
 import { MdOutlineCleaningServices } from "react-icons/md";
 import { SlNote } from "react-icons/sl";
+import { Link, useParams } from "react-router-dom";
+import { Link as Link1 } from "react-scroll";
 import client1 from '../assets/images/team/01.jpg'
 import client2 from '../assets/images/team/02.jpg'
 import client3 from '../assets/images/team/03.jpg'
@@ -38,6 +40,12 @@ import company3 from '../assets/images/team/lenovo.svg'
 import company4 from '../assets/images/team/paypal.svg'
 import company5 from '../assets/images/team/shopify.svg'
 import company6 from '../assets/images/team/spotify.svg'
+import belgium from '../assets/images/job/belgium.png'
+import allemagne from '../assets/images/job/germany.png'
+import croatie from '../assets/images/job/croatie.png'
+import italy from '../assets/images/job/italy.png'
+import spain from '../assets/images/job/spain.png'
+import facade from '../assets//images/job/facade.png'
 
 
 export const servicesData = [
@@ -226,7 +234,7 @@ export const serviceData = [
             desc_para4:"Chaque formation commence par une analyse des besoins, suivie d'un programme personnalisé dispensé par des experts. Nous combinons théorie et pratique pour garantir une assimilation efficace des connaissances.",
             para5:"Valeur Ajoutée",
             desc_para5:"Nos formations se distinguent par leur flexibilité et leur approche pratique, intégrant les dernières tendances et technologies pour offrir des solutions pertinentes et immédiatement applicables sur le terrain.",
-            Button : "GET FORMATION",
+            link:<Link to={"/formation"} className="text-sky-500" >Get Formation <i className="mdi mdi-chevron-right align-middle"></i></Link>,
         },
         {
             id : 2 ,
@@ -244,7 +252,7 @@ export const serviceData = [
             desc_para4:"Nous utilisons des techniques de nettoyage adaptées à chaque type de surface, incluant le lavage haute pression et l'utilisation de produits écologiques. Nous commençons par une évaluation détaillée, suivie d'un nettoyage approfondi et d'un contrôle qualité final.",
             para5:"Valeur Ajoutée",
             desc_para5:"Notre expertise en nettoyage des façades garantit des résultats durables et une intervention rapide, tout en respectant les normes environnementales et de sécurité les plus strictes.",
-            Button :"CONTACT US",
+            link:<Link1 to="contact" className="text-sky-500"smooth={true} duration={1000} activeClass='active' spy={true}>Contact Us <i className="mdi mdi-chevron-right align-middle"></i></Link1>,
         },
 
         {
@@ -263,7 +271,7 @@ export const serviceData = [
             desc_para4:"Nous offrons un processus d'enregistrement facile, incluant la réception et la gestion du courrier, ainsi que des options de redirection selon vos besoins spécifiques. Vous pouvez accéder à vos documents en toute sécurité via notre plateforme en ligne.",
             para5:"Valeur Ajoutée",
             desc_para5:"Notre service se distingue par sa flexibilité, son support personnalisé et sa capacité à offrir une adresse prestigieuse qui renforce la crédibilité de votre entreprise tout en optimisant vos opérations administratives. ",
-            Button:"CONTACT US",
+            link:<Link1 to="contact" className="text-sky-500"smooth={true} duration={1000} activeClass='active' spy={true}>Contact Us <i className="mdi mdi-chevron-right align-middle"></i></Link1>,
         },  
         {
             id : 4 ,
@@ -281,7 +289,7 @@ export const serviceData = [
             desc_para4:"Nous commençons par une analyse approfondie de vos besoins, suivie de la création d’un design personnalisé. Ensuite, nous développons et testons le site pour garantir une performance optimale avant de le lancer.",
             para5:"Valeur Ajoutée",
             desc_para5:"Notre approche personnalisée et notre expertise technique garantissent des résultats qui non seulement répondent à vos attentes mais les dépassent, en offrant un site web fonctionnel, esthétiquement plaisant et optimisé pour les moteurs de recherche.",
-            Button:"CONTACT US",
+            link:<Link1 to="contact" className="text-sky-500"smooth={true} duration={1000} activeClass='active' spy={true}>Contact Us <i className="mdi mdi-chevron-right align-middle"></i></Link1>,
         }, 
         {
             id : 5 ,
@@ -298,8 +306,112 @@ export const serviceData = [
             desc_para4:"Nous utilisons des méthodes de recherche avancées et un réseau mondial pour sourcer des candidats. Le processus inclut une évaluation approfondie des compétences, des entretiens ciblés et une gestion proactive des candidatures pour garantir une correspondance optimale.",
             para5:"Valeur Ajoutée",
             desc_para5:"Notre expertise en recrutement international permet de trouver des talents adaptés aux exigences spécifiques de votre entreprise, tout en offrant un service personnalisé et un soutien tout au long du processus de recrutement pour assurer une intégration réussie. ",
-            Button:"GET JOB",
+            link:<Link to="/jobs/all" className="text-sky-500" >Get Job <i className="mdi mdi-chevron-right align-middle"></i></Link>,
         },  
 ]
+export const jobs = [
+    {
+        id: 1,
+        image: croatie,
+        title: 'Employment contract in Croatia',
+        type: 'International',
+        secteur:'Construction/blacksmith/carpentry/plumbing/electrical mechanics/air conditioning/perm driver/butcher/hotel',
+        niveaulanguage:'Language is not necessary .',
+        timevisa:'The duration of obtaining a visa is 5 months .',
+        contratime:'One year employment contract.',
+        pricecontrat:'The contract price is 6 million .',
+        more:'We provide housing, medicine, the possibility of renewing the contract for a period of 5 years, and assistance in obtaining a residence card',
+        link:"https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D9%83%D8%B1%D9%88%D8%A7%D8%AA%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+    },
+    {
+        id: 2,
+        image: allemagne,
+        title: 'Employment contract in Germany',
+        type: 'International',
+        secteur:'Health and nursing/hotels/programming ',
+        niveaulanguage:'Required language B1 .',
+        timevisa:'The duration of obtaining a visa is 8 months.',
+        contratime:'One year employment contract.',
+        pricecontrat:'The contract price is 8 million .',
+        more:'We provide housing, medicine, the possibility of renewing the contract for a period of 5 years, and assistance in obtaining a residence card',
+        link:"https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A3%D9%84%D9%85%D8%A7%D9%86%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+        
+       
+    },
+    {
+        id: 3,
+        image: belgium,
+        title: 'Employment contract in Belgium',
+        type: 'International',
+        secteur:'Health and nursing/hotels/programming',
+        niveaulanguage:'Language B1 is necessary .',
+        timevisa:'The duration of obtaining a visa is 8 months.',
+        contratime:'One year employment contract.',
+        pricecontrat:'The price of the contract is 6 million',
+        more:'We provide housing, medicine, the possibility of renewing the contract for a period of 5 years, and assistance in obtaining a residence card',
+        link:"https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A8%D9%84%D8%AC%D9%8A%D9%83%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+    },
+    {
+        id: 4,
+        image: italy,
+        title: 'Employment contract in Italy',
+        type: 'International',
+        secteur:'Health and nursing/hotels/agriculture',
+        niveaulanguage:'Language B1 is necessary .',
+        timevisa:'The duration of obtaining a visa is 8 months.',
+        contratime:'One year employment contract.',
+        pricecontrat:'The contract price is 6 million',
+        more:'We provide housing, medicine, the possibility of renewing the contract for a period of 5 years, and assistance in obtaining a residence card',
+        link:"https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A5%D9%8A%D8%B7%D8%A7%D9%84%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+    },
+    {
+        id: 5,
+        image: spain,
+        title: 'Employment contract in Spain',
+        type: 'International',
+        secteur:'Health and nursing/hotels/agriculture',
+        niveaulanguage:'Language B1 is necessary .',
+        timevisa:'The duration of obtaining a visa is 8 months.',
+        contratime:'One year employment contract.',
+        pricecontrat:'The contract price is 6 million',
+        more:'We provide housing, medicine, the possibility of renewing the contract for a period of 5 years, and assistance in obtaining a residence card',
+        link:"https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A5%D8%B3%D8%A8%D8%A7%D9%86%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+    },
+    {
+        id: 6,
+        image: facade,
+        title: 'Senior Product Manager',
+        type: 'National',
+        secteur:'Health and nursing/hotels/programming',
+        niveaulanguage:'Required language B1 .',
+        timevisa:'The duration of obtaining a visa is 8 months.',
+        contratime:'One year employment contract.',
+        pricecontrat:'The contract price is 8 million',
+        more:'We provide housing, medicine, the possibility of renewing the contract for a period of 5 years, and assistance in obtaining a residence card',
+        link:"#",
+    },
+    // Ensure each job has a unique id
+];
+export const recruitment = [
+    {
+        id:1,
+        title:'International Recruitment',
+        desc:'Connecting global talent with opportunities across borders. We simplify international hiring to help you find the best candidates worldwide.',
+        image:service5,
+        title2: 'International Recruitment Services',
+        desc2:'Our company specializes in connecting top talent with global opportunities. We provide comprehensive international recruitment solutions, including candidate sourcing, screening, and placement. By leveraging our extensive network and expertise in diverse markets, we help businesses find the right talent to drive their growth and success across borders.',
+    
+    },
+    {
+        id:2,
+        title:'Recruitment OceanConnecting',
+        desc:'Connecting top talent with leading organizations nationwide. Streamlining your hiring process for effective, efficient results.',
+        image:formation6,
+        title2: 'Recruitment OceanConnecting',
+        desc2:'We’re excited to invite you to apply for a position at our company. Join our team and contribute to our dynamic environment while advancing your career. Explore opportunities for growth, innovation, and impact with us.',
+    
+    },
+
+];
 
 export const companyLogo = [company1, company2, company3, company4, company5, company6]

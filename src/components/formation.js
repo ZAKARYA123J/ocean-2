@@ -85,8 +85,8 @@ const CourseCard = () => {
                                 <div className="mt-6">
                                     <div className="flex mb-4">
                                     </div>
-                                    <Link to="" className="title text-lg font-semibold hover:text-teal-500 duration-500 ease-in-out">{item.title}</Link>
-                                    <p className="text-slate-400 mt-2">{t(item.desc)}</p>
+                                    <Link to={`/formation/${index+1}`} className="title text-lg font-semibold hover:text-teal-500 duration-500 ease-in-out">{item.title}</Link>
+                                    <p className="text-slate-400 mt-2">{item.desc}</p>
 
                                     <div className="mt-3">
                                         <Link to={`/formation/${index+1}`} className="text-teal-500">{t(item.button)}<i className="mdi mdi-chevron-right align-middle"></i></Link>
