@@ -310,66 +310,70 @@ export const serviceData = [
 export const jobs = [
     {
         id: 1,
-        image: spain,
-        title: 'Senior Product Manager',
+        image: croatie,
+        title: 'Employment contract in Croatia',
         type: 'International',
-        secteur:'Health and nursing/hotels/programming',
+        secteur:'Construction/blacksmith/carpentry/plumbing/electrical mechanics/air conditioning/perm driver/butcher/hotel',
+        niveaulanguage:'Language is not necessary .',
+        timevisa:'The duration of obtaining a visa is 5 months .',
+        contratime:'One year employment contract.',
+        pricecontrat:'The contract price is 6 million .',
+        more:'We provide housing, medicine, the possibility of renewing the contract for a period of 5 years, and assistance in obtaining a residence card',
+        link:"https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D9%83%D8%B1%D9%88%D8%A7%D8%AA%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+    },
+    {
+        id: 2,
+        image: allemagne,
+        title: 'Employment contract in Germany',
+        type: 'International',
+        secteur:'Health and nursing/hotels/programming ',
         niveaulanguage:'Required language B1 .',
         timevisa:'The duration of obtaining a visa is 8 months.',
         contratime:'One year employment contract.',
-        pricecontrat:'The contract price is 8 million',
-      
-    },
-    {
-      id: 2,
-      image: allemagne,
-      title: 'Senior Product Manager',
-      type: 'International',
-      secteur:'Health and nursing/hotels/programming',
-      niveaulanguage:'Required language B1 .',
-      timevisa:'The duration of obtaining a visa is 8 months.',
-      contratime:'One year employment contract.',
-      pricecontrat:'The contract price is 8 million',
-
-      
-     
+        pricecontrat:'The contract price is 8 million .',
+        more:'We provide housing, medicine, the possibility of renewing the contract for a period of 5 years, and assistance in obtaining a residence card',
+        link:"https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A3%D9%84%D9%85%D8%A7%D9%86%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+        
+       
     },
     {
         id: 3,
-        image: croatie,
-        title: 'Senior Product Manager',
+        image: belgium,
+        title: 'Employment contract in Belgium',
         type: 'International',
         secteur:'Health and nursing/hotels/programming',
-        niveaulanguage:'Required language B1 .',
+        niveaulanguage:'Language B1 is necessary .',
         timevisa:'The duration of obtaining a visa is 8 months.',
         contratime:'One year employment contract.',
-        pricecontrat:'The contract price is 8 million',
-      
+        pricecontrat:'The price of the contract is 6 million',
+        more:'We provide housing, medicine, the possibility of renewing the contract for a period of 5 years, and assistance in obtaining a residence card',
+        link:"https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A8%D9%84%D8%AC%D9%8A%D9%83%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
     },
     {
         id: 4,
         image: italy,
-        title: 'Senior Product Manager',
+        title: 'Employment contract in Italy',
         type: 'International',
-        secteur:'Health and nursing/hotels/programming',
-        niveaulanguage:'Required language B1 .',
+        secteur:'Health and nursing/hotels/agriculture',
+        niveaulanguage:'Language B1 is necessary .',
         timevisa:'The duration of obtaining a visa is 8 months.',
         contratime:'One year employment contract.',
-        pricecontrat:'The contract price is 8 million',
-      
+        pricecontrat:'The contract price is 6 million',
+        more:'We provide housing, medicine, the possibility of renewing the contract for a period of 5 years, and assistance in obtaining a residence card',
+        link:"https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A5%D9%8A%D8%B7%D8%A7%D9%84%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
     },
-    
     {
         id: 5,
-        image: belgium,
-        title: 'Senior Product Manager',
+        image: spain,
+        title: 'Employment contract in Spain',
         type: 'International',
-        secteur:'Health and nursing/hotels/programming',
-        niveaulanguage:'Required language B1 .',
+        secteur:'Health and nursing/hotels/agriculture',
+        niveaulanguage:'Language B1 is necessary .',
         timevisa:'The duration of obtaining a visa is 8 months.',
         contratime:'One year employment contract.',
-        pricecontrat:'The contract price is 8 million',
-      
+        pricecontrat:'The contract price is 6 million',
+        more:'We provide housing, medicine, the possibility of renewing the contract for a period of 5 years, and assistance in obtaining a residence card',
+        link:"https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A5%D8%B3%D8%A8%D8%A7%D9%86%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
     },
     {
         id: 6,
@@ -381,7 +385,8 @@ export const jobs = [
         timevisa:'The duration of obtaining a visa is 8 months.',
         contratime:'One year employment contract.',
         pricecontrat:'The contract price is 8 million',
-      
+        more:'We provide housing, medicine, the possibility of renewing the contract for a period of 5 years, and assistance in obtaining a residence card',
+        link:"#",
     },
     // Ensure each job has a unique id
 ];
