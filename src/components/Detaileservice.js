@@ -39,7 +39,7 @@ export default function Daitalservice() {
     <section className="relative md:py-24 py-16">
       <div className="container relative">
         <div className="grid grid-cols-1 pb-6 text-center">
-          <h3 className="font-semibold text-2xl leading-normal mb-4">NO SERVICES</h3>
+          <h3 className="font-semibold text-2xl leading-normal mb-4">Our SERVICES</h3>
           <p className="text-slate-400 max-w-xl mx-auto">
             Nous proposons des formations professionnelles adaptées à tous les niveaux, un service de nettoyage de glace pour assurer sécurité et propreté en hiver, ainsi qu'une domiciliation pour offrir à votre entreprise une adresse prestigieuse et une gestion administrative simplifiée.
           </p>

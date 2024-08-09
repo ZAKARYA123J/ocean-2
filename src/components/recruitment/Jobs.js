@@ -7,6 +7,7 @@ import { FaAngleRight } from "react-icons/fa";
 import LanguageSwitcher from '../LanguageSwitcher';
 import Whatp from '../WhatsAppFloatingButton';
 import { jobs } from '../../data/data';
+import Switcher from "../switcher";
 import WhatsAppFloatingButton from '../WhatsAppFloatingButton';
 
 
@@ -44,7 +45,8 @@ const JobListings = () => {
   };
 
   return (
-    <>
+    <>        
+    <Switcher/>
       <div className="p-10 bg-gray-100">
         <Navbar />
         <h2 className="text-3xl font-bold text-black mb-4 mt-20">
