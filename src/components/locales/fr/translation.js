@@ -283,5 +283,13 @@ export const Titlefr=[
         button:"Contactez-nous"
     }
 ]
-
+export const NavbarFR=[{
+    Home:"Maison",
+    Services:"Services",
+    Formation:"Formation",
+    Jobs:"Emplois",
+    About:"À propos",
+    Contact_us:"Contactez-nous"
+}
+]
 

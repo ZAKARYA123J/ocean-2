@@ -1,6 +1,8 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-
+import saudi from './flags/saudi.png'
+import french from './flags/fr.jpeg'
+import english from './flags/eng.png'
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
 
@@ -9,7 +11,7 @@ const LanguageSwitcher = () => {
   };
 
   return (
-    <div className="fixed bottom-4 right-4 z-50 bg-white p-2 rounded-lg shadow-lg">
+    <div>
       <select
         className="px-4 py-2  text-black rounded-lg"
         onChange={handleLanguageChange}
