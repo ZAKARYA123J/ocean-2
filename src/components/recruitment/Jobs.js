@@ -107,7 +107,7 @@ const JobListings = () => {
           ))}
         </div>
       </div>
-      <LanguageSwitcher/>
+      {/* <LanguageSwitcher/> */}
       <Whatp/>
      
       <Footer />
