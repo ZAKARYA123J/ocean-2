@@ -281,6 +281,12 @@ export const serviceDataEN = [
         Button: "GET JOB"
     }
 ]
+export const TitleEN=[
+    {
+        Title:"Studies Training Recruitment",
+        button:"Contact Us"
+    }
+]
 
 
 export const companyLogo = [company1, company2, company3, company4, company5, company6]

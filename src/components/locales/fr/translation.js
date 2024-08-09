@@ -277,4 +277,11 @@ export const serviceDataFR = [
         Button:"GET JOB",
     },  
 ]
+export const Titlefr=[
+    {
+        Title:"Etudes Formation Recrutements",
+        button:"Contactez-nous"
+    }
+]
+
 

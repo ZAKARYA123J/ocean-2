@@ -279,3 +279,9 @@ export const serviceDataAR = [
         Button: "احصل على وظيفة",
     },
 ]
+export const TitleAR=[
+    {
+        Title:"دراسات التدريب التوظيف",
+        button:"اتصل بنا"
+    }
+]

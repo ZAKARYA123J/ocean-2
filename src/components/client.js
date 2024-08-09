@@ -89,7 +89,6 @@ export default function Client() {
                     </div>
                 </div>
             </div>
-            <LanguageSwitcher />
         </section>
     );
 }

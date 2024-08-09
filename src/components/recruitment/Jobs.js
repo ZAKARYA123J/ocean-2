@@ -7,6 +7,7 @@ import bahrain from '../../assets/images/contries/Bahrain.webp';
 import canada from '../../assets/images/bg/codifyformatter.jpg';
 import { FaAngleRight } from "react-icons/fa";
 import Whatp from '../WhatsAppFloatingButton'
+import LanguageSwitcher from '../LanguageSwitcher';
 // Sample job data
 const jobs = [
   {
@@ -106,7 +107,9 @@ const JobListings = () => {
           ))}
         </div>
       </div>
+      <LanguageSwitcher/>
       <Whatp/>
+     
       <Footer />
     </>
   );
