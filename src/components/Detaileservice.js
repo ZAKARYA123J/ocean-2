@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import { Link as Link1 } from "react-scroll";
 import { serviceData } from "../data/data";
 import styled from "styled-components";
 
@@ -70,7 +71,7 @@ export default function Daitalservice() {
                     <div className="flex items-center" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                       <h5 className="text-lg font-medium"><strong>{selectedFormation.para1}</strong></h5>
                       <CTA>
-                        <Link to="" className="text-sky-500">{selectedFormation.Button} <i className="mdi mdi-chevron-right align-middle"></i></Link>
+                        {selectedFormation.link}
                       </CTA>
                     </div>
                     <p className="text-slate-400 mt-4">{selectedFormation.desc_para1}</p>
@@ -88,7 +89,8 @@ export default function Daitalservice() {
                     <p className="text-slate-400 mt-4">{selectedFormation.desc_para5}</p>
                     <div className="mt-4">
                       <CTA>
-                        <Link to="contact" className="text-sky-500">{selectedFormation.Button} <i className="mdi mdi-chevron-right align-middle"></i></Link>
+                        {selectedFormation.link}
+                        {/* <Link1 to="contact" className="text-sky-500"smooth={true} duration={1000} activeClass='active' spy={true}>{selectedFormation.Button} <i className="mdi mdi-chevron-right align-middle"></i></Link1> */}
                       </CTA>
                     </div>
                   </div>
