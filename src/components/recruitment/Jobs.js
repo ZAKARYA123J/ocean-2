@@ -70,6 +70,8 @@ const JobListings = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-3 gap-8 p-3">
                         {filteredJobs.map((job) => (
+                        
+
                     <div key={job.id} className="flex flex-col lg:flex-row bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
                     <div className="lg:w-1/4">
                     <img
@@ -81,12 +83,12 @@ const JobListings = () => {
                 <div className="p-4 flex flex-col justify-between lg:w-3/4">
                 <div>
                  <h3 className="text-blue-600  font-bold text-lg mb-1 ">{job.title}</h3>
-                 <p className="text-gray-600 text-sm mb-1"><strong>Secteur:</strong> {job.secteur}</p>
-                 <p className="text-gray-600 text-sm mb-1"><strong>Niveau Langue:</strong> {job.niveaulanguage}</p>
-                 <p className="text-gray-600 text-sm mb-1"><strong>Time Visa:</strong> {job.timevisa}</p>
-                 <p className="text-gray-600 text-sm mb-1"><strong>Contrat:</strong> {job.contratime}</p>
-                 <p className="text-gray-600 text-sm mb-3"><strong>Price Contrat:</strong> {job.pricecontrat}</p>
-                 <p className="text-gray-600 text-sm mb-3"><strong>More:</strong> {job.more}</p>
+                 <p className="text-gray-600 text-sm mb-1"><strong>{job.menu1}</strong> {job.secteur}</p>
+                 <p className="text-gray-600 text-sm mb-1"><strong>{job.menu2}</strong> {job.niveaulanguage}</p>
+                 <p className="text-gray-600 text-sm mb-1"><strong>{job.menu3}</strong> {job.timevisa}</p>
+                 <p className="text-gray-600 text-sm mb-1"><strong>{job.menu4}</strong> {job.contratime}</p>
+                 <p className="text-gray-600 text-sm mb-3"><strong>{job.menu5}</strong> {job.pricecontrat}</p>
+                 <p className="text-gray-600 text-sm mb-3"><strong>{job.menu6}</strong> {job.more}</p>
                 </div>
                 <div className="flex items-center justify-between">
                  <p className="text-blue-600 font-semibold text-sm">{job.type}</p>
