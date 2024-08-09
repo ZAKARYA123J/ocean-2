@@ -38,11 +38,12 @@ import company3 from '../assets/images/team/lenovo.svg'
 import company4 from '../assets/images/team/paypal.svg'
 import company5 from '../assets/images/team/shopify.svg'
 import company6 from '../assets/images/team/spotify.svg'
-import image from '../assets/images/ab3.jpg'
-import allemagne from '../assets/images/contries/allemagne.png'
-import croatie from '../assets/images/contries/croatie.png'
-import italy from '../assets/images/contries/italy.png'
-import spain from '../assets/images/contries/spain.png'
+import belgium from '../assets/images/job/belgium.png'
+import allemagne from '../assets/images/job/germany.png'
+import croatie from '../assets/images/job/croatie.png'
+import italy from '../assets/images/job/italy.png'
+import spain from '../assets/images/job/spain.png'
+import facade from '../assets//images/job/facade.png'
 
 
 export const servicesData = [
@@ -308,7 +309,19 @@ export const serviceData = [
 ]
 export const jobs = [
     {
-      id: 1,
+        id: 1,
+        image: spain,
+        title: 'Senior Product Manager',
+        type: 'International',
+        secteur:'Health and nursing/hotels/programming',
+        niveaulanguage:'Required language B1 .',
+        timevisa:'The duration of obtaining a visa is 8 months.',
+        contratime:'One year employment contract.',
+        pricecontrat:'The contract price is 8 million',
+      
+    },
+    {
+      id: 2,
       image: allemagne,
       title: 'Senior Product Manager',
       type: 'International',
@@ -322,7 +335,7 @@ export const jobs = [
      
     },
     {
-        id: 2,
+        id: 3,
         image: croatie,
         title: 'Senior Product Manager',
         type: 'International',
@@ -334,7 +347,7 @@ export const jobs = [
       
     },
     {
-        id: 3,
+        id: 4,
         image: italy,
         title: 'Senior Product Manager',
         type: 'International',
@@ -345,21 +358,10 @@ export const jobs = [
         pricecontrat:'The contract price is 8 million',
       
     },
-    {
-        id: 4,
-        image: spain,
-        title: 'Senior Product Manager',
-        type: 'International',
-        secteur:'Health and nursing/hotels/programming',
-        niveaulanguage:'Required language B1 .',
-        timevisa:'The duration of obtaining a visa is 8 months.',
-        contratime:'One year employment contract.',
-        pricecontrat:'The contract price is 8 million',
-      
-    },
+    
     {
         id: 5,
-        image: image,
+        image: belgium,
         title: 'Senior Product Manager',
         type: 'International',
         secteur:'Health and nursing/hotels/programming',
@@ -371,7 +373,7 @@ export const jobs = [
     },
     {
         id: 6,
-        image: image,
+        image: facade,
         title: 'Senior Product Manager',
         type: 'National',
         secteur:'Health and nursing/hotels/programming',
@@ -383,6 +385,26 @@ export const jobs = [
     },
     // Ensure each job has a unique id
 ];
+export const recruitment = [
+    {
+        id:1,
+        title:'International Recruitment',
+        desc:'Connecting global talent with opportunities across borders. We simplify international hiring to help you find the best candidates worldwide.',
+        image:service5,
+        title2: 'International Recruitment Services',
+        desc2:'Our company specializes in connecting top talent with global opportunities. We provide comprehensive international recruitment solutions, including candidate sourcing, screening, and placement. By leveraging our extensive network and expertise in diverse markets, we help businesses find the right talent to drive their growth and success across borders.',
+    
+    },
+    {
+        id:2,
+        title:'Recruitment OceanConnecting',
+        desc:'Connecting top talent with leading organizations nationwide. Streamlining your hiring process for effective, efficient results.',
+        image:formation6,
+        title2: 'Recruitment OceanConnecting',
+        desc2:'We’re excited to invite you to apply for a position at our company. Join our team and contribute to our dynamic environment while advancing your career. Explore opportunities for growth, innovation, and impact with us.',
+    
+    },
 
+];
 
 export const companyLogo = [company1, company2, company3, company4, company5, company6]
