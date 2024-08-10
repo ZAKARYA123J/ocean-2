@@ -82,7 +82,7 @@ export const blogDataFR = [
         desc:'La formation pour un Agent de Check-in Aéroport prépare les professionnels ...',
         detail:"La formation pour un Agent de Check-in Aéroport prépare les professionnels à gérer efficacement l'enregistrement des passagers et à assurer le bon déroulement des opérations aéroportuaires. Elle couvre l'accueil des passagers, la vérification des documents et la gestion des bagages, tout en utilisant des systèmes informatiques de réservation et de contrôle des bagages. Les participants apprennent également les procédures de sécurité aéroportuaire, les réglementations internationales, et les techniques de service client pour offrir une expérience agréable. La formation comprend des simulations pratiques pour appliquer les connaissances acquises et développer des compétences en communication et en gestion des situations d'urgence.",
         type: 'Formation',
-             button:"En savoir plus"
+        button:"En savoir plus"
     },
     {
         id:3,
@@ -100,7 +100,7 @@ export const blogDataFR = [
         desc: 'Cette formation offre une expérience complète pour les passionnés de navigation...',
         detail:"Cette formation offre une expérience complète pour les passionnés de navigation, incluant des cours théoriques et pratiques sur la sécurité, les techniques de voile, et la navigation côtière et hauturière. Les sessions sont dirigées par des instructeurs expérimentés et comprennent des pratiques intensives en mer. Les participants peuvent obtenir des certifications reconnues, leur permettant de piloter divers types de bateaux et de voiliers. Rejoignez-nous pour développer vos compétences nautiques et vivre une aventure maritime inoubliable!",
         type: 'Formation',
-             button:"En savoir plus"
+        button:"En savoir plus"
     },
     {
         id:5,
@@ -109,7 +109,7 @@ export const blogDataFR = [
         desc: 'La formation Home & Family est conçue pour offrir des compétences pratiques et ...',
         detail:"La formation Home & Family est conçue pour offrir des compétences pratiques et des connaissances approfondies sur la gestion de la vie domestique et des relations familiales. Elle aborde des sujets variés allant de l'organisation du foyer à la gestion des finances familiales, en passant par les techniques de communication et de résolution de conflits. L'objectif est de fournir aux participants les outils nécessaires pour créer un environnement familial harmonieux et bien organisé.",
         type:'Formation',
-             button:"En savoir plus"
+        button:"En savoir plus"
     },
     {
         id:6,
@@ -201,6 +201,8 @@ export const serviceDataFR = [
         icon:<SlNote/>,
         Servicetitle:"Découvrez nos services",
         title:'Formation',
+        title2:"NOS SERVICES",
+        desc2:"Nous proposons des formations professionnelles adaptées à tous les niveaux, un service de nettoyage de glace pour assurer sécurité et propreté en hiver, ainsi qu'une domiciliation pour offrir à votre entreprise une adresse prestigieuse et une gestion administrative simplifiée.",
         desc: "Ceci est requis lorsque, par exemple, le texte final n'est pas encore disponible.",
         image:service1,
         para1 :'Service de Formation',
@@ -303,4 +305,10 @@ export const NavbarFR=[{
     Contact_us:"Contactez-nous"
 }
 ]
+export const AboutFR=[{
+    ask:"Qui sommes-nous ?",
+    title:"Nous sommes spécialisés dans le placement international et l'assistance documentaire, offrant un soutien sur mesure en plusieurs langues pour vous aider à naviguer dans les opportunités de carrière internationales.",
+    desc:"Notre entreprise fournit des services de placement international et un soutien expert en plusieurs langues. Nous aidons les clients à trouver des opportunités de carrière à l'étranger et offrons une aide complète pour la préparation de documents en diverses langues. Notre objectif est de faciliter une transition fluide et efficace vers des carrières internationales.",
+    year:"Années d'expérience"
+}]
 

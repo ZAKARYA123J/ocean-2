@@ -212,6 +212,8 @@ export const serviceDataEN = [
         icon: <SlNote/>,
         Servicetitle:"Explore Our Services",
         title: "Training",
+        title2:"OUR SERVICES",
+        desc2:"We offer professional training adapted to all levels, an ice cleaning service to ensure safety and cleanliness in winter, as well as a domiciliation to offer your company a prestigious address and simplified administrative management.",
         desc: "This is required when, for example, the final text is not yet available.",
         image: service1,
         para1: "Training Service",
@@ -311,6 +313,12 @@ export const NavbarEN=[{
     Jobs:"Jobs",
     About:"About",
     Contact_us:"Contact us"
+}]
+export const AboutEN=[{
+    ask:"Who Are We ?",
+    title:"We specialize in global job placement and document assistance,offering tailored support in multiple languagesto help you navigate international career opportunities.",
+    desc:"Our company provides international job placement services and expert support in multiple languages. We assist clients in finding global career opportunities and offer comprehensive help with document preparation in various languages. Our goal is to facilitate a smooth and effective transition to international careers.",
+    year:"YearsExperience"
 }]
 
 export const companyLogo = [company1, company2, company3, company4, company5, company6]

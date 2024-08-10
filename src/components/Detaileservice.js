@@ -62,10 +62,15 @@ export default function Daitalservice() {
     <section className="relative md:py-24 py-16">
       <div className="container relative">
         <div className="grid grid-cols-1 pb-6 text-center">
-          <h3 className="font-semibold text-2xl leading-normal mb-4">NO SERVICES</h3>
-          <p className="text-slate-400 max-w-xl mx-auto">
-            Nous proposons des formations professionnelles adaptées à tous les niveaux, un service de nettoyage de glace pour assurer sécurité et propreté en hiver, ainsi qu'une domiciliation pour offrir à votre entreprise une adresse prestigieuse et une gestion administrative simplifiée.
-          </p>
+        {serviceData.map((item, index) => (
+          <>
+                     <h3 className="font-semibold text-2xl leading-normal mb-4">{t(item.title2)}</h3>
+                     <p className="text-slate-400 max-w-xl mx-auto">
+                       {t(item.desc2)}
+                     </p>
+                     </>
+                    ))}
+          
         </div>
         <div className="grid md:grid-cols-12 grid-cols-1 mt-6 gap-6">
           <div className="lg:col-span-4 md:col-span-5">
@@ -94,7 +99,7 @@ export default function Daitalservice() {
                     <div className="flex items-center" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                       <h5 className="text-lg font-medium"><strong>{t(selectedFormation.para1)}</strong></h5>
                       <CTA>
-                        {selectedFormation.link}
+                        {selectedFormation.Button}
                       </CTA>
                     </div>
                     <p className="text-slate-400 mt-4">{t(selectedFormation.desc_para1)}</p>
@@ -112,7 +117,7 @@ export default function Daitalservice() {
                     <p className="text-slate-400 mt-4">{t(selectedFormation.desc_para5)}</p>
                     <div className="mt-4">
                       <CTA>
-                        {selectedFormation.link}
+                        {t(selectedFormation.Button)}
                         {/* <Link1 to="contact" className="text-sky-500"smooth={true} duration={1000} activeClass='active' spy={true}>{selectedFormation.Button} <i className="mdi mdi-chevron-right align-middle"></i></Link1> */}
                       </CTA>
                     </div>
