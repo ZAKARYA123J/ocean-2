@@ -320,5 +320,27 @@ export const AboutEN=[{
     desc:"Our company provides international job placement services and expert support in multiple languages. We assist clients in finding global career opportunities and offer comprehensive help with document preparation in various languages. Our goal is to facilitate a smooth and effective transition to international careers.",
     year:"YearsExperience"
 }]
+export const recruitmentEN = [
+    {
+        id:1,
+        h1:"Recruitment",
+        title:'International Recruitment',
+        desc:'Connecting global talent with opportunities across borders. We simplify international hiring to help you find the best candidates worldwide.',
+        image:service5,
+        title2: 'International Recruitment Services',
+        desc2:'Our company specializes in connecting top talent with global opportunities. We provide comprehensive international recruitment solutions, including candidate sourcing, screening, and placement. By leveraging our extensive network and expertise in diverse markets, we help businesses find the right talent to drive their growth and success across borders.',
+    
+    },
+    {
+        id:2,
+        title:'Recruitment OceanConnecting',
+        desc:'Connecting top talent with leading organizations nationwide. Streamlining your hiring process for effective, efficient results.',
+        image:formation6,
+        title2: 'Recruitment OceanConnecting',
+        desc2:'We’re excited to invite you to apply for a position at our company. Join our team and contribute to our dynamic environment while advancing your career. Explore opportunities for growth, innovation, and impact with us.',
+    
+    },
+
+];
 
 export const companyLogo = [company1, company2, company3, company4, company5, company6]

@@ -311,4 +311,23 @@ export const AboutFR=[{
     desc:"Notre entreprise fournit des services de placement international et un soutien expert en plusieurs langues. Nous aidons les clients à trouver des opportunités de carrière à l'étranger et offrons une aide complète pour la préparation de documents en diverses langues. Notre objectif est de faciliter une transition fluide et efficace vers des carrières internationales.",
     year:"Années d'expérience"
 }]
+export const recruitmentFR = [
+    {
+        id: 1,
+        h1:"Recrutement",
+        title: 'Recrutement International',
+        desc: 'Relier les talents mondiaux aux opportunités au-delà des frontières. Nous simplifions le recrutement international pour vous aider à trouver les meilleurs candidats dans le monde entier.',
+        image: service5,
+        title2: 'Services de Recrutement International',
+        desc2: 'Notre entreprise se spécialise dans la mise en relation des meilleurs talents avec des opportunités mondiales. Nous proposons des solutions complètes de recrutement international, y compris la recherche, la présélection et le placement des candidats. En tirant parti de notre vaste réseau et de notre expertise sur divers marchés, nous aidons les entreprises à trouver les talents adéquats pour stimuler leur croissance et leur succès au-delà des frontières.',
+    },
+    {
+        id: 2,
+        title: 'Recrutement OceanConnecting',
+        desc: 'Connecter les meilleurs talents avec des organisations de premier plan à l’échelle nationale. Rationaliser votre processus de recrutement pour des résultats efficaces et efficients.',
+        image: formation6,
+        title2: 'Recrutement OceanConnecting',
+        desc2: 'Nous sommes ravis de vous inviter à postuler pour un poste dans notre entreprise. Rejoignez notre équipe et contribuez à notre environnement dynamique tout en faisant avancer votre carrière. Explorez des opportunités de croissance, d’innovation et d’impact avec nous.',
+    },
+];
 
