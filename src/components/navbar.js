@@ -51,7 +51,9 @@ export default function Navbar(){
     return(
         <nav className={`navbar ${scroll ? 'is-sticky' : ''}`} id="navbar">
             <div className="container relative flex flex-wrap items-center justify-between" >
+              <Link to={"/"}>
                     <img src={img} className="inline-block " style={{width:"120px"}} alt=""/>
+                    </Link>
                    
                 <div className="nav-icons flex items-center lg_992:order-2 ms-auto md:ms-8">
                     {/* <ul className="list-none menu-social mb-0">
