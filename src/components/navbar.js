@@ -65,6 +65,7 @@ export default function Navbar(){
                         <span className="sr-only">Navigation Menu</span>
                         <i className="mdi mdi-menu text-[24px]"></i>
                     </button>
+                    <button className="nav-link lg:hidden"><LanguageSwitcher /></button>
                 </div>
 
                 <div className={`navigation lg_992:order-1 lg_992:flex  ms-auto ${manu ? '' : 'hidden'}`} id="menu-collapse">
