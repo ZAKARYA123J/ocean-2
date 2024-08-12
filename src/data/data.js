@@ -46,7 +46,7 @@ import croatie from '../assets/images/job/croatie.png'
 import italy from '../assets/images/job/italy.png'
 import spain from '../assets/images/job/spain.png'
 import facade from '../assets//images/job/facade.png'
-
+import recrutocean from '../assets/images/service/recrutocean.png'
 
 export const servicesData = [
     {
@@ -424,9 +424,6 @@ export const jobs = [
         menu4:"Type Contrat :",
         menu5:"Region :",
         menu6:"Key skills :",
-
-        
-
     },
     // Ensure each job has a unique id
 ];
@@ -444,7 +441,7 @@ export const recruitment = [
         id:2,
         title:'Recruitment OceanConnecting',
         desc:'Connecting top talent with leading organizations nationwide. Streamlining your hiring process for effective, efficient results.',
-        image:formation6,
+        image:recrutocean,
         title2: 'Recruitment OceanConnecting',
         desc2:'We’re excited to invite you to apply for a position at our company. Join our team and contribute to our dynamic environment while advancing your career. Explore opportunities for growth, innovation, and impact with us.',
     
