@@ -112,7 +112,7 @@ const Services = () => {
               </div>
               <h1 className="text-lg font-semibold">{t(skill.title)}</h1>
               <p className="text-gray-600 dark:text-gray-400">
-                {t(skill.desc)}
+                {t(skill.desc_para1)}
               </p>
               <Link to={`/service/${skill.id}`}>
                 <CTA>{t(skill.Button)}</CTA>
