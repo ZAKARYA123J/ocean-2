@@ -1,26 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import saudi from './flags/saudi.png'
-import french from './flags/fr.jpeg'
-import english from './flags/eng.png'
+import saudi from './flags/saudi.png';
+import french from './flags/fr.jpeg';
+
+import english from './flags/eng.png';
+
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
+  const [selectedLanguage, setSelectedLanguage] = useState('en');
 
-  const handleLanguageChange = (event) => {
-    i18n.changeLanguage(event.target.value);
+  const handleLanguageChange = (language) => {
+    setSelectedLanguage(language);
+    i18n.changeLanguage(language);
   };
 
+  const getButtonClass = (language) => (
+    `focus:outline-none ${selectedLanguage === language ? 'border-2 border-sky-500' : ''}`
+  );
+
   return (
-    <div>
-      <select
-        className="px-4 py-2  text-black rounded-lg"
-        onChange={handleLanguageChange}
-        defaultValue={i18n.language}
+    <div className="flex space-x-2">
+      <button 
+        onClick={() => handleLanguageChange('en')} 
+        className={getButtonClass('en')}
       >
-        <option value="en">English</option>
-        <option value="fr">Français</option>
-        <option value="ar">Arabe</option>
-      </select>
+        <img src={english} alt="English" className="w-6 h-6 " />
+      </button>
+      <button 
+        onClick={() => handleLanguageChange('fr')} 
+        className={getButtonClass('fr')}
+      >
+        <img src={french} alt="Français" className="w-6 h-6 " />
+      </button>
+      <button 
+        onClick={() => handleLanguageChange('ar')} 
+        className={getButtonClass('ar')}
+      >
+        <img src={saudi} alt="العربية" className="w-6 h-6 " />
+      </button>
+     
+     
     </div>
   );
 };

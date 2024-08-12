@@ -51,7 +51,9 @@ export default function Navbar(){
     return(
         <nav className={`navbar ${scroll ? 'is-sticky' : ''}`} id="navbar">
             <div className="container relative flex flex-wrap items-center justify-between" >
+              <Link to={"/"}>
                     <img src={img} className="inline-block " style={{width:"120px"}} alt=""/>
+                    </Link>
                    
                 <div className="nav-icons flex items-center lg_992:order-2 ms-auto md:ms-8">
                     {/* <ul className="list-none menu-social mb-0">
@@ -63,6 +65,7 @@ export default function Navbar(){
                         <span className="sr-only">Navigation Menu</span>
                         <i className="mdi mdi-menu text-[24px]"></i>
                     </button>
+                    <button className="nav-link lg:hidden"><LanguageSwitcher /></button>
                 </div>
 
                 <div className={`navigation lg_992:order-1 lg_992:flex  ms-auto ${manu ? '' : 'hidden'}`} id="menu-collapse">
@@ -86,8 +89,8 @@ export default function Navbar(){
     <li className="nav-item ms-0">
       <Link1 className="nav-link" to="contact" smooth={true} duration={1000} activeClass='active' spy={true}>{t(item.Contact_us)}</Link1>
     </li>
-    <li className="nav-item ms-0">
-      <button className="nav-link"><LanguageSwitcher /></button>
+    <li className="nav-item ms-0 md:hiden" >
+      <button className="nav-link "><LanguageSwitcher /></button>
     </li>
   </ul>
 ))}

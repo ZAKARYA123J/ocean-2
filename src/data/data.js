@@ -261,7 +261,7 @@ export const serviceData = [
             id : 3 ,
             icon:<IoHomeOutline/>,
             title:'Domiciliation',
-            desc:'This is required when, for example, the final text is not yet available.',
+            desc:"Profitez d'une domiciliation d'entreprise professionnelle à Agadir pour renforcer votre image corporative et votre présence sur le marché . ",
             image:service3,
             para1 :'Service de Domiciliation',
             desc_para1 :"Notre service de domiciliation vous offre une adresse professionnelle prestigieuse pour votre entreprise. En plus de simplifier la gestion administrative, nous assurons la réception de votre courrier et vous fournissons un support complet pour toutes vos démarches. Faites de notre adresse celle de votre entreprise pour renforcer votre image et optimiser votre organisation.",

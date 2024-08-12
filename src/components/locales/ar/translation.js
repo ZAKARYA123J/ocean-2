@@ -30,6 +30,15 @@ import service2 from '../../../assets/images/service/service2.png'
 import service3 from '../../../assets/images/service/service3.png'
 import service4 from '../../../assets/images/service/service4.png'
 import service5 from '../../../assets/images/service/service5.png'
+import belgium from '../../../assets/images/job/belgium.png'
+import allemagne from '../../../assets/images/job/germany.png'
+import croatie from '../../../assets/images/job/croatie.png'
+import italy from '../../../assets/images/job/italy.png'
+import spain from '../../../assets/images/job/spain.png'
+import facade from '../../../assets//images/job/facade.png'
+import resume from '../../../assets/images/job/resume.png'
+import recrutocean from '../../../assets/images/service/recrutocean.png'
+import recrutinter from '../../../assets/images/service/recrutinter2.png'
 
 export const clientDataAR = [
     {
@@ -209,7 +218,7 @@ export const serviceDataAR = [
         title: 'التدريب',
         title2:"خدماتنا",
         desc2:"نحن نقدم تدريبًا احترافيًا يناسب جميع المستويات، وخدمة تنظيف الجليد لضمان السلامة والنظافة في فصل الشتاء، بالإضافة إلى التوطين لتقديم عنوان مرموق وإدارة إدارية مبسطة لشركتك.",
-        desc: "هذا مطلوب عندما، على سبيل المثال، النص النهائي لم يكن متاحًا بعد.",
+        desc: "عزز مهاراتك من خلال تدريب مخصص من محترفين ذوي خبرة. يقدم المدربون الخبراء لدينا برامج مخصصة لمساعدتك على تحقيق أهدافك بثقة وفعالية.",
         image: service1,
         para1: 'خدمة التدريب',
         desc_para1: "نقدم تدريبات مهنية عالية الجودة، تتناسب مع جميع مستويات الخبرة. تم تصميم برامجنا لتوفير المهارات العملية والنظرية، مما يتيح لك التقدم في مسيرتك المهنية وتحقيق أهدافك المهنية. سواء كنت مبتدئًا أو خبيرًا، سيقوم مدربونا ذوو الخبرة بمساعدتك طوال مسيرتك التعليمية.",
@@ -221,6 +230,7 @@ export const serviceDataAR = [
         desc_para4: "تبدأ كل دورة تدريبية بتحليل الاحتياجات، تليها برنامج مخصص يقدمه خبراء. نحن ندمج بين النظرية والتطبيق لضمان استيعاب فعّال للمعرفة.",
         para5: "القيمة المضافة",
         desc_para5: "تتميز تدريباتنا بمرونتها ونهجها العملي، حيث ندمج أحدث الاتجاهات والتقنيات لتقديم حلول ملائمة وقابلة للتطبيق على الفور في الميدان.",
+        Bouton : "تعرف أكثر",
         link:<Link to={"/formation"} className="text-sky-500" >احصل على تدريب <i className="mdi mdi-chevron-right align-middle"></i></Link>,
 
     },
@@ -228,7 +238,7 @@ export const serviceDataAR = [
         id: 2,
         icon: <MdOutlineCleaningServices />,
         title: 'تنظيف الواجهات',
-        desc: 'هذا مطلوب عندما، على سبيل المثال، النص النهائي لم يكن متاحًا بعد.',
+        desc: 'عزز مظهر المبنى الخاص بك وطول عمره من خلال خدمات تنظيف الواجهات الاحترافية. تأكد من أن الممتلكات الخاصة بك تترك انطباعًا أوليًا قويًا، مما يعكس جودة عملك واحترافيته.',
         image: service2,
         para1: 'خدمة تنظيف واجهات البنايات',
         desc_para1: "تضمن لك خدمتنا لتنظيف الواجهات نتائج مثالية لاستعادة اللمعان والنظافة لمبانيك. بفضل تقنياتنا الاحترافية ومنتجاتنا الصديقة للبيئة، نقوم بإزالة الأوساخ، والعفن، والملوثات بشكل فعال. ثق بخبرتنا للحفاظ على مظهر ومتانة واجهاتك.",
@@ -240,6 +250,7 @@ export const serviceDataAR = [
         desc_para4: "نستخدم تقنيات تنظيف تتناسب مع كل نوع من الأسطح، بما في ذلك الغسيل عالي الضغط واستخدام منتجات صديقة للبيئة. نبدأ بتقييم شامل، يتبعه تنظيف دقيق وفحص جودة نهائي.",
         para5: "القيمة المضافة",
         desc_para5: "تضمن خبرتنا في تنظيف الواجهات نتائج طويلة الأمد وتدخل سريع، مع احترام أعلى المعايير البيئية والأمنية.",
+        Bouton : "تعرف أكثر",
         link:<Link1 to="contact" className="text-sky-500"smooth={true} duration={1000} activeClass='active' spy={true}>اتصل بنا <i className="mdi mdi-chevron-right align-middle"></i></Link1>,
 
     },
@@ -247,7 +258,7 @@ export const serviceDataAR = [
         id: 3,
         icon: <IoHomeOutline />,
         title: 'التسجيل',
-        desc: 'هذا مطلوب عندما، على سبيل المثال، النص النهائي لم يكن متاحًا بعد.',
+        desc: 'استفد من توطين الأعمال المهنية في أغادير لتعزيز صورة شركتك ووجودك في السوق.',
         image: service3,
         para1: 'خدمة التسجيل',
         desc_para1: "تقدم لك خدمتنا للتسجيل عنوانًا تجاريًا مميزًا لشركتك. بالإضافة إلى تبسيط الإدارة الإدارية، نحرص على استلام بريدك وتوفير دعم كامل لجميع إجراءاتك. اجعل عنواننا عنوان شركتك لتعزيز صورتك وتحسين تنظيمك.",
@@ -259,6 +270,7 @@ export const serviceDataAR = [
         desc_para4: "نقدم عملية تسجيل سهلة، تشمل استلام وإدارة البريد، بالإضافة إلى خيارات التوجيه حسب احتياجاتك المحددة. يمكنك الوصول إلى مستنداتك بأمان عبر منصتنا الإلكترونية.",
         para5: "القيمة المضافة",
         desc_para5: "تتميز خدمتنا بمرونتها، ودعمها المخصص، وقدرتها على توفير عنوان مميز يعزز مصداقية شركتك، مع تحسين عملياتك الإدارية.",
+        Bouton : "تعرف أكثر",
         link:<Link1 to="contact" className="text-sky-500"smooth={true} duration={1000} activeClass='active' spy={true}>اتصل بنا <i className="mdi mdi-chevron-right align-middle"></i></Link1>,
 
     },
@@ -266,7 +278,7 @@ export const serviceDataAR = [
         id: 4,
         title: 'التطوير',
         icon: <CgWebsite />,
-        desc: 'هذا مطلوب عندما، على سبيل المثال، النص النهائي لم يكن متاحًا بعد.',
+        desc: 'عزز تواجدك على الإنترنت من خلال خدمات تطوير الويب المتخصصة لدينا. يقوم مقدمو الخدمة الفرديون لدينا بتصميم مواقع ويب مصممة خصيصًا وسريعة الاستجابة وتتوافق تمامًا مع علامتك التجارية وأهداف عملك.',
         image: service4,
         para1: 'خدمة التطوير',
         desc_para1: "نقدم خدمة كاملة لإنشاء مواقع الويب حسب الطلب لتلبية احتياجاتك الخاصة. من التصميم إلى الإطلاق، يستخدم فريقنا من الخبراء أحدث التقنيات لتطوير مواقع جمالية، وعملية، ومحسّنة لمحركات البحث. سواء كنت بحاجة إلى موقع عرض، أو متجر عبر الإنترنت، أو منصة مخصصة، نحن هنا لتحقيق مشروعك.",
@@ -278,6 +290,7 @@ export const serviceDataAR = [
         desc_para4: "نبدأ بتحليل شامل لاحتياجاتك، يليه إنشاء تصميم مخصص. ثم نقوم بتطوير واختبار الموقع لضمان أدائه الأمثل قبل إطلاقه.",
         para5: "القيمة المضافة",
         desc_para5: "تضمن مقاربتنا الشخصية وخبرتنا التقنية تحقيق نتائج لا تقتصر على تلبية توقعاتك بل تتجاوزها، من خلال تقديم موقع ويب وظيفي، وجمالي، ومحسن لمحركات البحث.",
+        Bouton : "تعرف أكثر",
         link:<Link1 to="contact" className="text-sky-500"smooth={true} duration={1000} activeClass='active' spy={true}>اتصل بنا <i className="mdi mdi-chevron-right align-middle"></i></Link1>,
 
     },
@@ -309,7 +322,7 @@ export const TitleAR=[
 export const NavbarAR=
 [
 {
-    Home:"منزل",
+    Home:"الرئيسية",
     Services:"خدمات",
     Formation:"التدريب",
     Jobs:"وظائف",
@@ -328,7 +341,7 @@ export const recruitmentAR = [
         h1:"توظيف",
         title: 'التوظيف الدولي',
         desc: 'ربط المواهب العالمية بالفرص عبر الحدود. نحن نبسط عملية التوظيف الدولي لمساعدتك في العثور على أفضل المرشحين في جميع أنحاء العالم.',
-        image: service5,
+        image:recrutinter,
         title2: 'خدمات التوظيف الدولي',
         desc2: 'تتخصص شركتنا في ربط أفضل المواهب بالفرص العالمية. نقدم حلول توظيف دولية شاملة، بما في ذلك البحث عن المرشحين، وفحصهم، وتوظيفهم. من خلال الاستفادة من شبكتنا الواسعة وخبرتنا في الأسواق المختلفة، نساعد الشركات على العثور على المواهب المناسبة لدفع نموها ونجاحها عبر الحدود.',
     },
@@ -336,9 +349,138 @@ export const recruitmentAR = [
         id: 2,
         title: 'التوظيف OceanConnecting',
         desc: 'ربط أفضل المواهب مع المنظمات الرائدة على مستوى الوطن. تبسيط عملية التوظيف لديك لتحقيق نتائج فعالة وكفء.',
-        image: formation6,
+        image:recrutocean,
         title2: 'التوظيف OceanConnecting',
         desc2: 'نحن متحمسون لدعوتك للتقدم لشغل وظيفة في شركتنا. انضم إلى فريقنا وساهم في بيئتنا الديناميكية بينما تقدم مسيرتك المهنية. استكشف فرص النمو والابتكار والتأثير معنا.',
     },
+];
+export const jobsAR = [
+    {
+        id: 1,
+        image: resume,
+        title: 'استمارة طلب عقد عمل خارجي',
+        type: 'دولي',
+        more: "يرجى ملء النموذج التالي بالمعلومات اللازمة وإحضاره إلى مكتبنا في أقرب وقت ممكن على العنوان التالي " ,
+        action : 'تحميل',
+        link:"https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D9%83%D8%B1%D9%88%D8%A7%D8%AA%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+    },
+    {
+        id: 2,
+        image: croatie,
+        title: 'عقد عمل في كرواتيا',
+        type: 'دولي',
+        secteur: 'البناء/الحدادة/النجارة/السباكة/الميكانيكا الكهربائية/تكييف الهواء/سائق/جزار/فندق',
+        niveaulanguage: 'اللغة غير ضرورية.',
+        timevisa: 'مدة الحصول على الفيزا هي 5 أشهر.',
+        contratime: 'عقد عمل لمدة سنة.',
+        pricecontrat: 'سعر العقد هو 6 ملايين.',
+        more: 'نوفر السكن، والطب، وإمكانية تجديد العقد لمدة 5 سنوات، ومساعدة في الحصول على بطاقة الإقامة.',
+        link: "https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D9%83%D8%B1%D9%88%D8%A7%D8%AA%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+        
+            menu1: "القطاع :",
+            menu2: "مستوى اللغة :",
+            menu3: "مدة التأشيرة :",
+            menu4: "العقد :",
+            menu5: "سعر العقد :",
+            menu6: "المزيد :"
+          
+          
+    },
+    {
+        id: 3,
+        image: allemagne,
+        title: 'عقد عمل في ألمانيا',
+        type: 'دولي',
+        secteur: 'الصحة والتمريض/الفنادق/البرمجة',
+        niveaulanguage: 'اللغة مطلوبة B1.',
+        timevisa: 'مدة الحصول على الفيزا هي 8 أشهر.',
+        contratime: 'عقد عمل لمدة سنة.',
+        pricecontrat: 'سعر العقد هو 8 ملايين.',
+        more: 'نوفر السكن، والطب، وإمكانية تجديد العقد لمدة 5 سنوات، ومساعدة في الحصول على بطاقة الإقامة.',
+        link: "https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A3%D9%84%D9%85%D8%A7%D9%86%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+        menu1: "القطاع :",
+        menu2: "مستوى اللغة :",
+        menu3: "مدة التأشيرة :",
+        menu4: "العقد :",
+        menu5: "سعر العقد :",
+        menu6: "المزيد :"
+    },
+    {
+        id: 4,
+        image: belgium,
+        title: 'عقد عمل في بلجيكا',
+        type: 'دولي',
+        secteur: 'الصحة والتمريض/الفنادق/البرمجة',
+        niveaulanguage: 'اللغة B1 ضرورية.',
+        timevisa: 'مدة الحصول على الفيزا هي 8 أشهر.',
+        contratime: 'عقد عمل لمدة سنة.',
+        pricecontrat: 'سعر العقد هو 6 ملايين.',
+        more: 'نوفر السكن، والطب، وإمكانية تجديد العقد لمدة 5 سنوات، ومساعدة في الحصول على بطاقة الإقامة.',
+        link: "https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A8%D9%84%D8%AC%D9%8A%D9%83%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+        menu1: "القطاع :",
+        menu2: "مستوى اللغة :",
+        menu3: "مدة التأشيرة :",
+        menu4: "العقد :",
+        menu5: "سعر العقد :",
+        menu6: "المزيد :"
+    },
+    {
+        id: 5,
+        image: italy,
+        title: 'عقد عمل في إيطاليا',
+        type: 'دولي',
+        secteur: 'الصحة والتمريض/الفنادق/الزراعة',
+        niveaulanguage: 'اللغة B1 ضرورية.',
+        timevisa: 'مدة الحصول على الفيزا هي 8 أشهر.',
+        contratime: 'عقد عمل لمدة سنة.',
+        pricecontrat: 'سعر العقد هو 6 ملايين.',
+        more: 'نوفر السكن، والطب، وإمكانية تجديد العقد لمدة 5 سنوات، ومساعدة في الحصول على بطاقة الإقامة.',
+        link: "https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A5%D9%8A%D8%B7%D8%A7%D9%84%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+        menu1: "القطاع :",
+        menu2: "مستوى اللغة :",
+        menu3: "مدة التأشيرة :",
+        menu4: "العقد :",
+        menu5: "سعر العقد :",
+        menu6: "المزيد :"
+    },
+    {
+        id: 6,
+        image: spain,
+        title: 'عقد عمل في إسبانيا',
+        type: 'دولي',
+        secteur: 'الصحة والتمريض/الفنادق/الزراعة',
+        niveaulanguage: 'اللغة B1 ضرورية.',
+        timevisa: 'مدة الحصول على الفيزا هي 8 أشهر.',
+        contratime: 'عقد عمل لمدة سنة.',
+        pricecontrat: 'سعر العقد هو 6 ملايين.',
+        more: 'نوفر السكن، والطب، وإمكانية تجديد العقد لمدة 5 سنوات، ومساعدة في الحصول على بطاقة الإقامة.',
+        link: "https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A5%D8%B3%D8%A8%D8%A7%D9%86%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+        menu1: "القطاع :",
+        menu2: "مستوى اللغة :",
+        menu3: "مدة التأشيرة :",
+        menu4: "العقد :",
+        menu5: "سعر العقد :",
+        menu6: "المزيد :"
+    },
+    {
+        id: 7,
+        image: facade,
+        title: 'مدير منتج أول',
+        type: 'وطني',
+        secteur: 'خدمة التنظيف',
+        niveaulanguage: 'اللغة ليست ضرورية.',
+        timevisa: 'مستوى البكالوريا.',
+        contratime: 'عقد CDI -CDD.',
+        pricecontrat: 'أكادير .',
+        more: 'الشراء - صناعة الغلايات - التدفئة - التقديرات - التصنيع - GPAO - العملية - الإنتاج - الجودة',
+        menu1:" قطاع  : ",
+        menu2:" مستوى اللغة  :",
+        menu3:" مستوى التعليم  :",
+        menu4:" نوع العقد :",
+        menu5:" منطقة :",
+        menu6:" المهارات الأساسية :",
+        action : ' تقدم ',
+    },
+    // تأكد من أن لكل وظيفة معرف فريد
 ];
 
