@@ -22,6 +22,6 @@ export default function IndexFive(){
     </div>
 </section>
 <Footer/>
-        </>
+     </>
     )
 }

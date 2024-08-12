@@ -118,7 +118,7 @@ export default function Index(){
         <GetInTouch/>
         <WhatsAppFloatingButton/>
         <Footer/>
-        <Switcher/>
+        {/* <Switcher/> */}
         
         </>
     )

@@ -322,7 +322,7 @@ export const serviceDataFR = [
         desc_para4:"Nous utilisons des méthodes de recherche avancées et un réseau mondial pour sourcer des candidats. Le processus inclut une évaluation approfondie des compétences, des entretiens ciblés et une gestion proactive des candidatures pour garantir une correspondance optimale.",
         para5:"Valeur Ajoutée",
         desc_para5:"Notre expertise en recrutement international permet de trouver des talents adaptés aux exigences spécifiques de votre entreprise, tout en offrant un service personnalisé et un soutien tout au long du processus de recrutement pour assurer une intégration réussie. ",
-        Button:"GET JOB",
+        Button:"OBTENIR UN EMPLOI",
     },  
 ]
 export const Titlefr=[
