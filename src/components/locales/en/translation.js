@@ -82,6 +82,8 @@ export const blogDataEN = [
     {
         id:1,
         image:formation6,
+        Title:"Training",
+        text:"This administrative management training teaches participants the essential skills to excel in administrative tasks, covering document management, optimization of organizational processes, and professional communication. It combines theory and practice for skills that are immediately applicable in business.",
         resrvedatail:"For each course you complete, you will receive a certification that you can share on your social networks (for example, LinkedIn). Each certification has a unique authentication number that allows it to be verified.",
         resrveButton:"Réserver",
         blogetitle:"Trends Trainings",
@@ -89,7 +91,9 @@ export const blogDataEN = [
         desc:'Ocean Connecting offers a comprehensive language learning program covering...',
         detail:'The Ocean Connecting offers a comprehensive language learning program covering levels A1 to C2. It features young teachers, engaging activities, educational trips, and flexible schedules. Students benefit from regular level assessments, free access to PCs and Wi-Fi, and air-conditioned classrooms. The program also provides psychological monitoring and guidance, ensuring a supportive learning environment.this program aims to enhance language proficiency through interactive and diverse methods, accommodating different learning paces and needs.',
         type: 'language',
-        button:"Read More"
+        button:"Read More",
+        data:"For each course you complete, you will receive a certification that you can share on your social networks (for example, LinkedIn). Each certification has a unique authentication number that allows it to be verified.",
+        reserver:"Reservé"
     },
     {
         id:2,
@@ -98,7 +102,9 @@ export const blogDataEN = [
         desc:'La formation pour un Agent de Check-in Aéroport prépare les professionnels ...',
         detail:"La formation pour un Agent de Check-in Aéroport prépare les professionnels à gérer efficacement l'enregistrement des passagers et à assurer le bon déroulement des opérations aéroportuaires. Elle couvre l'accueil des passagers, la vérification des documents et la gestion des bagages, tout en utilisant des systèmes informatiques de réservation et de contrôle des bagages. Les participants apprennent également les procédures de sécurité aéroportuaire, les réglementations internationales, et les techniques de service client pour offrir une expérience agréable. La formation comprend des simulations pratiques pour appliquer les connaissances acquises et développer des compétences en communication et en gestion des situations d'urgence.",
         type: 'Formation',
-                button:"Read More"
+                button:"Read More",
+                       data:"For each course you complete, you will receive a certification that you can share on your social networks (for example, LinkedIn). Each certification has a unique authentication number that allows it to be verified.",
+        reserver:"Reservé"
     },
     {
         id:3,
@@ -107,7 +113,9 @@ export const blogDataEN = [
         desc:'La formation DJ enseigne les compétences nécessaires pour devenir un DJ...',
         detail:"La formation DJ enseigne les compétences nécessaires pour devenir un DJ professionnel, en couvrant les techniques de mixage, l'utilisation des équipements modernes comme les platines et les contrôleurs, ainsi que les bases de la production musicale pour créer des remixes et des morceaux originaux. Les participants apprennent également à gérer des événements, à organiser des sets, et à interagir avec le public. En plus des aspects techniques, la formation aide à développer une identité artistique personnelle, à promouvoir son travail en ligne et à construire un portfolio. Elle est idéale pour les débutants et les DJs souhaitant perfectionner leurs compétences et entrer dans le monde de la musique.",
         type: 'Formation',
-                button:"Read More"
+                button:"Read More",
+                       data:"For each course you complete, you will receive a certification that you can share on your social networks (for example, LinkedIn). Each certification has a unique authentication number that allows it to be verified.",
+        reserver:"Reservé"
     },
     {
         id:4,
@@ -116,7 +124,9 @@ export const blogDataEN = [
         desc: 'Cette formation offre une expérience complète pour les passionnés de navigation...',
         detail:"Cette formation offre une expérience complète pour les passionnés de navigation, incluant des cours théoriques et pratiques sur la sécurité, les techniques de voile, et la navigation côtière et hauturière. Les sessions sont dirigées par des instructeurs expérimentés et comprennent des pratiques intensives en mer. Les participants peuvent obtenir des certifications reconnues, leur permettant de piloter divers types de bateaux et de voiliers. Rejoignez-nous pour développer vos compétences nautiques et vivre une aventure maritime inoubliable!",
         type: 'Formation',
-                button:"Read More"
+                button:"Read More",
+                       data:"For each course you complete, you will receive a certification that you can share on your social networks (for example, LinkedIn). Each certification has a unique authentication number that allows it to be verified.",
+        reserver:"Reservé"
     },
     {
         id:5,
@@ -125,7 +135,9 @@ export const blogDataEN = [
         desc: 'La formation Home & Family est conçue pour offrir des compétences pratiques et ...',
         detail:"La formation Home & Family est conçue pour offrir des compétences pratiques et des connaissances approfondies sur la gestion de la vie domestique et des relations familiales. Elle aborde des sujets variés allant de l'organisation du foyer à la gestion des finances familiales, en passant par les techniques de communication et de résolution de conflits. L'objectif est de fournir aux participants les outils nécessaires pour créer un environnement familial harmonieux et bien organisé.",
         type:'Formation',
-                button:"Read More"
+                button:"Read More",
+                       data:"For each course you complete, you will receive a certification that you can share on your social networks (for example, LinkedIn). Each certification has a unique authentication number that allows it to be verified.",
+        reserver:"Reservé"
     },
     {
         id:6,
@@ -134,7 +146,9 @@ export const blogDataEN = [
         desc:'La formation en installation et utilisation des VAR (Value Added Resellers)...',
         detail:"La formation en installation et utilisation des VAR (Value Added Resellers) vise à fournir aux professionnels les compétences nécessaires pour installer, configurer et utiliser efficacement les solutions technologiques proposées par les VAR. Elle couvre les étapes d'installation des matériels et logiciels, la configuration avancée, ainsi que l'utilisation quotidienne des outils et applications. Les participants apprennent également à fournir un support technique, diagnostiquer et résoudre les problèmes, effectuer la maintenance préventive, et optimiser les performances des solutions. Cette formation est essentielle pour garantir une gestion efficace des solutions VAR et assurer une performance optimale des systèmes",
         type: 'Formation',
-                button:"Read More"
+                button:"Read More",
+                       data:"For each course you complete, you will receive a certification that you can share on your social networks (for example, LinkedIn). Each certification has a unique authentication number that allows it to be verified.",
+        reserver:"Reservé"
     },
     {
         id:7,
@@ -143,7 +157,9 @@ export const blogDataEN = [
         desc:'La formation à la navigation maritime enseigne aux participants les compétences ...',
         detail:"La formation à la navigation maritime enseigne aux participants les compétences essentielles pour naviguer en toute sécurité en mer, en couvrant l'utilisation des outils de navigation comme les cartes maritimes et les systèmes GPS, ainsi que la compréhension des réglementations internationales. Les participants apprennent à planifier des trajets, à gérer les conditions météorologiques, et à assurer la sécurité du navire et de l'équipage. La formation inclut également des techniques de sauvetage et de gestion des situations d'urgence, garantissant une navigation efficace et sécurisée tout en respectant les règles maritimes.",
         type: 'Formation',
-        button:"Read More"
+        button:"Read More",
+               data:"For each course you complete, you will receive a certification that you can share on your social networks (for example, LinkedIn). Each certification has a unique authentication number that allows it to be verified.",
+        reserver:"Reservé"
     },
     {
         id:8,
@@ -152,7 +168,9 @@ export const blogDataEN = [
         desc:'La formation sur les pierres et métaux précieux fournit une compréhension ...',
         detail:"La formation sur les pierres et métaux précieux fournit une compréhension approfondie des caractéristiques, de l'évaluation et de l'entretien de ces matériaux précieux. Les participants apprennent à identifier et évaluer les pierres précieuses et les métaux précieux, en utilisant des critères de qualité et de certification. La formation couvre également les techniques de traitement et d'entretien pour préserver leur valeur, ainsi que les tendances du marché et les pratiques commerciales. En outre, elle aborde les enjeux éthiques et les pratiques durables liés à l'extraction et au commerce de ces ressources.",
         type: 'Formation',
-                button:"Read More"
+                button:"Read More",
+                    data:"For each course you complete, you will receive a certification that you can share on your social networks (for example, LinkedIn). Each certification has a unique authentication number that allows it to be verified.",
+        reserver:"Reservé"
     },
     {
         id:9,
@@ -161,7 +179,9 @@ export const blogDataEN = [
         desc:"La formation pour développer l'agriculture et la pêche vise à optimiser...",
         detail:"La formation pour développer l'agriculture et la pêche vise à optimiser les pratiques agricoles et halieutiques tout en garantissant la durabilité et la rentabilité. Elle couvre des techniques modernes de culture et de gestion des sols, ainsi que des méthodes de gestion durable des stocks de poissons et des écosystèmes aquatiques. Les participants apprennent à utiliser les dernières technologies et innovations, à adopter des pratiques respectueuses de l'environnement, et à élaborer des stratégies économiques pour améliorer la productivité et accéder aux marchés. Cette formation est essentielle pour les agriculteurs, pêcheurs, et gestionnaires de ressources naturelles souhaitant améliorer leurs pratiques et assurer un développement durable dans leurs secteurs respectifs.",
         type: 'Formation',
-        button:"Read More"
+        button:"Read More",
+               data:"For each course you complete, you will receive a certification that you can share on your social networks (for example, LinkedIn). Each certification has a unique authentication number that allows it to be verified.",
+        reserver:"Reservé"
     },
     {
         id:10,
@@ -170,7 +190,9 @@ export const blogDataEN = [
         desc:'La formation en sciences de la Terre et séismes offre une compréhension ...',
         detail:"La formation en sciences de la Terre et séismes offre une compréhension approfondie des processus géologiques, des mécanismes des séismes, et des techniques d'évaluation des risques sismiques. Elle couvre les principes fondamentaux de la géologie, les mouvements des plaques tectoniques, et les causes des séismes, ainsi que les méthodes de surveillance et de prévision des tremblements de terre. Les participants apprennent également à évaluer les risques sismiques, développer des stratégies pour réduire les risques, et préparer les infrastructures et les communautés aux impacts des séismes. Cette formation est essentielle pour les chercheurs, ingénieurs, et professionnels en gestion des risques souhaitant renforcer leur expertise en sismologie et en réduction des risques.",
         type: 'Formation',
-        button:"Read More"
+        button:"Read More",
+               data:"For each course you complete, you will receive a certification that you can share on your social networks (for example, LinkedIn). Each certification has a unique authentication number that allows it to be verified.",
+        reserver:"Reservé"
     },
     {
         id:11,
@@ -179,7 +201,9 @@ export const blogDataEN = [
         desc:'Études Formation Recrutements National et International (EFRNI) est ...',
         detail:"Études Formation Recrutements National et International (EFRNI) est une formation spécialisée qui vise à développer des compétences avancées dans le domaine du recrutement, tant au niveau national qu'international. Elle couvre les enjeux liés au recrutement dans divers contextes culturels et légaux, tout en enseignant l'utilisation des outils modernes pour identifier et attirer les talents. La formation met également l'accent sur l'optimisation des processus de sélection et sur l'importance de la gestion des talents pour assurer la rétention et le développement des employés dans une perspective globale",
         type: 'Formation',
-        button:"Read More"
+        button:"Read More",
+               data:"For each course you complete, you will receive a certification that you can share on your social networks (for example, LinkedIn). Each certification has a unique authentication number that allows it to be verified.",
+        reserver:"Reservé"
     },
     {
         id:12,
@@ -188,7 +212,9 @@ export const blogDataEN = [
         desc:'La formation « Apprendre le théâtre pour les enfants » initie les jeunes...',
         detail:"La formation « Apprendre le théâtre pour les enfants » initie les jeunes à l’art dramatique en développant leur confiance en soi, leurs compétences en communication, et leur créativité. À travers des jeux de rôle, des improvisations, et des exercices de création, les enfants apprennent à exprimer leurs émotions et idées tout en renforçant leur esprit d'équipe et leur capacité à travailler en groupe. La formation introduit également les bases du théâtre, comme la prise de parole en public et la gestion du stress de la scène, offrant ainsi une expérience enrichissante qui stimule à la fois leur développement personnel et leurs compétences sociales",
         type: 'Formation',
-        button:"Read More"
+        button:"Read More",
+               data:"For each course you complete, you will receive a certification that you can share on your social networks (for example, LinkedIn). Each certification has a unique authentication number that allows it to be verified.",
+        reserver:"Reservé"
     },
     {
         id:13,
@@ -197,7 +223,9 @@ export const blogDataEN = [
         desc:'La formation sur les ascenseurs est conçue pour fournir aux participants...',
         detail:"La formation sur les ascenseurs est conçue pour fournir aux participants une compréhension complète des systèmes d'ascenseurs, de leur installation à leur maintenance. Elle couvre les principes de fonctionnement des ascenseurs, les procédures de sécurité, et les techniques de dépannage. Les participants apprendront à installer, entretenir, et réparer les ascenseurs tout en respectant les normes de sécurité et de réglementation en vigueur. La formation est idéale pour les techniciens, ingénieurs, et toute personne impliquée dans le secteur des ascenseurs, offrant les compétences nécessaires pour assurer le bon fonctionnement et la sécurité des équipements.",
         type: 'Formation',
-        button:"Read More"
+        button:"Read More",
+               data:"For each course you complete, you will receive a certification that you can share on your social networks (for example, LinkedIn). Each certification has a unique authentication number that allows it to be verified.",
+        reserver:"Reservé"
     },
     {
         id:14,
@@ -206,7 +234,9 @@ export const blogDataEN = [
         desc:'La formation à la conduite de train et de tramway prépare les participants...',
         detail:"La formation à la conduite de train et de tramway prépare les participants à piloter ces véhicules de manière sécurisée et efficace. Elle couvre les aspects techniques de la conduite, y compris le maniement des commandes, la gestion des systèmes de signalisation, et le respect des procédures de sécurité. Les participants apprennent également à gérer les situations d'urgence, à optimiser la consommation d'énergie et à assurer le confort des passagers. La formation inclut des simulations pratiques et théoriques pour développer des compétences approfondies en conduite et en gestion des opérations ferroviaires et de tramway, tout en respectant les normes réglementaires en vigueur.",
         type: 'Formation',
-        button:"Read More"
+        button:"Read More",
+               data:"For each course you complete, you will receive a certification that you can share on your social networks (for example, LinkedIn). Each certification has a unique authentication number that allows it to be verified.",
+        reserver:"Reservé"
     },
     
 ]
@@ -466,5 +496,4 @@ export const jobsEN = [
     },
     // Ensure each job has a unique id
 ];
-
 export const companyLogo = [company1, company2, company3, company4, company5, company6]

@@ -114,9 +114,9 @@ export default function Index(){
 </div>
 
         <AgencyTab/>
-        <Cta/>
+        {/* <Cta/>
     
-        <Client/>
+        <Client/> */}
         {/* <Pricing/> */}
         
         <About/>
