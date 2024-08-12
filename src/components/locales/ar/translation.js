@@ -307,7 +307,7 @@ export const TitleAR=[
 export const NavbarAR=
 [
 {
-    Home:"منزل",
+    Home:"الرئيسية",
     Services:"خدمات",
     Formation:"التدريب",
     Jobs:"وظائف",

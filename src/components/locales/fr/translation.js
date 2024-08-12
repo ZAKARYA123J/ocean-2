@@ -302,7 +302,7 @@ export const Titlefr=[
     }
 ]
 export const NavbarFR=[{
-    Home:"Maison",
+    Home:"Accueil",
     Services:"Services",
     Formation:"Formation",
     Jobs:"Emplois",
