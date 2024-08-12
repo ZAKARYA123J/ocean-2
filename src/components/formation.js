@@ -79,7 +79,9 @@ const CourseCard = () => {
                         return (
                             <div className="group relative overflow-hidden" key={index}>
                                 <div className="relative overflow-hidden rounded-md shadow dark:shadow-gray-800">
+                                    <Link to={`/formation/${index+1}`} className="">
                                     <img  src={item.image}  className="group-hover:scale-110 transition-transform duration-500" alt=""/>
+                                    </Link>
                                 </div>
 
                                 <div className="mt-6">

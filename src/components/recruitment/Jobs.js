@@ -6,19 +6,41 @@ import Footer from '../footer';
 import { FaAngleRight } from "react-icons/fa";
 import LanguageSwitcher from '../LanguageSwitcher';
 import Whatp from '../WhatsAppFloatingButton';
-import { jobs } from '../../data/data';
+// import { jobs } from '../../data/data';
 import WhatsAppFloatingButton from '../WhatsAppFloatingButton';
-
+import { useTranslation } from 'react-i18next';
 
 
 // Sample job data
 
-
+const loadClientData = (lang) => {
+  switch (lang) {
+      case 'fr':
+          return import('../locales/fr/translation').then(module => module.jobsFR);
+      case 'ar':
+          return import('../locales/ar/translation').then(module => module.jobsAR);
+      case 'en':
+      default:
+          return import('../locales/en/translation').then(module => module.jobsEN);
+  }
+};
 const JobListings = () => {
   const [selectedType, setSelectedType] = useState('All');
   const { type } = useParams();
   const navigate = useNavigate();
+  const [jobs,setJob]=useState([])
+  const { i18n, t } = useTranslation();
 
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await loadClientData(i18n.language);
+      setJob(data);
+
+
+    };
+
+    fetchData();
+  }, [i18n.language]);
   // Get unique job types for dropdown options
   const jobTypes = [...new Set(jobs.map(job => job.type)), 'All'];
 
@@ -79,16 +101,16 @@ const JobListings = () => {
                 </div>
                 <div className="p-4 flex flex-col justify-between lg:w-3/4">
                 <div>
-                 <h3 className="text-blue-600  font-bold text-lg mb-1 ">{job.title}</h3>
-                 <p className="text-gray-600 text-sm mb-1"><strong>Secteur:</strong> {job.secteur}</p>
-                 <p className="text-gray-600 text-sm mb-1"><strong>Niveau Langue:</strong> {job.niveaulanguage}</p>
-                 <p className="text-gray-600 text-sm mb-1"><strong>Time Visa:</strong> {job.timevisa}</p>
-                 <p className="text-gray-600 text-sm mb-1"><strong>Contrat:</strong> {job.contratime}</p>
-                 <p className="text-gray-600 text-sm mb-3"><strong>Price Contrat:</strong> {job.pricecontrat}</p>
-                 <p className="text-gray-600 text-sm mb-3"><strong>More:</strong> {job.more}</p>
+                 <h3 className="text-blue-600  font-bold text-lg mb-1 ">{t(job.title)}</h3>
+                 <p className="text-gray-600 text-sm mb-1"><strong>Secteur:</strong> {t(job.secteur)}</p>
+                 <p className="text-gray-600 text-sm mb-1"><strong>Niveau Langue:</strong> {t(job.niveaulanguage)}</p>
+                 <p className="text-gray-600 text-sm mb-1"><strong>Time Visa:</strong> {t(job.timevisa)}</p>
+                 <p className="text-gray-600 text-sm mb-1"><strong>Contrat:</strong> {t(job.contratime)}</p>
+                 <p className="text-gray-600 text-sm mb-3"><strong>Price Contrat:</strong> {t(job.pricecontrat)}</p>
+                 <p className="text-gray-600 text-sm mb-3"><strong>More:</strong> {t(job.more)}</p>
                 </div>
                 <div className="flex items-center justify-between">
-                 <p className="text-blue-600 font-semibold text-sm">{job.type}</p>
+                 <p className="text-blue-600 font-semibold text-sm">{t(job.type)}</p>
                  {/* if  (job.id === 1 ) { */}
                  <Link to={`${job.link}`} className="inline-flex items-center justify-center px-3 py-2 bg-blue-500 text-white text-sm font-semibold rounded-md shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300">
                    <span>Demande</span>
@@ -118,4 +140,4 @@ const JobListings = () => {
   );
 };
 
-export default JobListings;
+export default JobListings;
