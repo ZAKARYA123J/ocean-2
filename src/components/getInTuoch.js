@@ -3,6 +3,7 @@ import emailjs from "emailjs-com";
 import contact2 from '../assets/images/done/contact.svg';
 import styled from "styled-components";
 
+
 const CTA = styled.button`
   background-color: var(--white);
   color: #3a86ff;

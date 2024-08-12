@@ -2,6 +2,8 @@ import { CgWebsite } from "react-icons/cg";
 import { IoHomeOutline } from "react-icons/io5";
 import { MdOutlineCleaningServices } from "react-icons/md";
 import { SlNote } from "react-icons/sl";
+import { Link, useParams } from "react-router-dom";
+import { Link as Link1 } from "react-scroll";
 import client1 from '../../../assets/images/team/01.jpg'
 import client2 from '../../../assets/images/team/02.jpg'
 import client3 from '../../../assets/images/team/03.jpg'
@@ -219,7 +221,8 @@ export const serviceDataAR = [
         desc_para4: "تبدأ كل دورة تدريبية بتحليل الاحتياجات، تليها برنامج مخصص يقدمه خبراء. نحن ندمج بين النظرية والتطبيق لضمان استيعاب فعّال للمعرفة.",
         para5: "القيمة المضافة",
         desc_para5: "تتميز تدريباتنا بمرونتها ونهجها العملي، حيث ندمج أحدث الاتجاهات والتقنيات لتقديم حلول ملائمة وقابلة للتطبيق على الفور في الميدان.",
-        Button: "احصل على تدريب",
+        link:<Link to={"/formation"} className="text-sky-500" >احصل على تدريب <i className="mdi mdi-chevron-right align-middle"></i></Link>,
+
     },
     {
         id: 2,
@@ -227,7 +230,7 @@ export const serviceDataAR = [
         title: 'تنظيف الواجهات',
         desc: 'هذا مطلوب عندما، على سبيل المثال، النص النهائي لم يكن متاحًا بعد.',
         image: service2,
-        para1: 'خدمة تنظيف الواجهات',
+        para1: 'خدمة تنظيف واجهات البنايات',
         desc_para1: "تضمن لك خدمتنا لتنظيف الواجهات نتائج مثالية لاستعادة اللمعان والنظافة لمبانيك. بفضل تقنياتنا الاحترافية ومنتجاتنا الصديقة للبيئة، نقوم بإزالة الأوساخ، والعفن، والملوثات بشكل فعال. ثق بخبرتنا للحفاظ على مظهر ومتانة واجهاتك.",
         para2: "الفوائد والمزايا",
         desc_para2: "يستعيد هذه الخدمة مظهر واجهاتك، ويطيل عمرها، ويحسن صورة ممتلكاتك من خلال تقديم مظهر نظيف ومرتب.",
@@ -237,7 +240,8 @@ export const serviceDataAR = [
         desc_para4: "نستخدم تقنيات تنظيف تتناسب مع كل نوع من الأسطح، بما في ذلك الغسيل عالي الضغط واستخدام منتجات صديقة للبيئة. نبدأ بتقييم شامل، يتبعه تنظيف دقيق وفحص جودة نهائي.",
         para5: "القيمة المضافة",
         desc_para5: "تضمن خبرتنا في تنظيف الواجهات نتائج طويلة الأمد وتدخل سريع، مع احترام أعلى المعايير البيئية والأمنية.",
-        Button: "اتصل بنا",
+        link:<Link1 to="contact" className="text-sky-500"smooth={true} duration={1000} activeClass='active' spy={true}>اتصل بنا <i className="mdi mdi-chevron-right align-middle"></i></Link1>,
+
     },
     {
         id: 3,
@@ -255,7 +259,8 @@ export const serviceDataAR = [
         desc_para4: "نقدم عملية تسجيل سهلة، تشمل استلام وإدارة البريد، بالإضافة إلى خيارات التوجيه حسب احتياجاتك المحددة. يمكنك الوصول إلى مستنداتك بأمان عبر منصتنا الإلكترونية.",
         para5: "القيمة المضافة",
         desc_para5: "تتميز خدمتنا بمرونتها، ودعمها المخصص، وقدرتها على توفير عنوان مميز يعزز مصداقية شركتك، مع تحسين عملياتك الإدارية.",
-        Button: "اتصل بنا",
+        link:<Link1 to="contact" className="text-sky-500"smooth={true} duration={1000} activeClass='active' spy={true}>اتصل بنا <i className="mdi mdi-chevron-right align-middle"></i></Link1>,
+
     },
     {
         id: 4,
@@ -273,7 +278,8 @@ export const serviceDataAR = [
         desc_para4: "نبدأ بتحليل شامل لاحتياجاتك، يليه إنشاء تصميم مخصص. ثم نقوم بتطوير واختبار الموقع لضمان أدائه الأمثل قبل إطلاقه.",
         para5: "القيمة المضافة",
         desc_para5: "تضمن مقاربتنا الشخصية وخبرتنا التقنية تحقيق نتائج لا تقتصر على تلبية توقعاتك بل تتجاوزها، من خلال تقديم موقع ويب وظيفي، وجمالي، ومحسن لمحركات البحث.",
-        Button: "اتصل بنا",
+        link:<Link1 to="contact" className="text-sky-500"smooth={true} duration={1000} activeClass='active' spy={true}>اتصل بنا <i className="mdi mdi-chevron-right align-middle"></i></Link1>,
+
     },
     {
         id: 5,
@@ -290,7 +296,8 @@ export const serviceDataAR = [
         desc_para4: "نستخدم طرق بحث متقدمة وشبكة عالمية للعثور على المرشحين. تتضمن العملية تقييمًا دقيقًا للمهارات، ومقابلات موجهة، وإدارة نشطة للطلبات لضمان تطابق مثالي.",
         para5: "القيمة المضافة",
         desc_para5: "تسمح لنا خبرتنا في التوظيف الدولي بالعثور على المواهب المناسبة لمتطلبات شركتك المحددة، مع تقديم خدمة مخصصة ودعم طوال عملية التوظيف لضمان تكامل ناجح.",
-        Button: "احصل على وظيفة",
+        link:<Link to="/jobs/all" className="text-sky-500" > احصل على وظيفة خارجية <i className="mdi mdi-chevron-right align-middle"></i></Link>,
+
     },
 ]
 export const TitleAR=[
