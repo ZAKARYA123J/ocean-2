@@ -47,8 +47,12 @@ const CourseCard = () => {
         <section className="relative md:py-24 py-16" id="blog">
             <div className="container relative">
                  <div className="grid grid-cols-1 pb-6 text-center">
-                    <h3 className="font-semibold text-2xl leading-normal mb-4">Formation</h3>
-                    <p className="text-slate-400 max-w-xl mx-auto">Cette formation en gestion administrative enseigne aux participants les compétences essentielles pour exceller dans les tâches administratives, en couvrant la gestion de la documentation, l'optimisation des processus organisationnels, et la communication professionnelle. Elle combine théorie et pratique pour des compétences applicables immédiatement en entreprise.</p>
+                 {filteredBlogData.map((item, index) => (
+          <>
+                                 <h3 className="font-semibold text-2xl leading-normal ">{t(item.Title)}</h3>
+                                 <p className="text-slate-400 max-w-xl mx-auto">{t(item.text)}</p>
+                     </>
+                    ))}
                     <div className="relative flex justify-center items-center mt-4">
                        <div className="relative flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4 p-6">
         <input 

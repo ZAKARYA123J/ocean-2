@@ -1,5 +1,6 @@
 import React,{useState, useEffect} from "react";
 import { Link } from "react-router-dom";
+import {FiSun, FiMoon} from '../assets/icons/vander'
 // import img from './ocean3.png'
 export default function Switcher(){
     const [scroll, setScroll] = useState(false);
@@ -14,6 +15,27 @@ export default function Switcher(){
             });
         }
     }, []);
+
+    const themChange = () =>{
+        const htmlTag = document.getElementsByTagName("html")[0]
+            
+            if (htmlTag.className.includes("dark")) {
+                htmlTag.className = 'light'
+            } else {
+                htmlTag.className = 'dark'
+            }
+    }
+
+    const modeChange = (e) =>{
+        const htmlTag = document.getElementsByTagName("html")[0]
+        if(e.target.innerText === "LTR"){
+            htmlTag.dir = "ltr"
+        }
+        else{
+            htmlTag.dir = "rtl"
+        }
+    }
+
     const scrollTop = () =>{
         window.scrollTo({ 
             top: 0,  
