@@ -46,7 +46,7 @@ import croatie from '../assets/images/job/croatie.png'
 import italy from '../assets/images/job/italy.png'
 import spain from '../assets/images/job/spain.png'
 import facade from '../assets//images/job/facade.png'
-
+import recrutocean from '../assets/images/service/recrutocean.png'
 
 export const servicesData = [
     {
@@ -322,6 +322,12 @@ export const jobs = [
         pricecontrat:'The contract price is 6 million .',
         more:'We provide housing, medicine, the possibility of renewing the contract for a period of 5 years, and assistance in obtaining a residence card',
         link:"https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D9%83%D8%B1%D9%88%D8%A7%D8%AA%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+        menu1:"Secteur :",
+        menu2:"Niveau Langue :",
+        menu3:"Time Visa :",
+        menu4:"Contrat :",
+        menu5:"Price Contrat :",
+        menu6:"More :",
     },
     {
         id: 2,
@@ -335,7 +341,12 @@ export const jobs = [
         pricecontrat:'The contract price is 8 million .',
         more:'We provide housing, medicine, the possibility of renewing the contract for a period of 5 years, and assistance in obtaining a residence card',
         link:"https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A3%D9%84%D9%85%D8%A7%D9%86%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
-        
+        menu1:"Secteur :",
+        menu2:"Niveau Langue :",
+        menu3:"Time Visa :",
+        menu4:"Contrat :",
+        menu5:"Price Contrat :",
+        menu6:"More :",    
        
     },
     {
@@ -350,6 +361,12 @@ export const jobs = [
         pricecontrat:'The price of the contract is 6 million',
         more:'We provide housing, medicine, the possibility of renewing the contract for a period of 5 years, and assistance in obtaining a residence card',
         link:"https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A8%D9%84%D8%AC%D9%8A%D9%83%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+        menu1:"Secteur :",
+        menu2:"Niveau Langue :",
+        menu3:"Time Visa :",
+        menu4:"Contrat :",
+        menu5:"Price Contrat :",
+        menu6:"More :",
     },
     {
         id: 4,
@@ -363,6 +380,12 @@ export const jobs = [
         pricecontrat:'The contract price is 6 million',
         more:'We provide housing, medicine, the possibility of renewing the contract for a period of 5 years, and assistance in obtaining a residence card',
         link:"https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A5%D9%8A%D8%B7%D8%A7%D9%84%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+        menu1:"Secteur :",
+        menu2:"Niveau Langue :",
+        menu3:"Time Visa :",
+        menu4:"Contrat :",
+        menu5:"Price Contrat :",
+        menu6:"More :",
     },
     {
         id: 5,
@@ -376,19 +399,31 @@ export const jobs = [
         pricecontrat:'The contract price is 6 million',
         more:'We provide housing, medicine, the possibility of renewing the contract for a period of 5 years, and assistance in obtaining a residence card',
         link:"https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A5%D8%B3%D8%A8%D8%A7%D9%86%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+        menu1:"Secteur :",
+        menu2:"Niveau Langue :",
+        menu3:"Time Visa :",
+        menu4:"Contrat :",
+        menu5:"Price Contrat :",
+        menu6:"More :",
     },
     {
         id: 6,
         image: facade,
-        title: 'Senior Product Manager',
+        title: 'facade cleaning jobs',
         type: 'National',
-        secteur:'Health and nursing/hotels/programming',
-        niveaulanguage:'Required language B1 .',
-        timevisa:'The duration of obtaining a visa is 8 months.',
-        contratime:'One year employment contract.',
-        pricecontrat:'The contract price is 8 million',
-        more:'We provide housing, medicine, the possibility of renewing the contract for a period of 5 years, and assistance in obtaining a residence card',
+        secteur:'cleaning service',
+        niveaulanguage:'Language is not necessary .',
+        timevisa:'niveau BAC.',
+        contratime:'contrat CDI - CDD .',
+        pricecontrat:'Casablanca-Mohammedia',
+        more:'Purchasing - Boilermaking - Heating - Estimates - Manufacturing - GPAO - Process - Production - Quality',
         link:"#",
+        menu1:"Secteur :",
+        menu2:"Niveau Langue :",
+        menu3:"Level of education :",
+        menu4:"Type Contrat :",
+        menu5:"Region :",
+        menu6:"Key skills :",
     },
     // Ensure each job has a unique id
 ];
@@ -406,7 +441,7 @@ export const recruitment = [
         id:2,
         title:'Recruitment OceanConnecting',
         desc:'Connecting top talent with leading organizations nationwide. Streamlining your hiring process for effective, efficient results.',
-        image:formation6,
+        image:recrutocean,
         title2: 'Recruitment OceanConnecting',
         desc2:'We’re excited to invite you to apply for a position at our company. Join our team and contribute to our dynamic environment while advancing your career. Explore opportunities for growth, innovation, and impact with us.',
     
