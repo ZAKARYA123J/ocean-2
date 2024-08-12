@@ -4,6 +4,7 @@ import image from '../../assets/images/ab3.jpg';
 import Navbar from '../navbar';
 import Footer from '../footer';
 import { FaAngleRight } from "react-icons/fa";
+import LanguageSwitcher from '../LanguageSwitcher';
 import Whatp from '../WhatsAppFloatingButton';
 import { jobs } from '../../data/data';
 import Switcher from "../switcher";
@@ -113,7 +114,9 @@ const JobListings = () => {
 
 
       </div>
+      {/* <LanguageSwitcher/> */}
       <Whatp/>
+     
       <Footer />
     </>
   );
