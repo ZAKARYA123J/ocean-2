@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import emailjs from "emailjs-com";
 import contact2 from '../assets/images/done/contact.svg';
 import styled from "styled-components";
 
@@ -31,24 +30,7 @@ const CTA = styled.button`
 export default function GetInTouch() {
   const form = useRef();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
 
-    emailjs.sendForm(
-      'YOUR_SERVICE_ID', 
-      'YOUR_TEMPLATE_ID', 
-      form.current, 
-      'YOUR_USER_ID',
-      { to_email: 'ayoubbounaga2001@gmail.com' }  // Add this line to specify the email recipient
-    )
-    .then((result) => {
-        console.log(result.text);
-        alert("Message Sent Successfully");
-    }, (error) => {
-        console.log(error.text);
-        alert("Failed to Send Message");
-    });
-  };
 
   return (
     <section className="relative lg:py-24 py-16 bg-slate-50 dark:bg-slate-800" id="contact">
@@ -66,7 +48,7 @@ export default function GetInTouch() {
           <div className="lg:col-span-5 md:col-span-6">
             <div className="lg:ms-5">
               <div className="bg-white dark:bg-slate-900 rounded-md shadow dark:shadow-gray-700 p-6">
-                <form ref={form} onSubmit={sendEmail}>
+                <form ref={form} >
                   <div className="grid lg:grid-cols-12 grid-cols-1 gap-3">
                     <div className="lg:col-span-6">
                       <label htmlFor="name" className="font-semibold">Your Name:</label>

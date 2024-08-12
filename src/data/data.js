@@ -46,7 +46,9 @@ import croatie from '../assets/images/job/croatie.png'
 import italy from '../assets/images/job/italy.png'
 import spain from '../assets/images/job/spain.png'
 import facade from '../assets//images/job/facade.png'
-
+import recrutocean from '../assets/images/service/recrutocean.png'
+import recrutinter from '../assets/images/service/recrutinter2.png'
+import resume from '../assets/images/job/resume.png'
 
 export const servicesData = [
     {
@@ -310,8 +312,18 @@ export const serviceData = [
         },  
 ]
 export const jobs = [
+    
     {
         id: 1,
+        image: resume,
+        title: 'External job application form',
+        type: 'International',
+        more:'Please fill out the following form with the necessary information and bring it to our office as soon as possible to the following address',
+        action : 'Download',
+        link:"https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D9%83%D8%B1%D9%88%D8%A7%D8%AA%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+    },
+    {
+        id: 2,
         image: croatie,
         title: 'Employment contract in Croatia',
         type: 'International',
@@ -328,9 +340,10 @@ export const jobs = [
         menu4:"Contrat :",
         menu5:"Price Contrat :",
         menu6:"More :",
+        action : 'Demande',
     },
     {
-        id: 2,
+        id: 3,
         image: allemagne,
         title: 'Employment contract in Germany',
         type: 'International',
@@ -346,11 +359,12 @@ export const jobs = [
         menu3:"Time Visa :",
         menu4:"Contrat :",
         menu5:"Price Contrat :",
-        menu6:"More :",    
+        menu6:"More :",
+        action : 'Demande',    
        
     },
     {
-        id: 3,
+        id: 4,
         image: belgium,
         title: 'Employment contract in Belgium',
         type: 'International',
@@ -367,9 +381,10 @@ export const jobs = [
         menu4:"Contrat :",
         menu5:"Price Contrat :",
         menu6:"More :",
+        action : 'Demande',
     },
     {
-        id: 4,
+        id: 5,
         image: italy,
         title: 'Employment contract in Italy',
         type: 'International',
@@ -386,9 +401,10 @@ export const jobs = [
         menu4:"Contrat :",
         menu5:"Price Contrat :",
         menu6:"More :",
+        action : 'Demande',
     },
     {
-        id: 5,
+        id: 6,
         image: spain,
         title: 'Employment contract in Spain',
         type: 'International',
@@ -405,9 +421,10 @@ export const jobs = [
         menu4:"Contrat :",
         menu5:"Price Contrat :",
         menu6:"More :",
+        action : 'Demande',
     },
     {
-        id: 6,
+        id: 7,
         image: facade,
         title: 'facade cleaning jobs',
         type: 'National',
@@ -424,9 +441,7 @@ export const jobs = [
         menu4:"Type Contrat :",
         menu5:"Region :",
         menu6:"Key skills :",
-
-        
-
+        action : 'Demande',
     },
     // Ensure each job has a unique id
 ];
@@ -435,7 +450,7 @@ export const recruitment = [
         id:1,
         title:'International Recruitment',
         desc:'Connecting global talent with opportunities across borders. We simplify international hiring to help you find the best candidates worldwide.',
-        image:service5,
+        image:recrutinter,
         title2: 'International Recruitment Services',
         desc2:'Our company specializes in connecting top talent with global opportunities. We provide comprehensive international recruitment solutions, including candidate sourcing, screening, and placement. By leveraging our extensive network and expertise in diverse markets, we help businesses find the right talent to drive their growth and success across borders.',
     
@@ -444,7 +459,7 @@ export const recruitment = [
         id:2,
         title:'Recruitment OceanConnecting',
         desc:'Connecting top talent with leading organizations nationwide. Streamlining your hiring process for effective, efficient results.',
-        image:formation6,
+        image:recrutocean,
         title2: 'Recruitment OceanConnecting',
         desc2:'We’re excited to invite you to apply for a position at our company. Join our team and contribute to our dynamic environment while advancing your career. Explore opportunities for growth, innovation, and impact with us.',
     
