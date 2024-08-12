@@ -352,6 +352,15 @@ export const jobsAR = [
         pricecontrat: 'سعر العقد هو 6 ملايين.',
         more: 'نوفر السكن، والطب، وإمكانية تجديد العقد لمدة 5 سنوات، ومساعدة في الحصول على بطاقة الإقامة.',
         link: "https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D9%83%D8%B1%D9%88%D8%A7%D8%AA%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+        
+            menu1: "القطاع :",
+            menu2: "مستوى اللغة :",
+            menu3: "مدة التأشيرة :",
+            menu4: "العقد :",
+            menu5: "سعر العقد :",
+            menu6: "المزيد :"
+          
+          
     },
     {
         id: 2,
@@ -365,6 +374,12 @@ export const jobsAR = [
         pricecontrat: 'سعر العقد هو 8 ملايين.',
         more: 'نوفر السكن، والطب، وإمكانية تجديد العقد لمدة 5 سنوات، ومساعدة في الحصول على بطاقة الإقامة.',
         link: "https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A3%D9%84%D9%85%D8%A7%D9%86%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+        menu1: "القطاع :",
+        menu2: "مستوى اللغة :",
+        menu3: "مدة التأشيرة :",
+        menu4: "العقد :",
+        menu5: "سعر العقد :",
+        menu6: "المزيد :"
     },
     {
         id: 3,
@@ -378,6 +393,12 @@ export const jobsAR = [
         pricecontrat: 'سعر العقد هو 6 ملايين.',
         more: 'نوفر السكن، والطب، وإمكانية تجديد العقد لمدة 5 سنوات، ومساعدة في الحصول على بطاقة الإقامة.',
         link: "https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A8%D9%84%D8%AC%D9%8A%D9%83%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+        menu1: "القطاع :",
+        menu2: "مستوى اللغة :",
+        menu3: "مدة التأشيرة :",
+        menu4: "العقد :",
+        menu5: "سعر العقد :",
+        menu6: "المزيد :"
     },
     {
         id: 4,
@@ -391,6 +412,12 @@ export const jobsAR = [
         pricecontrat: 'سعر العقد هو 6 ملايين.',
         more: 'نوفر السكن، والطب، وإمكانية تجديد العقد لمدة 5 سنوات، ومساعدة في الحصول على بطاقة الإقامة.',
         link: "https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A5%D9%8A%D8%B7%D8%A7%D9%84%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+        menu1: "القطاع :",
+        menu2: "مستوى اللغة :",
+        menu3: "مدة التأشيرة :",
+        menu4: "العقد :",
+        menu5: "سعر العقد :",
+        menu6: "المزيد :"
     },
     {
         id: 5,
@@ -404,6 +431,12 @@ export const jobsAR = [
         pricecontrat: 'سعر العقد هو 6 ملايين.',
         more: 'نوفر السكن، والطب، وإمكانية تجديد العقد لمدة 5 سنوات، ومساعدة في الحصول على بطاقة الإقامة.',
         link: "https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A5%D8%B3%D8%A8%D8%A7%D9%86%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+        menu1: "القطاع :",
+        menu2: "مستوى اللغة :",
+        menu3: "مدة التأشيرة :",
+        menu4: "العقد :",
+        menu5: "سعر العقد :",
+        menu6: "المزيد :"
     },
     {
         id: 6,
@@ -417,6 +450,12 @@ export const jobsAR = [
         pricecontrat: 'سعر العقد هو 8 ملايين.',
         more: 'نوفر السكن، والطب، وإمكانية تجديد العقد لمدة 5 سنوات، ومساعدة في الحصول على بطاقة الإقامة.',
         link: "#",
+        menu1: "القطاع :",
+        menu2: "مستوى اللغة :",
+        menu3: "مدة التأشيرة :",
+        menu4: "العقد :",
+        menu5: "سعر العقد :",
+        menu6: "المزيد :"
     },
     // تأكد من أن لكل وظيفة معرف فريد
 ];
