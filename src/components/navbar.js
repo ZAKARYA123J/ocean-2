@@ -89,9 +89,12 @@ export default function Navbar(){
     <li className="nav-item ms-0">
       <Link1 className="nav-link" to="contact" smooth={true} duration={1000} activeClass='active' spy={true}>{t(item.Contact_us)}</Link1>
     </li>
-    <li className="nav-item ms-0 md:hiden" >
-      <button className="nav-link "><LanguageSwitcher /></button>
-    </li>
+    <li className="nav-item hidden lg:block">
+  <button className="nav-link">
+    <LanguageSwitcher />
+  </button>
+</li>
+
   </ul>
 ))}
 
