@@ -33,7 +33,7 @@ const BlogDetail = () => {
             <div className="flex flex-col lg:flex-row items-center justify-center min-h-screen p-4 lg:p-4">
                 <div className="w-full lg:w-2/3 mb-8 lg:mb-0">
                     <div className="mb-6">
-                        <h1 className="text-3xl lg:text-4xl font-extrabold text-gray-900 mb-4">{blogPost.title}</h1>
+                        <h1 className="text-3xl lg:text-4xl font-extrabold text-gray-900 mb-4">{t(blogPost.title)}</h1>
                     </div>
                     <div className="mb-6">
                         <img 
@@ -43,7 +43,7 @@ const BlogDetail = () => {
                         />
                     </div>
                     <div className="prose prose-gray text-base lg:text-lg">
-                        <p>{blogPost.detail}</p>
+                        <p>{t(blogPost.detail)}</p>
                     </div>
                 </div> 
                 <div className="lg:w-2/3 mb-9 lg:mb-80 p-5 bg-white rounded-lg shadow-lg flex flex-col justify-center items-center lg:ml-8">
