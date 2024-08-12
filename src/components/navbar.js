@@ -89,7 +89,7 @@ export default function Navbar(){
     <li className="nav-item ms-0">
       <Link1 className="nav-link" to="contact" smooth={true} duration={1000} activeClass='active' spy={true}>{t(item.Contact_us)}</Link1>
     </li>
-    <li className="nav-item hidden lg:block">
+    <li className="nav-item  ">
   <button className="nav-link">
     <LanguageSwitcher />
   </button>

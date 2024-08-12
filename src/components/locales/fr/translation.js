@@ -484,4 +484,14 @@ export const jobsFR = [
     },
     // Assurez-vous que chaque offre d'emploi a un identifiant unique
 ];
+export const ContactFR=[{
+    title: "CONTACTEZ-NOUS",
+    desc: "Nous aimerions avoir de vos nouvelles ! Remplissez le formulaire ci-dessous avec votre nom, votre e-mail et votre message, et nous vous répondrons dans les plus brefs délais. Merci de nous avoir contactés !",
+    name: "Votre Nom :",
+    email: "Votre E-mail :",
+    question: "Votre Question :",
+    comment: "Votre Commentaire :",
+    Message: "Envoyer le Message"
+}]
+
 

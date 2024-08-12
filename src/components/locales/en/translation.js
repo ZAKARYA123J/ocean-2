@@ -496,4 +496,13 @@ export const jobsEN = [
     },
     // Ensure each job has a unique id
 ];
+export const ContactEN=[{
+    title:"CONTACT US",
+    desc:" We’d love to hear from you! Fill out the form below with your name, email, and message, and we’ll get back to you shortly. Thanks for reaching out!",
+    name:"Your Name:",
+    email:"Your Email:",
+    question:"Your Question:",
+    comment:"Your Comment:",
+    Message:"Send Message"
+}]
 export const companyLogo = [company1, company2, company3, company4, company5, company6]
