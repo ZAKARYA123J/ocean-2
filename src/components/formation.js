@@ -1,13 +1,28 @@
 // components/CourseCard.js
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { Link } from "react-router-dom";
-import { blogData } from "../data/data";
 import { FiCalendar, FiClock } from '../assets/icons/vander';
-
+import { useTranslation } from 'react-i18next';
+const loadClientData = (lang) => {
+    switch (lang) {
+      case 'fr':
+        return import('./locales/fr/translation').then(module => module.blogDataFR);
+      case 'ar':
+        return import('./locales/ar/translation').then(module => module.blogDataAR);
+      case 'en':
+      default:
+        return import('./locales/en/translation').then(module => module.blogDataEN);
+    }
+  };
 const CourseCard = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [filter, setFilter] = useState('All');
-
+    const { i18n, t } = useTranslation();
+    const [bloggDta, setBlogdata] = React.useState([]);
+  
+    useEffect(() => {
+      loadClientData(i18n.language).then(data => setBlogdata(data));
+    }, [i18n.language]);
     const handleSearch = (event) => {
         setSearchTerm(event.target.value);
     };
@@ -16,7 +31,7 @@ const CourseCard = () => {
         setFilter(event.target.value);
     };
 
-    const filteredBlogData = blogData.filter(item => {
+    const filteredBlogData = bloggDta.filter(item => {
         const matchesSearchTerm = item.title.toLowerCase().includes(searchTerm.toLowerCase());
         const matchesFilter = filter === 'All' || item.type.includes(filter);
         return matchesSearchTerm && matchesFilter;
@@ -33,7 +48,7 @@ const CourseCard = () => {
             <div className="container relative">
                  <div className="grid grid-cols-1 pb-6 text-center">
                     <h3 className="font-semibold text-2xl leading-normal mb-4">Formation</h3>
-                    <p className="text-slate-400 max-w-xl mx-auto">This is just a simple text made for this unique and awesome template, you can replace it with any text.</p>
+                    <p className="text-slate-400 max-w-xl mx-auto">Cette formation en gestion administrative enseigne aux participants les compétences essentielles pour exceller dans les tâches administratives, en couvrant la gestion de la documentation, l'optimisation des processus organisationnels, et la communication professionnelle. Elle combine théorie et pratique pour des compétences applicables immédiatement en entreprise.</p>
                     <div className="relative flex justify-center items-center mt-4">
                        <div className="relative flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4 p-6">
         <input 
@@ -52,7 +67,7 @@ const CourseCard = () => {
         style={{ minHeight: '50px' }}
     >
                             {filterOptions.map(option => (
-                                <option key={option.value} value={option.value}>{option.label}</option>
+                                <option key={option.value} value={option.value}>{t(option.label)}</option>
                             ))}
                             </select>
                         </div>
@@ -76,7 +91,7 @@ const CourseCard = () => {
                                     <p className="text-slate-400 mt-2">{item.desc}</p>
 
                                     <div className="mt-3">
-                                        <Link to={`/formation/${index+1}`} className="text-teal-500">Read More <i className="mdi mdi-chevron-right align-middle"></i></Link>
+                                        <Link to={`/formation/${index+1}`} className="text-teal-500">{t(item.button)}<i className="mdi mdi-chevron-right align-middle"></i></Link>
                                     </div>
                                 </div>
                             </div>
