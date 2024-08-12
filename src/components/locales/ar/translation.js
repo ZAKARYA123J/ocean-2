@@ -28,7 +28,12 @@ import service2 from '../../../assets/images/service/service2.png'
 import service3 from '../../../assets/images/service/service3.png'
 import service4 from '../../../assets/images/service/service4.png'
 import service5 from '../../../assets/images/service/service5.png'
-
+import belgium from '../../../assets/images/job/belgium.png'
+import allemagne from '../../../assets/images/job/germany.png'
+import croatie from '../../../assets/images/job/croatie.png'
+import italy from '../../../assets/images/job/italy.png'
+import spain from '../../../assets/images/job/spain.png'
+import facade from '../../../assets//images/job/facade.png'
 export const clientDataAR = [
     {
         image: client1,
@@ -302,7 +307,7 @@ export const TitleAR=[
 export const NavbarAR=
 [
 {
-    Home:"منزل",
+    Home:"الرئيسية",
     Services:"خدمات",
     Formation:"التدريب",
     Jobs:"وظائف",
@@ -333,5 +338,125 @@ export const recruitmentAR = [
         title2: 'التوظيف OceanConnecting',
         desc2: 'نحن متحمسون لدعوتك للتقدم لشغل وظيفة في شركتنا. انضم إلى فريقنا وساهم في بيئتنا الديناميكية بينما تقدم مسيرتك المهنية. استكشف فرص النمو والابتكار والتأثير معنا.',
     },
+];
+export const jobsAR = [
+    {
+        id: 1,
+        image: croatie,
+        title: 'عقد عمل في كرواتيا',
+        type: 'دولي',
+        secteur: 'البناء/الحدادة/النجارة/السباكة/الميكانيكا الكهربائية/تكييف الهواء/سائق/جزار/فندق',
+        niveaulanguage: 'اللغة غير ضرورية.',
+        timevisa: 'مدة الحصول على الفيزا هي 5 أشهر.',
+        contratime: 'عقد عمل لمدة سنة.',
+        pricecontrat: 'سعر العقد هو 6 ملايين.',
+        more: 'نوفر السكن، والطب، وإمكانية تجديد العقد لمدة 5 سنوات، ومساعدة في الحصول على بطاقة الإقامة.',
+        link: "https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D9%83%D8%B1%D9%88%D8%A7%D8%AA%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+        
+            menu1: "القطاع :",
+            menu2: "مستوى اللغة :",
+            menu3: "مدة التأشيرة :",
+            menu4: "العقد :",
+            menu5: "سعر العقد :",
+            menu6: "المزيد :"
+          
+          
+    },
+    {
+        id: 2,
+        image: allemagne,
+        title: 'عقد عمل في ألمانيا',
+        type: 'دولي',
+        secteur: 'الصحة والتمريض/الفنادق/البرمجة',
+        niveaulanguage: 'اللغة مطلوبة B1.',
+        timevisa: 'مدة الحصول على الفيزا هي 8 أشهر.',
+        contratime: 'عقد عمل لمدة سنة.',
+        pricecontrat: 'سعر العقد هو 8 ملايين.',
+        more: 'نوفر السكن، والطب، وإمكانية تجديد العقد لمدة 5 سنوات، ومساعدة في الحصول على بطاقة الإقامة.',
+        link: "https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A3%D9%84%D9%85%D8%A7%D9%86%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+        menu1: "القطاع :",
+        menu2: "مستوى اللغة :",
+        menu3: "مدة التأشيرة :",
+        menu4: "العقد :",
+        menu5: "سعر العقد :",
+        menu6: "المزيد :"
+    },
+    {
+        id: 3,
+        image: belgium,
+        title: 'عقد عمل في بلجيكا',
+        type: 'دولي',
+        secteur: 'الصحة والتمريض/الفنادق/البرمجة',
+        niveaulanguage: 'اللغة B1 ضرورية.',
+        timevisa: 'مدة الحصول على الفيزا هي 8 أشهر.',
+        contratime: 'عقد عمل لمدة سنة.',
+        pricecontrat: 'سعر العقد هو 6 ملايين.',
+        more: 'نوفر السكن، والطب، وإمكانية تجديد العقد لمدة 5 سنوات، ومساعدة في الحصول على بطاقة الإقامة.',
+        link: "https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A8%D9%84%D8%AC%D9%8A%D9%83%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+        menu1: "القطاع :",
+        menu2: "مستوى اللغة :",
+        menu3: "مدة التأشيرة :",
+        menu4: "العقد :",
+        menu5: "سعر العقد :",
+        menu6: "المزيد :"
+    },
+    {
+        id: 4,
+        image: italy,
+        title: 'عقد عمل في إيطاليا',
+        type: 'دولي',
+        secteur: 'الصحة والتمريض/الفنادق/الزراعة',
+        niveaulanguage: 'اللغة B1 ضرورية.',
+        timevisa: 'مدة الحصول على الفيزا هي 8 أشهر.',
+        contratime: 'عقد عمل لمدة سنة.',
+        pricecontrat: 'سعر العقد هو 6 ملايين.',
+        more: 'نوفر السكن، والطب، وإمكانية تجديد العقد لمدة 5 سنوات، ومساعدة في الحصول على بطاقة الإقامة.',
+        link: "https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A5%D9%8A%D8%B7%D8%A7%D9%84%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+        menu1: "القطاع :",
+        menu2: "مستوى اللغة :",
+        menu3: "مدة التأشيرة :",
+        menu4: "العقد :",
+        menu5: "سعر العقد :",
+        menu6: "المزيد :"
+    },
+    {
+        id: 5,
+        image: spain,
+        title: 'عقد عمل في إسبانيا',
+        type: 'دولي',
+        secteur: 'الصحة والتمريض/الفنادق/الزراعة',
+        niveaulanguage: 'اللغة B1 ضرورية.',
+        timevisa: 'مدة الحصول على الفيزا هي 8 أشهر.',
+        contratime: 'عقد عمل لمدة سنة.',
+        pricecontrat: 'سعر العقد هو 6 ملايين.',
+        more: 'نوفر السكن، والطب، وإمكانية تجديد العقد لمدة 5 سنوات، ومساعدة في الحصول على بطاقة الإقامة.',
+        link: "https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A5%D8%B3%D8%A8%D8%A7%D9%86%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+        menu1: "القطاع :",
+        menu2: "مستوى اللغة :",
+        menu3: "مدة التأشيرة :",
+        menu4: "العقد :",
+        menu5: "سعر العقد :",
+        menu6: "المزيد :"
+    },
+    {
+        id: 6,
+        image: facade,
+        title: 'مدير منتج أول',
+        type: 'وطني',
+        secteur: 'الصحة والتمريض/الفنادق/البرمجة',
+        niveaulanguage: 'اللغة المطلوبة B1.',
+        timevisa: 'مدة الحصول على الفيزا هي 8 أشهر.',
+        contratime: 'عقد عمل لمدة سنة.',
+        pricecontrat: 'سعر العقد هو 8 ملايين.',
+        more: 'نوفر السكن، والطب، وإمكانية تجديد العقد لمدة 5 سنوات، ومساعدة في الحصول على بطاقة الإقامة.',
+        link: "#",
+        menu1: "القطاع :",
+        menu2: "مستوى اللغة :",
+        menu3: "مدة التأشيرة :",
+        menu4: "العقد :",
+        menu5: "سعر العقد :",
+        menu6: "المزيد :"
+    },
+    // تأكد من أن لكل وظيفة معرف فريد
 ];
 

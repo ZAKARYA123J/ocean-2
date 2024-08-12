@@ -28,7 +28,12 @@ import service2 from '../../../assets/images/service/service2.png'
 import service3 from '../../../assets/images/service/service3.png'
 import service4 from '../../../assets/images/service/service4.png'
 import service5 from '../../../assets/images/service/service5.png'
-
+import belgium from '../../../assets/images/job/belgium.png'
+import allemagne from '../../../assets/images/job/germany.png'
+import croatie from '../../../assets/images/job/croatie.png'
+import italy from '../../../assets/images/job/italy.png'
+import spain from '../../../assets/images/job/spain.png'
+import facade from '../../../assets//images/job/facade.png'
 export const clientDataFr = [
     {
         image: client1,
@@ -297,7 +302,7 @@ export const Titlefr=[
     }
 ]
 export const NavbarFR=[{
-    Home:"Maison",
+    Home:"Accueil",
     Services:"Services",
     Formation:"Formation",
     Jobs:"Emplois",
@@ -329,5 +334,124 @@ export const recruitmentFR = [
         title2: 'Recrutement OceanConnecting',
         desc2: 'Nous sommes ravis de vous inviter à postuler pour un poste dans notre entreprise. Rejoignez notre équipe et contribuez à notre environnement dynamique tout en faisant avancer votre carrière. Explorez des opportunités de croissance, d’innovation et d’impact avec nous.',
     },
+];
+export const jobsFR = [
+    {
+        id: 1,
+        image: croatie,
+        title: 'Contrat de travail en Croatie',
+        type: 'International',
+        secteur: 'Construction/ferronnerie/charpenterie/plomberie/mécanique électrique/climatisation/chauffeur/percepteur/hôtel',
+        niveaulanguage: 'La langue n\'est pas nécessaire.',
+        timevisa: 'La durée d\'obtention d\'un visa est de 5 mois.',
+        contratime: 'Contrat de travail d\'un an.',
+        pricecontrat: 'Le prix du contrat est de 6 millions.',
+        more: 'Nous fournissons le logement, la médecine, la possibilité de renouveler le contrat pour une période de 5 ans, et l\'assistance pour obtenir une carte de résident.',
+        link: "https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D9%83%D8%B1%D9%88%D8%A7%D8%AA%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+        menu1: "Secteur :",
+            menu2: "Niveau Langue :",
+            menu3: "Temps de Visa :",
+            menu4: "Contrat :",
+            menu5: "Prix du Contrat :",
+            menu6: "Plus :"
+          
+          
+    },
+    {
+        id: 2,
+        image: allemagne,
+        title: 'Contrat de travail en Allemagne',
+        type: 'International',
+        secteur: 'Santé et soins/hôtels/programming',
+        niveaulanguage: 'Langue requise B1.',
+        timevisa: 'La durée d\'obtention d\'un visa est de 8 mois.',
+        contratime: 'Contrat de travail d\'un an.',
+        pricecontrat: 'Le prix du contrat est de 8 millions.',
+        more: 'Nous fournissons le logement, la médecine, la possibilité de renouveler le contrat pour une période de 5 ans, et l\'assistance pour obtenir une carte de résident.',
+        link: "https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A3%D9%84%D9%85%D8%A7%D9%86%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+        menu1: "Secteur :",
+        menu2: "Niveau Langue :",
+        menu3: "Temps de Visa :",
+        menu4: "Contrat :",
+        menu5: "Prix du Contrat :",
+        menu6: "Plus :"
+    },
+    {
+        id: 3,
+        image: belgium,
+        title: 'Contrat de travail en Belgique',
+        type: 'International',
+        secteur: 'Santé et soins/hôtels/programming',
+        niveaulanguage: 'Langue B1 nécessaire.',
+        timevisa: 'La durée d\'obtention d\'un visa est de 8 mois.',
+        contratime: 'Contrat de travail d\'un an.',
+        pricecontrat: 'Le prix du contrat est de 6 millions.',
+        more: 'Nous fournissons le logement, la médecine, la possibilité de renouveler le contrat pour une période de 5 ans, et l\'assistance pour obtenir une carte de résident.',
+        link: "https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A8%D9%84%D8%AC%D9%8A%D9%83%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+        menu1: "Secteur :",
+        menu2: "Niveau Langue :",
+        menu3: "Temps de Visa :",
+        menu4: "Contrat :",
+        menu5: "Prix du Contrat :",
+        menu6: "Plus :"
+    },
+    {
+        id: 4,
+        image: italy,
+        title: 'Contrat de travail en Italie',
+        type: 'International',
+        secteur: 'Santé et soins/hôtels/agriculture',
+        niveaulanguage: 'Langue B1 nécessaire.',
+        timevisa: 'La durée d\'obtention d\'un visa est de 8 mois.',
+        contratime: 'Contrat de travail d\'un an.',
+        pricecontrat: 'Le prix du contrat est de 6 millions.',
+        more: 'Nous fournissons le logement, la médecine, la possibilité de renouveler le contrat pour une période de 5 ans, et l\'assistance pour obtenir une carte de résident.',
+        link: "https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A5%D9%8A%D8%B7%D8%A7%D9%84%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+        menu1: "Secteur :",
+        menu2: "Niveau Langue :",
+        menu3: "Temps de Visa :",
+        menu4: "Contrat :",
+        menu5: "Prix du Contrat :",
+        menu6: "Plus :"
+    },
+    {
+        id: 5,
+        image: spain,
+        title: 'Contrat de travail en Espagne',
+        type: 'International',
+        secteur: 'Santé et soins/hôtels/agriculture',
+        niveaulanguage: 'Langue B1 nécessaire.',
+        timevisa: 'La durée d\'obtention d\'un visa est de 8 mois.',
+        contratime: 'Contrat de travail d\'un an.',
+        pricecontrat: 'Le prix du contrat est de 6 millions.',
+        more: 'Nous fournissons le logement, la médecine, la possibilité de renouveler le contrat pour une période de 5 ans, et l\'assistance pour obtenir une carte de résident.',
+        link: "https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A5%D8%B3%D8%A8%D8%A7%D9%86%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+        menu1: "Secteur :",
+        menu2: "Niveau Langue :",
+        menu3: "Temps de Visa :",
+        menu4: "Contrat :",
+        menu5: "Prix du Contrat :",
+        menu6: "Plus :"
+    },
+    {
+        id: 6,
+        image: facade,
+        title: 'Responsable Produit Senior',
+        type: 'National',
+        secteur: 'Santé et soins/hôtels/programming',
+        niveaulanguage: 'Langue requise B1.',
+        timevisa: 'La durée d\'obtention d\'un visa est de 8 mois.',
+        contratime: 'Contrat de travail d\'un an.',
+        pricecontrat: 'Le prix du contrat est de 8 millions.',
+        more: 'Nous fournissons le logement, la médecine, la possibilité de renouveler le contrat pour une période de 5 ans, et l\'assistance pour obtenir une carte de résident.',
+        link: "#",
+        menu1: "Secteur :",
+        menu2: "Niveau Langue :",
+        menu3: "Temps de Visa :",
+        menu4: "Contrat :",
+        menu5: "Prix du Contrat :",
+        menu6: "Plus :"
+    },
+    // Assurez-vous que chaque offre d'emploi a un identifiant unique
 ];
 
