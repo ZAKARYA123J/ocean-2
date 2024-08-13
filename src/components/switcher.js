@@ -29,7 +29,7 @@ export default function Switcher() {
         const htmlTag = document.getElementsByTagName("html")[0];
         htmlTag.dir = e.target.innerText === "LTR" ? "ltr" : "rtl";
     }
-
+    
     const scrollTop = () => {
         window.scrollTo({
             top: 0,

@@ -480,6 +480,8 @@ export const recruitmentEN = [
         title2: 'International Recruitment Services',
         desc2:'Our company specializes in connecting top talent with global opportunities. We provide comprehensive international recruitment solutions, including candidate sourcing, screening, and placement. By leveraging our extensive network and expertise in diverse markets, we help businesses find the right talent to drive their growth and success across borders.',
           button:"Apply Now",
+             
+    type:"international",
     
     },
     {
@@ -490,6 +492,7 @@ export const recruitmentEN = [
         title2: 'Recruitment OceanConnecting',
         desc2:'We’re excited to invite you to apply for a position at our company. Join our team and contribute to our dynamic environment while advancing your career. Explore opportunities for growth, innovation, and impact with us.',
         button:"Apply Now",
+        type:"national"
     
     },
 
@@ -624,5 +627,9 @@ export const ContactEN=[{
     comment:"Your Comment:",
     Message:"Send Message"
 }]
+// export const type=[{
+
+     
+// }]
 
 export const companyLogo = [company1, company2, company3, company4, company5, company6]
