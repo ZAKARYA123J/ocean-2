@@ -315,7 +315,7 @@ export const serviceDataAR = [
 ]
 export const TitleAR=[
     {
-        Title:"دراسات التدريب التوظيف",
+        Title:"التعلم والتدريب والتوظيف الوطني والدولي",
         button:"اتصل بنا"
     }
 ]
@@ -382,7 +382,8 @@ export const jobsAR = [
             menu3: "مدة التأشيرة :",
             menu4: "العقد :",
             menu5: "سعر العقد :",
-            menu6: "المزيد :"
+            menu6: "المزيد :",
+            action : 'تقديم الطلب',
           
           
     },
@@ -403,7 +404,8 @@ export const jobsAR = [
         menu3: "مدة التأشيرة :",
         menu4: "العقد :",
         menu5: "سعر العقد :",
-        menu6: "المزيد :"
+        menu6: "المزيد :",
+        action : 'تقديم الطلب',
     },
     {
         id: 4,
@@ -422,7 +424,8 @@ export const jobsAR = [
         menu3: "مدة التأشيرة :",
         menu4: "العقد :",
         menu5: "سعر العقد :",
-        menu6: "المزيد :"
+        menu6: "المزيد :",
+        action : 'تقديم الطلب',
     },
     {
         id: 5,
@@ -441,7 +444,8 @@ export const jobsAR = [
         menu3: "مدة التأشيرة :",
         menu4: "العقد :",
         menu5: "سعر العقد :",
-        menu6: "المزيد :"
+        menu6: "المزيد :",
+        action : 'تقديم الطلب',
     },
     {
         id: 6,
@@ -460,7 +464,8 @@ export const jobsAR = [
         menu3: "مدة التأشيرة :",
         menu4: "العقد :",
         menu5: "سعر العقد :",
-        menu6: "المزيد :"
+        menu6: "المزيد :",
+        action : 'تقديم الطلب',
     },
     {
         id: 7,
@@ -480,6 +485,7 @@ export const jobsAR = [
         menu5:" منطقة :",
         menu6:" المهارات الأساسية :",
         action : ' تقدم ',
+        action : 'تقديم الطلب',
     },
     // تأكد من أن لكل وظيفة معرف فريد
 ];

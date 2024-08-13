@@ -321,7 +321,7 @@ export const serviceDataEN = [
 ]
 export const TitleEN=[
     {
-        Title:"Studies Training Recruitment",
+        Title:"Studies Training National and Internasionl Recruitment",
         button:"Contact Us"
     }
 ]
@@ -389,6 +389,7 @@ export const jobsEN = [
         menu4:"Contrat :",
         menu5:"Price Contrat :",
         menu6:"More :",
+       action : 'To apply',
     },
     {
         id: 3,
@@ -408,6 +409,7 @@ export const jobsEN = [
         menu4:"Contrat :",
         menu5:"Price Contrat :",
         menu6:"More :",
+       action : 'To apply',
        
     },
     {
@@ -428,6 +430,7 @@ export const jobsEN = [
         menu4:"Contrat :",
         menu5:"Price Contrat :",
         menu6:"More :",
+       action : 'To apply',
     },
     {
         id: 5,
@@ -447,6 +450,7 @@ export const jobsEN = [
         menu4:"Contrat :",
         menu5:"Price Contrat :",
         menu6:"More :",
+       action : 'To apply',
     },
     {
         id: 6,
@@ -466,6 +470,7 @@ export const jobsEN = [
         menu4:"Contrat :",
         menu5:"Price Contrat :",
         menu6:"More:",
+       action : 'To apply',
     },
     {
         id: 7,
@@ -485,7 +490,7 @@ export const jobsEN = [
         menu4:"Type Contrat :",
         menu5:"Region :",
         menu6:"Key skills :",
-        action : 'Demande',
+        action : 'To apply',
     },
     // Ensure each job has a unique id
 ];

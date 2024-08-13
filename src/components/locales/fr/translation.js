@@ -311,7 +311,7 @@ export const serviceDataFR = [
 ]
 export const Titlefr=[
     {
-        Title:"Etudes Formation Recrutements",
+        Title:"Etudes Formation Recrutement National et Internaional",
         button:"Contactez-nous"
     }
 ]
@@ -377,7 +377,8 @@ export const jobsFR = [
             menu3: "Temps de Visa :",
             menu4: "Contrat :",
             menu5: "Prix du Contrat :",
-            menu6: "Plus :"
+            menu6: "Plus :",
+            action : 'Demande',
           
           
     },
@@ -398,7 +399,9 @@ export const jobsFR = [
         menu3: "Temps de Visa :",
         menu4: "Contrat :",
         menu5: "Prix du Contrat :",
-        menu6: "Plus :"
+        menu6: "Plus :",
+        action : 'Demande',
+
     },
     {
         id: 4,
@@ -417,7 +420,8 @@ export const jobsFR = [
         menu3: "Temps de Visa :",
         menu4: "Contrat :",
         menu5: "Prix du Contrat :",
-        menu6: "Plus :"
+        menu6: "Plus :",
+        action : 'Demande',
     },
     {
         id: 5,
@@ -436,7 +440,8 @@ export const jobsFR = [
         menu3: "Temps de Visa :",
         menu4: "Contrat :",
         menu5: "Prix du Contrat :",
-        menu6: "Plus :"
+        menu6: "Plus :",
+        action : 'Demande',
     },
     {
         id: 6,
@@ -455,7 +460,8 @@ export const jobsFR = [
         menu3: "Temps de Visa :",
         menu4: "Contrat :",
         menu5: "Prix du Contrat :",
-        menu6: "Plus :"
+        menu6: "Plus :",
+        action : 'Demande',
     },
     {
         id: 7,
@@ -475,6 +481,7 @@ export const jobsFR = [
         menu4:"Type Contrat :",
         menu5:"Région :",
         menu6:"Compétences clés :",
+        menu6: "Plus :",
         action : 'Demande',
     },
     // Assurez-vous que chaque offre d'emploi a un identifiant unique
