@@ -492,6 +492,8 @@ export const recruitmentEN = [
         image:recrutinter,
         title2: 'International Recruitment Services',
         desc2:'Our company specializes in connecting top talent with global opportunities. We provide comprehensive international recruitment solutions, including candidate sourcing, screening, and placement. By leveraging our extensive network and expertise in diverse markets, we help businesses find the right talent to drive their growth and success across borders.',
+        button:"Apply Now",
+        type :"International"
     
     },
     {
@@ -501,6 +503,8 @@ export const recruitmentEN = [
         image:recrutocean,
         title2: 'Recruitment OceanConnecting',
         desc2:'We’re excited to invite you to apply for a position at our company. Join our team and contribute to our dynamic environment while advancing your career. Explore opportunities for growth, innovation, and impact with us.',
+        button:"Apply Now",
+        type :"National"
     
     },
 
@@ -537,6 +541,7 @@ export const jobsEN = [
         menu5:"Price Contrat :",
         menu6:"More :",
        action : 'To apply',
+
     },
     {
         id: 3,
