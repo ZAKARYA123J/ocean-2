@@ -62,9 +62,13 @@ const JobListings = () => {
     <>
       <div className="p-10 bg-gray-100">
         <Navbar />
-        <h2 className="text-3xl font-bold text-black mb-4 mt-20">
-          {t('Job Placement Agencies')} <span className="text-3xl font-bold text-blue-600">{t('Ocean connect')}</span>
-        </h2>
+     
+          {filteredJobs.map((item, index) => (
+                       <h2 className="text-3xl font-bold text-black mb-4 mt-20">
+                       {t(item.job)} <span className="text-3xl font-bold text-blue-600">{t(item.ocean)}</span>
+                     </h2>
+                    ))}
+     
 
         {/* Dropdown for selecting job type */}
         <div className="mb-8 flex justify-center">

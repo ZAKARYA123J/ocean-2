@@ -91,12 +91,12 @@ export default function AgencyTab(){
         <section className="realtive md:py-24 py-16" id="jobs">
             <div className="container relative">
                 <div className="grid grid-cols-1 pb-6 text-center">
-                    
+{/*                     
                 {recruitment.map((item, index) => (
           <>
                     <h3 className="font-semibold text-2xl leading-normal mb-4">{t(recruitment.h1)} </h3>
                      </>
-                    ))}
+                    ))} */}
                     {/* <p className="text-slate-400 max-w-xl mx-auto">This  a simple text made for this unique and awesome template, you can replace it with any text.</p> */}
                 </div>
                 

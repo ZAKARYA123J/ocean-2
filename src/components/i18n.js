@@ -2,9 +2,9 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
-import {clientDataEN,blogDataEN,serviceDataEN,TitleEN,NavbarEN,AboutEN,jobsEN} from './locales/en/translation';
-import {clientDataFr,blogDataFR,serviceDataFR,Titlefr,NavbarFR,AboutFR,jobsFR} from './locales/fr/translation';
-import { clientDataAR,blogDataAR,serviceDataAR,TitleAR,NavbarAR,AboutAR,jobsAR} from './locales/ar/translation';
+import {clientDataEN,blogDataEN,serviceDataEN,TitleEN,NavbarEN,AboutEN,jobsEN,ContactEN} from './locales/en/translation';
+import {clientDataFr,blogDataFR,serviceDataFR,Titlefr,NavbarFR,AboutFR,jobsFR,ContactFR} from './locales/fr/translation';
+import { clientDataAR,blogDataAR,serviceDataAR,TitleAR,NavbarAR,AboutAR,jobsAR,ContactAR} from './locales/ar/translation';
 // Initialize i18next
 i18n
   .use(LanguageDetector) // Detect user language
@@ -12,13 +12,13 @@ i18n
   .init({
     resources: {
       en: {
-        translation: clientDataEN,blogDataEN,serviceDataEN,TitleEN,NavbarEN,AboutEN,jobsEN
+        translation: clientDataEN,blogDataEN,serviceDataEN,TitleEN,NavbarEN,AboutEN,jobsEN,ContactEN
       },
       fr: {
-        translation: clientDataFr,blogDataFR,serviceDataFR,Titlefr,NavbarFR,AboutFR,jobsFR
+        translation: clientDataFr,blogDataFR,serviceDataFR,Titlefr,NavbarFR,AboutFR,jobsFR,ContactFR
       },
       ar:{
-        translation:clientDataAR,blogDataAR,serviceDataAR,TitleAR,NavbarAR,AboutAR,jobsAR
+        translation:clientDataAR,blogDataAR,serviceDataAR,TitleAR,NavbarAR,AboutAR,jobsAR,ContactAR
       }
     },
     fallbackLng: 'en', // Default language if detection fails

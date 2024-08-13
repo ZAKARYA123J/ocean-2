@@ -61,11 +61,12 @@ export default function Navbar(){
                             <Link to="" className="h-8 px-4 text-[12px] tracking-wider inline-flex items-center justify-center font-medium rounded-md bg-blue-500 text-white uppercase">Login</Link>
                         </li>
                     </ul> */}
+                     <button className="nav-link lg:hidden"><LanguageSwitcher /></button>
                     <button data-collapse="menu-collapse" type="button" className="collapse-btn inline-flex items-center ms-2 text-dark dark:text-white lg_992:hidden" onClick={() =>setManu(!manu)}>
                         <span className="sr-only">Navigation Menu</span>
                         <i className="mdi mdi-menu text-[24px]"></i>
                     </button>
-                    <button className="nav-link lg:hidden"><LanguageSwitcher /></button>
+                   
                 </div>
 
                 <div className={`navigation lg_992:order-1 lg_992:flex  ms-auto ${manu ? '' : 'hidden'}`} id="menu-collapse">
@@ -89,9 +90,12 @@ export default function Navbar(){
     <li className="nav-item ms-0">
       <Link1 className="nav-link" to="contact" smooth={true} duration={1000} activeClass='active' spy={true}>{t(item.Contact_us)}</Link1>
     </li>
-    <li className="nav-item ms-0 md:hiden" >
-      <button className="nav-link "><LanguageSwitcher /></button>
-    </li>
+    <li className="nav-item  ">
+  <button className="nav-link">
+    <LanguageSwitcher />
+  </button>
+</li>
+
   </ul>
 ))}
 
