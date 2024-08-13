@@ -6,7 +6,7 @@ import img from './ocean3.png'
 
 export default function Footer(){
     return(
-        <footer className="footer bg-dark-footer relative text-gray-200 dark:text-gray-200">
+        <footer className="footer bg-gray-400 relative text-gray-200 dark:text-gray-300">
             <div className="py-[30px] px-0 border-t border-slate-800">
                 <div className="container relative text-center">
                     <div className="grid lg:grid-cols-12 md:grid-cols-3 grid-cols-1 items-center">
