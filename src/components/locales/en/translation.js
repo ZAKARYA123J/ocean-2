@@ -258,7 +258,8 @@ export  const blogDataEN = [
         title: 'Language',
         desc: 'The Ocean Connecting offers a comprehensive language learning program covering...',
         detail: 'The Ocean Connecting offers a comprehensive language learning program covering levels A1 to C2. It features young teachers, engaging activities, educational trips, and flexible schedules. Students benefit from regular level assessments, free access to PCs and Wi-Fi, and air-conditioned classrooms. The program also provides psychological monitoring and guidance, ensuring a supportive learning environment. This program aims to enhance language proficiency through interactive and diverse methods, accommodating different learning paces and needs.',
-        type: 'Language'
+        type: 'Language',
+        button: "Learn more",
     },
     {
         id: 2,
@@ -270,6 +271,7 @@ export  const blogDataEN = [
         desc: 'The training for an Airport Check-in Agent prepares professionals...',
         detail: 'The training for an Airport Check-in Agent prepares professionals to manage passenger check-in efficiently and ensure smooth airport operations. It covers passenger greeting, document verification, and baggage handling, while using booking and baggage control systems. Participants also learn airport security procedures, international regulations, and customer service techniques to provide a pleasant experience. The training includes practical simulations to apply acquired knowledge and develop communication and emergency management skills.',
         type: 'Formation',
+         button: "Learn more",
     },
     {
         id: 3,
@@ -281,6 +283,7 @@ export  const blogDataEN = [
         desc: 'DJ training teaches the skills necessary to become a DJ...',
         detail: 'DJ training teaches the skills necessary to become a professional DJ, covering mixing techniques, using modern equipment such as turntables and controllers, and the basics of music production to create remixes and original tracks. Participants also learn to manage events, organize sets, and interact with the audience. In addition to technical aspects, the training helps develop a personal artistic identity, promote work online, and build a portfolio. It is ideal for beginners and DJs looking to refine their skills and enter the music industry.',
         type: 'Formation',
+         button: "Learn more",
     },
     {
         id: 4,
@@ -292,6 +295,8 @@ export  const blogDataEN = [
         desc: 'This training offers a comprehensive experience for sailing enthusiasts...',
         detail: 'This training offers a comprehensive experience for sailing enthusiasts, including theoretical and practical courses on safety, sailing techniques, and coastal and offshore navigation. Sessions are led by experienced instructors and include intensive sea practice. Participants can obtain recognized certifications, allowing them to pilot various types of boats and sailboats. Join us to develop your nautical skills and experience an unforgettable maritime adventure!',
         type: 'Formation',
+         button: "Learn more",
+
     },
     {
         id: 5,
