@@ -99,7 +99,7 @@ export default function Daitalservice() {
                     <div className="flex items-center" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                       <h5 className="text-lg font-medium"><strong>{t(selectedFormation.para1)}</strong></h5>
                       <CTA>
-                        {selectedFormation.Button}
+                        {selectedFormation.link}
                       </CTA>
                     </div>
                     <p className="text-slate-400 mt-4">{t(selectedFormation.desc_para1)}</p>
@@ -117,7 +117,7 @@ export default function Daitalservice() {
                     <p className="text-slate-400 mt-4">{t(selectedFormation.desc_para5)}</p>
                     <div className="mt-4">
                       <CTA>
-                        {t(selectedFormation.Button)}
+                        {selectedFormation.link}
                         {/* <Link1 to="contact" className="text-sky-500"smooth={true} duration={1000} activeClass='active' spy={true}>{selectedFormation.Button} <i className="mdi mdi-chevron-right align-middle"></i></Link1> */}
                       </CTA>
                     </div>
