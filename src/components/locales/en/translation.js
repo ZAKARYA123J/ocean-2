@@ -495,6 +495,8 @@ export const recruitmentEN = [
 export const jobsEN = [
     {
         id: 1,
+        job:"Job Placement Agencies",
+        ocean:"Ocean connect",
         image: croatie,
         title: 'Employment contract in Croatia',
         type: 'International',
@@ -619,4 +621,5 @@ export const ContactEN=[{
     comment:"Your Comment:",
     Message:"Send Message"
 }]
+
 export const companyLogo = [company1, company2, company3, company4, company5, company6]

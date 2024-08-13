@@ -168,8 +168,8 @@ export const blogDataFR = [
         desc:"La formation pour développer l'agriculture et la pêche vise à optimiser...",
         detail:"La formation pour développer l'agriculture et la pêche vise à optimiser les pratiques agricoles et halieutiques tout en garantissant la durabilité et la rentabilité. Elle couvre des techniques modernes de culture et de gestion des sols, ainsi que des méthodes de gestion durable des stocks de poissons et des écosystèmes aquatiques. Les participants apprennent à utiliser les dernières technologies et innovations, à adopter des pratiques respectueuses de l'environnement, et à élaborer des stratégies économiques pour améliorer la productivité et accéder aux marchés. Cette formation est essentielle pour les agriculteurs, pêcheurs, et gestionnaires de ressources naturelles souhaitant améliorer leurs pratiques et assurer un développement durable dans leurs secteurs respectifs.",
         type: 'Formation',
-             button:"En savoir plus",
-               data: "Pour chaque cours que vous terminez, vous recevrez une certification que vous pourrez partager sur vos réseaux sociaux (par exemple, LinkedIn). Chaque certification a un numéro d'authentification unique qui permet de la vérifier.",
+        button:"En savoir plus",
+        data: "Pour chaque cours que vous terminez, vous recevrez une certification que vous pourrez partager sur vos réseaux sociaux (par exemple, LinkedIn). Chaque certification a un numéro d'authentification unique qui permet de la vérifier.",
         reserver: "Réservé"
     },
     {
@@ -368,6 +368,8 @@ export const recruitmentFR = [
 export const jobsFR = [
     {
         id: 1,
+        job:"Agences de placement",
+        ocean:"Ocean connect",
         image: croatie,
         title: 'Contrat de travail en Croatie',
         type: 'International',
@@ -493,5 +495,10 @@ export const ContactFR=[{
     comment: "Votre Commentaire :",
     Message: "Envoyer le Message"
 }]
+export const placementfr=[
+    {
+        job:"Agences de placement",
+    }
+]
 
 

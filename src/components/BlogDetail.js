@@ -49,7 +49,7 @@ const BlogDetail = () => {
                 <div className="lg:w-2/3 mb-9 lg:mb-80 p-5 bg-white rounded-lg shadow-lg flex flex-col justify-center items-center lg:ml-8">
                     <p className="lg:w-2/3 mb-5 lg:mb-6">Welcome to our platform tailored for {blogPost.title} To register, simply click here</p>
                     <button className="bg-purple-600 text-white py-3 lg:py-4 px-5 lg:px-10 rounded-lg text-lg lg:text-xl font-semibold flex items-center">
-                        <span className="mr-2">⚡</span> Réserver
+                        <span className="mr-2">⚡</span> {t(blogPost.resrveButton)}
                     </button>
                 </div>
             </div>

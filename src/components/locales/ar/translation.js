@@ -400,6 +400,8 @@ export const recruitmentAR = [
 export const jobsAR = [
     {
         id: 1,
+        job:"وكالة توظيف",
+        ocean:"Ocean connect",
         image: croatie,
         title: 'عقد عمل في كرواتيا',
         type: 'دولي',
@@ -527,3 +529,8 @@ export const ContactAR=[{
     comment: ": تعليقك",
     Message: "أرسل الرسالة"
 }]
+export const placementar=[
+    {
+      
+    }
+]
