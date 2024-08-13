@@ -85,10 +85,11 @@ export default function Navbar(){
       <Link to={`/jobs/${all}`} className="nav-link">{t(item.Jobs)}</Link>
     </li>
     <li className="nav-item ms-0">
-      <Link1 className="nav-link" to="about" smooth={true} duration={1000} activeClass='active' spy={true}>{t(item.About)}</Link1>
+      <Link1 className="nav-link cursor-pointer" to="about" smooth={true} duration={1000} activeClass='active' spy={true}>{t(item.About)}</Link1>
     </li>
     <li className="nav-item ms-0">
-      <Link1 className="nav-link" to="contact" smooth={true} duration={1000} activeClass='active' spy={true}>{t(item.Contact_us)}</Link1>
+      
+      <Link1 className="nav-link cursor-pointer" to="contact" smooth={true} duration={1000} activeClass='active' spy={true}>{t(item.Contact_us)}</Link1>
     </li>
     <li className="nav-item  ">
   <button className="nav-link">
