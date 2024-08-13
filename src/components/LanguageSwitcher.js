@@ -26,11 +26,11 @@ const LanguageSwitcher = () => {
                 onClick={() => handleLanguageChange('en')} 
                 className={getButtonClass('en')}
             >
-                <img src={english} alt="English" className="w-6 h-6 " />
+                <img src={english} alt="English" className="w-6 h-6  " />
             </button>
             <button 
                 onClick={() => handleLanguageChange('fr')} 
-                className={getButtonClass('fr')}
+                className={getButtonClass('fr') }
             >
                 <img src={french} alt="Français" className="w-6 h-6 " />
             </button>
@@ -38,7 +38,7 @@ const LanguageSwitcher = () => {
                 onClick={() => handleLanguageChange('ar')} 
                 className={getButtonClass('ar')}
             >
-                <img src={saudi} alt="العربية" className="w-6 h-6 " />
+                <img src={saudi} alt="العربية" className="w-6 h-6"/>
             </button>
         </div>
     );
