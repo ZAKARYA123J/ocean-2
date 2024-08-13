@@ -135,14 +135,15 @@ export default function AgencyTab(){
                                 <div className="mt-6">
                                     <h5 className="text-lg font-medium">{t(item.title2)}</h5>
                                     <p className="text-slate-400 mt-4">{t(item.desc2)}</p>
+                                    
                                     <div className="mt-4">
                                     {activeIndex === 1 ? (
                                       <Link to={`/jobs/${international}`}>
-                                       <CTA color="blue">Apply Now <i className="mdi mdi-chevron-right align-middle"></i></CTA>
+                                       <CTA color="blue">{t(item.button)}<i className="mdi mdi-chevron-right align-middle"></i></CTA>
                                       </Link>
                                         ) : (
                                          <Link to={`/jobs/${national}`}>
-                                         <CTA color="blue">Apply Now <i className="mdi mdi-chevron-right align-middle"></i></CTA>
+                                         <CTA color="blue">{t(item.button)}<i className="mdi mdi-chevron-right align-middle"></i></CTA>
                                         </Link>
                                             )}
                                     

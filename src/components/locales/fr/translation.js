@@ -355,6 +355,7 @@ export const recruitmentFR = [
         image: service5,
         title2: 'Services de Recrutement International',
         desc2: 'Notre entreprise se spécialise dans la mise en relation des meilleurs talents avec des opportunités mondiales. Nous proposons des solutions complètes de recrutement international, y compris la recherche, la présélection et le placement des candidats. En tirant parti de notre vaste réseau et de notre expertise sur divers marchés, nous aidons les entreprises à trouver les talents adéquats pour stimuler leur croissance et leur succès au-delà des frontières.',
+          button:"Postulez maintenant"
     },
     {
         id: 2,
@@ -363,6 +364,7 @@ export const recruitmentFR = [
         image: formation6,
         title2: 'Recrutement OceanConnecting',
         desc2: 'Nous sommes ravis de vous inviter à postuler pour un poste dans notre entreprise. Rejoignez notre équipe et contribuez à notre environnement dynamique tout en faisant avancer votre carrière. Explorez des opportunités de croissance, d’innovation et d’impact avec nous.',
+         button:"Postulez maintenant"
     },
 ];
 export const jobsFR = [
@@ -385,8 +387,8 @@ export const jobsFR = [
             menu3: "Temps de Visa :",
             menu4: "Contrat :",
             menu5: "Prix du Contrat :",
-            menu6: "Plus :"
-          
+            menu6: "Plus :",
+         
           
     },
     {

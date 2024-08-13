@@ -68,8 +68,6 @@ const JobListings = () => {
                        {t(item.job)} <span className="text-3xl font-bold text-blue-600">{t(item.ocean)}</span>
                      </h2>
                     ))}
-     
-
         {/* Dropdown for selecting job type */}
         <div className="mb-8 flex justify-center">
           <select
