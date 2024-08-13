@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FiLinkedin, FiFacebook, FiInstagram, FiMail } from '../assets/icons/vander';
+import { FiLinkedin, FiFacebook, FiInstagram, FiMail ,FiYoutube  } from '../assets/icons/vander';
 import img from './ocean3.png';
 import footerBg from './footer-bg.jpg'; // A realistic background image
 
@@ -34,10 +34,13 @@ export default function Footer() {
                     </div>
 
                     <ul className="lg:col-span-4 list-none md:text-end text-center mt-6 md:mt-0 text-white">
-                        <li className="inline"><Link to="https://www.linkedin.com/company/ocean-connecting/?originalSubdomain=ma" target="_blank" className="size-8 inline-flex justify-center items-center rounded-md hover:scale-105 transition-transform duration-300 ease-in-out"><FiLinkedin className="size-4 align-middle" title="Linkedin"/></Link></li>
+                        
                         <li className="inline"><Link to="https://www.facebook.com/the.ocean.connecting/" target="_blank" className="size-8 inline-flex justify-center items-center rounded-md hover:scale-105 transition-transform duration-300 ease-in-out"><FiFacebook className="size-4 align-middle" title="Facebook"/></Link></li>
                         <li className="inline"><Link to="https://www.instagram.com/oceanconnecting.ma/" target="_blank" className="size-8 inline-flex justify-center items-center rounded-md hover:scale-105 transition-transform duration-300 ease-in-out"><FiInstagram className="size-4 align-middle" title="Instagram"/></Link></li>
+                        <li className="inline"><Link to="https://www.youtube.com/@OceanConnecting" className="size-8 inline-flex justify-center items-center rounded-md hover:scale-105 transition-transform duration-300 ease-in-out"><FiYoutube  className="size-4 align-middle" title="YouTUbe"/></Link></li>
+                        <li className="inline"><Link to="https://www.linkedin.com/company/ocean-connecting/?originalSubdomain=ma" target="_blank" className="size-8 inline-flex justify-center items-center rounded-md hover:scale-105 transition-transform duration-300 ease-in-out"><FiLinkedin className="size-4 align-middle" title="Linkedin"/></Link></li>
                         <li className="inline"><Link to="mailto:oceanconnecting.ma@gmail.com" className="size-8 inline-flex justify-center items-center rounded-md hover:scale-105 transition-transform duration-300 ease-in-out"><FiMail className="size-4 align-middle" title="Email"/></Link></li>
+                        
                     </ul>
                 </div>
             </div>
