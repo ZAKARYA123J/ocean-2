@@ -108,11 +108,6 @@ export default function Index(){
         {/* <LanguageSwitcher/> */}
         <Services/>
         <Blogs/>
-        <div className="flex justify-center">
-        <Link to={"formation"}> <button className="py-2 px-4 bg-sky-500 text-white rounded">Show all Formations<i className="mdi mdi-chevron-right ms-1"></i></button></Link>
- 
-</div>
-
         <AgencyTab/>
         {/* <Cta/>
     
@@ -123,7 +118,7 @@ export default function Index(){
         <GetInTouch/>
         <WhatsAppFloatingButton/>
         <Footer/>
-        <Switcher/>
+        {/* <Switcher/> */}
         
         </>
     )
