@@ -3,6 +3,7 @@ import contact2 from '../assets/images/done/contact.svg';
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
 
+
 const CTA = styled.button`
   background-color: var(--white);
   color: #3a86ff;

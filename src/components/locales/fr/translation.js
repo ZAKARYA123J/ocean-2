@@ -2,6 +2,8 @@ import { CgWebsite } from "react-icons/cg";
 import { IoHomeOutline } from "react-icons/io5";
 import { MdOutlineCleaningServices } from "react-icons/md";
 import { SlNote } from "react-icons/sl";
+import { Link, useParams } from "react-router-dom";
+import { Link as Link1 } from "react-scroll";
 import client1 from '../../../assets/images/team/01.jpg'
 import client2 from '../../../assets/images/team/02.jpg'
 import client3 from '../../../assets/images/team/03.jpg'
@@ -34,6 +36,10 @@ import croatie from '../../../assets/images/job/croatie.png'
 import italy from '../../../assets/images/job/italy.png'
 import spain from '../../../assets/images/job/spain.png'
 import facade from '../../../assets//images/job/facade.png'
+import resume from '../../../assets/images/job/resume.png'
+import recrutocean from '../../../assets/images/service/recrutocean.png'
+import recrutinter from '../../../assets/images/service/recrutinter2.png'
+
 export const clientDataFr = [
     {
         image: client1,
@@ -278,7 +284,7 @@ export const serviceDataFR = [
         title:'Formation',
         title2:"NOS SERVICES",
         desc2:"Nous proposons des formations professionnelles adaptées à tous les niveaux, un service de nettoyage de glace pour assurer sécurité et propreté en hiver, ainsi qu'une domiciliation pour offrir à votre entreprise une adresse prestigieuse et une gestion administrative simplifiée.",
-        desc: "Ceci est requis lorsque, par exemple, le texte final n'est pas encore disponible.",
+        desc: "Boostez vos compétences grâce à des formations sur mesure dispensées par des professionnels expérimentés. Nos formateurs experts proposent des programmes personnalisés pour vous aider à atteindre vos objectifs en toute confiance et efficacement.",
         image:service1,
         para1 :'Service de Formation',
         desc_para1 :"Nous offrons des formations professionnelles de haute qualité, adaptées à tous les niveaux d'expertise. Nos programmes sont conçus pour fournir des compétences pratiques et théoriques, vous permettant de progresser dans votre carrière et d'atteindre vos objectifs professionnels. Que vous soyez débutant ou expert, nos formateurs expérimentés vous accompagneront tout au long de votre parcours d'apprentissage.",
@@ -290,13 +296,15 @@ export const serviceDataFR = [
         desc_para4:"Chaque formation commence par une analyse des besoins, suivie d'un programme personnalisé dispensé par des experts. Nous combinons théorie et pratique pour garantir une assimilation efficace des connaissances.",
         para5:"Valeur Ajoutée",
         desc_para5:"Nos formations se distinguent par leur flexibilité et leur approche pratique, intégrant les dernières tendances et technologies pour offrir des solutions pertinentes et immédiatement applicables sur le terrain.",
-        Button:"GET FORMATION",
+        Bouton : "Apprendre encore plus",
+        link:<Link to={"/formation"} className="text-sky-500" >Obtenez une formation <i className="mdi mdi-chevron-right align-middle"></i></Link>,
+
     },
     {
         id : 2 ,
         icon:<MdOutlineCleaningServices/>,
         title:'Nettoyage des Façades',
-        desc:"Ceci est requis lorsque, par exemple, le texte final n'est pas encore disponible.",
+        desc:"Améliorez l’apparence et la longévité de votre bâtiment grâce à des services professionnels de nettoyage de façade. Assurez-vous que votre propriété fasse une bonne première impression, reflétant la qualité et le professionnalisme de votre entreprise.",
         image:service2,
         para1 :'Service de Nettoyage des Façades',
         desc_para1 :"Notre service de nettoyage des façades vous garantit des résultats impeccables pour redonner éclat et propreté à vos bâtiments. Grâce à des techniques professionnelles et des produits respectueux de l'environnement, nous éliminons efficacement saletés, moisissures et polluants. Faites confiance à notre expertise pour préserver l'apparence et la durabilité de vos façades.",
@@ -308,16 +316,18 @@ export const serviceDataFR = [
         desc_para4:"Nous utilisons des techniques de nettoyage adaptées à chaque type de surface, incluant le lavage haute pression et l'utilisation de produits écologiques. Nous commençons par une évaluation détaillée, suivie d'un nettoyage approfondi et d'un contrôle qualité final.",
         para5:"Valeur Ajoutée",
         desc_para5:"Notre expertise en nettoyage des façades garantit des résultats durables et une intervention rapide, tout en respectant les normes environnementales et de sécurité les plus strictes.",
-        Button :"CONTACT US",
+        Bouton : "Apprendre encore plus",
+        link:<Link1 to="contact" className="text-sky-500"smooth={true} duration={1000} activeClass='active' spy={true}>Contactez-nous <i className="mdi mdi-chevron-right align-middle"></i></Link1>,
+
     },
 
     {
         id : 3 ,
         icon:<IoHomeOutline/>,
-        title:'Domiciliation',
-        desc:"Ceci est requis lorsque, par exemple, le texte final n'est pas encore disponible.",
+        title:" Domiciliation d'Entreprise ",
+        desc:" Profitez d'une domiciliation d'entreprise professionnelle à Agadir pour renforcer votre image corporative et votre présence sur le marché. ",
         image:service3,
-        para1 :'Service de Domiciliation',
+        para1 :"Service de Domiciliation d'Entreprise ",
         desc_para1 :"Notre service de domiciliation vous offre une adresse professionnelle prestigieuse pour votre entreprise. En plus de simplifier la gestion administrative, nous assurons la réception de votre courrier et vous fournissons un support complet pour toutes vos démarches. Faites de notre adresse celle de votre entreprise pour renforcer votre image et optimiser votre organisation.",
         para2 :"Avantages et Bénéfices",
         desc_para2 :"En utilisant notre adresse, vous bénéficiez d'une image professionnelle renforcée et d'une gestion simplifiée de votre correspondance, tout en conservant votre vie privée.",
@@ -327,13 +337,15 @@ export const serviceDataFR = [
         desc_para4:"Nous offrons un processus d'enregistrement facile, incluant la réception et la gestion du courrier, ainsi que des options de redirection selon vos besoins spécifiques. Vous pouvez accéder à vos documents en toute sécurité via notre plateforme en ligne.",
         para5:"Valeur Ajoutée",
         desc_para5:"Notre service se distingue par sa flexibilité, son support personnalisé et sa capacité à offrir une adresse prestigieuse qui renforce la crédibilité de votre entreprise tout en optimisant vos opérations administratives. ",
-        Button:"CONTACT US",
+        Bouton : "Apprendre encore plus",
+        link:<Link1 to="contact" className="text-sky-500"smooth={true} duration={1000} activeClass='active' spy={true}>Contactez-nous <i className="mdi mdi-chevron-right align-middle"></i></Link1>,
+
     },  
     {
         id : 4 ,
         title:'Developpement',
         icon:<CgWebsite/>,
-        desc:"Ceci est requis lorsque, par exemple, le texte final n'est pas encore disponible.",
+        desc:"Boostez votre présence en ligne avec nos services experts en développement Web. Nos fournisseurs individuels créent des sites Web sur mesure et réactifs qui correspondent parfaitement à votre marque et à vos objectifs commerciaux.",
         image:service4,
         para1 :'Service de Developpement',
         desc_para1 :"Nous proposons un service complet de création de sites web sur mesure pour répondre à vos besoins spécifiques. De la conception à la mise en ligne, notre équipe d'experts utilise les dernières technologies pour développer des sites esthétiques, fonctionnels et optimisés pour le référencement. Que vous ayez besoin d'un site vitrine, d'une boutique en ligne ou d'une plateforme personnalisée, nous sommes là pour réaliser votre projet.",
@@ -345,7 +357,9 @@ export const serviceDataFR = [
         desc_para4:"Nous commençons par une analyse approfondie de vos besoins, suivie de la création d’un design personnalisé. Ensuite, nous développons et testons le site pour garantir une performance optimale avant de le lancer.",
         para5:"Valeur Ajoutée",
         desc_para5:"Notre approche personnalisée et notre expertise technique garantissent des résultats qui non seulement répondent à vos attentes mais les dépassent, en offrant un site web fonctionnel, esthétiquement plaisant et optimisé pour les moteurs de recherche.",
-        Button:"CONTACT US",
+        Bouton : "Apprendre encore plus",
+        link:<Link1 to="contact" className="text-sky-500"smooth={true} duration={1000} activeClass='active' spy={true}>Contactez-nous <i className="mdi mdi-chevron-right align-middle"></i></Link1>,
+
     }, 
     {
         id : 5 ,
@@ -362,12 +376,15 @@ export const serviceDataFR = [
         desc_para4:"Nous utilisons des méthodes de recherche avancées et un réseau mondial pour sourcer des candidats. Le processus inclut une évaluation approfondie des compétences, des entretiens ciblés et une gestion proactive des candidatures pour garantir une correspondance optimale.",
         para5:"Valeur Ajoutée",
         desc_para5:"Notre expertise en recrutement international permet de trouver des talents adaptés aux exigences spécifiques de votre entreprise, tout en offrant un service personnalisé et un soutien tout au long du processus de recrutement pour assurer une intégration réussie. ",
-        Button:"OBTENIR UN EMPLOI",
+
+        link:<Link to="/jobs/all" className="text-sky-500" >Obtenez un emploi à l'international <i className="mdi mdi-chevron-right align-middle"></i></Link>,
+
+
     },  
 ]
 export const Titlefr=[
     {
-        Title:"Etudes Formation Recrutements",
+        Title:"Etudes Formation Recrutement National et Internaional",
         button:"Contactez-nous"
     }
 ]
@@ -392,7 +409,7 @@ export const recruitmentFR = [
         h1:"Recrutement",
         title: 'Recrutement International',
         desc: 'Relier les talents mondiaux aux opportunités au-delà des frontières. Nous simplifions le recrutement international pour vous aider à trouver les meilleurs candidats dans le monde entier.',
-        image: service5,
+        image:recrutinter,
         title2: 'Services de Recrutement International',
         desc2: 'Notre entreprise se spécialise dans la mise en relation des meilleurs talents avec des opportunités mondiales. Nous proposons des solutions complètes de recrutement international, y compris la recherche, la présélection et le placement des candidats. En tirant parti de notre vaste réseau et de notre expertise sur divers marchés, nous aidons les entreprises à trouver les talents adéquats pour stimuler leur croissance et leur succès au-delà des frontières.',
           button:"Postulez maintenant",
@@ -402,7 +419,7 @@ export const recruitmentFR = [
         id: 2,
         title: 'Recrutement OceanConnecting',
         desc: 'Connecter les meilleurs talents avec des organisations de premier plan à l’échelle nationale. Rationaliser votre processus de recrutement pour des résultats efficaces et efficients.',
-        image: formation6,
+        image:recrutocean,
         title2: 'Recrutement OceanConnecting',
         desc2: 'Nous sommes ravis de vous inviter à postuler pour un poste dans notre entreprise. Rejoignez notre équipe et contribuez à notre environnement dynamique tout en faisant avancer votre carrière. Explorez des opportunités de croissance, d’innovation et d’impact avec nous.',
          button:"Postulez maintenant",
@@ -412,6 +429,16 @@ export const recruitmentFR = [
 export const jobsFR = [
     {
         id: 1,
+        image: resume,
+        title: 'Formulaire de demande de contrat de travail externe',
+        type: 'International',
+        more: "Veuillez remplir le formulaire suivant avec les informations nécessaires et l'apporter à notre bureau dès que possible à l'adresse suivante " ,
+        action : 'Télécharger',
+        link:"https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D9%83%D8%B1%D9%88%D8%A7%D8%AA%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+    },
+    
+    {
+        id: 2,
         job:"Agences de placement",
         ocean:"Ocean connect",
         image: croatie,
@@ -425,16 +452,17 @@ export const jobsFR = [
         more: 'Nous fournissons le logement, la médecine, la possibilité de renouveler le contrat pour une période de 5 ans, et l\'assistance pour obtenir une carte de résident.',
         link: "https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D9%83%D8%B1%D9%88%D8%A7%D8%AA%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
         menu1: "Secteur :",
-            menu2: "Niveau Langue :",
-            menu3: "Temps de Visa :",
-            menu4: "Contrat :",
-            menu5: "Prix du Contrat :",
-            menu6: "Plus :",
-         
+        menu2: "Niveau Langue :",
+        menu3: "Temps de Visa :",
+        menu4: "Contrat :",
+        menu5: "Prix du Contrat :",
+        menu6: "Plus :",
+        action : 'Demande',
+          
           
     },
     {
-        id: 2,
+        id: 3,
         image: allemagne,
         title: 'Contrat de travail en Allemagne',
         type: 'International',
@@ -450,10 +478,12 @@ export const jobsFR = [
         menu3: "Temps de Visa :",
         menu4: "Contrat :",
         menu5: "Prix du Contrat :",
-        menu6: "Plus :"
+        menu6: "Plus :",
+        action : 'Demande',
+
     },
     {
-        id: 3,
+        id: 4,
         image: belgium,
         title: 'Contrat de travail en Belgique',
         type: 'International',
@@ -469,10 +499,11 @@ export const jobsFR = [
         menu3: "Temps de Visa :",
         menu4: "Contrat :",
         menu5: "Prix du Contrat :",
-        menu6: "Plus :"
+        menu6: "Plus :",
+        action : 'Demande',
     },
     {
-        id: 4,
+        id: 5,
         image: italy,
         title: 'Contrat de travail en Italie',
         type: 'International',
@@ -488,10 +519,11 @@ export const jobsFR = [
         menu3: "Temps de Visa :",
         menu4: "Contrat :",
         menu5: "Prix du Contrat :",
-        menu6: "Plus :"
+        menu6: "Plus :",
+        action : 'Demande',
     },
     {
-        id: 5,
+        id: 6,
         image: spain,
         title: 'Contrat de travail en Espagne',
         type: 'International',
@@ -507,26 +539,29 @@ export const jobsFR = [
         menu3: "Temps de Visa :",
         menu4: "Contrat :",
         menu5: "Prix du Contrat :",
-        menu6: "Plus :"
+        menu6: "Plus :",
+        action : 'Demande',
     },
     {
-        id: 6,
+        id: 7,
         image: facade,
         title: 'Responsable Produit Senior',
         type: 'National',
-        secteur: 'Santé et soins/hôtels/programming',
-        niveaulanguage: 'Langue requise B1.',
-        timevisa: 'La durée d\'obtention d\'un visa est de 8 mois.',
-        contratime: 'Contrat de travail d\'un an.',
-        pricecontrat: 'Le prix du contrat est de 8 millions.',
-        more: 'Nous fournissons le logement, la médecine, la possibilité de renouveler le contrat pour une période de 5 ans, et l\'assistance pour obtenir une carte de résident.',
+        secteur: 'service de nettoyage',
+        niveaulanguage: " La langue n'est pas nécessaire.",
+        timevisa: 'niveau BAC.',
+        contratime: 'contrat CDI - CDD .',
+        pricecontrat: 'AGADIR .',
+        more: 'Achats - Chaudronnerie - Chauffage - Devis - Fabrication - GPAO - Process - Production - Qualité',
         link: "#",
-        menu1: "Secteur :",
-        menu2: "Niveau Langue :",
-        menu3: "Temps de Visa :",
-        menu4: "Contrat :",
-        menu5: "Prix du Contrat :",
-        menu6: "Plus :"
+        menu1:"Secteur :",
+        menu2:"Niveau Langue :",
+        menu3:"Niveau d'éducation:",
+        menu4:"Type Contrat :",
+        menu5:"Région :",
+        menu6:"Compétences clés :",
+        menu6: "Plus :",
+        action : 'Demande',
     },
     // Assurez-vous que chaque offre d'emploi a un identifiant unique
 ];

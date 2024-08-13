@@ -115,7 +115,7 @@ const Services = () => {
                 {t(skill.desc)}
               </p>
               <Link to={`/service/${skill.id}`}>
-                <CTA>{t(skill.Button)}</CTA>
+                <CTA>{t(skill.Bouton)}</CTA>
               </Link>
             </div>
           ))}
