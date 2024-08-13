@@ -544,7 +544,6 @@ export const jobsAR = [
         menu4:" نوع العقد :",
         menu5:" منطقة :",
         menu6:" المهارات الأساسية :",
-        action : ' تقدم ',
         action : 'تقديم الطلب',
     },
     // تأكد من أن لكل وظيفة معرف فريد
@@ -553,10 +552,10 @@ export const jobsAR = [
 export const ContactAR=[{
     title: "اتصل بنا",
     desc: "يسعدنا سماع رأيك! املأ النموذج أدناه باسمك وبريدك الإلكتروني ورسالتك، وسنرد عليك في أقرب وقت ممكن. شكرًا لتواصلك معنا!",
-    name: ": اسمك",
-    email: ": بريدك الإلكتروني",
-    question: ": سؤالك",
-    comment: ": تعليقك",
+    name: " اسمك :",
+    email: "بريدك الإلكتروني :",
+    question: "سؤالك :",
+    comment: "تعليقك :",
     Message: "أرسل الرسالة"
 }]
 export const placementar=[

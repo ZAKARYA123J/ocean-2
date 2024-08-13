@@ -535,7 +535,7 @@ export const jobsEN = [
         menu3:"Time Visa :",
         menu4:"Contrat :",
         menu5:"Price Contrat :",
-        menu6:"More :",
+        menu6:"More :",
        action : 'To apply',
     },
     {
@@ -555,7 +555,7 @@ export const jobsEN = [
         menu3:"Time Visa :",
         menu4:"Contrat :",
         menu5:"Price Contrat :",
-        menu6:"More :",
+         menu6:"More :",
        action : 'To apply',
        
     },
@@ -576,7 +576,7 @@ export const jobsEN = [
         menu3:"Time Visa :",
         menu4:"Contrat :",
         menu5:"Price Contrat :",
-        menu6:"More :",
+         menu6:"More :",
        action : 'To apply',
     },
     {
@@ -596,7 +596,7 @@ export const jobsEN = [
         menu3:"Time Visa :",
         menu4:"Contrat :",
         menu5:"Price Contrat :",
-        menu6:"More :",
+         menu6:"More :",
        action : 'To apply',
     },
     {
@@ -616,8 +616,8 @@ export const jobsEN = [
         menu3:"Time Visa :",
         menu4:"Contrat :",
         menu5:"Price Contrat :",
-        menu6:"More:",
-       action : 'To apply',
+         menu6:"More :",
+        action : 'To apply',
     },
     {
         id: 7,
