@@ -17,7 +17,7 @@ export default function Service(){
         <Detailservice id={id}/>
         <WhatsAppFloatingButton/>
         {/* <LanguageSwitcher/> */}
-        <GetInTouch/>
+        {/* <GetInTouch/> */}
         <Footer/>
         <Switcher/>
         </>
