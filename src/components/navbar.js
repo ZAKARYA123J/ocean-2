@@ -120,9 +120,7 @@ export default function Navbar(){
   <button className="nav-link">
     <LanguageSwitcher />
   </button>
-</li>
-
-  </ul>
+</li></ul>
 ))}
 
                   
