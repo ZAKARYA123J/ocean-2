@@ -58,9 +58,13 @@ export default function AgencyTab() {
     return (
         <section className="relative md:py-24 py-16" id="jobs">
             <div className="container relative">
-                <div className="grid grid-cols-1 pb-6 text-center">
-                    {/* Title could be here */}
-                </div>
+            {recruitment.map((item, index) => {
+    return (
+        <div key={index} className="grid grid-cols-1 pb-6 text-center">
+          <h2 className="text-2xl font-bold text-gray-800">{t(item.h1)}</h2>
+        </div>
+    );
+})}
 
                 <div className="grid md:grid-cols-12 grid-cols-1 mt-6 gap-6">
                     <div className="lg:col-span-4 md:col-span-5">
