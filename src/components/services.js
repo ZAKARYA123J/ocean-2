@@ -107,7 +107,7 @@ const Services = () => {
               data-aos-delay={skill.aosDelay}
               className="card space-y-3 sm:space-y-4 p-4"
             >
-              <div style={{ color: 'skyblue' }} className="text-4xl text-primary">
+              <div  className="text-4xl text-sky-500">
                 {skill.icon}
               </div>
               <h1 className="text-lg font-semibold">{t(skill.title)}</h1>

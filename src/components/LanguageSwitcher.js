@@ -32,7 +32,7 @@ const LanguageSwitcher = () => {
                 onClick={() => handleLanguageChange('fr')} 
                 className={getButtonClass('fr') }
             >
-                <img src={french} alt="Français" className="w-6 h-6 " />
+                <img src={french} alt="Français" className={`w-6 h-6 ${selectedLanguage === 'ar' ? 'mr-2' : ''}`}/>
             </button>
             <button 
                 onClick={() => handleLanguageChange('ar')} 

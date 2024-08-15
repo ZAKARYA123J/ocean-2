@@ -19,7 +19,6 @@ function App() {
       <Route path='/formation/:id' element={<IndexFive/>}/>
       <Route path='/service/:id' element={<Service/>}/>
       <Route path='/jobs/:type' element={<Jobs/>}/>
-
     </Routes>
   );
 }

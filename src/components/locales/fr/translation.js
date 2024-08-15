@@ -286,7 +286,7 @@ export const serviceDataFR = [
         Servicetitle:"Découvrez nos services",
         title:'Formation',
         title2:"NOS SERVICES",
-        desc2:"Nous proposons des formations professionnelles adaptées à tous les niveaux, un service de nettoyage de glace pour assurer sécurité et propreté en hiver, ainsi qu'une domiciliation pour offrir à votre entreprise une adresse prestigieuse et une gestion administrative simplifiée.",
+        desc2:"Nous proposons une formation professionnelle adaptée à tous les niveaux, un service de nettoyage des façades pour assurer la sécurité et la propreté en hiver, ainsi qu'une adresse prestigieuse et une gestion administrative simplifiée pour votre entreprise.",
         desc: "Boostez vos compétences grâce à des formations sur mesure dispensées par des professionnels expérimentés. Nos formateurs experts proposent des programmes personnalisés pour vous aider à atteindre vos objectifs en toute confiance et efficacement.",
         image:service1,
         para1 :'Service de Formation',
@@ -466,6 +466,7 @@ export const jobsFR = [
         menu5: "Prix du contrat  :",
         menu6: "Plus d'informations :",
         action:'Demande',
+
           
     },
     {
@@ -552,14 +553,14 @@ export const jobsFR = [
     {
         id: 7,
         image: facade,
-        title: 'Responsable Produit Senior',
+        title: 'Nettoyant pour façades de bâtiments',
         type: 'National',
         secteur: 'service de nettoyage',
         niveaulanguage: " La langue n'est pas nécessaire.",
         timevisa: 'niveau BAC.',
         contratime: 'contrat CDI - CDD .',
         pricecontrat: 'AGADIR .',
-        more: 'Achats - Chaudronnerie - Chauffage - Devis - Fabrication - GPAO - Process - Production - Qualité',
+        more: " Connaissance des produits chimiques - Tolérance psychologique - Bonne communication - Aptitude à utiliser l'équipement - Précision et souci du détail - Travail en hauteur - Aptitude physique - Conscience de la sécurité ",
         link: "#",
         menu1:"Secteur :",
         menu2:"Niveau de langue  :",
