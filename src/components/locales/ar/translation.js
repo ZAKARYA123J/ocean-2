@@ -372,7 +372,7 @@ export const serviceDataAR = [
 ]
 export const TitleAR=[
     {
-        Title:"التعلم والتدريب والتوظيف الوطني والدولي",
+        Title:"التعلم والتدريب مع التوظيف الوطني والدولي",
         button:"اتصل بنا"
     }
 ]
