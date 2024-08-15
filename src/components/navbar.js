@@ -110,7 +110,9 @@ export default function Navbar(){
     </li>
     <li className="nav-item ms-0">
     {isHomePage ?(   <Link1 className="nav-link cursor-pointer" to="contact" smooth={true} duration={1000} activeClass='active' spy={true}>{t(item.Contact_us)}</Link1>):(
-      <Link className="nav-link cursor-pointer" to={'/'}>{t(item.Contact_us)}</Link>
+      <Link className="nav-link cursor-pointer" to={'/'}>
+        {t(item.Contact_us)}
+      </Link>
     )}
 
       
