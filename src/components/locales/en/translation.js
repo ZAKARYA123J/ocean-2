@@ -91,6 +91,8 @@ export  const blogDataEN = [
     {
         id: 1,
         image: formation6,
+        Title : "Training",
+        text:"This administrative management course teaches participants the essential skills to excel in administrative tasks, covering documentation management, optimization of organizational processes, and professional communication. It combines theory and practice for skills that can be applied immediately in the workplace.",
         resrvedatail: "Welcome to our platform tailored for",
         register:"To register, simply click here ",
         resrveButton:"For reservation",
@@ -374,6 +376,7 @@ export const NavbarEN=[{
     Contact_us:"Contact us"
 }]
 export const AboutEN=[{
+    h1 : 'About Ocean Connecting ',
     ask:"Who Are We ?",
     title:"We specialize in global job placement and document assistance,offering tailored support in multiple languagesto help you navigate international career opportunities.",
     desc:"Our company provides international job placement services and expert support in multiple languages. We assist clients in finding global career opportunities and offer comprehensive help with document preparation in various languages. Our goal is to facilitate a smooth and effective transition to international careers.",

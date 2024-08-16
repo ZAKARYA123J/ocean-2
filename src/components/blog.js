@@ -58,8 +58,8 @@ export default function Blogs() {
       
             <div className="grid grid-cols-1 pb-6 text-center">
             {limitedItems.map((item, index) => (
-                        <h3 className="font-semibold text-2xl leading-normal mb-4" key={index}>
-                            {i18n.t(item.blogetitle)}
+                        <h3 className="text-3xl font-semibold sm:text-3xl text-violet-950 dark:text-primary" key={index}>
+                            {i18n.t(item.Title)}
                         </h3>
                     ))}
             </div>

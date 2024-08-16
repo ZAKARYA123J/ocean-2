@@ -39,16 +39,8 @@ export default function Switcher() {
 
     return (
         <>
-            <Link to="#" onClick={() => scrollTop()} id="back-to-top" className={`back-to-top fixed text-lg rounded-full z-10 bottom-5 right-5 size-9 text-center bg-sky-500 text-white leading-9 ${scroll ? 'block' : 'hidden'}`}>
-                <i className="mdi mdi-arrow-up"></i>
-            </Link>
+         <Link to="#" onClick={()=>scrollTop()} id="back-to-top" className={`back-to-top fixed text-lg rounded-full z-10 bottom-5 right-5 size-9 text-center bg-sky-500 text-white leading-9 ${scroll ? 'block' : 'hidden' }`}><i className="mdi mdi-arrow-up"></i></Link>
 
-            <div className="fixed top-[40%] -right-3 z-50">
-                <Link to="#" id="switchRtl">
-                    <span className="py-1 px-3 relative inline-block rounded-t-md -rotate-90 bg-white dark:bg-slate-900 shadow-md dark:shadow dark:shadow-gray-800 font-medium rtl:block ltr:hidden" onClick={(e) => modeChange(e)}></span>
-                    <span className="py-1 px-3 relative inline-block rounded-t-md -rotate-90 bg-white dark:bg-slate-900 shadow-md dark:shadow dark:shadow-gray-800 font-medium ltr:block rtl:hidden" onClick={(e) => modeChange(e)}></span>
-                </Link>
-            </div>
         </>
-    );
+    )
 }

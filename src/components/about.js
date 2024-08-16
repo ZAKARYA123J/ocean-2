@@ -30,14 +30,35 @@ export default function About() {
   }, [i18n.language]);
 
   return (
-    <section className="relative md:py-24 py-16" id="about">
+
+    <section className="relative md:py-10 py-10" id="about">
+      <section className="relative lg:py-14 py-16 " >
+      {serviceAbout.map((item, index) => (
+        <div className="container relative" key={index}>
+          <div className=" text-center">
+            <h3 className="text-3xl font-semibold sm:text-3xl text-violet-950 dark:text-primary">{t(item.h1)}</h3>
+            {/* <p className="text-slate-400 max-w-xl mx-auto">
+              {t(item.desc)}
+            </p> */}
+          </div>
+        </div>
+      ))}
+    </section>
       <div className="container relative">
         <div className="grid md:grid-cols-12 grid-cols-1 items-center gap-6">
           {serviceAbout.map((item, index) => (
+            
+            
             <React.Fragment key={index}>
+              
+              
               <div className="md:col-span-6">
+                
+                
                 <div className="lg:me-8">
+                  
                   <div className="relative">
+                    
                     <img
                       src={aboutImage}
                       className="rounded-full shadow dark:shadow-gray-700"
