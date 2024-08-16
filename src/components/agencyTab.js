@@ -93,7 +93,7 @@ export default function AgencyTab(){
             {recruitment.map((item, index) => {
     return (
         <div key={index} className="grid grid-cols-1 pb-6 text-center">
-          <h2 className="text-2xl font-bold text-gray-800">{t(item.h1)}</h2>
+          <h2 className="text-3xl font-semibold sm:text-3xl text-violet-950 dark:text-primary">{t(item.h1)}</h2>
         </div>
     );
 })}
