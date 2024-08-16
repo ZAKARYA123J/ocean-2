@@ -9,6 +9,7 @@ import IndexSeven from './pages/index-seven';
 import Service from './pages/service';
 import Jobs from './components/recruitment/Jobs'
 import IndexFive from './pages/index-five';
+import Gallery from './components/gallery'; 
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Route path='/formation/:id' element={<IndexFive/>}/>
       <Route path='/service/:id' element={<Service/>}/>
       <Route path='/jobs/:type' element={<Jobs/>}/>
+      <Route path='/gallery' element={<Gallery/>}/>
     </Routes>
   );
 }

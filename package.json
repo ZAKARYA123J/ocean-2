@@ -4,7 +4,10 @@
   "description": "Upcover - React js Business Landing Page Template",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
     "@material-tailwind/react": "^2.1.9",
+    "@mui/material": "^5.16.7",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",

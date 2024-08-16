@@ -48,6 +48,17 @@ import resume from '../../../assets/images/job/resume.png'
 import recrutocean from '../../../assets/images/service/recrutocean.png'
 import recrutinter from '../../../assets/images/service/recrutinter2.png'
 import form from '../../../assets/images/form.pdf'
+import Event11 from '../../../assets/images/gallery/evenement1/1.jpg'
+import Event12 from '../../../assets/images/gallery/evenement1/2.jpg'
+import Event13 from '../../../assets/images/gallery/evenement1/3.jpg'
+import Event14 from '../../../assets/images/gallery/evenement1/4.jpg'
+import Event15 from '../../../assets/images/gallery/evenement1/5.jpg'
+import Event16 from '../../../assets/images/gallery/evenement1/6.jpg'
+import Event17 from '../../../assets/images/gallery/evenement1/7.jpg'
+import Event18 from '../../../assets/images/gallery/evenement1/8.jpg'
+import Event19 from '../../../assets/images/gallery/evenement1/9.jpg'
+import Event110 from '../../../assets/images/gallery/evenement1/10.jpg'
+
 
 
 
@@ -417,7 +428,7 @@ export const jobsEN = [
         title: 'Application for an overseas work contract',
         type: 'International',
         menu1: "Required documents : ",
-        secteur: " The Apostil is issued by the court and translated into English by the Ministry of Foreign Affairs. ",
+        secteur: "  The judicial record is obtained from the court and the signature is corrected at the Ministry of Foreign Affairs (Apostil) and translated into English .",
         menu2: "Required images :",
         niveaulanguage: "A photo of yourself, a copy of your passport, a video and a photo of yourself practicing your chosen profession." ,
         menu6:"More information :",
@@ -432,7 +443,7 @@ export const jobsEN = [
         image: croatie,
         title: 'Employment contract in Croatia',
         type: 'International',
-        secteur:'Construction / Blacksmithing / Joinery / Painting / Electrical mechanic / Air conditioning / Permi D driver / Butcher / Hotel business.',
+        secteur:'Construction / Blacksmithing / Joinery / Painting / Electrical mechanic / Air conditioning / Driver license D / Butcher / hotel service .',
         niveaulanguage:'Language not required .',
         timevisa:'The visa is valid for 5 months .',
         contratime:'1-year employment contract.',
@@ -560,6 +571,11 @@ export const ContactEN=[{
     Message:"Send Message"
 }]
 // export const type=[{
+export const galleryEN=[{
+        title:"CONTACT US",
+        desc:" We’d love to hear from you! Fill out the form below with your name, email, and message, and we’ll get back to you shortly. Thanks for reaching out!",
+        image:"Your Name:",
+}]
 
      
 // }]

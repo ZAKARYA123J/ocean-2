@@ -589,6 +589,15 @@ export const placementfr=[
     }
     
 ]
+export const galleryFR=[{
+    title:"CONTACT US",
+    desc:" We’d love to hear from you! Fill out the form below with your name, email, and message, and we’ll get back to you shortly. Thanks for reaching out!",
+    name:"Your Name:",
+    email:"Your Email:",
+    question:"Your Question:",
+    comment:"Your Comment:",
+    Message:"Send Message"
+}]
 
 
 
