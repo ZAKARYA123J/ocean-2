@@ -65,8 +65,7 @@ export default function AgencyTab() {
         </div>
     );
 })}
-
-                <div className="grid md:grid-cols-12 grid-cols-1 mt-6 gap-6">
+              <div className="grid md:grid-cols-12 grid-cols-1 mt-6 gap-6">
                     <div className="lg:col-span-4 md:col-span-5">
                         <div className="sticky top-20">
                             {recruitment.map((item) => (
