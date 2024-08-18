@@ -65,7 +65,7 @@ export default function GetInTouch() {
       {contact.map((item, index) => (
         <div className="container relative" key={index}>
           <div className="grid grid-cols-1 pb-6 text-center">
-            <h3 className="font-semibold text-2xl leading-normal mb-4">{t(item.title)}</h3>
+            <h3 className="text-3xl font-semibold sm:text-3xl text-violet-950 dark:text-primary">{t(item.title)}</h3>
             <p className="text-slate-400 max-w-xl mx-auto">
               {t(item.desc)}
             </p>
