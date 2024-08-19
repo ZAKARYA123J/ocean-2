@@ -51,7 +51,7 @@ const BlogDetail = () => {
                     <button className="bg-purple-600 text-white py-3 lg:py-4 px-5 lg:px-10 rounded-lg text-lg lg:text-xl font-semibold flex items-center">
               <span className="mr-2">⚡</span> {t(blogPost.resrveButton)}
                     </button>
-                </div>
+</div>
             </div>
         </>
     );
