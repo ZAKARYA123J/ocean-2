@@ -387,7 +387,7 @@ export const serviceDataFR = [
 ]
 export const Titlefr=[
     {
-        Title:"Etudes Formation Recrutement National et Internaional",
+        Title:"Études Formation Recrutement National et International",
         button:"Contactez-nous"
     }
 ]
@@ -589,15 +589,17 @@ export const placementfr=[
     }
     
 ]
-export const galleryFR=[{
+export const GalleryFR=[
+    {
     title:"CONTACT US",
     desc:" We’d love to hear from you! Fill out the form below with your name, email, and message, and we’ll get back to you shortly. Thanks for reaching out!",
-    name:"Your Name:",
-    email:"Your Email:",
-    question:"Your Question:",
-    comment:"Your Comment:",
-    Message:"Send Message"
-}]
+    image:"https://i.imgur.com/alQ7GWW.jpeg",
+    numberimage:"Your Email:",
+    datealbum:"Your Question:",
+    titlealbum:"Your Comment:",
+    }
+]
+
 
 
 

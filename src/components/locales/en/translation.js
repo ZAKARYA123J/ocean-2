@@ -48,16 +48,6 @@ import resume from '../../../assets/images/job/resume.png'
 import recrutocean from '../../../assets/images/service/recrutocean.png'
 import recrutinter from '../../../assets/images/service/recrutinter2.png'
 import form from '../../../assets/images/form.pdf'
-import Event11 from '../../../assets/images/gallery/evenement1/1.jpg'
-import Event12 from '../../../assets/images/gallery/evenement1/2.jpg'
-import Event13 from '../../../assets/images/gallery/evenement1/3.jpg'
-import Event14 from '../../../assets/images/gallery/evenement1/4.jpg'
-import Event15 from '../../../assets/images/gallery/evenement1/5.jpg'
-import Event16 from '../../../assets/images/gallery/evenement1/6.jpg'
-import Event17 from '../../../assets/images/gallery/evenement1/7.jpg'
-import Event18 from '../../../assets/images/gallery/evenement1/8.jpg'
-import Event19 from '../../../assets/images/gallery/evenement1/9.jpg'
-import Event110 from '../../../assets/images/gallery/evenement1/10.jpg'
 
 
 
@@ -374,7 +364,7 @@ export const serviceDataEN = [
 ]
 export const TitleEN=[
     {
-        Title:"Studies Training National and Internasionl Recruitment",
+        Title:"Studies Training Recruitment National and International",
         button:"Contact Us"
     }
 ]
@@ -570,12 +560,47 @@ export const ContactEN=[{
     comment:"Your Comment:",
     Message:"Send Message"
 }]
+export const GalleryEN=[
+    {
+        id:1,
+        title:"Welcome to Our Gallery!",
+        desc:"Discover the creativity and passion behind our work through these images. Enjoy the view!",
+        image:"https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F1.jpg?alt=media&token=84676c79-346a-4ce2-8197-902ac615420a",
+        numberimage:"45 images",
+        datealbum:"12-12-2024",
+        titlealbum:"evenement - infermiere ",
+    },
+    {
+        id:2,
+        image:"https://i.imgur.com/alQ7GWW.jpeg",
+        numberimage:"45 images",
+        datealbum:"12-12-2024",
+        titlealbum:"evenement - infermiere ",
+    },
+    {
+        id:3,
+        image:"https://i.imgur.com/alQ7GWW.jpeg",
+        numberimage:"45 images",
+        datealbum:"12-12-2024",
+        titlealbum:"evenement - infermiere ",
+    },
+    {
+        id:4,
+        image:"https://i.imgur.com/alQ7GWW.jpeg",
+        numberimage:"45 images",
+        datealbum:"12-12-2024",
+        titlealbum:"evenement - infermiere ",
+    },
+    {
+        id:5,
+        image:"https://i.imgur.com/alQ7GWW.jpeg",
+        numberimage:"45 images",
+        datealbum:"12-12-2024",
+        titlealbum:"Your Comment:",
+    },
+];
 // export const type=[{
-export const galleryEN=[{
-        title:"CONTACT US",
-        desc:" We’d love to hear from you! Fill out the form below with your name, email, and message, and we’ll get back to you shortly. Thanks for reaching out!",
-        image:"Your Name:",
-}]
+
 
      
 // }]

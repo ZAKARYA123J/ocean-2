@@ -1,25 +1,17 @@
 import React,{useEffect} from "react";
 import { Link as Link1 } from "react-scroll";
-import { Link } from "react-router-dom";
-import heroImg from "../assets/images/design-team.svg"
-import desayn from '../assets/images/done/design-team.svg'
-
+import desayn from '../assets/images/done/design-team.svg';
 import Navbar from "../components/navbar";
 import About from "../components/about";
 import Services from "../components/services";
 import AgencyTab from "../components/agencyTab";
-import Cta from "../components/cta";
-import Client from "../components/client";
 import Blogs from "../components/blog";
 import GetInTouch from "../components/getInTuoch";
 import Footer from "../components/footer";
-import Switcher from "../components/switcher";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import WhatsAppFloatingButton from '../components/WhatsAppFloatingButton';
-import LanguageSwitcher from "../components/LanguageSwitcher";
-import img from './result.svg';
 import { useTranslation } from "react-i18next";
 const CTA = styled.button`
   background-color: var(--white);
