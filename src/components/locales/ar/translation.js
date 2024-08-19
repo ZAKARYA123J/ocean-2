@@ -575,6 +575,54 @@ export const placementar=[
       
     }
 ]
+export const GalleryAR=[
+    {
+        id : 1 ,
+        title:"CONTACT US",
+        desc:" We’d love to hear from you! Fill out the form below with your name, email, and message, and we’ll get back to you shortly. Thanks for reaching out!",
+        image:"https://i.imgur.com/alQ7GWW.jpeg",
+        numberimage:"Your Email:",
+        datealbum:"Your Question:",
+        titlealbum:"Your Comment:",
+    },
+    {
+        id : 2 ,
+        title:"CONTACT US",
+        desc:" We’d love to hear from you! Fill out the form below with your name, email, and message, and we’ll get back to you shortly. Thanks for reaching out!",
+        image:"https://i.imgur.com/alQ7GWW.jpeg",
+        numberimage:"Your Email:",
+        datealbum:"Your Question:",
+        titlealbum:"Your Comment:",
+    },
+    {
+        id : 3 ,
+        title:"CONTACT US",
+        desc:" We’d love to hear from you! Fill out the form below with your name, email, and message, and we’ll get back to you shortly. Thanks for reaching out!",
+        image:"https://i.imgur.com/alQ7GWW.jpeg",
+        numberimage:"Your Email:",
+        datealbum:"Your Question:",
+        titlealbum:"Your Comment:",
+    },
+    {
+        id : 4 ,
+        title:"CONTACT US",
+        desc:" We’d love to hear from you! Fill out the form below with your name, email, and message, and we’ll get back to you shortly. Thanks for reaching out!",
+        image:"https://i.imgur.com/alQ7GWW.jpeg",
+        numberimage:"Your Email:",
+        datealbum:"Your Question:",
+        titlealbum:"Your Comment:",
+    },
+    {
+        id : 5 ,
+        title:"CONTACT US",
+        desc:" We’d love to hear from you! Fill out the form below with your name, email, and message, and we’ll get back to you shortly. Thanks for reaching out!",
+        image:"https://i.imgur.com/alQ7GWW.jpeg",
+        numberimage:"Your Email:",
+        datealbum:"Your Question:",
+        titlealbum:"Your Comment:",
+    },
+];
+
 // export const type=[{
    
 // }]

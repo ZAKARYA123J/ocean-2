@@ -51,6 +51,7 @@ import form from '../../../assets/images/form.pdf'
 
 
 
+
 export const clientDataEN = [
     {
         image:client1,
@@ -363,7 +364,7 @@ export const serviceDataEN = [
 ]
 export const TitleEN=[
     {
-        Title:"Studies Training National and Internasionl Recruitment",
+        Title:"Studies Training Recruitment National and International",
         button:"Contact Us"
     }
 ]
@@ -417,7 +418,7 @@ export const jobsEN = [
         title: 'Application for an overseas work contract',
         type: 'International',
         menu1: "Required documents : ",
-        secteur: " The Apostil is issued by the court and translated into English by the Ministry of Foreign Affairs. ",
+        secteur: "  The judicial record is obtained from the court and the signature is corrected at the Ministry of Foreign Affairs (Apostil) and translated into English .",
         menu2: "Required images :",
         niveaulanguage: "A photo of yourself, a copy of your passport, a video and a photo of yourself practicing your chosen profession." ,
         menu6:"More information :",
@@ -432,7 +433,7 @@ export const jobsEN = [
         image: croatie,
         title: 'Employment contract in Croatia',
         type: 'International',
-        secteur:'Construction / Blacksmithing / Joinery / Painting / Electrical mechanic / Air conditioning / Permi D driver / Butcher / Hotel business.',
+        secteur:'Construction / Blacksmithing / Joinery / Painting / Electrical mechanic / Air conditioning / Driver license D / Butcher / hotel service .',
         niveaulanguage:'Language not required .',
         timevisa:'The visa is valid for 5 months .',
         contratime:'1-year employment contract.',
@@ -559,7 +560,47 @@ export const ContactEN=[{
     comment:"Your Comment:",
     Message:"Send Message"
 }]
+export const GalleryEN=[
+    {
+        id:1,
+        title:"Welcome to Our Gallery!",
+        desc:"Discover the creativity and passion behind our work through these images. Enjoy the view!",
+        image:"https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F1.jpg?alt=media&token=84676c79-346a-4ce2-8197-902ac615420a",
+        numberimage:"45 images",
+        datealbum:"12-12-2024",
+        titlealbum:"evenement - infermiere ",
+    },
+    {
+        id:2,
+        image:"https://i.imgur.com/alQ7GWW.jpeg",
+        numberimage:"45 images",
+        datealbum:"12-12-2024",
+        titlealbum:"evenement - infermiere ",
+    },
+    {
+        id:3,
+        image:"https://i.imgur.com/alQ7GWW.jpeg",
+        numberimage:"45 images",
+        datealbum:"12-12-2024",
+        titlealbum:"evenement - infermiere ",
+    },
+    {
+        id:4,
+        image:"https://i.imgur.com/alQ7GWW.jpeg",
+        numberimage:"45 images",
+        datealbum:"12-12-2024",
+        titlealbum:"evenement - infermiere ",
+    },
+    {
+        id:5,
+        image:"https://i.imgur.com/alQ7GWW.jpeg",
+        numberimage:"45 images",
+        datealbum:"12-12-2024",
+        titlealbum:"Your Comment:",
+    },
+];
 // export const type=[{
+
 
      
 // }]

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { FiSun, FiMoon } from '../assets/icons/vander';
+
 
 export default function Switcher() {
     const [scroll, setScroll] = useState(false);
@@ -27,7 +27,9 @@ export default function Switcher() {
 
     const modeChange = (e) => {
         const htmlTag = document.getElementsByTagName("html")[0];
-        htmlTag.dir = e.target.innerText === "LTR" ? "ltr" : "rtl";
+        const direction = e.target.innerText === "LTR" ? "ltr" : "rtl";
+        htmlTag.dir = direction;
+        localStorage.setItem("textDirection", direction);
     }
     
     const scrollTop = () => {
