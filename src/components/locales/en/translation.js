@@ -1,5 +1,8 @@
 
 import { CgWebsite } from "react-icons/cg";
+
+
+
 import { IoHomeOutline } from "react-icons/io5";
 import { MdOutlineCleaningServices } from "react-icons/md";
 import { SlNote } from "react-icons/sl";
@@ -373,6 +376,7 @@ export const NavbarEN=[{
     Services:"Services",
     Formation:"Training",
     Jobs:"Jobs",
+    gallery:"GALLERY",
     About:"About",
     Contact_us:"Contact us"
 }]
@@ -565,17 +569,36 @@ export const GalleryEN=[
         id:1,
         title:"Welcome to Our Gallery!",
         desc:"Discover the creativity and passion behind our work through these images. Enjoy the view!",
-        image:"https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F1.jpg?alt=media&token=84676c79-346a-4ce2-8197-902ac615420a",
-        numberimage:"45 images",
-        datealbum:"12-12-2024",
-        titlealbum:"evenement - infermiere ",
+        image:"https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F2.jpg?alt=media&token=88735b9b-07a6-4e0b-b952-4389f2c48b15",
+        numberimage:"10 images",
+        datealbum:" 12-12-2024",
+        titlealbum:"Event - Nurses ",
+        img: [
+            {alt: 'image1', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F1.jpg?alt=media&token=84676c79-346a-4ce2-8197-902ac615420a'},
+            {alt: 'image2', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F2.jpg?alt=media&token=88735b9b-07a6-4e0b-b952-4389f2c48b15'},
+            {alt: "image3", url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F3.jpg?alt=media&token=158d9836-541c-48b5-8692-0476c1c2c988'},
+            {alt: "image4", url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F4.jpg?alt=media&token=0d91d194-9a78-4ac9-b462-7da342a2c761'},
+            {alt: "image5", url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F5.jpg?alt=media&token=517637e2-1209-461b-a6a9-a583c65e7ad7'},
+            {alt: "image6", url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F7.jpg?alt=media&token=1ea2e5cb-26ef-45c2-976b-dd1676781f3f'},
+            {alt: "image7", url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F7.jpg?alt=media&token=1ea2e5cb-26ef-45c2-976b-dd1676781f3f'},
+            {alt: "image8", url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F8.jpg?alt=media&token=e5a2ba1d-465a-4add-8f7b-0fe513e55eb2'},
+            {alt: "image9", url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F9.jpg?alt=media&token=3e008c82-f4d5-4731-8125-701514fca796'},
+            {alt: "image10", url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F10.jpg?alt=media&token=94188e51-9c92-4eb7-86c2-ac9994bc0899'},
+        ]
     },
     {
         id:2,
-        image:"https://i.imgur.com/alQ7GWW.jpeg",
-        numberimage:"45 images",
+        image:"https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FglassCleaning-team%2F1.png?alt=media&token=1f6f3b17-5d66-43f1-9af6-e355e3b1e096",
+        numberimage:"5 images",
         datealbum:"12-12-2024",
-        titlealbum:"evenement - infermiere ",
+        titlealbum:"glassCleaning-team ",
+        img: [
+            {alt: 'image1', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FglassCleaning-team%2F6.jpg?alt=media&token=ac60ba0c-fa73-41ac-89a2-cd3d2dae1d7c'},
+            {alt: 'image2', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FglassCleaning-team%2F2.jpg?alt=media&token=1c1bdf81-1c94-4ff7-9f30-2f3b76ebf9c0'},
+            {alt: 'image3', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FglassCleaning-team%2F3.jpg?alt=media&token=8c041f49-c424-497e-b7df-562be8dd2cef'},
+            {alt: 'image4', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FglassCleaning-team%2F4.jpg?alt=media&token=30010bb7-9d28-4f51-a78d-3e412424d250'},
+            {alt: 'image5', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FglassCleaning-team%2F5.jpg?alt=media&token=fd4d31a0-2761-4b2a-bc0b-c5cd2cbc459d'},
+            ]
     },
     {
         id:3,
@@ -583,6 +606,9 @@ export const GalleryEN=[
         numberimage:"45 images",
         datealbum:"12-12-2024",
         titlealbum:"evenement - infermiere ",
+        img: [
+            {alt: 'image1', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F1.jpg?alt=media&token=84676c79-346a-4ce2-8197-902ac615420a'},
+            ]
     },
     {
         id:4,
@@ -590,6 +616,9 @@ export const GalleryEN=[
         numberimage:"45 images",
         datealbum:"12-12-2024",
         titlealbum:"evenement - infermiere ",
+        img: [
+            {alt: 'image1', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F1.jpg?alt=media&token=84676c79-346a-4ce2-8197-902ac615420a'},
+            ]
     },
     {
         id:5,
@@ -597,6 +626,9 @@ export const GalleryEN=[
         numberimage:"45 images",
         datealbum:"12-12-2024",
         titlealbum:"Your Comment:",
+        img: [
+            {alt: 'image1', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F1.jpg?alt=media&token=84676c79-346a-4ce2-8197-902ac615420a'},
+            ]
     },
 ];
 // export const type=[{
