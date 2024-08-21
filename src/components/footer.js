@@ -6,7 +6,7 @@ import footerBg from './footer-bg.jpg'; // A realistic background image
 
 export default function Footer() {
     return (
-        <footer className="footer relative text-gray-200 dark:text-gray-200" style={{ position: 'relative', overflow: 'hidden', backgroundImage: `url(${footerBg})`, backgroundSize: 'cover', backgroundPosition: 'center', padding: '30px 0'  }}>
+        <footer className="footer relative text-gray-200 dark:text-gray-200" style={{ direction: 'ltr', position: 'relative', overflow: 'hidden', backgroundImage: `url(${footerBg})`, backgroundSize: 'cover', backgroundPosition: 'center', padding: '30px 0'  }}>
             {/* Semi-transparent overlay for readability */}
             <div style={{
                 position: 'absolute',
@@ -30,7 +30,7 @@ export default function Footer() {
                     <div className="lg:col-span-5 text-center mt-6 md:mt-0 text-white">
                         <p className="mb-0">© {new Date().getFullYear()} Ocean connecting</p>
                         <p className="mb-0">oceanconnecting.ma@gmail.com</p>
-                        <p>+212 704-309787</p>
+                        <p>+212704-309787</p>
                     </div>
 
                     <ul className="lg:col-span-4 list-none md:text-end text-center mt-6 md:mt-0 text-white">
