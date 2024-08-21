@@ -5,7 +5,12 @@ import Navbar from "../navbar";
 import Footer from "../footer";
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
+import Slide from '@mui/material/Slide';
 import { FaArrowLeft, FaArrowRight, FaTimes, FaSearchPlus, FaSearchMinus } from 'react-icons/fa';
+
+const Transition = React.forwardRef(function Transition(props, ref) {
+    return <Slide direction="up" ref={ref} {...props} />;
+});
 
 const loadClientData = (lang) => {
     switch (lang) {
@@ -95,111 +100,121 @@ const GalleryDetail = () => {
                                     position: 'relative',
                                     padding: 0,
                                     overflow: 'hidden',
+                                    backgroundColor: '#444241',
+                                    color: '#fff',
                                 }
                             }}
+                            TransitionComponent={Transition}
                         >
-                            <DialogContent 
-                                style={{ 
-                                    display: 'flex', 
-                                    alignItems: 'center', 
-                                    justifyContent: 'center', 
+                            <DialogContent
+                                style={{
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
                                     position: 'relative',
-                                    height: '80vh', // Adjust height as needed
+                                    height: '80vh',
+                                    padding: '30px',
                                     overflow: 'hidden',
                                 }}
                             >
-                                <button 
-                                    onClick={zoomOut} 
-                                    style={{ 
-                                        position: 'absolute', 
-                                        top: 10, 
-                                        right: 130, 
-                                        background: 'none', 
+                                <button
+                                    onClick={zoomOut}
+                                    style={{
+                                        position: 'absolute',
+                                        top: 10,
+                                        right: 130,
+                                        background: 'none',
                                         border: 'none',
                                         cursor: 'pointer',
-                                        fontSize: '24px'
+                                        fontSize: '24px',
+                                        color: '#fff'
                                     }}
                                 >
                                     <FaSearchMinus />
                                 </button>
-                                <button 
-                                    onClick={zoomIn} 
-                                    style={{ 
-                                        position: 'absolute', 
-                                        top: 10, 
-                                        right: 90, 
-                                        background: 'none', 
+                                <button
+                                    onClick={zoomIn}
+                                    style={{
+                                        position: 'absolute',
+                                        top: 10,
+                                        right: 90,
+                                        background: 'none',
                                         border: 'none',
                                         cursor: 'pointer',
-                                        fontSize: '24px'
+                                        fontSize: '24px',
+                                        color: '#fff'
                                     }}
                                 >
                                     <FaSearchPlus />
                                 </button>
-                                <button 
-                                    onClick={() => setIsOpen(false)} 
-                                    style={{ 
-                                        position: 'absolute', 
-                                        top: 10, 
-                                        right: 10, 
-                                        background: 'none', 
+                                <button
+                                    onClick={() => setIsOpen(false)}
+                                    style={{
+                                        position: 'absolute',
+                                        top: 10,
+                                        right: 10,
+                                        background: 'none',
                                         border: 'none',
                                         cursor: 'pointer',
-                                        fontSize: '24px'
+                                        fontSize: '24px',
+                                        color: '#fff'
                                     }}
                                 >
                                     <FaTimes />
                                 </button>
-                                <button 
-                                    onClick={handlePrev} 
-                                    style={{ 
-                                        position: 'absolute', 
-                                        top: '50%', 
-                                        left: 10, 
-                                        background: 'none', 
+                                <button
+                                    onClick={handlePrev}
+                                    style={{
+                                        position: 'absolute',
+                                        top: '50%',
+                                        left: 10,
+                                        background: 'none',
                                         border: 'none',
                                         cursor: 'pointer',
                                         fontSize: '24px',
+                                        color: '#fff',
                                         transform: 'translateY(-50%)'
                                     }}
                                 >
                                     <FaArrowLeft />
                                 </button>
-                                <button 
-                                    onClick={handleNext} 
-                                    style={{ 
-                                        position: 'absolute', 
-                                        top: '50%', 
-                                        right: 10, 
-                                        background: 'none', 
+                                <button
+                                    onClick={handleNext}
+                                    style={{
+                                        position: 'absolute',
+                                        top: '50%',
+                                        right: 10,
+                                        background: 'none',
                                         border: 'none',
                                         cursor: 'pointer',
                                         fontSize: '24px',
+                                        color: '#fff',
                                         transform: 'translateY(-50%)'
                                     }}
                                 >
                                     <FaArrowRight />
                                 </button>
-                                <div 
-                                    style={{ 
-                                        maxWidth: '100%', 
-                                        maxHeight: '100%', 
-                                        overflow: 'hidden', 
-                                        display: 'flex', 
-                                        alignItems: 'center', 
-                                        justifyContent: 'center'
+                                <div
+                                    style={{
+                                        width: '800px',  // Increase width
+                                        height: '500px',  // Increase height
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        overflow: 'hidden',
+                                        border: '2px solid #444241',  // Change border color to match the dialog
+                                        boxSizing: 'border-box',
                                     }}
                                 >
                                     <img
                                         src={images[photoIndex]}
                                         alt={`Image ${photoIndex}`}
-                                        style={{ 
-                                            transform: `scale(${scale})`, // Apply zoom effect
-                                            transition: 'transform 0.3s', // Smooth zoom transition
-                                            width: 'auto', 
-                                            height: 'auto', 
-                                            maxWidth: '100%', 
-                                            maxHeight: '100%'
+                                        style={{
+                                            transform: `scale(${scale})`,
+                                            transition: 'transform 0.3s',
+                                            maxWidth: '100%',
+                                            maxHeight: '100%',
+                                            objectFit: 'contain',
                                         }}
                                     />
                                 </div>
