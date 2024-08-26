@@ -1,7 +1,5 @@
 import React, { useState,useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import { Link as Link1 } from "react-scroll";
-import { serviceData } from "../data/data";
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
 const CTA = styled.button`

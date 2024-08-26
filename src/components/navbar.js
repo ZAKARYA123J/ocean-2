@@ -88,6 +88,9 @@ export default function Navbar(){
       <Link to={`/jobs/${all}`} className="nav-link">{t(item.Jobs)}</Link>
     </li>
     <li className="nav-item ms-0">
+      <Link to={`/gallery`} className="nav-link">{t(item.gallery)}</Link>
+    </li>
+    <li className="nav-item ms-0">
       {isHomePage ? (
         <Link1
           className="nav-link cursor-pointer"
