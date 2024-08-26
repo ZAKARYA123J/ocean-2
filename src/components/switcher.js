@@ -27,9 +27,18 @@ export default function Switcher() {
 
     const modeChange = (e) => {
         const htmlTag = document.getElementsByTagName("html")[0];
+    const currentPath = window.location.pathname;
+
+    // Force LTR if on the /gallery/1 page
+    if (currentPath === "/gallery/:id") {
+        htmlTag.dir = "ltr";
+        localStorage.setItem("textDirection", "ltr");
+    } else {
         const direction = e.target.innerText === "LTR" ? "ltr" : "rtl";
         htmlTag.dir = direction;
         localStorage.setItem("textDirection", direction);
+    }
+
     }
     
     const scrollTop = () => {
