@@ -367,7 +367,7 @@ export const serviceDataEN = [
 ]
 export const TitleEN=[
     {
-        Title:"Studies Training Recruitment National and International",
+        Title:"Studies Training and Recruitment National and International",
         button:"Contact Us"
     }
 ]
