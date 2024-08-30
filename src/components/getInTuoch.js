@@ -42,7 +42,7 @@ const loadClientData = async (lang) => {
     }
   } catch (error) {
     console.error(`Failed to load client data for language ${lang}`, error);
-    return []; // Return an empty array in case of an error
+    return [];
   }
 };
 
@@ -50,15 +50,63 @@ export default function GetInTouch() {
   const [contact, setContactData] = useState([]);
   const { i18n, t } = useTranslation();
 
+  // State to hold form data
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    comments: ''
+  });
+
   useEffect(() => {
     const fetchData = async () => {
       const data = await loadClientData(i18n.language);
-      console.log("Loaded contact data:", data); // Log data to inspect
+      console.log("Loaded contact data:", data); 
       setContactData(data);
     };
 
     fetchData();
   }, [i18n.language]);
+
+  // Handle form input change
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch('https://sendmailocean.onrender.com/Email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        // Handle successful response
+        alert('Message sent successfully!');
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          comments: ''
+        });
+      } else {
+        // Handle error response
+        alert('Failed to send message.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('An error occurred. Please try again later.');
+    }
+  };
 
   return (
     <section className="relative lg:py-24 py-16 bg-slate-50 dark:bg-slate-800" id="contact">
@@ -77,23 +125,23 @@ export default function GetInTouch() {
             <div className="lg:col-span-5 md:col-span-6">
               <div className="lg:ms-5">
                 <div className="bg-white dark:bg-slate-900 rounded-md shadow dark:shadow-gray-700 p-6">
-                  <form>
+                  <form onSubmit={handleSubmit}>
                     <div className="grid lg:grid-cols-12 grid-cols-1 gap-3">
                       <div className="lg:col-span-6">
                         <label htmlFor="name" className="font-semibold">{t(item.name)}</label>
-                        <input name="name" id="name" type="text" className="mt-2 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0" placeholder={t(item.name)} required />
+                        <input name="name" id="name" type="text" className="mt-2 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0" placeholder={t(item.name)} value={formData.name} onChange={handleChange} required />
                       </div>
                       <div className="lg:col-span-6">
                         <label htmlFor="email" className="font-semibold">{t(item.email)}</label>
-                        <input name="email" id="email" type="email" className="mt-2 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0" placeholder={t(item.email)} required />
+                        <input name="email" id="email" type="email" className="mt-2 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0" placeholder={t(item.email)} value={formData.email} onChange={handleChange} required />
                       </div>
                       <div className="lg:col-span-12">
                         <label htmlFor="subject" className="font-semibold">{t(item.question)}</label>
-                        <input name="subject" id="subject" className="mt-2 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0" placeholder={t(item.question)} required />
+                        <input name="subject" id="subject" className="mt-2 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0" placeholder={t(item.question)} value={formData.subject} onChange={handleChange} required />
                       </div>
                       <div className="lg:col-span-12">
                         <label htmlFor="comments" className="font-semibold">{t(item.comment)}</label>
-                        <textarea name="comments" id="comments" className="mt-2 w-full py-2 px-3 h-28 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0" placeholder={t(item.comment)} required></textarea>
+                        <textarea name="comments" id="comments" className="mt-2 w-full py-2 px-3 h-28 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0" placeholder={t(item.comment)} value={formData.comments} onChange={handleChange} required></textarea>
                       </div>
                     </div>
                     <CTA>
