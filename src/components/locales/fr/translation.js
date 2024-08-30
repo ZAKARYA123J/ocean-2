@@ -86,7 +86,7 @@ export const blogDataFR = [
         register:"Pour vous inscrire, cliquez simplement ici",
         resrveButton:"Réserver",
         blogetitle:"Formations Trends",
-        title:'language',
+        title:'lang',
         desc:'Ocean Connecting offers a comprehensive language learning program covering...',
         detail:'Ocean Connecting offers a comprehensive language learning program covering levels A1 to C2. It features young teachers, engaging activities, educational trips, and flexible schedules. Students benefit from regular level assessments, free access to PCs and Wi-Fi, and air-conditioned classrooms. The program also provides psychological monitoring and guidance, ensuring a supportive learning environment.this program aims to enhance language proficiency through interactive and diverse methods, accommodating different learning paces and needs.',
         type: 'language',
