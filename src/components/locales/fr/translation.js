@@ -119,7 +119,7 @@ export const blogDataFR = [
         detail:"La formation DJ enseigne les compétences nécessaires pour devenir un DJ professionnel, en couvrant les techniques de mixage, l'utilisation des équipements modernes comme les platines et les contrôleurs, ainsi que les bases de la production musicale pour créer des remixes et des morceaux originaux. Les participants apprennent également à gérer des événements, à organiser des sets, et à interagir avec le public. En plus des aspects techniques, la formation aide à développer une identité artistique personnelle, à promouvoir son travail en ligne et à construire un portfolio. Elle est idéale pour les débutants et les DJs souhaitant perfectionner leurs compétences et entrer dans le monde de la musique.",
         type: 'Formation',
         button:"En savoir plus",
-          data: "Pour chaque cours que vous terminez, vous recevrez une certification que vous pourrez partager sur vos réseaux sociaux (par exemple, LinkedIn). Chaque certification a un numéro d'authentification unique qui permet de la vérifier.",
+        data: "Pour chaque cours que vous terminez, vous recevrez une certification que vous pourrez partager sur vos réseaux sociaux (par exemple, LinkedIn). Chaque certification a un numéro d'authentification unique qui permet de la vérifier.",
         reserver: "Réservé"
     },
     {
