@@ -543,7 +543,7 @@ export const jobsAR = [
     {
         id: 7,
         image: facade,
-        title: 'عامل تنضيف واجهات المبانيط',
+        title: 'عامل تنضيف واجهات المباني',
         type: 'وطني',
         secteur: 'خدمة التنظيف',
         niveaulanguage: 'اللغة ليست ضرورية.',
