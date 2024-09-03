@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+ul li{
+    -webkit-margin-start: 0.25rem;
+            margin-inline-start: 0.25rem;
+  }
+  ul li:first-child{
+    -webkit-margin-start: 0px;
+            margin-inline-start: 0px;
+  }
+  html {
+        scroll-behavior: smooth;
+      }
