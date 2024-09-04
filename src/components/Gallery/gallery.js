@@ -34,34 +34,51 @@ const Gallery = () => {
     return (
         <>
             <Navbar />
-            <section className="py-20 bg-gray-50" id="blog">
-                <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
+            <section className="py-20 bg-gray-50 dark:bg-gray-900" id="blog">
+                <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
+                    {/* Header Section */}
                     {Gallerydata.map((item, index) => (
-                        <div className="text-center mb-8 mt-8" key={index}>
-                            <h1 className="text-3xl font-bold text-gray-800 mb-4">{t(item.title)}</h1>
-                            <p className="text-lg text-gray-600">{t(item.desc)}</p>
+                        <div className="text-center mb-12 mt-8" key={index}>
+                            <h1 className="text-3xl lg:text-4xl font-bold text-gray-800 dark:text-white mb-4">
+                                {t(item.title)}
+                            </h1>
+                            <p className="text-lg text-gray-600 dark:text-gray-300">
+                                {t(item.desc)}
+                            </p>
                         </div>
                     ))}
-                    <div className="mt-20 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
+                    
+                    {/* Gallery Items */}
+                    <div className="mt-16 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-6">
                         {Gallerydata.map((item, index) => (
-                            <div className="bg-white rounded-lg shadow-lg overflow-hidden mx-auto transform transition-transform duration-300 hover:scale-105 hover:bg-sky-200" key={index}>
+                            <div 
+                                className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden mx-auto max-w-sm transform transition-transform duration-300 hover:scale-105 hover:bg-sky-200 dark:hover:bg-sky-700" 
+                                key={index}
+                            >
                                 <Link to={`/gallery/${index + 1}`}>
-                                    <div className="relative h-60">
+                                    <div className="relative h-60 overflow-hidden">
                                         <img
                                             src={item.image}
-                                            className="w-full h-full object-cover"
+                                            className="w-full h-full object-cover object-center rounded-t-lg transition-opacity duration-300"
                                             alt={t(item.title)}
+                                            aria-label={`Gallery image for ${t(item.title)}`}
                                         />
                                     </div>
-                                    <div className="p-4">
-                                        <div className="flex items-center space-x-2">
+                                    <div className="p-5">
+                                        <div className="flex items-center space-x-3 mb-2">
                                             <FaImages className="text-sky-500 text-xl" />
-                                            <span className="text-lg text-gray-700">{t(item.numberimage)}</span>
+                                            <span className="text-lg text-gray-700 dark:text-gray-300">
+                                                {t(item.numberimage)}
+                                            </span>
                                             <div className="flex-1 flex justify-end">
-                                                <span className="text-lg text-gray-700">{t(item.datealbum)}</span>
+                                                <span className="text-lg text-gray-700 dark:text-gray-300">
+                                                    {t(item.datealbum)}
+                                                </span>
                                             </div>
                                         </div>
-                                        <h2 className="text-xl font-semibold mb-2 mt-2">{t(item.titlealbum)}</h2>
+                                        <h2 className="text-xl font-semibold mb-2 mt-1 text-gray-800 dark:text-white">
+                                            {t(item.titlealbum)}
+                                        </h2>
                                     </div>
                                 </Link>
                             </div>

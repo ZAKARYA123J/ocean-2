@@ -1,8 +1,5 @@
 
 import { CgWebsite } from "react-icons/cg";
-
-
-
 import { IoHomeOutline } from "react-icons/io5";
 import { MdOutlineCleaningServices } from "react-icons/md";
 import { SlNote } from "react-icons/sl";
