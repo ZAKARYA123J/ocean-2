@@ -170,8 +170,6 @@ export default function Index() {
       <GetInTouch />
       <WhatsAppFloatingButton />
       <Footer />
-      {/* <Team />
-      <Profile /> */}
     </>
   );
 }
