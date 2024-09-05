@@ -112,6 +112,6 @@ export default function Index(){
         <Footer/>
         {/* <Switcher/> */}
         
-        </>
-    )
+        </>
+    )
 }
