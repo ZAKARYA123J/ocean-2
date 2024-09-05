@@ -41,17 +41,20 @@ const GalleryDetail = () => {
     }
 
     return (
-        <div className="flex flex-col min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100">
+        <div className="flex flex-col min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100">
             <Navbar />
             <section className="flex-grow mb-20">
-                <div className="mt-24 container mx-auto px-4 lg:px-8 max-w-6xl">
-                    <h1 className="text-3xl lg:text-4xl font-extrabold text-gray-900 dark:text-white mb-8 text-center">
-                        {t(galleryAlbum.titlealbum)} <span className="text-lg text-gray-500">{t(galleryAlbum.datealbum)}</span>
+                <div className="mt-20 container mx-auto px-4 lg:px-8 max-w-7xl">
+                    <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+                        {t(galleryAlbum.titlealbum)}
+                        <span className="block text-lg text-gray-500 dark:text-gray-400 mt-2">
+                            {t(galleryAlbum.datealbum)}
+                        </span>
                     </h1>
-                    <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                         {galleryAlbum.img.map((image, index) => (
                             <div
-                                className="rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 ease-in-out cursor-pointer hover:scale-105 hover:shadow-2xl"
+                                className="rounded-lg overflow-hidden shadow-md transform transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
                                 key={index}
                                 role="button"
                                 aria-label={`Gallery image ${index + 1}`}
@@ -60,7 +63,7 @@ const GalleryDetail = () => {
                                     <img
                                         src={image.url}
                                         alt={`Gallery ${index + 1}`}
-                                        className="w-full h-48 object-cover rounded-t-lg transition-opacity duration-300 hover:opacity-90"
+                                        className="w-full h-56 object-cover transition-transform duration-300 hover:scale-105"
                                     />
                                 </a>
                             </div>

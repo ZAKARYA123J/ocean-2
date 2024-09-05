@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
-import designImage from '../assets/images/done/design-team.svg';
+import designImage from '../assets/images/done/hero.png';
 import Footer from '../components/footer';
 import About from "../components/about";
 import Services from "../components/services";
