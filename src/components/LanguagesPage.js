@@ -110,7 +110,6 @@ const LanguagesPage = () => {
             <section className="flex-grow pt-24">
                 <div className="relative container mx-auto px-4 lg:px-8 max-w-7xl mt-10 flex flex-col lg:flex-row items-center justify-between">
                     <div className="relative flex justify-center items-center mb-10 lg:mb-0" style={{ height: `${containerSize}px`, width: `${containerSize}px` }}>
-                        {/* Background Concentric Circles with Wave Effect */}
                         <div className="absolute w-[90%] h-[90%] rounded-full bg-blue-100 opacity-30 wave-animation"></div>
                         <div className="absolute w-[75%] h-[75%] rounded-full bg-blue-200 opacity-30 wave-animation"></div>
                         <div className="absolute w-[50%] h-[50%] rounded-full bg-blue-300 opacity-30 wave-animation"></div>
