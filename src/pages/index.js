@@ -8,6 +8,7 @@ import AgencyTab from "../components/agencyTab";
 import Blogs from "../components/blog";
 import GetInTouch from "../components/getInTuoch";
 import Footer from "../components/footer";
+import { Helmet } from "react-helmet-async";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import styled from "styled-components";
@@ -67,6 +68,12 @@ export default function Index(){
       }, []);
     return(
         <>
+        <Helmet>
+        <title>Home | Ocean Connecting</title>
+        <meta name="description" content="We specialize in global job placement and document assistance, offering tailored support in multiple languages." />
+        <meta name="keywords" content="global job placement, career support, document assistance, international jobs" />
+      </Helmet>
+
         <Navbar/>
         <section className="relative overflow-hidden md:py-48 py-40 bg-teal-500/5 dark:bg-sky-500/20" id="home">
   <div className="container relative mt-8">
