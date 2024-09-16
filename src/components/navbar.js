@@ -122,11 +122,15 @@ export default function Navbar() {
                {servicesDropdownOpen && (
   <ul className="dropdown-menu absolute bg-white text-dark shadow-lg rounded-lg p-4 w-80">
     {serviceData.map((service, idx) => (
-      <li className="nav-item" key={idx}>
+      <div key={idx}>
+        
+      <li className="nav-item" >
         <Link className="nav-link" to={`/service/${service.id}`} style={{ padding: '10px 20px', display: 'block' }}>
+
           {service.title}
         </Link>
       </li>
+      </div>
     ))}
   </ul>
 )}

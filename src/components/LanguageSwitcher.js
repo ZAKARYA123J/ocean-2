@@ -36,7 +36,7 @@ const LanguageSwitcher = () => {
         <div className="relative">
             <button 
                 onClick={toggleDropdown} 
-                className="flex items-center space-x-2 border p-2 rounded"
+                className="flex items-center  space-x-2 border p-2 rounded"
             >
                 <img 
                     src={selectedLanguage === 'ar' ? saudi : selectedLanguage === 'fr' ? french : english} 
@@ -46,7 +46,7 @@ const LanguageSwitcher = () => {
                 <span>{selectedLanguage.toUpperCase()}</span>
             </button>
             {isOpen && (
-                <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-300 rounded shadow-lg">
+                <div className="absolute right-0  w-48 bg-white border border-gray-300 rounded shadow-lg">
                     <button 
                         onClick={() => handleLanguageChange('en')} 
                         className="flex items-center p-2 w-full hover:bg-gray-100"

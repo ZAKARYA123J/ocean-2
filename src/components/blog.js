@@ -57,12 +57,15 @@ export default function Blogs() {
     <section className="relative md:py-24 py-16 bg-gray-50 dark:bg-gray-900" id="blog">
       <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
         <div className="text-center mb-12">
-          <h3 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            {t('Latest Articles')}
+        {blogData.map((item)=>(
+          <h3 className="text-4xl font-bold text-gray-900 dark:text-white mb-4" key={item.id}>
+            
+            {t(item.Title)}
           </h3>
-          <p className="text-lg text-gray-600 dark:text-gray-300">
+          ))}
+          {/* <p className="text-lg text-gray-600 dark:text-gray-300">
             {t('Stay updated with our latest news and articles')}
-          </p>
+          </p> */}
         </div>
 
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">

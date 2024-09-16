@@ -102,6 +102,7 @@ export  const blogDataEN = [
         detail: 'The Ocean Connecting offers a comprehensive language learning program covering levels A1 to C2. It features young teachers, engaging activities, educational trips, and flexible schedules. Students benefit from regular level assessments, free access to PCs and Wi-Fi, and air-conditioned classrooms. The program also provides psychological monitoring and guidance, ensuring a supportive learning environment. This program aims to enhance language proficiency through interactive and diverse methods, accommodating different learning paces and needs.',
         type: 'language',
         button: "Learn more",
+        show:"show all"
     },
     {
         id: 2,
@@ -114,6 +115,7 @@ export  const blogDataEN = [
         detail: 'The training for an Airport Check-in Agent prepares professionals to manage passenger check-in efficiently and ensure smooth airport operations. It covers passenger greeting, document verification, and baggage handling, while using booking and baggage control systems. Participants also learn airport security procedures, international regulations, and customer service techniques to provide a pleasant experience. The training includes practical simulations to apply acquired knowledge and develop communication and emergency management skills.',
         type: 'Formation',
          button: "Learn more",
+          show:"show all"
     },
     {
         id: 3,
@@ -126,6 +128,7 @@ export  const blogDataEN = [
         detail: 'DJ training teaches the skills necessary to become a professional DJ, covering mixing techniques, using modern equipment such as turntables and controllers, and the basics of music production to create remixes and original tracks. Participants also learn to manage events, organize sets, and interact with the audience. In addition to technical aspects, the training helps develop a personal artistic identity, promote work online, and build a portfolio. It is ideal for beginners and DJs looking to refine their skills and enter the music industry.',
         type: 'Formation',
          button: "Learn more",
+          show:"show all"
     },
     {
         id: 4,
@@ -138,6 +141,7 @@ export  const blogDataEN = [
         detail: 'This training offers a comprehensive experience for sailing enthusiasts, including theoretical and practical courses on safety, sailing techniques, and coastal and offshore navigation. Sessions are led by experienced instructors and include intensive sea practice. Participants can obtain recognized certifications, allowing them to pilot various types of boats and sailboats. Join us to develop your nautical skills and experience an unforgettable maritime adventure!',
         type: 'Formation',
          button: "Learn more",
+          show:"show all"
 
     },
     {
@@ -151,6 +155,7 @@ export  const blogDataEN = [
         detail: 'The Home & Family training is designed to provide practical skills and in-depth knowledge on managing domestic life and family relationships. It covers various topics from home organization to family financial management, communication techniques, and conflict resolution. The goal is to provide participants with the necessary tools to create a harmonious and well-organized family environment.',
         type: 'Formation',
         button: "Learn more",
+         show:"show all"
     },
     {
         id: 6,
@@ -163,6 +168,7 @@ export  const blogDataEN = [
         detail: 'The VAR (Value Added Resellers) installation and usage training aims to provide professionals with the skills needed to install, configure, and use VAR technology solutions effectively. It covers hardware and software installation steps, advanced configuration, and daily use of tools and applications. Participants also learn to provide technical support, diagnose and resolve issues, perform preventive maintenance, and optimize solution performance. This training is essential for effective VAR solution management and ensuring optimal system performance.',
         type: 'Formation',
         button: "Learn more",
+         show:"show all"
     },
     {
         id: 7,
@@ -175,6 +181,7 @@ export  const blogDataEN = [
         detail: 'Maritime navigation training teaches participants the essential skills to navigate safely at sea, covering the use of navigation tools such as nautical charts and GPS systems, as well as understanding international regulations. Participants learn to plan routes, manage weather conditions, and ensure the safety of the vessel and crew. The training also includes rescue techniques and emergency management, ensuring effective and safe navigation while adhering to maritime rules.',
         type: 'Formation',
         button: "Learn more",
+         show:"show all"
     },
     {
         id: 8,
@@ -187,6 +194,7 @@ export  const blogDataEN = [
         detail: 'The training on precious stones and metals provides an in-depth understanding of the characteristics, evaluation, and maintenance of these valuable materials. Participants learn to identify and evaluate precious stones and metals using quality and certification criteria. The training also covers treatment and maintenance techniques to preserve their value, as well as market trends and business practices. Additionally, it addresses ethical issues and sustainable practices related to the extraction and trade of these resources.',
         type: 'Formation',
         button: "Learn more",
+         show:"show all"
     },
     {
         id: 9,
@@ -199,6 +207,7 @@ export  const blogDataEN = [
         detail: 'The training to develop agriculture and fishing aims to optimize agricultural and fishery practices while ensuring sustainability and profitability. It covers modern techniques of cultivation and soil management, as well as methods for sustainable management of fish stocks and aquatic ecosystems. Participants learn to use the latest technologies and innovations, adopt environmentally friendly practices, and develop economic strategies to improve productivity and access markets. This training is essential for farmers, fishermen, and natural resource managers seeking to enhance their practices and ensure sustainable development in their respective sectors.',
         type: 'Formation',
         button: "Learn more",
+         show:"show all"
     },
     {
         id: 10,
@@ -211,6 +220,7 @@ export  const blogDataEN = [
         detail: 'The training in Earth sciences and seismology offers an in-depth understanding of geological processes, earthquake mechanisms, and techniques for assessing seismic risks. It covers fundamental principles of geology, tectonic plate movements, and earthquake causes, as well as methods for monitoring and predicting earthquakes. Participants also learn to assess seismic risks, develop strategies to reduce risks, and prepare infrastructure and communities for the impacts of earthquakes. This training is essential for researchers, engineers, and risk management professionals looking to enhance their expertise in seismology and risk reduction.',
         type: 'Formation',
         button: "Learn more",
+         show:"show all"
     },
     {
         id: 11,
@@ -223,6 +233,7 @@ export  const blogDataEN = [
         detail: 'National and International Recruitment Studies and Training (EFRNI) is a specialized training program aimed at developing advanced skills in the recruitment field, both nationally and internationally. It covers the challenges related to recruitment in various cultural and legal contexts, while teaching the use of modern tools to identify and attract talent. The training also emphasizes optimizing selection processes and the importance of talent management to ensure employee retention and development from a global perspective.',
         type: 'Formation',
          button: "Learn more",
+          show:"show all"
     },
     {
         id: 12,
@@ -235,6 +246,7 @@ export  const blogDataEN = [
         detail: 'The training "Learning Theatre for Children" introduces young people to the art of drama by developing their self-confidence, communication skills, and creativity. Through role-playing, improvisations, and creative exercises, children learn to express their emotions and ideas while enhancing their teamwork and group work skills. The training also covers the basics of theatre, such as public speaking and managing stage fright, offering an enriching experience that stimulates both personal development and social skills.',
         type: 'Formation',
         button: "Learn more",
+         show:"show all"
     },
     {
         id: 13,
@@ -247,6 +259,7 @@ export  const blogDataEN = [
         detail: 'The elevator training is designed to provide participants with a comprehensive understanding of elevator systems, from installation to maintenance. It covers the principles of elevator operation, safety procedures, and troubleshooting techniques. Participants will learn to install, maintain, and repair elevators while adhering to safety and regulatory standards. The training is ideal for technicians, engineers, and anyone involved in the elevator sector, offering the skills needed to ensure the proper functioning and safety of equipment.',
         type: 'Formation',
         button: "Learn more",
+         show:"show all"
     },
     {
         id: 14,
@@ -259,6 +272,7 @@ export  const blogDataEN = [
         detail: 'The training for driving trains and trams prepares participants to operate these vehicles safely and efficiently. It covers the technical aspects of driving, including handling controls, managing signaling systems, and adhering to safety procedures. Participants also learn to manage emergency situations, optimize energy consumption, and ensure passenger comfort. The training includes practical and theoretical simulations to develop in-depth skills in driving and managing railway and tramway operations while complying with current regulations.',
         type: 'Formation',
         button: "Learn more",
+         show:"show all"
     },
 ];
 
@@ -267,7 +281,7 @@ export const serviceDataEN = [
     {
         id: 1,
         icon: <SlNote />,
-        Servicetitle:"Explore Our Services",
+        Servicetitle:"Services",
         title: "Training",
         title2:"OUR SERVICES",
         desc2:"We offer you professional training at all levels, a facade cleaning service to ensure safety and cleanliness in winter, a prestigious address and streamlined administrative management of your business.",

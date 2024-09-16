@@ -92,7 +92,8 @@ export const blogDataFR = [
         type: 'language',
         button:"En savoir plus",
         data: "Pour chaque cours que vous terminez, vous recevrez une certification que vous pourrez partager sur vos réseaux sociaux (par exemple, LinkedIn). Chaque certification a un numéro d'authentification unique qui permet de la vérifier.",
-        reserver: "Réservé"
+        reserver: "Réservé",
+        show:"Tout afficher"
     },
     {
         id:2,
@@ -106,7 +107,8 @@ export const blogDataFR = [
         type: 'Formation',
         button:"En savoir plus",
           data: "Pour chaque cours que vous terminez, vous recevrez une certification que vous pourrez partager sur vos réseaux sociaux (par exemple, LinkedIn). Chaque certification a un numéro d'authentification unique qui permet de la vérifier.",
-        reserver: "Réservé"
+        reserver: "Réservé",
+          show:"Tout afficher"
     },
     {
         id:3,
@@ -120,7 +122,8 @@ export const blogDataFR = [
         type: 'Formation',
         button:"En savoir plus",
         data: "Pour chaque cours que vous terminez, vous recevrez une certification que vous pourrez partager sur vos réseaux sociaux (par exemple, LinkedIn). Chaque certification a un numéro d'authentification unique qui permet de la vérifier.",
-        reserver: "Réservé"
+        reserver: "Réservé",
+          show:"Tout afficher"
     },
     {
         id:4,
@@ -134,7 +137,8 @@ export const blogDataFR = [
         type: 'Formation',
         button:"En savoir plus",
         data: "Pour chaque cours que vous terminez, vous recevrez une certification que vous pourrez partager sur vos réseaux sociaux (par exemple, LinkedIn). Chaque certification a un numéro d'authentification unique qui permet de la vérifier.",
-        reserver: "Réservé"
+        reserver: "Réservé",
+          show:"Tout afficher"
     },
     {
         id:5,
@@ -148,7 +152,8 @@ export const blogDataFR = [
         type:'Formation',
         button:"En savoir plus",
         data: "Pour chaque cours que vous terminez, vous recevrez une certification que vous pourrez partager sur vos réseaux sociaux (par exemple, LinkedIn). Chaque certification a un numéro d'authentification unique qui permet de la vérifier.",
-        reserver: "Réservé"
+        reserver: "Réservé",
+          show:"Tout afficher"
     },
     {
         id:6,
@@ -162,7 +167,8 @@ export const blogDataFR = [
         type: 'Formation',
              button:"En savoir plus",
                data: "Pour chaque cours que vous terminez, vous recevrez une certification que vous pourrez partager sur vos réseaux sociaux (par exemple, LinkedIn). Chaque certification a un numéro d'authentification unique qui permet de la vérifier.",
-        reserver: "Réservé"
+        reserver: "Réservé",
+          show:"Tout afficher"
     },
     {
         id:7,
@@ -176,7 +182,8 @@ export const blogDataFR = [
         type: 'Formation',
         button:"En savoir plus",
           data: "Pour chaque cours que vous terminez, vous recevrez une certification que vous pourrez partager sur vos réseaux sociaux (par exemple, LinkedIn). Chaque certification a un numéro d'authentification unique qui permet de la vérifier.",
-        reserver: "Réservé"
+        reserver: "Réservé",
+          show:"Tout afficher"
     },
     {
         id:8,
@@ -190,7 +197,8 @@ export const blogDataFR = [
         type: 'Formation',
         button:"En savoir plus",
         data: "Pour chaque cours que vous terminez, vous recevrez une certification que vous pourrez partager sur vos réseaux sociaux (par exemple, LinkedIn). Chaque certification a un numéro d'authentification unique qui permet de la vérifier.",
-        reserver: "Réservé"
+        reserver: "Réservé",
+          show:"Tout afficher"
     },
     {
         id:9,
@@ -204,7 +212,8 @@ export const blogDataFR = [
         type: 'Formation',
         button:"En savoir plus",
         data: "Pour chaque cours que vous terminez, vous recevrez une certification que vous pourrez partager sur vos réseaux sociaux (par exemple, LinkedIn). Chaque certification a un numéro d'authentification unique qui permet de la vérifier.",
-        reserver: "Réservé"
+        reserver: "Réservé",
+          show:"Tout afficher"
     },
     {
         id:10,
@@ -218,7 +227,8 @@ export const blogDataFR = [
         type: 'Formation',
              button:"En savoir plus",
                data: "Pour chaque cours que vous terminez, vous recevrez une certification que vous pourrez partager sur vos réseaux sociaux (par exemple, LinkedIn). Chaque certification a un numéro d'authentification unique qui permet de la vérifier.",
-        reserver: "Réservé"
+        reserver: "Réservé",
+          show:"Tout afficher"
     },
     {
         id:11,
@@ -232,7 +242,8 @@ export const blogDataFR = [
         type: 'Formation',
              button:"En savoir plus",
                data: "Pour chaque cours que vous terminez, vous recevrez une certification que vous pourrez partager sur vos réseaux sociaux (par exemple, LinkedIn). Chaque certification a un numéro d'authentification unique qui permet de la vérifier.",
-        reserver: "Réservé"
+        reserver: "Réservé",
+          show:"Tout afficher"
     },
     {
         id:12,
@@ -246,7 +257,8 @@ export const blogDataFR = [
         type: 'Formation',
              button:"En savoir plus",
                data: "Pour chaque cours que vous terminez, vous recevrez une certification que vous pourrez partager sur vos réseaux sociaux (par exemple, LinkedIn). Chaque certification a un numéro d'authentification unique qui permet de la vérifier.",
-        reserver: "Réservé"
+        reserver: "Réservé",
+          show:"Tout afficher"
     },
     {
         id:13,
@@ -260,7 +272,8 @@ export const blogDataFR = [
         type: 'Formation',
         button:"En savoir plus",
           data: "Pour chaque cours que vous terminez, vous recevrez une certification que vous pourrez partager sur vos réseaux sociaux (par exemple, LinkedIn). Chaque certification a un numéro d'authentification unique qui permet de la vérifier.",
-        reserver: "Réservé"
+        reserver: "Réservé",
+          show:"Tout afficher"
     },
     {
         id:14,
@@ -274,7 +287,8 @@ export const blogDataFR = [
         type: 'Formation',
         button:"En savoir plus",
         data: "Pour chaque cours que vous terminez, vous recevrez une certification que vous pourrez partager sur vos réseaux sociaux (par exemple, LinkedIn). Chaque certification a un numéro d'authentification unique qui permet de la vérifier.",
-        reserver: "Réservé"
+        reserver: "Réservé",
+          show:"Tout afficher"
     },
     
 ]
