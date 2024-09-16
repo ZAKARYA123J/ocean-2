@@ -15,7 +15,7 @@ import TeamNurse from './components/TeamNurse';
 import ContractPage from './components/ContractPage';
 import LanguagesPage from './components/LanguagesPage';
 import { HelmetProvider } from 'react-helmet-async'; // Import HelmetProvider
-
+import { Events } from 'react-scroll';
 function App() {
   return (
     <HelmetProvider>
