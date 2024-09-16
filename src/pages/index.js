@@ -167,8 +167,8 @@ export default function Index() {
       <Navbar />
       <Section id="home">
         <ContentWrapper>
-          <TextBlock data-aos="fade-right">
-            <h1>
+          <TextBlock data-aos="fade-right" className="pt-24" >
+            <h1 >
               {clientData.map((item, index) => (
                 <span key={index}>{i18n.t(item.Title)}</span>
               ))}
@@ -183,7 +183,7 @@ export default function Index() {
               </ScrollLink>
             </CTAButton>
           </TextBlock>
-          <ImageWrapper data-aos="fade-left" isVisible>
+          <ImageWrapper data-aos="fade-left" className="" isVisible>
             <img src={images[currentImage]} alt="Design Team" />
           </ImageWrapper>
         </ContentWrapper>
