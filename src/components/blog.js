@@ -1,32 +1,32 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { blogData } from "../data/data";
-import styled from "styled-components";
 import { useTranslation } from "react-i18next";
+import styled from "styled-components";
 import { FiCalendar, FiClock } from '../assets/icons/vander';
 
+// Styled CTA Button with Modern Look
 const CTA = styled.button`
-  background-color: var(--white);
-  color: #3a86ff;
-  padding: 0.5rem 1rem;
+  background-color: #3a86ff; /* Blue */
+  color: #ffffff;
+  padding: 0.5rem 1.5rem;
   margin-top: 1rem;
   border-radius: 20px;
   cursor: pointer;
   font-size: 15px;
   font-weight: 600;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  transition: transform 0.2s;
-  border: solid 1px blue;
+  justify-content: center;
+  transition: transform 0.3s, background-color 0.3s;
+  border: none;
 
-  @media only screen and (max-width: 48em) {
-    padding: 0.2rem 1rem;
-  }
   &:hover {
-    transform: scale(1.1);
+    transform: translateY(-3px);
+    background-color: #2563eb; /* Blue-600 */
   }
+
   &:active {
-    transform: scale(0.9);
+    transform: translateY(1px);
   }
 `;
 
@@ -44,63 +44,67 @@ const loadClientData = (lang) => {
 
 export default function Blogs() {
   const { i18n, t } = useTranslation();
-  const [bloggDta, setBlogdata] = React.useState([]);
+  const [blogData, setBlogData] = useState([]);
 
   useEffect(() => {
-    loadClientData(i18n.language).then(data => setBlogdata(data));
+    loadClientData(i18n.language).then(data => setBlogData(data));
   }, [i18n.language]);
 
-  const limitedItems = bloggDta.slice(0, 3);
+  const limitedItems = blogData.slice(0, 3);
 
   return (
-    <section className="relative md:py-24 py-16" id="blog">
-      <div className="container relative">
-      
-            <div className="grid grid-cols-1 pb-6 text-center">
-            {limitedItems.map((item, index) => (
-                        <h3 className="text-3xl font-semibold sm:text-3xl text-violet-950 dark:text-primary" key={index}>
-                            {i18n.t(item.Title)}
-                        </h3>
-                    ))}
-            </div>
+    <section className="relative md:py-24 py-16 bg-gray-50 dark:bg-gray-900" id="blog">
+      <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
+        <div className="text-center mb-12">
+          <h3 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            {t('Latest Articles')}
+          </h3>
+          <p className="text-lg text-gray-600 dark:text-gray-300">
+            {t('Stay updated with our latest news and articles')}
+          </p>
+        </div>
 
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mt-6 gap-6">
-              {limitedItems.map((item, index) => (
-                <div className="group relative overflow-hidden" key={index}>
-                  <div className="relative overflow-hidden rounded-md shadow dark:shadow-gray-800">
-                    <img src={item.image} className="group-hover:scale-110 duration-500" alt="" />
-                  </div>
-                  <div className="mt-6">
-                    {/* Uncomment and use the following if needed */}
-                    {/* <div className="flex mb-4">
-                      <span className="flex items-center text-slate-400 text-sm">
-                        <FiCalendar className="size-4 text-slate-900 dark:text-white me-1.5" />
-                        {item.date}
-                      </span>
-                      <span className="flex items-center text-slate-400 text-sm ms-3">
-                        <FiClock className="size-4 text-slate-900 dark:text-white me-1.5" />
-                        5 min read
-                      </span>
-                    </div> */}
-                   
-                    <Link to={`/blog/${item.id}`} className="title text-lg font-semibold hover:text-sky-500 duration-500 ease-in-out">
-                      {t(item.title)}
-                    </Link>
-                    <p className="text-slate-400 mt-2">
-                      {t(item.desc)}
-                    </p>
-
-                    <div className="mt-3">
-                      <CTA>
-                        <Link to={`/formation/${item.id}`}>
-                          {t(item.button)} <i className="mdi mdi-chevron-right align-middle"></i>
-                        </Link>
-                      </CTA>
-                    </div>
-                  </div>
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
+          {limitedItems.map((item, index) => (
+            <div key={index} className="group bg-white dark:bg-slate-800 rounded-lg shadow-lg overflow-hidden transition-shadow duration-300 hover:shadow-xl">
+              <div className="relative overflow-hidden rounded-t-lg">
+                <img 
+                  src={item.image} 
+                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" 
+                  alt={t(item.title)} 
+                />
+              </div>
+              <div className="p-6">
+                {/* Meta Information */}
+                <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-4">
+                  <span className="flex items-center">
+                    <FiCalendar className="mr-1.5" />
+                    {item.date}
+                  </span>
+                  <span className="flex items-center ml-4">
+                    <FiClock className="mr-1.5" />
+                    5 min read
+                  </span>
                 </div>
-              ))}
+                
+                <Link to={`/blog/${item.id}`} className="block">
+                  <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-blue-500 transition-colors">
+                    {t(item.title)}
+                  </h4>
+                </Link>
+                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                  {t(item.desc)}
+                </p>
+
+                <Link to={`/formation/${item.id}`}>
+                  <CTA>
+                    {t(item.button)} <i className="mdi mdi-chevron-right align-middle ml-1"></i>
+                  </CTA>
+                </Link>
+              </div>
             </div>
+          ))}
+        </div>
       </div>
     </section>
   );

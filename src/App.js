@@ -9,6 +9,8 @@ import Jobs from './components/recruitment/Jobs';
 import IndexFive from './pages/index-five';
 import Gallery from './components/Gallery/gallery';
 import GalleryDetail from './components/Gallery/detailgallery';
+import TeamPage from './components/TeamPage';
+import LanguagesPage from './components/LanguagesPage';
 import { HelmetProvider } from 'react-helmet-async'; // Import HelmetProvider
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
         <Route path='/jobs/:type' element={<Jobs />} />
         <Route path='/gallery' element={<Gallery />} />
         <Route path='/gallery/:id' element={<GalleryDetail />} />
+        <Route path="/team" element={<TeamPage />} />
+        <Route path="/languages" element={<LanguagesPage />} />
       </Routes>
     </HelmetProvider>
   );

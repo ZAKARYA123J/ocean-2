@@ -3,8 +3,8 @@ import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Navbar from '../navbar';
 import Footer from '../footer';
-import { Fancybox } from '@fancyapps/ui'; // Correct import
-import '@fancyapps/ui/dist/fancybox/fancybox.css'; // Alternative import
+import { Fancybox } from '@fancyapps/ui';
+import '@fancyapps/ui/dist/fancybox/fancybox.css';
 
 const loadClientData = (lang) => {
     const locales = {
@@ -29,7 +29,10 @@ const GalleryDetail = () => {
 
     useEffect(() => {
         if (galleryAlbum) {
-            Fancybox.bind('[data-fancybox="gallery"]'); // Bind only when the album is loaded
+            Fancybox.bind('[data-fancybox="gallery"]', {
+                Toolbar: false,
+                animated: false,
+            });
         }
     }, [galleryAlbum]);
 
@@ -38,18 +41,30 @@ const GalleryDetail = () => {
     }
 
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100">
             <Navbar />
             <section className="flex-grow mb-20">
-                <div className="mt-40 container relative">
-                    <h1 className="text-3xl lg:text-4xl font-extrabold text-gray-900 mb-4">
-                        {t(galleryAlbum.titlealbum)} {t(galleryAlbum.datealbum)}
+                <div className="mt-20 container mx-auto px-4 lg:px-8 max-w-7xl">
+                    <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+                        {t(galleryAlbum.titlealbum)}
+                        <span className="block text-lg text-gray-500 dark:text-gray-400 mt-2">
+                            {t(galleryAlbum.datealbum)}
+                        </span>
                     </h1>
-                    <div className="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                         {galleryAlbum.img.map((image, index) => (
-                            <div className="rounded-lg shadow-lg overflow-hidden mx-auto" key={index}>
+                            <div
+                                className="rounded-lg overflow-hidden shadow-md transform transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
+                                key={index}
+                                role="button"
+                                aria-label={`Gallery image ${index + 1}`}
+                            >
                                 <a data-fancybox="gallery" href={image.url} data-caption={`Image ${index + 1}`}>
-                                    <img src={image.url} alt={`Gallery ${index + 1}`} className="cursor-pointer w-full h-auto rounded shadow-md" />
+                                    <img
+                                        src={image.url}
+                                        alt={`Gallery ${index + 1}`}
+                                        className="w-full h-56 object-cover transition-transform duration-300 hover:scale-105"
+                                    />
                                 </a>
                             </div>
                         ))}
