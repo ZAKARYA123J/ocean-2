@@ -15,7 +15,8 @@ export default function Footer() {
                 backgroundSize: 'cover', 
                 backgroundPosition: 'center', 
                 padding: '40px 20px' 
-            }}>
+            }}
+        >
             {/* Semi-transparent overlay for readability */}
             <div 
                 style={{
@@ -24,9 +25,10 @@ export default function Footer() {
                     left: 0,
                     right: 0,
                     bottom: 0,
-                    background: 'rgba(0, 0, 0, 0.5)', // Darker overlay for readability
+                    background: 'rgba(0, 0, 0, 0.6)', // Darker overlay for readability
                     zIndex: 1
-                }}></div>
+                }}
+            ></div>
 
             {/* Footer Content */}
             <div className="container relative z-10 text-center">
@@ -59,39 +61,49 @@ export default function Footer() {
                             <Link 
                                 to="https://www.facebook.com/the.ocean.connecting/" 
                                 target="_blank" 
-                                className="inline-flex justify-center items-center rounded-md hover:scale-110 transition-transform duration-300 ease-in-out hover:text-blue-500">
-                                <FiFacebook className="w-6 h-6" title="Facebook"/>
+                                className="inline-flex justify-center items-center rounded-md hover:scale-110 transition-transform duration-300 ease-in-out hover:text-blue-500"
+                                aria-label="Facebook"
+                            >
+                                <FiFacebook className="w-6 h-6" />
                             </Link>
                         </li>
                         <li className="inline">
                             <Link 
                                 to="https://www.instagram.com/oceanconnecting.ma/" 
                                 target="_blank" 
-                                className="inline-flex justify-center items-center rounded-md hover:scale-110 transition-transform duration-300 ease-in-out hover:text-pink-500">
-                                <FiInstagram className="w-6 h-6" title="Instagram"/>
+                                className="inline-flex justify-center items-center rounded-md hover:scale-110 transition-transform duration-300 ease-in-out hover:text-pink-500"
+                                aria-label="Instagram"
+                            >
+                                <FiInstagram className="w-6 h-6" />
                             </Link>
                         </li>
                         <li className="inline">
                             <Link 
                                 to="https://www.youtube.com/@OceanConnecting" 
                                 target="_blank"
-                                className="inline-flex justify-center items-center rounded-md hover:scale-110 transition-transform duration-300 ease-in-out hover:text-red-500">
-                                <FiYoutube className="w-6 h-6" title="YouTube"/>
+                                className="inline-flex justify-center items-center rounded-md hover:scale-110 transition-transform duration-300 ease-in-out hover:text-red-500"
+                                aria-label="YouTube"
+                            >
+                                <FiYoutube className="w-6 h-6" />
                             </Link>
                         </li>
                         <li className="inline">
                             <Link 
                                 to="https://www.linkedin.com/company/ocean-connecting/?originalSubdomain=ma" 
                                 target="_blank" 
-                                className="inline-flex justify-center items-center rounded-md hover:scale-110 transition-transform duration-300 ease-in-out hover:text-blue-700">
-                                <FiLinkedin className="w-6 h-6" title="LinkedIn"/>
+                                className="inline-flex justify-center items-center rounded-md hover:scale-110 transition-transform duration-300 ease-in-out hover:text-blue-700"
+                                aria-label="LinkedIn"
+                            >
+                                <FiLinkedin className="w-6 h-6" />
                             </Link>
                         </li>
                         <li className="inline">
                             <Link 
                                 to="mailto:oceanconnecting.ma@gmail.com" 
-                                className="inline-flex justify-center items-center rounded-md hover:scale-110 transition-transform duration-300 ease-in-out hover:text-yellow-500">
-                                <FiMail className="w-6 h-6" title="Email"/>
+                                className="inline-flex justify-center items-center rounded-md hover:scale-110 transition-transform duration-300 ease-in-out hover:text-yellow-500"
+                                aria-label="Email"
+                            >
+                                <FiMail className="w-6 h-6" />
                             </Link>
                         </li>
                     </ul>

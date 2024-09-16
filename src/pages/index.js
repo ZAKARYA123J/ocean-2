@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
-import designImage from '../assets/images/done/hero.png';
 import Footer from '../components/footer';
 import About from "../components/about";
 import Services from "../components/services";
@@ -14,6 +13,11 @@ import "aos/dist/aos.css";
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
+
+// Import images directly
+import heroImage1 from '../assets/images/done/TeamDev/service.png';
+import heroImage2 from '../assets/images/done/TeamDev/service1.png';
+import heroImage4 from '../assets/images/done/TeamDev/service2.png';
 
 // Styled Components
 const CTAButton = styled.button`
@@ -99,7 +103,11 @@ const ImageWrapper = styled.div`
   img {
     max-width: 100%;
     height: auto;
-    object-fit: contain;
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+    transition: opacity 2s ease-in-out;
+    opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
   }
 `;
 
@@ -119,6 +127,10 @@ const loadClientData = (lang) => {
 export default function Index() {
   const { i18n } = useTranslation();
   const [clientData, setClientData] = useState([]);
+  const [currentImage, setCurrentImage] = useState(0);
+
+  // List of images for automatic switching
+  const images = [heroImage1, heroImage2, heroImage4];
 
   useEffect(() => {
     // Load client data whenever the language changes
@@ -133,6 +145,16 @@ export default function Index() {
     });
     AOS.refresh();
   }, [i18n.language]);
+
+  // Automatically switch images every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prevImage) => (prevImage + 1) % images.length);
+    }, 3000); // Change image every 3 seconds
+
+    // Cleanup interval on component unmount
+    return () => clearInterval(interval);
+  }, [images.length]);
 
   return (
     <>
@@ -161,8 +183,8 @@ export default function Index() {
               </ScrollLink>
             </CTAButton>
           </TextBlock>
-          <ImageWrapper data-aos="fade-left">
-            <img src={designImage} alt="Design Team" />
+          <ImageWrapper data-aos="fade-left" isVisible>
+            <img src={images[currentImage]} alt="Design Team" />
           </ImageWrapper>
         </ContentWrapper>
       </Section>
