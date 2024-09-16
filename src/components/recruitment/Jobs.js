@@ -5,7 +5,7 @@ import Footer from '../footer';
 import { FaAngleRight } from "react-icons/fa";
 import Whatp from '../WhatsAppFloatingButton';
 import { useTranslation } from 'react-i18next';
-
+import { Helmet } from 'react-helmet-async';
 // Function to dynamically load job data based on the selected language
 const loadClientData = (lang) => {
   switch (lang) {
@@ -60,6 +60,11 @@ const JobListings = () => {
 
   return (
     <>
+     <Helmet>
+        <title>Jobs | Ocean Connecting</title>
+        <meta name="description" content="Learn more about the Jobs we offer for international career and document assistance." />
+        <meta name="keywords" content="international services, career support, document assistance" />
+      </Helmet>
       <div className="p-10 bg-gray-100">
         <Navbar />
      
