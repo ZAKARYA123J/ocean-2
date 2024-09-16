@@ -11,7 +11,9 @@ import Gallery from './components/Gallery/gallery'
 import GalleryDetail from './components/Gallery/detailgallery'
 import TeamPage from './components/TeamPage';
 import LanguagesPage from './components/LanguagesPage';
-
+import TeamNurse from './components/TeamNurse';
+import ContractPage from './components/ContractPage';
+import 'leaflet/dist/leaflet.css';
 
 
 function App() {
@@ -25,6 +27,8 @@ function App() {
       <Route path='/gallery' element={<Gallery/>}/>
       <Route path='/gallery/:id' element={<GalleryDetail/>}/>
       <Route path="/team" element={<TeamPage />} />
+      <Route path="/nurse" element={<TeamNurse />} />
+      <Route path="/contract" element={<ContractPage />} />
       <Route path="/languages" component={LanguagesPage} />
     </Routes>
   );

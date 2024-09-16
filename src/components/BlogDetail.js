@@ -149,7 +149,7 @@ const BlogDetail = () => {
           <p className="blog-detail">{t(blogPost.detail)}</p>
         </div>
 
-        <div className="section-small">
+        <div className="section-small ">
           <h2>Welcome to our platform tailored for {t(blogPost.title)}</h2>
           <button className="cta-button">
             <span>⚡</span> For reservation
