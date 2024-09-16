@@ -2,6 +2,8 @@ import { CgWebsite } from "react-icons/cg";
 import { IoHomeOutline } from "react-icons/io5";
 import { MdOutlineCleaningServices } from "react-icons/md";
 import { SlNote } from "react-icons/sl";
+import { Link, useParams } from "react-router-dom";
+import { Link as Link1 } from "react-scroll";
 import client1 from '../../../assets/images/team/01.jpg'
 import client2 from '../../../assets/images/team/02.jpg'
 import client3 from '../../../assets/images/team/03.jpg'
@@ -34,6 +36,11 @@ import croatie from '../../../assets/images/job/croatie.png'
 import italy from '../../../assets/images/job/italy.png'
 import spain from '../../../assets/images/job/spain.png'
 import facade from '../../../assets//images/job/facade.png'
+import resume from '../../../assets/images/job/resume.png'
+import recrutocean from '../../../assets/images/service/recrutocean.png'
+import recrutinter from '../../../assets/images/service/recrutinter2.png'
+import form from '../../../assets/images/form.pdf'
+
 export const clientDataAR = [
     {
         image: client1,
@@ -267,8 +274,8 @@ export const serviceDataAR = [
         Servicetitle:"اكتشف خدماتنا",
         title: 'التدريب',
         title2:"خدماتنا",
-        desc2:"نحن نقدم تدريبًا احترافيًا يناسب جميع المستويات، وخدمة تنظيف الجليد لضمان السلامة والنظافة في فصل الشتاء، بالإضافة إلى التوطين لتقديم عنوان مرموق وإدارة إدارية مبسطة لشركتك.",
-        desc: "هذا مطلوب عندما، على سبيل المثال، النص النهائي لم يكن متاحًا بعد.",
+        desc2:"نحن نوفر تدريباً احترافياً يتناسب مع جميع المستويات، وخدمة تنظيف واجهات المباني لضمان السلامة والنظافة في فصل الشتاء، بالإضافة إلى توفير مقرّ سكن لشركتك لتوفر لها عنواناً مرموقاً وإدارة إدارية مبسطة.",
+        desc: "عزز مهاراتك من خلال تدريب مخصص من محترفين ذوي خبرة. يقدم المدربون الخبراء لدينا برامج مخصصة لمساعدتك على تحقيق أهدافك بثقة وفعالية.",
         image: service1,
         para1: 'خدمة التدريب',
         desc_para1: "نقدم تدريبات مهنية عالية الجودة، تتناسب مع جميع مستويات الخبرة. تم تصميم برامجنا لتوفير المهارات العملية والنظرية، مما يتيح لك التقدم في مسيرتك المهنية وتحقيق أهدافك المهنية. سواء كنت مبتدئًا أو خبيرًا، سيقوم مدربونا ذوو الخبرة بمساعدتك طوال مسيرتك التعليمية.",
@@ -280,15 +287,17 @@ export const serviceDataAR = [
         desc_para4: "تبدأ كل دورة تدريبية بتحليل الاحتياجات، تليها برنامج مخصص يقدمه خبراء. نحن ندمج بين النظرية والتطبيق لضمان استيعاب فعّال للمعرفة.",
         para5: "القيمة المضافة",
         desc_para5: "تتميز تدريباتنا بمرونتها ونهجها العملي، حيث ندمج أحدث الاتجاهات والتقنيات لتقديم حلول ملائمة وقابلة للتطبيق على الفور في الميدان.",
-        Button: "احصل على تدريب",
+        Bouton : "تعرف أكثر",
+        link:<Link to={"/formation"} className="text-sky-500" >احصل على تدريب <i className="mdi mdi-chevron-right align-middle"></i></Link>,
+
     },
     {
         id: 2,
         icon: <MdOutlineCleaningServices />,
         title: 'تنظيف الواجهات',
-        desc: 'هذا مطلوب عندما، على سبيل المثال، النص النهائي لم يكن متاحًا بعد.',
+        desc: 'عزز مظهر المبنى الخاص بك وطول عمره من خلال خدمات تنظيف الواجهات الاحترافية. تأكد من أن الممتلكات الخاصة بك تترك انطباعًا أوليًا قويًا، مما يعكس جودة عملك واحترافيته.',
         image: service2,
-        para1: 'خدمة تنظيف الواجهات',
+        para1: 'خدمة تنظيف واجهات البنايات',
         desc_para1: "تضمن لك خدمتنا لتنظيف الواجهات نتائج مثالية لاستعادة اللمعان والنظافة لمبانيك. بفضل تقنياتنا الاحترافية ومنتجاتنا الصديقة للبيئة، نقوم بإزالة الأوساخ، والعفن، والملوثات بشكل فعال. ثق بخبرتنا للحفاظ على مظهر ومتانة واجهاتك.",
         para2: "الفوائد والمزايا",
         desc_para2: "يستعيد هذه الخدمة مظهر واجهاتك، ويطيل عمرها، ويحسن صورة ممتلكاتك من خلال تقديم مظهر نظيف ومرتب.",
@@ -298,13 +307,15 @@ export const serviceDataAR = [
         desc_para4: "نستخدم تقنيات تنظيف تتناسب مع كل نوع من الأسطح، بما في ذلك الغسيل عالي الضغط واستخدام منتجات صديقة للبيئة. نبدأ بتقييم شامل، يتبعه تنظيف دقيق وفحص جودة نهائي.",
         para5: "القيمة المضافة",
         desc_para5: "تضمن خبرتنا في تنظيف الواجهات نتائج طويلة الأمد وتدخل سريع، مع احترام أعلى المعايير البيئية والأمنية.",
-        Button: "اتصل بنا",
+        Bouton : "تعرف أكثر",
+        link:<Link1 to="contact" className="text-sky-500"smooth={true} duration={1000} activeClass='active' spy={true}>اتصل بنا <i className="mdi mdi-chevron-right align-middle"></i></Link1>,
+
     },
     {
         id: 3,
         icon: <IoHomeOutline />,
         title: 'التسجيل',
-        desc: 'هذا مطلوب عندما، على سبيل المثال، النص النهائي لم يكن متاحًا بعد.',
+        desc: 'استفد من توطين الأعمال المهنية في أغادير لتعزيز صورة شركتك ووجودك في السوق.',
         image: service3,
         para1: 'خدمة التسجيل',
         desc_para1: "تقدم لك خدمتنا للتسجيل عنوانًا تجاريًا مميزًا لشركتك. بالإضافة إلى تبسيط الإدارة الإدارية، نحرص على استلام بريدك وتوفير دعم كامل لجميع إجراءاتك. اجعل عنواننا عنوان شركتك لتعزيز صورتك وتحسين تنظيمك.",
@@ -316,13 +327,15 @@ export const serviceDataAR = [
         desc_para4: "نقدم عملية تسجيل سهلة، تشمل استلام وإدارة البريد، بالإضافة إلى خيارات التوجيه حسب احتياجاتك المحددة. يمكنك الوصول إلى مستنداتك بأمان عبر منصتنا الإلكترونية.",
         para5: "القيمة المضافة",
         desc_para5: "تتميز خدمتنا بمرونتها، ودعمها المخصص، وقدرتها على توفير عنوان مميز يعزز مصداقية شركتك، مع تحسين عملياتك الإدارية.",
-        Button: "اتصل بنا",
+        Bouton : "تعرف أكثر",
+        link:<Link1 to="contact" className="text-sky-500"smooth={true} duration={1000} activeClass='active' spy={true}>اتصل بنا <i className="mdi mdi-chevron-right align-middle"></i></Link1>,
+
     },
     {
         id: 4,
         title: 'التطوير',
         icon: <CgWebsite />,
-        desc: 'هذا مطلوب عندما، على سبيل المثال، النص النهائي لم يكن متاحًا بعد.',
+        desc: 'عزز تواجدك على الإنترنت من خلال خدمات تطوير الويب المتخصصة لدينا. يقوم مقدمو الخدمة الفرديون لدينا بتصميم مواقع ويب مصممة خصيصًا وسريعة الاستجابة وتتوافق تمامًا مع علامتك التجارية وأهداف عملك.',
         image: service4,
         para1: 'خدمة التطوير',
         desc_para1: "نقدم خدمة كاملة لإنشاء مواقع الويب حسب الطلب لتلبية احتياجاتك الخاصة. من التصميم إلى الإطلاق، يستخدم فريقنا من الخبراء أحدث التقنيات لتطوير مواقع جمالية، وعملية، ومحسّنة لمحركات البحث. سواء كنت بحاجة إلى موقع عرض، أو متجر عبر الإنترنت، أو منصة مخصصة، نحن هنا لتحقيق مشروعك.",
@@ -334,7 +347,9 @@ export const serviceDataAR = [
         desc_para4: "نبدأ بتحليل شامل لاحتياجاتك، يليه إنشاء تصميم مخصص. ثم نقوم بتطوير واختبار الموقع لضمان أدائه الأمثل قبل إطلاقه.",
         para5: "القيمة المضافة",
         desc_para5: "تضمن مقاربتنا الشخصية وخبرتنا التقنية تحقيق نتائج لا تقتصر على تلبية توقعاتك بل تتجاوزها، من خلال تقديم موقع ويب وظيفي، وجمالي، ومحسن لمحركات البحث.",
-        Button: "اتصل بنا",
+        Bouton : "تعرف أكثر",
+        link:<Link1 to="contact" className="text-sky-500"smooth={true} duration={1000} activeClass='active' spy={true}>اتصل بنا <i className="mdi mdi-chevron-right align-middle"></i></Link1>,
+
     },
     {
         id: 5,
@@ -351,12 +366,13 @@ export const serviceDataAR = [
         desc_para4: "نستخدم طرق بحث متقدمة وشبكة عالمية للعثور على المرشحين. تتضمن العملية تقييمًا دقيقًا للمهارات، ومقابلات موجهة، وإدارة نشطة للطلبات لضمان تطابق مثالي.",
         para5: "القيمة المضافة",
         desc_para5: "تسمح لنا خبرتنا في التوظيف الدولي بالعثور على المواهب المناسبة لمتطلبات شركتك المحددة، مع تقديم خدمة مخصصة ودعم طوال عملية التوظيف لضمان تكامل ناجح.",
-        Button: "احصل على وظيفة",
+        link:<Link to="/jobs/all" className="text-sky-500" > احصل على وظيفة خارجية <i className="mdi mdi-chevron-right align-middle"></i></Link>,
+
     },
 ]
 export const TitleAR=[
     {
-        Title:"دراسات التدريب التوظيف",
+        Title:"التعلم والتدريب مع التوظيف الوطني والدولي",
         button:"اتصل بنا"
     }
 ]
@@ -367,10 +383,12 @@ export const NavbarAR=
     Services:"خدمات",
     Formation:"التدريب",
     Jobs:"وظائف",
+    gallery:"معرض الصور",
     About:"معلومات عنا",
     Contact_us:"اتصل بنا"
 }]
 export const AboutAR=[{
+    h1 : 'تعرف على  Ocean Connecting ',
     ask:"من نحن؟",
     title:"نحن متخصصون في التوظيف الدولي ومساعدة الوثائق، نقدم دعمًا مخصصًا بعدة لغات لمساعدتك في التنقل عبر الفرص الوظيفية الدولية.",
     desc:"تقدم شركتنا خدمات التوظيف الدولي ودعمًا خبيرًا بعدة لغات. نساعد العملاء في العثور على فرص عمل عالمية ونوفر مساعدة شاملة في إعداد الوثائق بلغات مختلفة. هدفنا هو تسهيل انتقال سلس وفعّال إلى الوظائف الدولية.",
@@ -382,145 +400,164 @@ export const recruitmentAR = [
         h1:"توظيف",
         title: 'التوظيف الدولي',
         desc: 'ربط المواهب العالمية بالفرص عبر الحدود. نحن نبسط عملية التوظيف الدولي لمساعدتك في العثور على أفضل المرشحين في جميع أنحاء العالم.',
-        image: service5,
+        image:recrutinter,
         title2: 'خدمات التوظيف الدولي',
         desc2: 'تتخصص شركتنا في ربط أفضل المواهب بالفرص العالمية. نقدم حلول توظيف دولية شاملة، بما في ذلك البحث عن المرشحين، وفحصهم، وتوظيفهم. من خلال الاستفادة من شبكتنا الواسعة وخبرتنا في الأسواق المختلفة، نساعد الشركات على العثور على المواهب المناسبة لدفع نموها ونجاحها عبر الحدود.',
         button:"تقدم الآن",
-      
-        type:"دولي",
-    
+        type: 'دولي',
+
     },
     {
         id: 2,
         title: 'التوظيف OceanConnecting',
         desc: 'ربط أفضل المواهب مع المنظمات الرائدة على مستوى الوطن. تبسيط عملية التوظيف لديك لتحقيق نتائج فعالة وكفء.',
-        image: formation6,
+        image:recrutocean,
         title2: 'التوظيف OceanConnecting',
         desc2: 'نحن متحمسون لدعوتك للتقدم لشغل وظيفة في شركتنا. انضم إلى فريقنا وساهم في بيئتنا الديناميكية بينما تقدم مسيرتك المهنية. استكشف فرص النمو والابتكار والتأثير معنا.',
         button:"تقدم الآن",
-        type:"وطني",
+        type: 'وطني',
     },
 ];
 export const jobsAR = [
     {
         id: 1,
+        image: resume,
+        title: 'ملف طلب عقد عمل للخارج',
+        type: 'دولي',
+        menu1: "الوثائق المطلوبه : ",
+        secteur: " السجل العدلي كاتجيبوا من المحكمة و كاتكاليزيه ف الوزارة الخارجية (Apostil) ويترجم للإنجليزية ",
+        menu2: "الصور المطلوبة :",
+        niveaulanguage: "   صورة فوتوغرافية ديالك و  صورة من جواز السفر و  فيديو و صورة ديالك وانت كاتزاول المهنة الي بغيتي تخدم فيها",
+        menu6:'المزيد :',
+        more:' الإستمارة يمكن ليك الحصول عليها بالضغط على زر التحميل  🙏🏻او باش نسهلو عليكم تقدروا تبعتو لنا الوثائق الأصلية (Pdf)',
+        action : 'تحميل',
+        
+        
+        link: form ,
+        // link:"https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D9%83%D8%B1%D9%88%D8%A7%D8%AA%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+    },
+    {
+        id: 2,
         job:"وكالة توظيف",
         ocean:"Ocean connect",
         image: croatie,
         title: 'عقد عمل في كرواتيا',
         type: 'دولي',
-        secteur: 'البناء/الحدادة/النجارة/السباكة/الميكانيكا الكهربائية/تكييف الهواء/سائق/جزار/فندق',
+        secteur: 'بناء/ حدادة / نجارة / صباغة / إلكتريك ميكانيك / تكييف / سائق بيرمي D / جزار / الفندقة .',
         niveaulanguage: 'اللغة غير ضرورية.',
-        timevisa: 'مدة الحصول على الفيزا هي 5 أشهر.',
-        contratime: 'عقد عمل لمدة سنة.',
-        pricecontrat: 'سعر العقد هو 6 ملايين.',
-        more: 'نوفر السكن، والطب، وإمكانية تجديد العقد لمدة 5 سنوات، ومساعدة في الحصول على بطاقة الإقامة.',
-        link: "https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D9%83%D8%B1%D9%88%D8%A7%D8%AA%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
-        
-            menu1: "القطاع :",
-            menu2: "مستوى اللغة :",
-            menu3: "مدة التأشيرة :",
-            menu4: "العقد :",
-            menu5: "سعر العقد :",
-            menu6: "المزيد :",
-             
-          
-          
-    },
-    {
-        id: 2,
-        image: allemagne,
-        title: 'عقد عمل في ألمانيا',
-        type: 'دولي',
-        secteur: 'الصحة والتمريض/الفنادق/البرمجة',
-        niveaulanguage: 'اللغة مطلوبة B1.',
-        timevisa: 'مدة الحصول على الفيزا هي 8 أشهر.',
-        contratime: 'عقد عمل لمدة سنة.',
-        pricecontrat: 'سعر العقد هو 8 ملايين.',
-        more: 'نوفر السكن، والطب، وإمكانية تجديد العقد لمدة 5 سنوات، ومساعدة في الحصول على بطاقة الإقامة.',
-        link: "https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A3%D9%84%D9%85%D8%A7%D9%86%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+        timevisa: 'مدة الحصول على الفيزا 5 أشهر .',
+        contratime: 'عقد عمل لمدة سنة .',
+        pricecontrat: 'ثمن العقد 6 ملايين .',
+        more: 'العقد كيتوفر على السكن و التطبيب بالمجان ..',
+        link: "https://api.whatsapp.com/send/?phone=%2B212657236635&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D9%83%D8%B1%D9%88%D8%A7%D8%AA%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
         menu1: "القطاع :",
         menu2: "مستوى اللغة :",
         menu3: "مدة التأشيرة :",
         menu4: "العقد :",
         menu5: "سعر العقد :",
-        menu6: "المزيد :"
+        menu6: "المزيد :",
+        action : 'تقديم الطلب',
+          
+          
     },
     {
         id: 3,
-        image: belgium,
-        title: 'عقد عمل في بلجيكا',
+        image: allemagne,
+        title: 'عقد عمل في ألمانيا',
         type: 'دولي',
-        secteur: 'الصحة والتمريض/الفنادق/البرمجة',
-        niveaulanguage: 'اللغة B1 ضرورية.',
-        timevisa: 'مدة الحصول على الفيزا هي 8 أشهر.',
-        contratime: 'عقد عمل لمدة سنة.',
-        pricecontrat: 'سعر العقد هو 6 ملايين.',
-        more: 'نوفر السكن، والطب، وإمكانية تجديد العقد لمدة 5 سنوات، ومساعدة في الحصول على بطاقة الإقامة.',
-        link: "https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A8%D9%84%D8%AC%D9%8A%D9%83%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+        secteur: ' الصحة والتمريض/ الفنادق / البرمجة',
+        niveaulanguage: 'ضروري اللغة B1 .',
+        timevisa: 'مدة الحصول على الفيزا 8 اشهر .',
+        contratime: 'عقد عمل لمدة سنة .',
+        pricecontrat: 'ثمن العقد 8 ملايين .',
+        more: 'العقد كيتوفر على السكن و التطبيب بالمجان ..',
+        link: "https://api.whatsapp.com/send/?phone=%2B212657236635&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A3%D9%84%D9%85%D8%A7%D9%86%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
         menu1: "القطاع :",
         menu2: "مستوى اللغة :",
         menu3: "مدة التأشيرة :",
         menu4: "العقد :",
         menu5: "سعر العقد :",
-        menu6: "المزيد :"
+        menu6: "المزيد :",
+        action : 'تقديم الطلب',
     },
     {
         id: 4,
-        image: italy,
-        title: 'عقد عمل في إيطاليا',
+        image: belgium,
+        title: 'عقد عمل في بلجيكا',
         type: 'دولي',
-        secteur: 'الصحة والتمريض/الفنادق/الزراعة',
-        niveaulanguage: 'اللغة B1 ضرورية.',
-        timevisa: 'مدة الحصول على الفيزا هي 8 أشهر.',
-        contratime: 'عقد عمل لمدة سنة.',
-        pricecontrat: 'سعر العقد هو 6 ملايين.',
-        more: 'نوفر السكن، والطب، وإمكانية تجديد العقد لمدة 5 سنوات، ومساعدة في الحصول على بطاقة الإقامة.',
-        link: "https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A5%D9%8A%D8%B7%D8%A7%D9%84%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+        secteur: ' الصحة والتمريض/ الفنادق / البرمجة ',
+        niveaulanguage: ' ضروري اللغة B1 ',
+        timevisa: 'مدة الحصول على الفيزا 8 اشهر .',
+        contratime: 'عقد عمل لمدة سنة .',
+        pricecontrat: 'ثمن العقد 6 ملايين .',
+        more: 'العقد كيتوفر على السكن و التطبيب بالمجان ..',
+        link: "https://api.whatsapp.com/send/?phone=%2B212657236635&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A8%D9%84%D8%AC%D9%8A%D9%83%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
         menu1: "القطاع :",
         menu2: "مستوى اللغة :",
         menu3: "مدة التأشيرة :",
         menu4: "العقد :",
         menu5: "سعر العقد :",
-        menu6: "المزيد :"
+        menu6: "المزيد :",
+        action : 'تقديم الطلب',
     },
     {
         id: 5,
-        image: spain,
-        title: 'عقد عمل في إسبانيا',
+        image: italy,
+        title: 'عقد عمل في إيطاليا',
         type: 'دولي',
-        secteur: 'الصحة والتمريض/الفنادق/الزراعة',
-        niveaulanguage: 'اللغة B1 ضرورية.',
-        timevisa: 'مدة الحصول على الفيزا هي 8 أشهر.',
-        contratime: 'عقد عمل لمدة سنة.',
-        pricecontrat: 'سعر العقد هو 6 ملايين.',
-        more: 'نوفر السكن، والطب، وإمكانية تجديد العقد لمدة 5 سنوات، ومساعدة في الحصول على بطاقة الإقامة.',
-        link: "https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A5%D8%B3%D8%A8%D8%A7%D9%86%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+        secteur: 'الصحة والتمريض/ الفنادق / فلاحة .',
+        niveaulanguage: ' ضروري اللغة B1 ',
+        timevisa: 'مدة الحصول على الفيزا 8 اشهر .',
+        contratime: 'عقد عمل لمدة سنة .',
+        pricecontrat: 'ثمن العقد 6 ملايين .',
+        more: 'العقد كيتوفر على السكن و التطبيب بالمجان ..',
+        link: "https://api.whatsapp.com/send/?phone=%2B212657236635&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A5%D9%8A%D8%B7%D8%A7%D9%84%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
         menu1: "القطاع :",
         menu2: "مستوى اللغة :",
         menu3: "مدة التأشيرة :",
         menu4: "العقد :",
         menu5: "سعر العقد :",
-        menu6: "المزيد :"
+        menu6: "المزيد :",
+        action : 'تقديم الطلب',
     },
     {
         id: 6,
-        image: facade,
-        title: 'مدير منتج أول',
-        type: 'وطني',
-        secteur: 'الصحة والتمريض/الفنادق/البرمجة',
-        niveaulanguage: 'اللغة المطلوبة B1.',
-        timevisa: 'مدة الحصول على الفيزا هي 8 أشهر.',
-        contratime: 'عقد عمل لمدة سنة.',
-        pricecontrat: 'سعر العقد هو 8 ملايين.',
-        more: 'نوفر السكن، والطب، وإمكانية تجديد العقد لمدة 5 سنوات، ومساعدة في الحصول على بطاقة الإقامة.',
-        link: "#",
+        image: spain,
+        title: 'عقد عمل في إسبانيا',
+        type: 'دولي',
+        secteur:' الصحة والتمريض/ الفنادق / فلاحة .',
+        niveaulanguage: 'ضروري اللغة B1 .',
+        timevisa: 'مدة الحصول على الفيزا 8 اشهر .',
+        contratime: 'عقد عمل لمدة سنة .',
+        pricecontrat: 'ثمن العقد 6 ملايين .',
+        more: 'العقد كيتوفر على السكن و التطبيب بالمجان ..',
+        link: "https://api.whatsapp.com/send/?phone=%2B212657236635&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A5%D8%B3%D8%A8%D8%A7%D9%86%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
         menu1: "القطاع :",
         menu2: "مستوى اللغة :",
         menu3: "مدة التأشيرة :",
         menu4: "العقد :",
         menu5: "سعر العقد :",
-        menu6: "المزيد :"
+        menu6: "المزيد :",
+        action : 'تقديم الطلب',
+    },
+    {
+        id: 7,
+        image: facade,
+        title: 'عامل تنضيف واجهات المباني',
+        type: 'وطني',
+        secteur: 'خدمة التنظيف',
+        niveaulanguage: 'اللغة ليست ضرورية.',
+        timevisa: 'مستوى البكالوريا.',
+        contratime: 'عقد CDI -CDD.',
+        pricecontrat: 'أكادير .',
+        more: ' المعرفة بالمواد الكيميائية - التحمل النفسي - التواصل الجيد - القدرة على استخدام المعدات - الدقة والانتباه للتفاصيل - العمل على ارتفاعات عالية - القدرة البدنية - الوعي بالسلامة',
+        menu1:" قطاع  : ",
+        menu2:" مستوى اللغة  :",
+        menu3:" مستوى التعليم  :",
+        menu4:" نوع العقد :",
+        menu5:" منطقة :",
+        menu6:" المهارات الأساسية :",
+        action : 'تقديم الطلب',
     },
     // تأكد من أن لكل وظيفة معرف فريد
 ];
@@ -528,10 +565,10 @@ export const jobsAR = [
 export const ContactAR=[{
     title: "اتصل بنا",
     desc: "يسعدنا سماع رأيك! املأ النموذج أدناه باسمك وبريدك الإلكتروني ورسالتك، وسنرد عليك في أقرب وقت ممكن. شكرًا لتواصلك معنا!",
-    name: " اسمك",
-    email: " بريدك الإلكتروني",
-    question: " سؤالك",
-    comment: " تعليقك",
+    name: " اسمك :",
+    email: "بريدك الإلكتروني :",
+    question: "سؤالك :",
+    comment: "تعليقك :",
     Message: "أرسل الرسالة"
 }]
 export const placementar=[
@@ -539,6 +576,78 @@ export const placementar=[
       
     }
 ]
+export const GalleryAR=[
+    {
+        id:1,
+        title:"مرحباً بكم في معرض الصور!",
+        desc:"اكتشف الإبداع والشغف وراء عملنا من خلال هذه الصور. استمتع بالمنظر!",
+        image:"https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F2.jpg?alt=media&token=88735b9b-07a6-4e0b-b952-4389f2c48b15",
+        numberimage:"10 صور",
+        datealbum:" 12-12-2024",
+        titlealbum:"حدث - الممرضين ",
+        img: [
+            {alt: 'image1', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F1.jpg?alt=media&token=84676c79-346a-4ce2-8197-902ac615420a'},
+            {alt: 'image2', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F2.jpg?alt=media&token=88735b9b-07a6-4e0b-b952-4389f2c48b15'},
+            {alt: "image3", url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F3.jpg?alt=media&token=158d9836-541c-48b5-8692-0476c1c2c988'},
+            {alt: "image4", url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F4.jpg?alt=media&token=0d91d194-9a78-4ac9-b462-7da342a2c761'},
+            {alt: "image5", url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F5.jpg?alt=media&token=517637e2-1209-461b-a6a9-a583c65e7ad7'},
+            {alt: "image6", url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F7.jpg?alt=media&token=1ea2e5cb-26ef-45c2-976b-dd1676781f3f'},
+            {alt: "image7", url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F7.jpg?alt=media&token=1ea2e5cb-26ef-45c2-976b-dd1676781f3f'},
+            {alt: "image8", url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F8.jpg?alt=media&token=e5a2ba1d-465a-4add-8f7b-0fe513e55eb2'},
+            {alt: "image9", url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F9.jpg?alt=media&token=3e008c82-f4d5-4731-8125-701514fca796'},
+            {alt: "image10", url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F10.jpg?alt=media&token=94188e51-9c92-4eb7-86c2-ac9994bc0899'},
+        ]
+    },
+    {
+        id:2,
+        image:"https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FglassCleaning-team%2F1.png?alt=media&token=1f6f3b17-5d66-43f1-9af6-e355e3b1e096",
+        numberimage:" 5 صور",
+        datealbum:"12-12-2024",
+        titlealbum:"فريق تنظيف الزجاج  ",
+        img: [
+            {alt: 'image1', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FglassCleaning-team%2F6.jpg?alt=media&token=ac60ba0c-fa73-41ac-89a2-cd3d2dae1d7c'},
+            {alt: 'image2', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FglassCleaning-team%2F2.jpg?alt=media&token=1c1bdf81-1c94-4ff7-9f30-2f3b76ebf9c0'},
+            {alt: 'image3', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FglassCleaning-team%2F3.jpg?alt=media&token=8c041f49-c424-497e-b7df-562be8dd2cef'},
+            {alt: 'image4', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FglassCleaning-team%2F4.jpg?alt=media&token=30010bb7-9d28-4f51-a78d-3e412424d250'},
+            {alt: 'image5', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FglassCleaning-team%2F5.jpg?alt=media&token=fd4d31a0-2761-4b2a-bc0b-c5cd2cbc459d'},
+            ]
+    },
+    {
+        id:3,
+        image:"https://i.imgur.com/alQ7GWW.jpeg",
+        numberimage:" 27 صور",
+        datealbum:"12-12-2024",
+        titlealbum:"صور المركز ",
+        img: [
+            {alt: 'image1', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4075.jpg?alt=media&token=0fbbc107-22b2-4fed-bbfb-f680799d7075'},
+            {alt: 'image2', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4076.jpg?alt=media&token=4c3ee7dd-e27e-468d-8917-980f9423b292'},
+            {alt: 'image3', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4079.jpg?alt=media&token=da9ea1e6-91f5-4e5d-8fa5-af4503e5eff5'},
+            {alt: 'image4', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4080.jpg?alt=media&token=7ef19b40-51b6-4aca-b2b6-d950aebdcbd0'},
+            {alt: 'image5', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4083.jpg?alt=media&token=2fd8f1ee-3826-46eb-995f-86ac7641fda6'},
+            {alt: 'image6', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4084.jpg?alt=media&token=0cf65c9e-d52f-491d-840e-11a43c5d1f70'},
+            {alt: 'image7', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4085.jpg?alt=media&token=a291f227-32d8-44be-ae30-f67e25bebf1f'},
+            {alt: 'image8', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4086.jpg?alt=media&token=a917d76e-03a1-4d1f-93b7-f68491b61d8b'},
+            {alt: 'image9', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4088.jpg?alt=media&token=a47dee19-cee1-4ccc-a3d1-c9c9f85bb833'},
+            {alt: 'image10', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4089.jpg?alt=media&token=ccdf637c-b9dd-462f-a7d3-3a4fb32ed37f'},
+            {alt: 'image11', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4090.jpg?alt=media&token=4100faca-4836-46bf-b0e9-2ba295540019'},
+            {alt: 'image12', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4091.jpg?alt=media&token=fc57e36f-28bd-47c5-aa8e-822cd088c906'},
+            {alt: 'image13', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4092.jpg?alt=media&token=74d75869-278f-4f3b-bd04-9ef4419c5b93'},
+            {alt: 'image14', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4093.jpg?alt=media&token=c3efdf66-6e8e-4913-a027-413e5db4be98'},
+            {alt: 'image15', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4094.jpg?alt=media&token=3b685692-20e7-4b17-a850-4665d25f5d4f'},
+            {alt: 'image16', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4095.jpg?alt=media&token=9f76d06d-02ca-4970-82e9-459ad1f7ba49'},
+            {alt: 'image17', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4096.jpg?alt=media&token=8906c50e-9cd9-414c-bf53-55fa1eb2a400'},
+            {alt: 'image18', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4097.jpg?alt=media&token=1d2807bf-78f9-4740-9e13-c80cca55c584'},
+            {alt: 'image19', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4098.jpg?alt=media&token=a2ae568e-d258-4db4-a418-f5a87cf7cb84'},
+            {alt: 'image20', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4099.jpg?alt=media&token=a737a81f-e776-4d3d-8f99-4e833a1e10e4'},
+            {alt: 'image21', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4100.jpg?alt=media&token=4cd635f4-66d8-4971-b6e5-a8f76f63cb6d'},
+            {alt: 'image22', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4102.jpg?alt=media&token=86e6047e-7132-46a0-aafb-d4c87fdfbe6d'},
+            {alt: 'image23', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4105.jpg?alt=media&token=d8ee1dc3-59b9-4ef9-819f-0df491aeb3a3'},
+            {alt: 'image24', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4106.jpg?alt=media&token=f7966a7d-ec7b-4de7-8a3c-371e470b163d'},
+            ]
+    },
+    
+];
+
 // export const type=[{
    
 // }]

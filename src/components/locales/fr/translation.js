@@ -2,6 +2,8 @@ import { CgWebsite } from "react-icons/cg";
 import { IoHomeOutline } from "react-icons/io5";
 import { MdOutlineCleaningServices } from "react-icons/md";
 import { SlNote } from "react-icons/sl";
+import { Link, useParams } from "react-router-dom";
+import { Link as Link1 } from "react-scroll";
 import client1 from '../../../assets/images/team/01.jpg'
 import client2 from '../../../assets/images/team/02.jpg'
 import client3 from '../../../assets/images/team/03.jpg'
@@ -34,6 +36,13 @@ import croatie from '../../../assets/images/job/croatie.png'
 import italy from '../../../assets/images/job/italy.png'
 import spain from '../../../assets/images/job/spain.png'
 import facade from '../../../assets//images/job/facade.png'
+import resume from '../../../assets/images/job/resume.png'
+import recrutocean from '../../../assets/images/service/recrutocean.png'
+import recrutinter from '../../../assets/images/service/recrutinter2.png'
+import form from '../../../assets/images/form.pdf'
+
+
+
 export const clientDataFr = [
     {
         image: client1,
@@ -77,7 +86,7 @@ export const blogDataFR = [
         register:"Pour vous inscrire, cliquez simplement ici",
         resrveButton:"Réserver",
         blogetitle:"Formations Trends",
-        title:'language',
+        title:'lang',
         desc:'Ocean Connecting offers a comprehensive language learning program covering...',
         detail:'Ocean Connecting offers a comprehensive language learning program covering levels A1 to C2. It features young teachers, engaging activities, educational trips, and flexible schedules. Students benefit from regular level assessments, free access to PCs and Wi-Fi, and air-conditioned classrooms. The program also provides psychological monitoring and guidance, ensuring a supportive learning environment.this program aims to enhance language proficiency through interactive and diverse methods, accommodating different learning paces and needs.',
         type: 'language',
@@ -277,8 +286,8 @@ export const serviceDataFR = [
         Servicetitle:"Découvrez nos services",
         title:'Formation',
         title2:"NOS SERVICES",
-        desc2:"Nous proposons des formations professionnelles adaptées à tous les niveaux, un service de nettoyage de glace pour assurer sécurité et propreté en hiver, ainsi qu'une domiciliation pour offrir à votre entreprise une adresse prestigieuse et une gestion administrative simplifiée.",
-        desc: "Ceci est requis lorsque, par exemple, le texte final n'est pas encore disponible.",
+        desc2:"Nous proposons une formation professionnelle adaptée à tous les niveaux, un service de nettoyage des façades pour assurer la sécurité et la propreté en hiver, ainsi qu'une adresse prestigieuse et une gestion administrative simplifiée pour votre entreprise.",
+        desc: "Boostez vos compétences grâce à des formations sur mesure dispensées par des professionnels expérimentés. Nos formateurs experts proposent des programmes personnalisés pour vous aider à atteindre vos objectifs en toute confiance et efficacement.",
         image:service1,
         para1 :'Service de Formation',
         desc_para1 :"Nous offrons des formations professionnelles de haute qualité, adaptées à tous les niveaux d'expertise. Nos programmes sont conçus pour fournir des compétences pratiques et théoriques, vous permettant de progresser dans votre carrière et d'atteindre vos objectifs professionnels. Que vous soyez débutant ou expert, nos formateurs expérimentés vous accompagneront tout au long de votre parcours d'apprentissage.",
@@ -290,13 +299,15 @@ export const serviceDataFR = [
         desc_para4:"Chaque formation commence par une analyse des besoins, suivie d'un programme personnalisé dispensé par des experts. Nous combinons théorie et pratique pour garantir une assimilation efficace des connaissances.",
         para5:"Valeur Ajoutée",
         desc_para5:"Nos formations se distinguent par leur flexibilité et leur approche pratique, intégrant les dernières tendances et technologies pour offrir des solutions pertinentes et immédiatement applicables sur le terrain.",
-        Button:"GET FORMATION",
+        Bouton : "Apprendre encore plus",
+        link:<Link to={"/formation"} className="text-sky-500" >Obtenez une formation <i className="mdi mdi-chevron-right align-middle"></i></Link>,
+
     },
     {
         id : 2 ,
         icon:<MdOutlineCleaningServices/>,
         title:'Nettoyage des Façades',
-        desc:"Ceci est requis lorsque, par exemple, le texte final n'est pas encore disponible.",
+        desc:"Améliorez l’apparence et la longévité de votre bâtiment grâce à des services professionnels de nettoyage de façade. Assurez-vous que votre propriété fasse une bonne première impression, reflétant la qualité et le professionnalisme de votre entreprise.",
         image:service2,
         para1 :'Service de Nettoyage des Façades',
         desc_para1 :"Notre service de nettoyage des façades vous garantit des résultats impeccables pour redonner éclat et propreté à vos bâtiments. Grâce à des techniques professionnelles et des produits respectueux de l'environnement, nous éliminons efficacement saletés, moisissures et polluants. Faites confiance à notre expertise pour préserver l'apparence et la durabilité de vos façades.",
@@ -308,16 +319,18 @@ export const serviceDataFR = [
         desc_para4:"Nous utilisons des techniques de nettoyage adaptées à chaque type de surface, incluant le lavage haute pression et l'utilisation de produits écologiques. Nous commençons par une évaluation détaillée, suivie d'un nettoyage approfondi et d'un contrôle qualité final.",
         para5:"Valeur Ajoutée",
         desc_para5:"Notre expertise en nettoyage des façades garantit des résultats durables et une intervention rapide, tout en respectant les normes environnementales et de sécurité les plus strictes.",
-        Button :"CONTACT US",
+        Bouton : "Apprendre encore plus",
+        link:<Link1 to="contact" className="text-sky-500"smooth={true} duration={1000} activeClass='active' spy={true}>Contactez-nous <i className="mdi mdi-chevron-right align-middle"></i></Link1>,
+
     },
 
     {
         id : 3 ,
         icon:<IoHomeOutline/>,
-        title:'Domiciliation',
-        desc:"Ceci est requis lorsque, par exemple, le texte final n'est pas encore disponible.",
+        title:" Domiciliation d'Entreprise ",
+        desc:" Profitez d'une domiciliation d'entreprise professionnelle à Agadir pour renforcer votre image corporative et votre présence sur le marché. ",
         image:service3,
-        para1 :'Service de Domiciliation',
+        para1 :"Service de Domiciliation d'Entreprise ",
         desc_para1 :"Notre service de domiciliation vous offre une adresse professionnelle prestigieuse pour votre entreprise. En plus de simplifier la gestion administrative, nous assurons la réception de votre courrier et vous fournissons un support complet pour toutes vos démarches. Faites de notre adresse celle de votre entreprise pour renforcer votre image et optimiser votre organisation.",
         para2 :"Avantages et Bénéfices",
         desc_para2 :"En utilisant notre adresse, vous bénéficiez d'une image professionnelle renforcée et d'une gestion simplifiée de votre correspondance, tout en conservant votre vie privée.",
@@ -327,13 +340,15 @@ export const serviceDataFR = [
         desc_para4:"Nous offrons un processus d'enregistrement facile, incluant la réception et la gestion du courrier, ainsi que des options de redirection selon vos besoins spécifiques. Vous pouvez accéder à vos documents en toute sécurité via notre plateforme en ligne.",
         para5:"Valeur Ajoutée",
         desc_para5:"Notre service se distingue par sa flexibilité, son support personnalisé et sa capacité à offrir une adresse prestigieuse qui renforce la crédibilité de votre entreprise tout en optimisant vos opérations administratives. ",
-        Button:"CONTACT US",
+        Bouton : "Apprendre encore plus",
+        link:<Link1 to="contact" className="text-sky-500"smooth={true} duration={1000} activeClass='active' spy={true}>Contactez-nous <i className="mdi mdi-chevron-right align-middle"></i></Link1>,
+
     },  
     {
         id : 4 ,
         title:'Developpement',
         icon:<CgWebsite/>,
-        desc:"Ceci est requis lorsque, par exemple, le texte final n'est pas encore disponible.",
+        desc:"Boostez votre présence en ligne avec nos services experts en développement Web. Nos fournisseurs individuels créent des sites Web sur mesure et réactifs qui correspondent parfaitement à votre marque et à vos objectifs commerciaux.",
         image:service4,
         para1 :'Service de Developpement',
         desc_para1 :"Nous proposons un service complet de création de sites web sur mesure pour répondre à vos besoins spécifiques. De la conception à la mise en ligne, notre équipe d'experts utilise les dernières technologies pour développer des sites esthétiques, fonctionnels et optimisés pour le référencement. Que vous ayez besoin d'un site vitrine, d'une boutique en ligne ou d'une plateforme personnalisée, nous sommes là pour réaliser votre projet.",
@@ -345,7 +360,9 @@ export const serviceDataFR = [
         desc_para4:"Nous commençons par une analyse approfondie de vos besoins, suivie de la création d’un design personnalisé. Ensuite, nous développons et testons le site pour garantir une performance optimale avant de le lancer.",
         para5:"Valeur Ajoutée",
         desc_para5:"Notre approche personnalisée et notre expertise technique garantissent des résultats qui non seulement répondent à vos attentes mais les dépassent, en offrant un site web fonctionnel, esthétiquement plaisant et optimisé pour les moteurs de recherche.",
-        Button:"CONTACT US",
+        Bouton : "Apprendre encore plus",
+        link:<Link1 to="contact" className="text-sky-500"smooth={true} duration={1000} activeClass='active' spy={true}>Contactez-nous <i className="mdi mdi-chevron-right align-middle"></i></Link1>,
+
     }, 
     {
         id : 5 ,
@@ -362,12 +379,15 @@ export const serviceDataFR = [
         desc_para4:"Nous utilisons des méthodes de recherche avancées et un réseau mondial pour sourcer des candidats. Le processus inclut une évaluation approfondie des compétences, des entretiens ciblés et une gestion proactive des candidatures pour garantir une correspondance optimale.",
         para5:"Valeur Ajoutée",
         desc_para5:"Notre expertise en recrutement international permet de trouver des talents adaptés aux exigences spécifiques de votre entreprise, tout en offrant un service personnalisé et un soutien tout au long du processus de recrutement pour assurer une intégration réussie. ",
-        Button:"OBTENIR UN EMPLOI",
+
+        link:<Link to="/jobs/all" className="text-sky-500" >Obtenez un emploi à l'international <i className="mdi mdi-chevron-right align-middle"></i></Link>,
+
+
     },  
 ]
 export const Titlefr=[
     {
-        Title:"Etudes Formation Recrutements",
+        Title:"Études Formation Recrutement National et International",
         button:"Contactez-nous"
     }
 ]
@@ -376,11 +396,13 @@ export const NavbarFR=[{
     Services:"Services",
     Formation:"Formation",
     Jobs:"Emplois",
+    gallery:"GALERIE",
     About:"À propos",
     Contact_us:"Contactez-nous"
 }
 ]
 export const AboutFR=[{
+    h1 : " À propos d'Ocean Connecting  ",
     ask:"Qui sommes-nous ?",
     title:"Nous sommes spécialisés dans le placement international et l'assistance documentaire, offrant un soutien sur mesure en plusieurs langues pour vous aider à naviguer dans les opportunités de carrière internationales.",
     desc:"Notre entreprise fournit des services de placement international et un soutien expert en plusieurs langues. Nous aidons les clients à trouver des opportunités de carrière à l'étranger et offrons une aide complète pour la préparation de documents en diverses langues. Notre objectif est de faciliter une transition fluide et efficace vers des carrières internationales.",
@@ -392,141 +414,164 @@ export const recruitmentFR = [
         h1:"Recrutement",
         title: 'Recrutement International',
         desc: 'Relier les talents mondiaux aux opportunités au-delà des frontières. Nous simplifions le recrutement international pour vous aider à trouver les meilleurs candidats dans le monde entier.',
-        image: service5,
+        image:recrutinter,
         title2: 'Services de Recrutement International',
         desc2: 'Notre entreprise se spécialise dans la mise en relation des meilleurs talents avec des opportunités mondiales. Nous proposons des solutions complètes de recrutement international, y compris la recherche, la présélection et le placement des candidats. En tirant parti de notre vaste réseau et de notre expertise sur divers marchés, nous aidons les entreprises à trouver les talents adéquats pour stimuler leur croissance et leur succès au-delà des frontières.',
           button:"Postulez maintenant",
-          type:"international"
+          type:"International"
     },
     {
         id: 2,
         title: 'Recrutement OceanConnecting',
         desc: 'Connecter les meilleurs talents avec des organisations de premier plan à l’échelle nationale. Rationaliser votre processus de recrutement pour des résultats efficaces et efficients.',
-        image: formation6,
+        image:recrutocean,
         title2: 'Recrutement OceanConnecting',
         desc2: 'Nous sommes ravis de vous inviter à postuler pour un poste dans notre entreprise. Rejoignez notre équipe et contribuez à notre environnement dynamique tout en faisant avancer votre carrière. Explorez des opportunités de croissance, d’innovation et d’impact avec nous.',
          button:"Postulez maintenant",
-         type:"national"
+         type:"National"
     },
 ];
 export const jobsFR = [
     {
         id: 1,
+        image: resume,
+        title: "Demande de contrat de travail à l'étranger ",
+        type: 'International',
+        menu1: "Documents requis : ",
+        secteur: " L'acte judiciaire (Apostil) est délivré par le tribunal et traduit en anglais par le ministère des affaires étrangères. ",
+        menu2: "Images requises :",
+        niveaulanguage: "Une photo de vous, une copie de votre passeport, une vidéo et une photo de vous en train d'exercer la profession que vous souhaitez exercer." ,
+        menu6:"Plus d'informations :",
+        more:' Vous pouvez obtenir le formulaire en cliquant sur le bouton de Télécharger , 🙏🏻 et pour vous faciliter la tâche, vous pouvez nous envoyer les documents originaux (PDF).',
+        action : 'Télécharger',
+        link: form ,    
+    },
+    
+    {
+        id: 2,
         job:"Agences de placement",
         ocean:"Ocean connect",
         image: croatie,
         title: 'Contrat de travail en Croatie',
         type: 'International',
-        secteur: 'Construction/ferronnerie/charpenterie/plomberie/mécanique électrique/climatisation/chauffeur/percepteur/hôtel',
-        niveaulanguage: 'La langue n\'est pas nécessaire.',
-        timevisa: 'La durée d\'obtention d\'un visa est de 5 mois.',
-        contratime: 'Contrat de travail d\'un an.',
-        pricecontrat: 'Le prix du contrat est de 6 millions.',
-        more: 'Nous fournissons le logement, la médecine, la possibilité de renouveler le contrat pour une période de 5 ans, et l\'assistance pour obtenir une carte de résident.',
-        link: "https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D9%83%D8%B1%D9%88%D8%A7%D8%AA%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+        secteur: 'Construction / Forge / Menuiserie / Peinture / Mécanicien électrique / Climatisation / Chauffeur Permi D / Boucher / Hôtellerie.',
+        niveaulanguage: "La langue n'est pas nécessaire.",
+        timevisa: 'La durée du visa est de 5 mois.',
+        contratime: 'Contrat de travail de 1 an.',
+        pricecontrat: 'Le prix du contrat est de 60,000 DH.',
+        more: 'Le contrat prévoit un logement et un traitement médical gratuits...',
+        link: "https://api.whatsapp.com/send/?phone=%2B212657236635&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D9%83%D8%B1%D9%88%D8%A7%D8%AA%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
         menu1: "Secteur :",
-            menu2: "Niveau Langue :",
-            menu3: "Temps de Visa :",
-            menu4: "Contrat :",
-            menu5: "Prix du Contrat :",
-            menu6: "Plus :",
-         
+        menu2: "Niveau de langue  :",
+        menu3: "Durée du visa  :",
+        menu4: "Le contrat :",
+        menu5: "Prix du contrat  :",
+        menu6: "Plus d'informations :",
+        action:'Demande',
+
           
     },
     {
-        id: 2,
+        id: 3,
         image: allemagne,
         title: 'Contrat de travail en Allemagne',
         type: 'International',
-        secteur: 'Santé et soins/hôtels/programming',
-        niveaulanguage: 'Langue requise B1.',
-        timevisa: 'La durée d\'obtention d\'un visa est de 8 mois.',
-        contratime: 'Contrat de travail d\'un an.',
-        pricecontrat: 'Le prix du contrat est de 8 millions.',
-        more: 'Nous fournissons le logement, la médecine, la possibilité de renouveler le contrat pour une période de 5 ans, et l\'assistance pour obtenir une carte de résident.',
-        link: "https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A3%D9%84%D9%85%D8%A7%D9%86%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
-        menu1: "Secteur :",
-        menu2: "Niveau Langue :",
-        menu3: "Temps de Visa :",
-        menu4: "Contrat :",
-        menu5: "Prix du Contrat :",
-        menu6: "Plus :"
-    },
-    {
-        id: 3,
-        image: belgium,
-        title: 'Contrat de travail en Belgique',
-        type: 'International',
-        secteur: 'Santé et soins/hôtels/programming',
+        secteur: ' Santé et soins infirmiers / Hôtels / Programmation',
         niveaulanguage: 'Langue B1 nécessaire.',
-        timevisa: 'La durée d\'obtention d\'un visa est de 8 mois.',
-        contratime: 'Contrat de travail d\'un an.',
-        pricecontrat: 'Le prix du contrat est de 6 millions.',
-        more: 'Nous fournissons le logement, la médecine, la possibilité de renouveler le contrat pour une période de 5 ans, et l\'assistance pour obtenir une carte de résident.',
-        link: "https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A8%D9%84%D8%AC%D9%8A%D9%83%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+        timevisa: 'La durée du visa est de 8 mois.',
+        contratime: 'Contrat de travail de 1 an.',
+        pricecontrat: 'Le prix du contrat est de 80,000 DH.',
+        more: 'Le contrat prévoit un logement et un traitement médical gratuits...',
+        link: "https://api.whatsapp.com/send/?phone=%2B212657236635&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A3%D9%84%D9%85%D8%A7%D9%86%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
         menu1: "Secteur :",
-        menu2: "Niveau Langue :",
-        menu3: "Temps de Visa :",
-        menu4: "Contrat :",
-        menu5: "Prix du Contrat :",
-        menu6: "Plus :"
+        menu2: "Niveau de langue  :",
+        menu3: "Durée du visa  :",
+        menu4: "Le contrat :",
+        menu5: "Prix du contrat  :",
+        menu6: "Plus d'informations :",
+        action : 'Demande',
+
     },
     {
         id: 4,
-        image: italy,
-        title: 'Contrat de travail en Italie',
+        image: belgium,
+        title: 'Contrat de travail en Belgique',
         type: 'International',
-        secteur: 'Santé et soins/hôtels/agriculture',
+        secteur: 'Santé et soins infirmiers / Hôtels / Programmation  ',
         niveaulanguage: 'Langue B1 nécessaire.',
-        timevisa: 'La durée d\'obtention d\'un visa est de 8 mois.',
-        contratime: 'Contrat de travail d\'un an.',
-        pricecontrat: 'Le prix du contrat est de 6 millions.',
-        more: 'Nous fournissons le logement, la médecine, la possibilité de renouveler le contrat pour une période de 5 ans, et l\'assistance pour obtenir une carte de résident.',
-        link: "https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A5%D9%8A%D8%B7%D8%A7%D9%84%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+        timevisa: 'La durée du visa est de 8 mois.',
+        contratime: 'Contrat de travail de 1 an.',
+        pricecontrat: 'Le prix du contrat est de 60,000 DH.',
+        more: 'Le contrat prévoit un logement et un traitement médical gratuits...',
+        link: "https://api.whatsapp.com/send/?phone=%2B212657236635&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A8%D9%84%D8%AC%D9%8A%D9%83%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
         menu1: "Secteur :",
-        menu2: "Niveau Langue :",
-        menu3: "Temps de Visa :",
-        menu4: "Contrat :",
-        menu5: "Prix du Contrat :",
-        menu6: "Plus :"
+        menu2: "Niveau de langue  :",
+        menu3: "Durée du visa  :",
+        menu4: "Le contrat :",
+        menu5: "Prix du contrat :",
+        menu6: "Plus d'informations :",
+        action : 'Demande',
     },
     {
         id: 5,
-        image: spain,
-        title: 'Contrat de travail en Espagne',
+        image: italy,
+        title: 'Contrat de travail en Italie',
         type: 'International',
-        secteur: 'Santé et soins/hôtels/agriculture',
+        secteur: 'Santé et soins infirmiers / Hôtels / Agriculture.',
         niveaulanguage: 'Langue B1 nécessaire.',
-        timevisa: 'La durée d\'obtention d\'un visa est de 8 mois.',
-        contratime: 'Contrat de travail d\'un an.',
-        pricecontrat: 'Le prix du contrat est de 6 millions.',
-        more: 'Nous fournissons le logement, la médecine, la possibilité de renouveler le contrat pour une période de 5 ans, et l\'assistance pour obtenir une carte de résident.',
-        link: "https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A5%D8%B3%D8%A8%D8%A7%D9%86%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+        timevisa: 'La durée du visa est de 8 mois.',
+        contratime: 'Contrat de travail de 1 an.',
+        pricecontrat: 'Le prix du contrat est de 60,000 DH.',
+        more: 'Le contrat prévoit un logement et un traitement médical gratuits...',
+        link: "https://api.whatsapp.com/send/?phone=%2B212657236635&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A5%D9%8A%D8%B7%D8%A7%D9%84%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
         menu1: "Secteur :",
-        menu2: "Niveau Langue :",
-        menu3: "Temps de Visa :",
-        menu4: "Contrat :",
+        menu2: "Niveau de langue  :",
+        menu3: "Durée du visa  :",
+        menu4: "Le contrat :",
         menu5: "Prix du Contrat :",
-        menu6: "Plus :"
+        menu6: "Plus d'informations :",
+        action : 'Demande',
     },
     {
         id: 6,
-        image: facade,
-        title: 'Responsable Produit Senior',
-        type: 'National',
-        secteur: 'Santé et soins/hôtels/programming',
-        niveaulanguage: 'Langue requise B1.',
-        timevisa: 'La durée d\'obtention d\'un visa est de 8 mois.',
-        contratime: 'Contrat de travail d\'un an.',
-        pricecontrat: 'Le prix du contrat est de 8 millions.',
-        more: 'Nous fournissons le logement, la médecine, la possibilité de renouveler le contrat pour une période de 5 ans, et l\'assistance pour obtenir une carte de résident.',
-        link: "#",
+        image: spain,
+        title: 'Contrat de travail en Espagne',
+        type: 'International',
+        secteur: 'Santé et soins infirmiers / Hôtels / Agriculture.',
+        niveaulanguage: 'Langue B1 nécessaire.',
+        timevisa: 'La durée du visa est de 8 mois.',
+        contratime: 'Contrat de travail de 1 an.',
+        pricecontrat: 'Le prix du contrat est de 60,000 DH.',
+        more: 'Le contrat prévoit un logement et un traitement médical gratuits...',
+        link: "https://api.whatsapp.com/send/?phone=%2B212657236635&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A5%D8%B3%D8%A8%D8%A7%D9%86%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
         menu1: "Secteur :",
-        menu2: "Niveau Langue :",
-        menu3: "Temps de Visa :",
-        menu4: "Contrat :",
+        menu2: "Niveau de langue  :",
+        menu3: "Durée du visa  :",
+        menu4: "Le contrat :",
         menu5: "Prix du Contrat :",
-        menu6: "Plus :"
+        menu6: "Plus d'informations :",
+        action : 'Demande',
+    },
+    {
+        id: 7,
+        image: facade,
+        title: 'Nettoyant pour façades de bâtiments',
+        type: 'National',
+        secteur: 'service de nettoyage',
+        niveaulanguage: " La langue n'est pas nécessaire.",
+        timevisa: 'niveau BAC.',
+        contratime: 'contrat CDI - CDD .',
+        pricecontrat: 'AGADIR .',
+        more: " Connaissance des produits chimiques - Tolérance psychologique - Bonne communication - Aptitude à utiliser l'équipement - Précision et souci du détail - Travail en hauteur - Aptitude physique - Conscience de la sécurité ",
+        link: "#",
+        menu1:"Secteur :",
+        menu2:"Niveau de langue  :",
+        menu3:"Niveau d'éducation:",
+        menu4:"Type Contrat :",
+        menu5:"Région :",
+        menu6:"Compétences clés :",
+        menu6: "Plus d'informations :",
+        action : 'Demande',
     },
     // Assurez-vous que chaque offre d'emploi a un identifiant unique
 ];
@@ -545,6 +590,78 @@ export const placementfr=[
     }
     
 ]
+export const GalleryFR=[
+    {
+        id:1,
+        title:"Bienvenue dans notre galerie !",
+        desc:"Découvrez la créativité et la passion qui se cachent derrière notre travail à travers ces images. Appréciez la vue !",
+        image:"https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F2.jpg?alt=media&token=88735b9b-07a6-4e0b-b952-4389f2c48b15",
+        numberimage:"10 images",
+        datealbum:" 12-12-2024",
+        titlealbum:"Événement - Infirmières",
+        img: [
+            {alt: 'image1', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F1.jpg?alt=media&token=84676c79-346a-4ce2-8197-902ac615420a'},
+            {alt: 'image2', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F2.jpg?alt=media&token=88735b9b-07a6-4e0b-b952-4389f2c48b15'},
+            {alt: "image3", url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F3.jpg?alt=media&token=158d9836-541c-48b5-8692-0476c1c2c988'},
+            {alt: "image4", url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F4.jpg?alt=media&token=0d91d194-9a78-4ac9-b462-7da342a2c761'},
+            {alt: "image5", url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F5.jpg?alt=media&token=517637e2-1209-461b-a6a9-a583c65e7ad7'},
+            {alt: "image6", url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F7.jpg?alt=media&token=1ea2e5cb-26ef-45c2-976b-dd1676781f3f'},
+            {alt: "image7", url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F7.jpg?alt=media&token=1ea2e5cb-26ef-45c2-976b-dd1676781f3f'},
+            {alt: "image8", url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F8.jpg?alt=media&token=e5a2ba1d-465a-4add-8f7b-0fe513e55eb2'},
+            {alt: "image9", url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F9.jpg?alt=media&token=3e008c82-f4d5-4731-8125-701514fca796'},
+            {alt: "image10", url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F10.jpg?alt=media&token=94188e51-9c92-4eb7-86c2-ac9994bc0899'},
+        ]
+    },
+    {
+        id:2,
+        image:"https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FglassCleaning-team%2F1.png?alt=media&token=1f6f3b17-5d66-43f1-9af6-e355e3b1e096",
+        numberimage:"5 images",
+        datealbum:"12-12-2024",
+        titlealbum:"équipe de nettoyage des vitres ",
+        img: [
+            {alt: 'image1', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FglassCleaning-team%2F6.jpg?alt=media&token=ac60ba0c-fa73-41ac-89a2-cd3d2dae1d7c'},
+            {alt: 'image2', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FglassCleaning-team%2F2.jpg?alt=media&token=1c1bdf81-1c94-4ff7-9f30-2f3b76ebf9c0'},
+            {alt: 'image3', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FglassCleaning-team%2F3.jpg?alt=media&token=8c041f49-c424-497e-b7df-562be8dd2cef'},
+            {alt: 'image4', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FglassCleaning-team%2F4.jpg?alt=media&token=30010bb7-9d28-4f51-a78d-3e412424d250'},
+            {alt: 'image5', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FglassCleaning-team%2F5.jpg?alt=media&token=fd4d31a0-2761-4b2a-bc0b-c5cd2cbc459d'},
+            ]
+    },
+    {
+        id:3,
+        image:"https://i.imgur.com/alQ7GWW.jpeg",
+        numberimage:"27 images",
+        datealbum:"12-12-2024",
+        titlealbum:"Photos du centre ",
+        img: [
+            {alt: 'image1', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4075.jpg?alt=media&token=0fbbc107-22b2-4fed-bbfb-f680799d7075'},
+            {alt: 'image2', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4076.jpg?alt=media&token=4c3ee7dd-e27e-468d-8917-980f9423b292'},
+            {alt: 'image3', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4079.jpg?alt=media&token=da9ea1e6-91f5-4e5d-8fa5-af4503e5eff5'},
+            {alt: 'image4', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4080.jpg?alt=media&token=7ef19b40-51b6-4aca-b2b6-d950aebdcbd0'},
+            {alt: 'image5', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4083.jpg?alt=media&token=2fd8f1ee-3826-46eb-995f-86ac7641fda6'},
+            {alt: 'image6', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4084.jpg?alt=media&token=0cf65c9e-d52f-491d-840e-11a43c5d1f70'},
+            {alt: 'image7', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4085.jpg?alt=media&token=a291f227-32d8-44be-ae30-f67e25bebf1f'},
+            {alt: 'image8', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4086.jpg?alt=media&token=a917d76e-03a1-4d1f-93b7-f68491b61d8b'},
+            {alt: 'image9', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4088.jpg?alt=media&token=a47dee19-cee1-4ccc-a3d1-c9c9f85bb833'},
+            {alt: 'image10', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4089.jpg?alt=media&token=ccdf637c-b9dd-462f-a7d3-3a4fb32ed37f'},
+            {alt: 'image11', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4090.jpg?alt=media&token=4100faca-4836-46bf-b0e9-2ba295540019'},
+            {alt: 'image12', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4091.jpg?alt=media&token=fc57e36f-28bd-47c5-aa8e-822cd088c906'},
+            {alt: 'image13', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4092.jpg?alt=media&token=74d75869-278f-4f3b-bd04-9ef4419c5b93'},
+            {alt: 'image14', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4093.jpg?alt=media&token=c3efdf66-6e8e-4913-a027-413e5db4be98'},
+            {alt: 'image15', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4094.jpg?alt=media&token=3b685692-20e7-4b17-a850-4665d25f5d4f'},
+            {alt: 'image16', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4095.jpg?alt=media&token=9f76d06d-02ca-4970-82e9-459ad1f7ba49'},
+            {alt: 'image17', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4096.jpg?alt=media&token=8906c50e-9cd9-414c-bf53-55fa1eb2a400'},
+            {alt: 'image18', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4097.jpg?alt=media&token=1d2807bf-78f9-4740-9e13-c80cca55c584'},
+            {alt: 'image19', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4098.jpg?alt=media&token=a2ae568e-d258-4db4-a418-f5a87cf7cb84'},
+            {alt: 'image20', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4099.jpg?alt=media&token=a737a81f-e776-4d3d-8f99-4e833a1e10e4'},
+            {alt: 'image21', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4100.jpg?alt=media&token=4cd635f4-66d8-4971-b6e5-a8f76f63cb6d'},
+            {alt: 'image22', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4102.jpg?alt=media&token=86e6047e-7132-46a0-aafb-d4c87fdfbe6d'},
+            {alt: 'image23', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4105.jpg?alt=media&token=d8ee1dc3-59b9-4ef9-819f-0df491aeb3a3'},
+            {alt: 'image24', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4106.jpg?alt=media&token=f7966a7d-ec7b-4de7-8a3c-371e470b163d'},
+            ]
+    },
+    
+]
+
 
 
 

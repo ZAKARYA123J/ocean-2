@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate, Link } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import Navbar from '../navbar';
 import Footer from '../footer';
 import { FaAngleRight } from "react-icons/fa";
 import Whatp from '../WhatsAppFloatingButton';
 import { useTranslation } from 'react-i18next';
 
-// Function to dynamically load job data based on the selected language
 const loadClientData = (lang) => {
   switch (lang) {
     case 'fr':
@@ -38,9 +37,7 @@ const JobListings = () => {
   const jobTypes = [...new Set(jobs.map(job => job.type)), 'All'];
 
   // Filter jobs based on selected type
-  const filteredJobs = selectedType === 'All'
-    ? jobs
-    : jobs.filter(job => job.type === selectedType);
+  const filteredJobs = selectedType === 'All' ? jobs : jobs.filter(job => job.type === selectedType);
 
   // Effect to set the selected type based on URL parameter
   useEffect(() => {
@@ -60,62 +57,71 @@ const JobListings = () => {
 
   return (
     <>
-      <div className="p-10 bg-gray-100">
-        <Navbar />
-     
-          {filteredJobs.map((item, index) => (
-                       <h2 className="text-3xl font-bold text-black mb-4 mt-20">
-                       {t(item.job)} <span className="text-3xl font-bold text-blue-600">{t(item.ocean)}</span>
-                     </h2>
-                    ))}
-        {/* Dropdown for selecting job type */}
-        <div className="mb-8 flex justify-center">
-          <select
-            value={selectedType}
-            onChange={handleTypeChange}
-            className="p-2 w-full max-w-md border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-          >
-            {jobTypes.map((type) => (
-              <option key={type} value={type}>
-                {type}
-              </option>
-            ))}
-          </select>
-        </div>
+      <Navbar />
+      <section className="bg-gray-100 py-16">
+        <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
+          {/* Page Title */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-800 mb-2">{t('Job Listings')}</h2>
+            <p className="text-gray-600">{t('Find your dream job with us')}</p>
+          </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-3 gap-8 p-3">
-          {filteredJobs.map((job) => (
-            <div key={job.id} className="flex flex-col lg:flex-row bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
-              <div className="lg:w-1/4">
-                <img
-                  className="w-full h-32 lg:h-full object-cover"
-                  src={job.image}
-                  alt={`${job.title} company logo`}
-                />
-              </div>
-              <div className="p-4 flex flex-col justify-between lg:w-3/4">
-                <div>
-                  <h3 className="text-blue-600 font-bold text-lg mb-1">{t(job.title)}</h3>
-                  <p className="text-gray-600 text-sm mb-1"><strong>{t(job.menu1)}</strong> {t(job.secteur)}</p>
-                  <p className="text-gray-600 text-sm mb-1"><strong>{t(job.menu2)}</strong> {t(job.niveaulanguage)}</p>
-                  <p className="text-gray-600 text-sm mb-1"><strong>{t(job.menu3)}</strong> {t(job.timevisa)}</p>
-                  <p className="text-gray-600 text-sm mb-1"><strong>{t(job.menu4)}</strong> {t(job.contratime)}</p>
-                  <p className="text-gray-600 text-sm mb-3"><strong>{t(job.menu5)}</strong> {t(job.pricecontrat)}</p>
-                  <p className="text-gray-600 text-sm mb-3"><strong>{t(job.menu6)}</strong> {t(job.more)}</p>
+          {/* Dropdown for selecting job type */}
+          <div className="mb-10 flex justify-center">
+            <select
+              value={selectedType}
+              onChange={handleTypeChange}
+              className="p-3 w-full max-w-md border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
+            >
+              {jobTypes.map((type) => (
+                <option key={type} value={type}>
+                  {type}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          {/* Job Listings */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredJobs.map((job) => (
+              <div
+                key={job.id}
+                className="flex flex-col bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg"
+              >
+                <div className="h-40 bg-gray-200">
+                  <img
+                    className="w-full h-full object-cover"
+                    src={job.image}
+                    alt={`${job.title} company logo`}
+                  />
                 </div>
-                <div className="flex items-center justify-between">
-                 <p className="text-blue-600 font-semibold text-sm">{job.type}</p>
-                 {/* if  (job.id === 1 ) { */}
-                 <Link to={`${job.link}`} className="inline-flex items-center justify-center px-3 py-2 bg-blue-500 text-white text-sm font-semibold rounded-md shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300">
-                   <span>{job.action}</span>
-                           <FaAngleRight className="ml-2" />
-                  </Link>
+                <div className="p-6 flex flex-col justify-between flex-1">
+                  <div>
+                    <h3 className="text-blue-600 font-bold text-lg mb-1">{t(job.title)}</h3>
+                    <p className="text-gray-600 text-sm mb-1"><strong>{t(job.menu1)}:</strong> {t(job.secteur)}</p>
+                    <p className="text-gray-600 text-sm mb-1"><strong>{t(job.menu2)}:</strong> {t(job.niveaulanguage)}</p>
+                    <p className="text-gray-600 text-sm mb-1"><strong>{t(job.menu3)}:</strong> {t(job.timevisa)}</p>
+                    <p className="text-gray-600 text-sm mb-1"><strong>{t(job.menu4)}:</strong> {t(job.contratime)}</p>
+                    <p className="text-gray-600 text-sm mb-1"><strong>{t(job.menu5)}:</strong> {t(job.pricecontrat)}</p>
+                    <p className="text-gray-600 text-sm"><strong>{t(job.menu6)}:</strong> {t(job.more)}</p>
+                  </div>
+                  <div className="flex items-center justify-between mt-4">
+                    <span className="text-blue-600 font-semibold text-sm">{job.type}</span>
+                    <a
+                      href={job.link}
+                      download="form"
+                      className="inline-flex items-center px-4 py-2 bg-blue-500 text-white text-sm font-semibold rounded-md shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300 transition"
+                    >
+                      <span>{t(job.action)}</span>
+                      <FaAngleRight className="ml-2" />
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
       <Whatp />
       <Footer />
     </>

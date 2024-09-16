@@ -4,33 +4,7 @@ import { Link } from "react-router-dom";
 import './i18n';
 import { useTranslation } from 'react-i18next';
 
-const CTA = styled.button`
-  background-color: var(--white);
-  color: #3a86ff;
-  padding: 0.5rem 1rem;
-  margin-top: 1rem;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 15px;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  transition: transform 0.2s;
-  border: solid 1px blue;
-
-  @media only screen and (max-width: 48em) {
-    padding: 0.2rem 1rem;
-  }
-
-  &:hover {
-    transform: scale(1.1);
-  }
-
-  &:active {
-    transform: scale(0.9);
-  }
-`;
-
+// Define loadClientData function
 const loadClientData = async (lang) => {
   try {
     switch (lang) {
@@ -48,22 +22,75 @@ const loadClientData = async (lang) => {
   }
 };
 
-// const loadHTML = async (lang) => {
-//   try {
-//     switch (lang) {
-//       case 'fr':
-//         return (await import('./locales/fr/translation')).htmlFR;
-//       case 'ar':
-//         return (await import('./locales/ar/translation')).htmlAR;
-//       case 'en':
-//       default:
-//         return (await import('./locales/en/translation')).htmlEN;
-//     }
-//   } catch (error) {
-//     console.error(`Failed to load HTML for language ${lang}`, error);
-//     return [];
-//   }
-// };
+const CTA = styled.button`
+  background-color: #ffffff;
+  color: #3a86ff;
+  padding: 0.5rem 1rem;
+  margin-top: auto; /* Push button to the bottom */
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, background-color 0.2s;
+  border: solid 1px #3a86ff;
+  white-space: nowrap; /* Prevents text wrapping */
+
+  &:hover {
+    transform: scale(1.05);
+    background-color: #e0f2fe;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+`;
+
+const Card = styled.div`
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column; /* Ensure button is at the bottom */
+  justify-content: space-between; /* Pushes button to the bottom */
+  height: 100%; /* Full height for uniform card sizing */
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+`;
+
+const IconWrapper = styled.div`
+  font-size: 4rem;
+  color: #0ea5e9; /* Updated icon color */
+  margin-bottom: 10px;
+`;
+
+const Header = styled.h1`
+  font-size: 2.5rem;
+  color: #4a4a4a; /* Dark gray for headings */
+  text-align: center;
+  margin-bottom: 2rem;
+`;
+
+const ServiceWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+`;
 
 const Services = () => {
   const [serviceData, setServiceData] = useState([]);
@@ -73,8 +100,6 @@ const Services = () => {
     const fetchData = async () => {
       const data = await loadClientData(i18n.language);
       setServiceData(data);
-
-
     };
 
     fetchData();
@@ -82,44 +107,33 @@ const Services = () => {
 
   const limitedItems = serviceData.slice(0, 4);
 
-  return (      
-    <div className="bg-white-100 dark:bg-black dark:text-white py-12 sm:grid sm:place-items-center" id="services">
-      <div className="container">
+  return (
+    <div className="bg-white dark:bg-gray-900 dark:text-white py-12 sm:grid sm:place-items-center" id="services">
+      <div className="container mx-auto px-6 lg:px-8">
         {/* Header */}
-        <div className="pb-12 text-center space-y-3">
-          {serviceData.map((title, index) => (
-            <h1
-              key={index}
-              data-aos="fade-up"
-              className="text-3xl font-semibold sm:text-3xl text-violet-950 dark:text-primary"
-            >
-              {t(title.Servicetitle)}
-            </h1>
-          ))}
-        </div>
+        <Header>{t('Services')}</Header>
 
         {/* Services cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+        <ServiceWrapper>
           {limitedItems.map((skill) => (
-            <div
+            <Card
               key={skill.id}
               data-aos="fade-up"
               data-aos-delay={skill.aosDelay}
-              className="card space-y-3 sm:space-y-4 p-4"
             >
-              <div style={{ color: 'skyblue' }} className="text-4xl text-primary">
+              <IconWrapper>
                 {skill.icon}
-              </div>
-              <h1 className="text-lg font-semibold">{t(skill.title)}</h1>
-              <p className="text-gray-600 dark:text-gray-400">
+              </IconWrapper>
+              <h1 className="text-xl font-semibold mt-4 mb-2 text-gray-800 dark:text-white">{t(skill.title)}</h1>
+              <p className="text-gray-600 dark:text-gray-400 mb-4">
                 {t(skill.desc)}
               </p>
               <Link to={`/service/${skill.id}`}>
-                <CTA>{t(skill.Button)}</CTA>
+                <CTA>{t(skill.Bouton)}</CTA>
               </Link>
-            </div>
+            </Card>
           ))}
-        </div>
+        </ServiceWrapper>
       </div>
     </div>
   );

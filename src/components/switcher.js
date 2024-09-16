@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { FiSun, FiMoon } from '../assets/icons/vander';
+
 
 export default function Switcher() {
     const [scroll, setScroll] = useState(false);
@@ -27,7 +27,18 @@ export default function Switcher() {
 
     const modeChange = (e) => {
         const htmlTag = document.getElementsByTagName("html")[0];
-        htmlTag.dir = e.target.innerText === "LTR" ? "ltr" : "rtl";
+    const currentPath = window.location.pathname;
+
+    // Force LTR if on the /gallery/1 page
+    if (currentPath === "/gallery/:id") {
+        htmlTag.dir = "ltr";
+        localStorage.setItem("textDirection", "ltr");
+    } else {
+        const direction = e.target.innerText === "LTR" ? "ltr" : "rtl";
+        htmlTag.dir = direction;
+        localStorage.setItem("textDirection", direction);
+    }
+
     }
     
     const scrollTop = () => {
@@ -39,16 +50,8 @@ export default function Switcher() {
 
     return (
         <>
-            <Link to="#" onClick={() => scrollTop()} id="back-to-top" className={`back-to-top fixed text-lg rounded-full z-10 bottom-5 right-5 size-9 text-center bg-sky-500 text-white leading-9 ${scroll ? 'block' : 'hidden'}`}>
-                <i className="mdi mdi-arrow-up"></i>
-            </Link>
+         <Link to="#" onClick={()=>scrollTop()} id="back-to-top" className={`back-to-top fixed text-lg rounded-full z-10 bottom-5 right-5 size-9 text-center bg-sky-500 text-white leading-9 ${scroll ? 'block' : 'hidden' }`}><i className="mdi mdi-arrow-up"></i></Link>
 
-            <div className="fixed top-[40%] -right-3 z-50">
-                <Link to="#" id="switchRtl">
-                    <span className="py-1 px-3 relative inline-block rounded-t-md -rotate-90 bg-white dark:bg-slate-900 shadow-md dark:shadow dark:shadow-gray-800 font-medium rtl:block ltr:hidden" onClick={(e) => modeChange(e)}>LTR</span>
-                    <span className="py-1 px-3 relative inline-block rounded-t-md -rotate-90 bg-white dark:bg-slate-900 shadow-md dark:shadow dark:shadow-gray-800 font-medium ltr:block rtl:hidden" onClick={(e) => modeChange(e)}>RTL</span>
-                </Link>
-            </div>
         </>
-    );
+    )
 }
