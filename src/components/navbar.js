@@ -142,7 +142,7 @@ export default function Navbar() {
   </Link>
   {formationDropdownOpen && (
     <ul className="dropdown-menu absolute bg-white text-dark shadow-lg rounded-lg p-4 w-80 max-h-60 overflow-y-auto z-50">
-      {blogDataEN.map((service, idx) => (
+      {blogData.map((service, idx) => (
         <li className="nav-item" key={idx}>
           <Link className="nav-link" to={`/formation/${service.id}`} style={{ padding: '10px 20px', display: 'block' }}>
             {service.title}
