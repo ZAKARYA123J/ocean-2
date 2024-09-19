@@ -6,8 +6,7 @@ import LanguageSwitcher from "./LanguageSwitcher";
 import img from './ocean3.png';
 import { useTranslation } from "react-i18next";
 import { RiArrowDropDownLine } from "react-icons/ri";
-import { serviceDataEN } from "./locales/en/translation";
-import { blogDataEN } from "./locales/en/translation";
+
 const loadClientData = async (lang) => {
   try {
     switch (lang) {
@@ -28,17 +27,36 @@ const loadClientData = async (lang) => {
   }
 };
 
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 992);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => {
+      window.removeEventListener('resize', checkMobile);
+    };
+  }, []);
+
+  return isMobile;
+};
 
 export default function Navbar() {
   const [scroll, setScroll] = useState(false);
-  const [manu, setManu] = useState(false);
-  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
-  const [formationDropdownOpen, setFormationDropdownOpen] = useState(false);
-  const [jobDropdownOpen, setJobDropdownOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [dropdowns, setDropdowns] = useState({
+    servicesOpen: false,
+    formationOpen: false,
+    jobOpen: false,
+  });
   const { i18n, t } = useTranslation();
   const [navbar, setNavbar] = useState([]);
   const [serviceData, setServiceData] = useState([]);
   const [blogData, setBlogData] = useState([]);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -60,127 +78,110 @@ export default function Navbar() {
     };
   }, []);
 
-  const all = 'All';
-  const international='International'
-  const national='National'
   const location = useLocation();
   const isHomePage = location.pathname === '/';
 
-  // Function to handle click on smaller screens
-  const handleDropdownClick = (dropdownType) => {
-    if (window.innerWidth <= 992) {
-      if (dropdownType === 'services') {
-        setServicesDropdownOpen(!servicesDropdownOpen);
-        setFormationDropdownOpen(false);
-        setJobDropdownOpen(false); // Close other dropdowns
-      } else if (dropdownType === 'formation') {
-        setFormationDropdownOpen(!formationDropdownOpen);
-        setServicesDropdownOpen(false); // Close other dropdowns
-        setJobDropdownOpen(false);
-      } else if (dropdownType === 'jobs') {
-        setJobDropdownOpen(!jobDropdownOpen);
-        setServicesDropdownOpen(false); // Close other dropdowns
-        setFormationDropdownOpen(false);
-      }
-    }
+  // Function to toggle dropdowns
+  const handleDropdownToggle = (dropdownType) => {
+    setDropdowns(prevState => ({
+      ...prevState,
+      [dropdownType]: !prevState[dropdownType],
+    }));
   };
+
   return (
     <nav className={`navbar ${scroll ? 'is-sticky' : ''}`} id="navbar">
       <div className="container relative flex flex-wrap items-center justify-between">
         <Link to={"/"}>
-          <img src={img} className="inline-block" style={{ width: "120px" }} alt="" />
+          <img src={img} className="inline-block" style={{ width: "120px" }} alt="Logo" />
         </Link>
 
         <div className="nav-icons flex items-center lg_992:order-2 ms-auto md:ms-8">
-          <button className="nav-link lg:hidden"><LanguageSwitcher /></button>
+          <button className="nav-link "><LanguageSwitcher /></button>
           <button
             data-collapse="menu-collapse"
             type="button"
             className="collapse-btn inline-flex items-center ms-2 text-dark dark:text-white lg_992:hidden"
-            onClick={() => setManu(!manu)}
+            onClick={() => setMenuOpen(!menuOpen)}
           >
             <span className="sr-only">Navigation Menu</span>
             <i className="mdi mdi-menu text-[24px]"></i>
           </button>
         </div>
 
-        <div className={`navigation lg_992:order-1 lg_992:flex ms-auto ${manu ? '' : 'hidden'}`} id="menu-collapse">
+        <div className={`navigation lg_992:order-1 lg_992:flex ms-auto ${menuOpen ? '' : 'hidden'}`} id="menu-collapse">
           {navbar.map((item, index) => (
             <ul className="navbar-nav" id="navbar-navlist" key={index}>
               <li className="nav-item ms-0">
                 <Link className="nav-link" to={"/"}>{t(item.Home)}</Link>
               </li>
-              <li
-                className="nav-item ms-0 relative"
-                onMouseEnter={() => setServicesDropdownOpen(true)}
-                onMouseLeave={() => setServicesDropdownOpen(false)}
-                onClick={handleDropdownClick} // Click event for smaller screens
-              >
-                <Link className="nav-link cursor-pointer flex items-center" to="#">
+
+              {/* Services dropdown */}
+              <li className="nav-item ms-0 relative">
+                <Link
+                  className="nav-link cursor-pointer flex items-center"
+                  onClick={() => handleDropdownToggle('servicesOpen')}
+                >
                   {t(item.Services)} <RiArrowDropDownLine className="ml-1" fontSize={25}/>
                 </Link>
-               {servicesDropdownOpen && (
-  <ul className="dropdown-menu absolute bg-white text-dark shadow-lg rounded-lg p-4 w-80">
-    {serviceData.map((service, idx) => (
-      <div key={idx}>
-        
-      <li className="nav-item" >
-        <Link className="nav-link" to={`/service/${service.id}`} style={{ padding: '10px 20px', display: 'block' }}>
-
-          {service.title}
-        </Link>
-      </li>
-      </div>
-    ))}
-  </ul>
-)}
-              </li>
-              <li
-  className="nav-item ms-0 relative"
-  onMouseEnter={() => setFormationDropdownOpen(true)}
-  onMouseLeave={() => setFormationDropdownOpen(false)}
-  onClick={handleDropdownClick} // Click event for smaller screens
->
-  <Link className="nav-link cursor-pointer flex items-center" to="#">
-    {t(item.Formation)} <RiArrowDropDownLine className="ml-1" fontSize={25} />
-  </Link>
-  {formationDropdownOpen && (
-    <ul className="dropdown-menu absolute bg-white text-dark shadow-lg rounded-lg p-4 w-80 max-h-60 overflow-y-auto z-50">
-      {blogData.map((service, idx) => (
-        <li className="nav-item" key={idx}>
-          <Link className="nav-link" to={`/formation/${service.id}`} style={{ padding: '10px 20px', display: 'block' }}>
-            {service.title}
-          </Link>
-        </li>
-      ))}
-    </ul>
-  )}
-</li>
-
-<li
-                className="nav-item ms-0 relative"
-                onMouseEnter={() => setJobDropdownOpen(true)}
-                onMouseLeave={() => setJobDropdownOpen(false)}
-                onClick={() => handleDropdownClick('jobs')} // Corrected click event
-              >
-                <Link className="nav-link cursor-pointer flex items-center" to={`/jobs/${national}`}>
-                  {t(item.Jobs)} 
-                </Link>
-                {/* {jobDropdownOpen && (
-                  <ul className="dropdown-menu absolute bg-white text-dark shadow-lg rounded-lg p-4 w-60">
-                    <li className="nav-item" >
-          <Link className="nav-link" to={`/jobs/${international}`} style={{ padding: '10px 20px', display: 'block' }}>
-            International
-          </Link>
-        </li>
-                    <li className="nav-item" >
-          <Link className="nav-link" to={`/jobs/${national}`} style={{ padding: '10px 20px', display: 'block' }}>
-            National
-          </Link>
-        </li>
+                {dropdowns.servicesOpen && (
+                  <ul className={`dropdown-list ${isMobile ? 'block' : 'absolute'} bg-white text-dark shadow-lg rounded-lg p-4 w-80`}>
+                    {serviceData.map((service, idx) => (
+                      <li className="nav-item" key={idx}>
+                        <Link className="nav-link" to={`/service/${service.id}`} style={{ padding: '10px 20px', display: 'block' }}>
+                          {service.title}
+                        </Link>
+                      </li>
+                    ))}
                   </ul>
-                )} */}
+                )}
               </li>
+
+              {/* Formation dropdown */}
+              <li className="nav-item ms-0 relative">
+                <Link
+                  className="nav-link cursor-pointer flex items-center"
+                  onClick={() => handleDropdownToggle('formationOpen')}
+                >
+                  {t(item.Formation)} <RiArrowDropDownLine className="ml-1" fontSize={25}/>
+                </Link>
+                {dropdowns.formationOpen && (
+                  <ul className={`dropdown-list ${isMobile ? 'block' : 'absolute'} bg-white text-dark shadow-lg rounded-lg p-4 w-80 max-h-60 overflow-y-auto`}>
+                    {blogData.map((service, idx) => (
+                      <li className="nav-item" key={idx}>
+                        <Link className="nav-link" to={`/formation/${service.id}`} style={{ padding: '10px 20px', display: 'block' }}>
+                          {service.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+
+              {/* Jobs dropdown */}
+              <li className="nav-item ms-0 relative">
+                <Link
+                  className="nav-link cursor-pointer flex items-center"
+                  onClick={() => handleDropdownToggle('jobOpen')}
+                >
+                  {t(item.Jobs)}
+                </Link>
+                {dropdowns.jobOpen && (
+                  <ul className={`dropdown-list ${isMobile ? 'block' : 'absolute'} bg-white text-dark shadow-lg rounded-lg p-4 w-80`}>
+                    <li className="nav-item">
+                      <Link className="nav-link" to={`/jobs/international`} style={{ padding: '10px 20px', display: 'block' }}>
+                        International
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link className="nav-link" to={`/jobs/national`} style={{ padding: '10px 20px', display: 'block' }}>
+                        National
+                      </Link>
+                    </li>
+                  </ul>
+                )}
+              </li>
+
               <li className="nav-item ms-0">
                 <Link to={`/gallery`} className="nav-link">{t(item.gallery)}</Link>
               </li>
@@ -212,18 +213,13 @@ export default function Navbar() {
                     activeClass="active"
                     spy={true}
                   >
-                    {t(item.Contact_us)}
+                    {t(item.Contact)}
                   </Link1>
                 ) : (
-                  <Link className="nav-link cursor-pointer" to="/">
-                    {t(item.Contact_us)}
+                  <Link className="nav-link cursor-pointer" to="/contact">
+                    {t(item.Contact)}
                   </Link>
                 )}
-              </li>
-              <li className="nav-item">
-                <button className="nav-link">
-                  <LanguageSwitcher />
-                </button>
               </li>
             </ul>
           ))}
