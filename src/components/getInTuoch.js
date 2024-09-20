@@ -2,24 +2,27 @@ import React, { useState, useEffect } from "react";
 import contact2 from '../assets/images/done/contact.svg';
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 
+// Minimized Button
 const CTA = styled.button`
   background-color: #3a86ff;
   color: #fff;
-  padding: 0.75rem 1.5rem;
-  margin-top: 1rem;
-  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  margin-top: 0.75rem;
+  border-radius: 10px;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 600;
-  transition: transform 0.2s, background-color 0.2s;
-  border: none;
   text-transform: uppercase;
+  border: none;
   display: inline-block;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 
   &:hover {
     transform: scale(1.05);
     background-color: #2a6bbf;
+    box-shadow: 0 3px 10px rgba(58, 134, 255, 0.4);
   }
 
   &:active {
@@ -27,6 +30,50 @@ const CTA = styled.button`
   }
 `;
 
+// Compact Section Layout with specified background color
+const Section = styled.section`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+  background-color: #f9fafb;
+  background-color: var(--tw-bg-opacity, 1) #f9fafb;
+  background: var(--bg-gray-50, bg-gray-900); 
+  min-height: 80vh;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+`;
+
+const ImageContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 70%; /* Increased the image size slightly */
+    transition: transform 0.4s ease;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+`;
+
+const FormContainer = styled(motion.div)`
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+`;
+
+// Function to load client data based on selected language
 const loadClientData = async (lang) => {
   try {
     switch (lang) {
@@ -58,7 +105,6 @@ export default function GetInTouch() {
   useEffect(() => {
     const fetchData = async () => {
       const data = await loadClientData(i18n.language);
-      console.log("Loaded contact data:", data); 
       setContactData(data);
     };
 
@@ -102,83 +148,80 @@ export default function GetInTouch() {
   };
 
   return (
-    <section className="relative lg:py-24 py-16 bg-slate-50 dark:bg-slate-800" id="contact">
+    <Section className="bg-gray-50 dark:bg-gray-900">
+      <ImageContainer>
+        <img src={contact2} alt="Contact" />
+      </ImageContainer>
+
       {contact.map((item, index) => (
-        <div className="container mx-auto px-6 md:px-12" key={index}>
-          <div className="grid grid-cols-1 pb-6 text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">{t(item.title)}</h3>
-            <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              {t(item.desc)}
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 items-center gap-12">
-            <div className="md:col-span-1">
-              <img src={contact2} alt="Contact" className="mx-auto" />
-            </div>
-            <div className="md:col-span-1">
-              <div className="bg-white dark:bg-slate-900 rounded-md shadow-lg dark:shadow-gray-700 p-8">
-                <form onSubmit={handleSubmit}>
-                  <div className="grid lg:grid-cols-2 grid-cols-1 gap-6">
-                    <div className="lg:col-span-1">
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t(item.name)}</label>
-                      <input
-                        name="name"
-                        id="name"
-                        type="text"
-                        className="mt-1 block w-full py-2 px-3 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
-                        placeholder={t(item.name)}
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                      />
-                    </div>
-                    <div className="lg:col-span-1">
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t(item.email)}</label>
-                      <input
-                        name="email"
-                        id="email"
-                        type="email"
-                        className="mt-1 block w-full py-2 px-3 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
-                        placeholder={t(item.email)}
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                      />
-                    </div>
-                    <div className="lg:col-span-2">
-                      <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t(item.question)}</label>
-                      <input
-                        name="subject"
-                        id="subject"
-                        type="text"
-                        className="mt-1 block w-full py-2 px-3 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
-                        placeholder={t(item.question)}
-                        value={formData.subject}
-                        onChange={handleChange}
-                        required
-                      />
-                    </div>
-                    <div className="lg:col-span-2">
-                      <label htmlFor="comments" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t(item.comment)}</label>
-                      <textarea
-                        name="comments"
-                        id="comments"
-                        className="mt-1 block w-full py-2 px-3 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
-                        placeholder={t(item.comment)}
-                        value={formData.comments}
-                        onChange={handleChange}
-                        rows="4"
-                        required
-                      />
-                    </div>
-                  </div>
-                  <CTA type="submit">{t(item.Message)}</CTA>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
+        <FormContainer
+          key={index}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+        >
+          <h3 className="text-2xl font-bold text-gray-800 mb-3">{t(item.title)}</h3>
+          <form onSubmit={handleSubmit}>
+            <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+              {t(item.name)}
+            </label>
+            <input
+              name="name"
+              id="name"
+              type="text"
+              className="mt-1 block w-full py-1.5 px-3 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+              placeholder={t(item.name)}
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+
+            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+              {t(item.email)}
+            </label>
+            <input
+              name="email"
+              id="email"
+              type="email"
+              className="mt-1 block w-full py-1.5 px-3 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+              placeholder={t(item.email)}
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+
+            <label htmlFor="subject" className="block text-sm font-medium text-gray-700">
+              {t(item.question)}
+            </label>
+            <input
+              name="subject"
+              id="subject"
+              type="text"
+              className="mt-1 block w-full py-1.5 px-3 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+              placeholder={t(item.question)}
+              value={formData.subject}
+              onChange={handleChange}
+              required
+            />
+
+            <label htmlFor="comments" className="block text-sm font-medium text-gray-700">
+              {t(item.comment)}
+            </label>
+            <textarea
+              name="comments"
+              id="comments"
+              className="mt-1 block w-full py-1.5 px-3 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+              placeholder={t(item.comment)}
+              value={formData.comments}
+              onChange={handleChange}
+              rows="3"
+              required
+            />
+
+            <CTA type="submit">{t(item.Message)}</CTA>
+          </form>
+        </FormContainer>
       ))}
-    </section>
+    </Section>
   );
 }

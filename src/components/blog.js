@@ -1,33 +1,56 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import styled from "styled-components";
-import { FiCalendar, FiClock } from '../assets/icons/vander';
+import styled, { keyframes } from "styled-components";
+import { FiCalendar, FiClock, FiShare2 } from '../assets/icons/vander'; // Add share icon
 
-// Styled CTA Button with Modern Look
-const CTA = styled.button`
-  background-color: #3a86ff; /* Blue */
-  color: #ffffff;
-  padding: 0.5rem 1.5rem;
-  margin-top: 1rem;
-  border-radius: 20px;
+// Share button styled component
+const ShareButton = styled.button`
+  background-color: transparent;
+  color: #3a86ff;
+  padding: 0.3rem 0.6rem;
+  border-radius: 50%;
+  border: none;
   cursor: pointer;
-  font-size: 15px;
-  font-weight: 600;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s, background-color 0.3s;
-  border: none;
+  transition: background-color 0.3s, transform 0.3s;
 
   &:hover {
-    transform: translateY(-3px);
-    background-color: #2563eb; /* Blue-600 */
+    background-color: rgba(58, 134, 255, 0.1);
+    transform: scale(1.1);
   }
+`;
 
-  &:active {
-    transform: translateY(1px);
+// Light follow cursor effect
+const LightEffect = styled.div`
+  position: relative;
+  transition: box-shadow 0.3s;
+  overflow: hidden;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   }
+`;
+
+const slideIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
+
+// Content Slide-In on hover
+const SlideInContent = styled.div`
+  animation: ${slideIn} 0.5s ease forwards;
 `;
 
 const loadClientData = (lang) => {
@@ -52,6 +75,20 @@ export default function Blogs() {
 
   const limitedItems = blogData.slice(0, 3);
 
+  // Share content function
+  const handleShare = (item) => {
+    if (navigator.share) {
+      navigator.share({
+        title: item.title,
+        text: item.desc,
+        url: window.location.origin + `/blog/${item.id}`,
+      }).catch((error) => console.error('Error sharing', error));
+    } else {
+      // Fallback - you can display a modal or copy the link
+      alert('Share feature is not supported in this browser. Please copy the link manually.');
+    }
+  };
+
   return (
     <section className="relative md:py-24 py-16 bg-gray-50 dark:bg-gray-900" id="blog">
       <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
@@ -66,15 +103,15 @@ export default function Blogs() {
 
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
           {limitedItems.map((item, index) => (
-            <div key={index} className="group bg-white dark:bg-slate-800 rounded-lg shadow-lg overflow-hidden transition-shadow duration-300 hover:shadow-xl">
+            <LightEffect key={index} className="group">
               <div className="relative overflow-hidden rounded-t-lg">
                 <img 
                   src={item.image} 
-                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" 
+                  className="w-full h-48 object-cover transition-transform duration-500" 
                   alt={t(item.title)} 
                 />
               </div>
-              <div className="p-6">
+              <SlideInContent className="p-6">
                 {/* Meta Information */}
                 <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-4">
                   <span className="flex items-center">
@@ -86,7 +123,7 @@ export default function Blogs() {
                     5 min read
                   </span>
                 </div>
-                
+
                 <Link to={`/blog/${item.id}`} className="block">
                   <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-blue-500 transition-colors">
                     {t(item.title)}
@@ -96,13 +133,20 @@ export default function Blogs() {
                   {t(item.desc)}
                 </p>
 
-                <Link to={`/formation/${item.id}`}>
-                  <CTA>
-                    {t(item.button)} <i className="mdi mdi-chevron-right align-middle ml-1"></i>
-                  </CTA>
-                </Link>
-              </div>
-            </div>
+                <div className="flex items-center justify-between">
+                  <Link to={`/formation/${item.id}`}>
+                    <button className="bg-blue-500 text-white rounded-full px-4 py-2 mt-2 hover:bg-blue-600 transition">
+                      {t(item.button)} <i className="mdi mdi-chevron-right align-middle ml-1"></i>
+                    </button>
+                  </Link>
+                  
+                  {/* Share Button */}
+                  <ShareButton onClick={() => handleShare(item)} aria-label="Share">
+                    <FiShare2 />
+                  </ShareButton>
+                </div>
+              </SlideInContent>
+            </LightEffect>
           ))}
         </div>
       </div>
