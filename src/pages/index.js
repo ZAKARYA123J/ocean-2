@@ -184,7 +184,9 @@ export default function Index() {
                 duration={500}
                 className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-8 rounded-full shadow-lg transform transition hover:-translate-y-1 hover:shadow-dynamic cursor-pointer"
               >
-                Contact Us
+              {clientData.map((item, index) => (
+                <span key={index}>{i18n.t(item.button)}</span>
+              ))}
               </ScrollLink>
               <ScrollLink
                 to="services"
