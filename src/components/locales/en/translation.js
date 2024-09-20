@@ -379,7 +379,8 @@ export const serviceDataEN = [
 export const TitleEN=[
     {
         Title:"Studies Training and Recruitment National and International",
-        button:"Contact Us"
+        button:"Contact Us",
+        Learn:"Learn More",
     }
 ]
 export const NavbarEN=[{
@@ -574,6 +575,42 @@ export const ContactEN=[{
     question:"Your Question:",
     comment:"Your Comment:",
     Message:"Send Message"
+}]
+export const NurseEN=[{
+    title:"Compassionate Nursing Care You Can Trust",
+    desc:"Our dedicated team of professional nurses is here to provide the highest quality of care with empathy andrespect. Your health and comfort are our top priority.",
+    contact:"Contact Us Today",
+    about:"About Us",
+    descab:"We are a team of licensed and experienced nurses dedicated to providing exceptional care in the comfort ofyour own home. From post-surgical care to chronic disease management, our goal is to improve your quality of life with personalized, compassionate services."
+}]
+export const CardEn=[{
+    title:"Highlights of Our Nursing Care",
+    Comfort:"Patient Comfort",
+    textCom:"Ensuring the utmost comfort for our patients through personalized and compassionate care.",
+    detail:"DETAIL",
+    Caregiver:"Caregiver Support",
+    textCare:"Supporting family caregivers with the resources and respite they need to care for loved ones.",
+    Safety:"Safety and Security",
+    textsafe:"Maintaining a safe and secure environment for all patients through rigorous safety measures."
+}]
+export const ServicesSectionEN=[{
+    title:"Our Care Services",
+    Patient:"Patient Care",
+    descp:" Taking care of the patient during their illness.",
+    Dressing:"Dressing Changes",
+    descd:" Changing dressings (surgical and dermatological, etc.).",
+    Injections:"Injections",
+    desci:"Types of intramuscular and subcutaneous injections.",
+    Medical:"Medical Prescription",
+    decsm:" With a medical prescription (mandatory).",
+    Umbilical:"Umbilical Care",
+    descu:"Umbilical care for babies.",
+    Postpartum:'Postpartum Care',
+    decccp:" Caring for the mother after childbirth.",
+    IV:"IV Fluid Change",
+    descI:" Changing IV fluids.",
+    Blood:"Blood Pressure & Glucose",
+    decsB:"Monitoring blood pressure and blood glucose levels."
 }]
 export const GalleryEN=[
     {
