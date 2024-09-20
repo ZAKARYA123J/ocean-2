@@ -1,41 +1,43 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
+
+// CTA Button with a gradient and hover effect
 const CTA = styled.button`
-  background-color: var(--white);
-  color: #3a86ff;
-  padding: 0.5rem 1rem;
-  margin-top: 2px;
-  border-radius: 20px;
+  background: linear-gradient(135deg, #3a86ff 0%, #7b2cbf 100%);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  border-radius: 30px;
   cursor: pointer;
   font-size: 15px;
   font-weight: 600;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  transition: transform 0.2s;
-  border: solid 1px blue;
-  @media only screen and (max-width: 48em) {
-    padding: 0.2rem 1rem;
-  }
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
   &:hover {
-    transform: scale(1.1);
+    background: linear-gradient(135deg, #2cb5e8 0%, #6a0dad 100%);
+    transform: scale(1.05);
   }
   &:active {
-    transform: scale(0.9);
+    transform: scale(0.95);
   }
 `;
+
 const loadClientData = (lang) => {
   switch (lang) {
-      case 'fr':
-          return import('./locales/fr/translation').then(module => module.serviceDataFR);
-      case 'ar':
-          return import('./locales/ar/translation').then(module => module.serviceDataAR);
-      case 'en':
-      default:
-          return import('./locales/en/translation').then(module => module.serviceDataEN);
+    case 'fr':
+      return import('./locales/fr/translation').then(module => module.serviceDataFR);
+    case 'ar':
+      return import('./locales/ar/translation').then(module => module.serviceDataAR);
+    case 'en':
+    default:
+      return import('./locales/en/translation').then(module => module.serviceDataEN);
   }
 };
+
 export default function Daitalservice() {
   const { id } = useParams();
   const [activeIndex, setActiveIndex] = useState(Number(id));
@@ -46,79 +48,80 @@ export default function Daitalservice() {
     const fetchData = async () => {
       const data = await loadClientData(i18n.language);
       setServiceData(data);
-
-
     };
-
     fetchData();
   }, [i18n.language]);
 
   // Filter the serviceData to get the selected formation
-  const selectedFormation = serviceData.find(item => item.id === activeIndex);
+  const selectedFormation = serviceData.find((item) => item.id === activeIndex);
 
   return (
-    <section className="relative md:py-24 py-16">
-      <div className="container relative">
+    <section className="relative md:py-24 py-16 bg-gray-50">
+      <div className="container mx-auto">
         <div className="grid grid-cols-1 pb-6 text-center">
-        {serviceData.map((item, index) => (
-          <>
-                     <h3 className="font-semibold text-2xl leading-normal mb-4">{t(item.title2)}</h3>
-                     <p className="text-slate-400 max-w-xl mx-auto">
-                       {t(item.desc2)}
-                     </p>
-                     </>
-                    ))}
-          
+          {serviceData.length > 0 ? (
+            <h3 className="font-semibold text-4xl leading-normal mb-8 text-gray-900">{t(serviceData[0].mainTitle)}</h3>
+          ) : null}
         </div>
-        <div className="grid md:grid-cols-12 grid-cols-1 mt-6 gap-6">
-          <div className="lg:col-span-4 md:col-span-5">
+
+        <div className="grid md:grid-cols-12 grid-cols-1 mt-6 gap-8">
+          {/* Left Sidebar - Service List */}
+          <div className="lg:col-span-4 md:col-span-5 bg-white shadow-lg rounded-lg p-6">
             <div className="sticky top-20">
               {serviceData.map((item) => (
-                <ul className="flex-column p-6 bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-md" key={item.id}>
-                  <li role="presentation">
+                <ul className="space-y-4" key={item.id}>
+                  <li>
                     <button
-                      className={`px-4 py-2 text-start text-base font-medium rounded-md w-full hover:text-sky-500 duration-500 ${activeIndex === item.id ? 'text-white bg-sky-500 hover:text-white' : ''}`}
+                      className={`w-full text-start p-4 text-lg font-medium rounded-lg border ${
+                        activeIndex === item.id
+                          ? 'bg-blue-600 text-white shadow-md'
+                          : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
+                      }`}
                       onClick={() => setActiveIndex(item.id)}
                     >
-                      <span className="text-lg mt-2 block text-dark-600 font-semibold shadow-md p-2 rounded text-lg mt-2 block text-center"><strong>{t(item.title)}</strong></span>
-                      <span className="block mt-2">{t(item.desc)}</span>
+                      <span className="block text-xl font-semibold">{t(item.title)}</span>
+                      <span className="block mt-1 text-base">{t(item.desc)}</span>
                     </button>
                   </li>
                 </ul>
               ))}
             </div>
           </div>
+
+          {/* Right Content Section */}
           <div className="lg:col-span-8 md:col-span-7">
-            <div id="myTabContent" className="p-6 bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-md">
+            <div className="p-8 bg-white shadow-lg rounded-lg">
               {selectedFormation ? (
                 <div>
-                  <img src={selectedFormation.image} className="shadow dark:shadow-gray-700 rounded-md" alt="" />
-                  <div className="mt-6">
-                    <div className="flex items-center" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                      <h5 className="text-lg font-medium"><strong>{t(selectedFormation.para1)}</strong></h5>
-                      <CTA>
-                        {selectedFormation.link}
-                      </CTA>
-                    </div>
-                    <p className="text-slate-400 mt-4">{t(selectedFormation.desc_para1)}</p>
-                    <br />
-                    <h5 className="text-lg font-medium"><strong>{t(selectedFormation.para2)}</strong></h5>
-                    <p className="text-slate-400 mt-4">{selectedFormation.desc_para2}</p>
-                    <br />
-                    <h5 className="text-lg font-medium"><strong>{t(selectedFormation.para3)}</strong></h5>
-                    <p className="text-slate-400 mt-4">{t(selectedFormation.desc_para3)}</p>
-                    <br />
-                    <h5 className="text-lg font-medium"><strong>{t(selectedFormation.para4)}</strong></h5>
-                    <p className="text-slate-400 mt-4">{t(selectedFormation.desc_para4)}</p>
-                    <br />
-                    <h5 className="text-lg font-medium"><strong>{t(selectedFormation.para5)}</strong></h5>
-                    <p className="text-slate-400 mt-4">{t(selectedFormation.desc_para5)}</p>
-                    <div className="mt-4">
-                      <CTA>
-                        {selectedFormation.link}
-                        {/* <Link1 to="contact" className="text-sky-500"smooth={true} duration={1000} activeClass='active' spy={true}>{selectedFormation.Button} <i className="mdi mdi-chevron-right align-middle"></i></Link1> */}
-                      </CTA>
-                    </div>
+                  <img
+                    src={selectedFormation.image}
+                    className="shadow-lg rounded-md mb-6 w-full h-64 object-cover"
+                    alt="Service"
+                  />
+                  <div>
+                    <h5 className="text-2xl font-semibold text-gray-900 mb-4">{t(selectedFormation.para1)}</h5>
+                    <p className="text-gray-600 text-lg mb-6">{t(selectedFormation.desc_para1)}</p>
+
+                    {/* Additional paragraphs */}
+                    {selectedFormation.para2 && (
+                      <>
+                        <h5 className="text-xl font-medium text-gray-900 mb-4">{t(selectedFormation.para2)}</h5>
+                        <p className="text-gray-600 text-base mb-6">{t(selectedFormation.desc_para2)}</p>
+                      </>
+                    )}
+
+                    {selectedFormation.para3 && (
+                      <>
+                        <h5 className="text-xl font-medium text-gray-900 mb-4">{t(selectedFormation.para3)}</h5>
+                        <p className="text-gray-600 text-base mb-6">{t(selectedFormation.desc_para3)}</p>
+                      </>
+                    )}
+
+                    <CTA>
+                      <Link to="/apply" className="text-white">
+                        {t(selectedFormation.link)}
+                      </Link>
+                    </CTA>
                   </div>
                 </div>
               ) : (
