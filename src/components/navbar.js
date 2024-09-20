@@ -162,24 +162,11 @@ export default function Navbar() {
               <li className="nav-item ms-0 relative">
                 <Link
                   className="nav-link cursor-pointer flex items-center"
-                  onClick={() => handleDropdownToggle('jobOpen')}
+                  to={`/jobs`}
                 >
                   {t(item.Jobs)}
                 </Link>
-                {dropdowns.jobOpen && (
-                  <ul className={`dropdown-list ${isMobile ? 'block' : 'absolute'} bg-white text-dark shadow-lg rounded-lg p-4 w-80`}>
-                    <li className="nav-item">
-                      <Link className="nav-link" to={`/jobs/international`} style={{ padding: '10px 20px', display: 'block' }}>
-                        International
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link className="nav-link" to={`/jobs/national`} style={{ padding: '10px 20px', display: 'block' }}>
-                        National
-                      </Link>
-                    </li>
-                  </ul>
-                )}
+               
               </li>
 
               <li className="nav-item ms-0">

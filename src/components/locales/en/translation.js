@@ -13,7 +13,6 @@ import client2 from '../../../assets/images/team/02.jpg'
 import client3 from '../../../assets/images/team/03.jpg'
 import client4 from '../../../assets/images/team/04.jpg'
 import client5 from '../../../assets/images/team/05.jpg'
-// import formation4 from '../assets/images/formation/formation4.jpg'
 import formation5 from '../../../assets/images/formation/formation05.jpg'
 import formation6 from '../../../assets/images/formation/formation6.jpg'
 import formation17 from '../../../assets/images/formation/formation17.jpg'
@@ -520,8 +519,8 @@ export const jobsEN = [
         menu3:"Time Visa :",
         menu4:"Contrat :",
         menu5:"Price Contrat :",
-         menu6:"More :",
-       action : 'To apply',
+        menu6:"More :",
+        action : 'To apply',
     },
     {
         id: 6,
