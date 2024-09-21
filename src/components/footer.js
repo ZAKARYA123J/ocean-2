@@ -1,114 +1,96 @@
 import React from "react";
+import { HiLocationMarker } from "react-icons/hi";
+import { PiPhoneCallFill, PiInstagramLogoFill } from "react-icons/pi";
+import { MdMarkEmailRead } from "react-icons/md";
+import { FaFacebookF } from "react-icons/fa6";
+import { ImLinkedin2 } from "react-icons/im";
+import { IoLogoYoutube } from "react-icons/io";
+import logo from "../components/ocean3.png";
 import { Link } from "react-router-dom";
-import { FiLinkedin, FiFacebook, FiInstagram, FiMail, FiYoutube } from '../assets/icons/vander';
-import img from './ocean3.png';
-import footerBg from './footer-bg.jpg'; // A realistic background image
 
-export default function Footer() {
-    return (
-        <footer 
-            className="footer relative text-white" 
-            style={{ 
-                position: 'relative', 
-                overflow: 'hidden', 
-                backgroundImage: `url(${footerBg})`, 
-                backgroundSize: 'cover', 
-                backgroundPosition: 'center', 
-                padding: '40px 20px' 
-            }}
-        >
-            {/* Semi-transparent overlay for readability */}
-            <div 
-                style={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    bottom: 0,
-                    background: 'rgba(0, 0, 0, 0.6)', // Darker overlay for readability
-                    zIndex: 1
-                }}
-            ></div>
+const socialLinks = [
+  { to: "https://www.facebook.com/the.ocean.connecting/", Icon: FaFacebookF, label: "Facebook" },
+  { to: "https://www.instagram.com/oceanconnecting.ma/", Icon: PiInstagramLogoFill, label: "Instagram" },
+  { to: "https://www.youtube.com/@OceanConnecting", Icon: IoLogoYoutube, label: "YouTube" },
+  { to: "https://www.linkedin.com/company/ocean-connecting/?originalSubdomain=ma", Icon: ImLinkedin2, label: "LinkedIn" },
+];
 
-            {/* Footer Content */}
-            <div className="container relative z-10 text-center">
-                <div className="grid lg:grid-cols-12 md:grid-cols-3 grid-cols-1 items-center">
-                    
-                    {/* Logo Section */}
-                    <div className="lg:col-span-3 md:text-start text-center mb-6 md:mb-0">
-                        <Link to="/" className="focus:outline-none">
-                            <img 
-                                src={img} 
-                                className="mx-auto md:me-auto md:ms-0" 
-                                alt="Ocean Connect Logo" 
-                                style={{ width: "150px", transition: 'transform 0.3s' }}
-                                onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.05)'}
-                                onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
-                            />
-                        </Link>
-                    </div>
+const contactInfo = [
+  { Icon: HiLocationMarker, title: "Address", content: "789 Inner Lane, Holy park, California, USA" },
+  { Icon: PiPhoneCallFill, title: "Call Us", content: "+09 876 543 210" },
+  { Icon: MdMarkEmailRead, title: "Email Us", content: "support24@rakar.com" },
+];
 
-                    {/* Contact Info */}
-                    <div className="lg:col-span-5 text-center mt-6 md:mt-0">
-                        <p className="mb-1 font-semibold text-lg">© {new Date().getFullYear()} Ocean Connecting</p>
-                        <p className="mb-1">oceanconnecting.ma@gmail.com</p>
-                        <p>+212 704-309787</p>
-                    </div>
+const pageElements = ["Home", "Services", "Formation", "About Us", "Contact"];
+const ourServices = ["Development Informatique", "Formation", "Clean facades", "Recruitment", "Domiciliation"];
 
-                    {/* Social Media Links */}
-                    <ul className="lg:col-span-4 list-none md:text-end text-center mt-6 md:mt-0 flex justify-center md:justify-end space-x-4">
-                        <li className="inline">
-                            <Link 
-                                to="https://www.facebook.com/the.ocean.connecting/" 
-                                target="_blank" 
-                                className="inline-flex justify-center items-center rounded-md hover:scale-110 transition-transform duration-300 ease-in-out hover:text-blue-500"
-                                aria-label="Facebook"
-                            >
-                                <FiFacebook className="w-6 h-6" />
-                            </Link>
-                        </li>
-                        <li className="inline">
-                            <Link 
-                                to="https://www.instagram.com/oceanconnecting.ma/" 
-                                target="_blank" 
-                                className="inline-flex justify-center items-center rounded-md hover:scale-110 transition-transform duration-300 ease-in-out hover:text-pink-500"
-                                aria-label="Instagram"
-                            >
-                                <FiInstagram className="w-6 h-6" />
-                            </Link>
-                        </li>
-                        <li className="inline">
-                            <Link 
-                                to="https://www.youtube.com/@OceanConnecting" 
-                                target="_blank"
-                                className="inline-flex justify-center items-center rounded-md hover:scale-110 transition-transform duration-300 ease-in-out hover:text-red-500"
-                                aria-label="YouTube"
-                            >
-                                <FiYoutube className="w-6 h-6" />
-                            </Link>
-                        </li>
-                        <li className="inline">
-                            <Link 
-                                to="https://www.linkedin.com/company/ocean-connecting/?originalSubdomain=ma" 
-                                target="_blank" 
-                                className="inline-flex justify-center items-center rounded-md hover:scale-110 transition-transform duration-300 ease-in-out hover:text-blue-700"
-                                aria-label="LinkedIn"
-                            >
-                                <FiLinkedin className="w-6 h-6" />
-                            </Link>
-                        </li>
-                        <li className="inline">
-                            <Link 
-                                to="mailto:oceanconnecting.ma@gmail.com" 
-                                className="inline-flex justify-center items-center rounded-md hover:scale-110 transition-transform duration-300 ease-in-out hover:text-yellow-500"
-                                aria-label="Email"
-                            >
-                                <FiMail className="w-6 h-6" />
-                            </Link>
-                        </li>
-                    </ul>
-                </div>
+function Footer() {
+  return (
+    <footer className="bg-[#e0f7fa] py-12 text-black">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8">
+        <div className="mb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {contactInfo.map(({ Icon, title, content }) => (
+            <div key={title} className="flex items-center space-x-3">
+              <div className="bg-[#3a86ff] p-2 rounded-md">
+                <Icon className="h-6 w-6 text-white" />
+              </div>
+              <div>
+                <p className="text-sm font-bold">{title}</p>
+                <p className="text-sm font-semibold">{content}</p>
+              </div>
             </div>
-        </footer>
-    );
+          ))}
+          <div className="flex items-center space-x-3">
+            {socialLinks.map(({ to, Icon, label }) => (
+              <div key={label} className="bg-[#3a86ff] p-2 rounded-md">
+                <Link
+                  to={to}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:scale-110 transition-transform duration-300 ease-in-out hover:text-blue-500"
+                  aria-label={label}
+                >
+                  <Icon className="h-6 w-6 text-white" />
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <div className="space-y-4">
+            <div className="flex items-center space-x-2">
+              <img src={logo} alt="RAKAR Logo" className="w-30" />
+            </div>
+            <p className="text-sm">WE ARE PROFESSIONAL</p>
+            <p className="text-sm">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              euismod, nisl vel tincidunt lacinia, nisl nisl aliquam nisl, eget
+              aliquam nisl nisl sit amet nisl.
+            </p>
+          </div>
+          <FooterLinkSection title="Page elements" links={pageElements} />
+          <FooterLinkSection title="Our Services" links={ourServices} />
+        </div>
+      </div>
+    </footer>
+  );
 }
+
+function FooterLinkSection({ title, links }) {
+  return (
+    <div className="space-y-2">
+      <h3 className="text-xl font-bold">{title}</h3>
+      <ul className="space-y-1">
+        {links.map((link) => (
+          <li key={link}>
+            <Link to={`/${link.toLowerCase().replace(/\s+/g, '-')}`} className="text-sm hover:text-[#3a86ff]">
+              {link}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default Footer;

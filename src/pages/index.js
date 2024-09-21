@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
-import Footer from '../components/footer';
+import Footer from '../components/foooter';
 import About from "../components/about";
 import Services from "../components/services";
 import AgencyTab from "../components/agencyTab";
