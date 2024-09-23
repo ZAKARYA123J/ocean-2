@@ -1,7 +1,23 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
+import { useTranslation } from "react-i18next";
 import nurseImage from "../assets/images/done/TeamDev/service.png"; // Ensure the correct path
 import { FaUser, FaEnvelope, FaPhone, FaStethoscope } from "react-icons/fa"; // Medical icons
-
+  const loadClientData = async (lang) => {
+    try {
+      switch (lang) {
+        case 'fr':
+          return (await import('./locales/fr/translation')).ContactFR;
+        case 'ar':
+          return (await import('./locales/ar/translation')).ContactAR;
+        case 'en':
+        default:
+          return (await import('./locales/en/translation')).ContactEN;
+      }
+    } catch (error) {
+      console.error(`Failed to load client data for language ${lang}`, error);
+      return [];
+    }
+  };
 const ContactForm = () => {
   // State to handle form inputs
   const [formData, setFormData] = useState({
@@ -24,6 +40,20 @@ const ContactForm = () => {
     }));
   };
 
+  const [contact, setContactData] = useState([]);
+  const { i18n, t } = useTranslation();
+
+
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await loadClientData(i18n.language);
+      console.log("Loaded contact data:", data); 
+      setContactData(data);
+    };
+
+    fetchData();
+  }, [i18n.language]);
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -57,13 +87,15 @@ const ContactForm = () => {
       id="contact"
       className="py-16 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100"
     >
-      <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
+      {contact.map((item,key)=>(
+
+    
+      <div className="container mx-auto px-6 lg:px-12 max-w-7xl" key={key}>
         <h2 className="text-4xl font-bold text-blue-800 dark:text-white mb-12 text-center animate-fade-in">
-          CONTACT US
+          {t(item.title)}
         </h2>
         <p className="text-lg mb-12 text-gray-600 dark:text-gray-300 text-center max-w-2xl mx-auto leading-relaxed">
-          If you have any questions or need further information, please do not
-          hesitate to contact us. Our team is ready to assist you.
+          {t(item.desc)}
         </p>
         <div className="flex flex-col lg:flex-row items-start justify-center lg:space-x-12">
           <div className="image-container">
@@ -166,6 +198,7 @@ const ContactForm = () => {
           </form>
         </div>
       </div>
+        ))}
     </section>
   );
 };
