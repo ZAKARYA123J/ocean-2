@@ -31,7 +31,7 @@ function App() {
         <Route path="/team" element={<TeamPage />} />
         <Route path="/nurse" element={<TeamNurse />} />
         <Route path="/contract" element={<ContractPage />} />
-        <Route path="/languages" element={<LanguagesPage />} /> {/* Fixed component to element */}
+        {/* <Route path="/languages" element={<LanguagesPage />} /> Fixed component to element */}
       </Routes>
     </HelmetProvider>
   );

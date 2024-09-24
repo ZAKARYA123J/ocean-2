@@ -42,16 +42,12 @@ const ContactForm = () => {
 
   const [contact, setContactData] = useState([]);
   const { i18n, t } = useTranslation();
-
-
-
   useEffect(() => {
     const fetchData = async () => {
       const data = await loadClientData(i18n.language);
       console.log("Loaded contact data:", data); 
       setContactData(data);
     };
-
     fetchData();
   }, [i18n.language]);
   // Handle form submission

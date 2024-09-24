@@ -104,7 +104,7 @@ const NursingServicesPage = () => {
       <CardNurse />
       <ServicesSection/>
       <ContactForm />
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
       
       <Footer />
     </div>
