@@ -41,8 +41,41 @@ import recrutocean from '../../../assets/images/service/recrutocean.png'
 import recrutinter from '../../../assets/images/service/recrutinter2.png'
 import form from '../../../assets/images/form.pdf'
 
+// export const teamTitle = "Rencontrez Notre Équipe de Développement";
+// export const teamDescription = "Nous sommes une équipe passionnée d'experts dédiée à la création de solutions innovantes. Explorez plus sur chaque membre de l'équipe ci-dessous et découvrez les technologies dans lesquelles ils excellent.";
+// export const membersTitle = "Nos Membres de l'Équipe";
+// export const viewDetails = "Voir les Détails";
 
-
+// export const teamMembers = [
+//     {
+//       id: 1,
+//       name: "ENNACHOUM ZAKARIA",
+//       role: "Développeur Full Stack",
+//       photo: "path/to/photo1.jpg",
+//       github: "https://github.com/Umbrator",
+//       linkedin: "https://linkedin.com/in/ennachoum-zakaria-264134231/",
+//     },
+//     // Add other members...
+//   ];
+  
+  export const servicesFR = [
+    {
+      title: "Sécurité",
+      description: "Assurez la sécurité de vos applications avec les derniers protocoles.",
+      icon: "FaLock",
+    },
+    {
+      title: "Consultation",
+      description: "Conseils d'experts sur l'architecture système, stratégie technologique, etc.",
+      icon: "FaComments",
+    },
+    {
+      title: "Développement",
+      description: "Développement front-end et back-end, adapté à vos besoins.",
+      icon: "FaCode",
+    },
+  ];
+  
 export const clientDataFr = [
     {
         image: client1,

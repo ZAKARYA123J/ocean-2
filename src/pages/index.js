@@ -48,14 +48,13 @@ export default function Index() {
       {/* CSS for Image Crossfade Effect */}
       <style>
         {`
-          /* Container for the image crossfade effect */
+          /* Default styles for PC/desktop screens */
           .image-container {
             position: relative;
             width: 600px;
             height: 400px;
           }
 
-          /* All images stacked on top of each other */
           .image-container img {
             position: absolute;
             top: 0;
@@ -64,43 +63,113 @@ export default function Index() {
             height: 100%;
             object-fit: cover;
             opacity: 0;
-            transition: opacity 1.5s ease-in-out; /* Smooth crossfade effect */
+            transition: opacity 1.5s ease-in-out;
           }
 
-          /* Only the active image will have full opacity */
           .image-container img.active {
             opacity: 1;
             z-index: 1;
+            transform: scale(1.05);
+            transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
           }
 
-          /* Add subtle zoom effect on image */
-          .image-container img.active {
-            transform: scale(1.05); /* Slight zoom */
-            transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
+          /* Mobile-specific adjustments */
+          @media (max-width: 768px) {
+            .image-container {
+              position: relative;
+              width: 100%; /* Full width for mobile */
+              height: 250px; /* Fixed height for mobile */
+              max-width: 100%; /* Limit max width */
+              margin-top: 20px; /* Ensure the image is below the text content */
+            }
+
+            .text-center {
+              text-align: center;
+              word-wrap: break-word; /* Ensure text wraps properly */
+              overflow-wrap: break-word; /* Prevent overflow of long words */
+              overflow: hidden; /* Prevent content overflow */
+              padding: 0 16px; /* Add padding to prevent text touching edges */
+              max-width: 100%; /* Ensure container doesn't exceed screen */
+              padding-top: 20px; /* Add top padding for mobile to create more space */
+            }
+
+            .md\\:flex-row {
+              flex-direction: column; /* Vertical stacking on mobile */
+              justify-content: center;
+              align-items: center;
+            }
+
+            .md\\:space-x-8 {
+              margin: 0; /* Remove horizontal space on mobile */
+            }
+
+            .md\\:text-left {
+              text-align: center; /* Center text on mobile */
+            }
+
+            .scroll-link {
+              padding: 12px 24px; /* Reduce button padding on mobile */
+              font-size: 12px; /* Further reduce button text size for mobile */
+            }
+
+            .cta-buttons {
+              flex-direction: column;
+              gap: 12px; /* Space between buttons on mobile */
+            }
+
+            .hero-text {
+              font-size: 1.8rem; /* Further reduce hero text size for mobile */
+              line-height: 1.2; /* Reduce line height */
+              word-break: break-word; /* Ensure text doesn't overflow */
+              max-width: 100%; /* Ensure text fits within screen */
+              padding-top: 90px; /* Add top padding for mobile to avoid overlap */
+            }
+
+            .sub-text {
+              font-size: 0.9rem; /* Reduce subtext font size */
+              margin-top: 1rem;
+              padding: 0 16px; /* Add padding for proper spacing */
+              word-wrap: break-word; /* Ensure long words wrap correctly */
+              overflow: hidden; /* Prevent overflow */
+              max-width: 100%; /* Ensure it fits mobile screen */
+            }
+
+            body {
+              overflow-x: hidden; /* Prevent horizontal scroll on mobile */
+            }
+
+            .container {
+              max-width: 100%; /* Ensure the container doesn’t overflow */
+              overflow-x: hidden; /* Prevent horizontal overflow */
+            }
+
+            .overflow-hidden {
+              overflow: hidden; /* Ensure the content doesn’t overflow */
+            }
           }
         `}
       </style>
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-200 via-purple-200 to-blue-300 min-h-screen flex flex-col items-center justify-center overflow-hidden">
-        <div className="relative max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center z-10 space-y-8 md:space-y-0 md:space-x-8">
+        <div className="relative max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center z-10 space-y-8 md:space-y-0 md:space-x-8 container overflow-hidden">
           
           {/* Hero Text and Buttons */}
           <div className="text-center md:text-left flex-1 space-y-6" data-aos="fade-right">
-            <h1 className="text-6xl md:text-7xl font-extrabold text-gray-900 leading-tight">
+            <h1 className="hero-text text-5xl md:text-7xl font-extrabold text-gray-900 leading-tight">
               Elevate Your Business Presence
             </h1>
-            <p className="text-xl text-gray-700 max-w-lg mx-auto md:mx-0" data-aos="fade-up" data-aos-delay="200">
+            <p className="sub-text text-base text-gray-700 max-w-lg mx-auto md:mx-0" data-aos="fade-up" data-aos-delay="200">
               With our innovative design solutions for global recruitment and training, your business can stand out.
             </p>
 
             {/* CTA Buttons */}
-            <div className="mt-4 flex justify-center md:justify-start space-x-4">
+            <div className="cta-buttons mt-4 flex justify-center md:justify-start space-x-4">
               <ScrollLink
                 to="contact"
                 smooth
                 duration={500}
-                className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-8 rounded-full shadow-lg transform transition hover:-translate-y-1 hover:shadow-dynamic cursor-pointer"
+                className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-6 rounded-full shadow-lg transform transition hover:-translate-y-1 hover:shadow-dynamic cursor-pointer"
               >
                 Contact Us
               </ScrollLink>
@@ -108,7 +177,7 @@ export default function Index() {
                 to="services"
                 smooth
                 duration={500}
-                className="inline-block bg-white border border-blue-600 text-blue-600 py-3 px-8 rounded-full shadow-lg transform transition hover:-translate-y-1 hover:shadow-dynamic cursor-pointer"
+                className="inline-block bg-white border border-blue-600 text-blue-600 py-2 px-6 rounded-full shadow-lg transform transition hover:-translate-y-1 hover:shadow-dynamic cursor-pointer"
               >
                 Learn More
               </ScrollLink>
@@ -117,7 +186,6 @@ export default function Index() {
 
           {/* Image Container with Crossfade Effect */}
           <div className="image-container">
-            {/* Loop through images and apply the "active" class to the current image */}
             {images.map((img, index) => (
               <img
                 key={index}

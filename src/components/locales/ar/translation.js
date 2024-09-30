@@ -40,7 +40,41 @@ import resume from '../../../assets/images/job/resume.png'
 import recrutocean from '../../../assets/images/service/recrutocean.png'
 import recrutinter from '../../../assets/images/service/recrutinter2.png'
 import form from '../../../assets/images/form.pdf'
+// export const teamTitle = "تعرف على فريق التطوير لدينا";
+// export const teamDescription = "نحن فريق شغوف من الخبراء مكرس لتطوير حلول مبتكرة. استكشف المزيد عن كل عضو في الفريق أدناه واكتشف التقنيات التي يتقنها.";
+// export const membersTitle = "أعضاء فريقنا";
+// export const viewDetails = "عرض التفاصيل";
 
+// export const teamMembers = [
+//     {
+//       id: 1,
+//       name: "ENNACHOUM زكريا",
+//       role: "مطور كامل",
+//       photo: "path/to/photo1.jpg",
+//       github: "https://github.com/Umbrator",
+//       linkedin: "https://linkedin.com/in/ennachoum-zakaria-264134231/",
+//     },
+//     // Add other members...
+//   ];
+  
+  export const servicesAR = [
+    {
+      title: "الأمان",
+      description: "تأكد من أن تطبيقاتك آمنة بأحدث البروتوكولات.",
+      icon: "FaLock",
+    },
+    {
+      title: "استشارة",
+      description: "نصيحة خبير في هندسة الأنظمة واستراتيجية التكنولوجيا.",
+      icon: "FaComments",
+    },
+    {
+      title: "التطوير",
+      description: "تطوير الواجهة الأمامية والخلفية حسب احتياجاتك.",
+      icon: "FaCode",
+    },
+  ];
+  
 export const clientDataAR = [
     {
         image: client1,

@@ -137,8 +137,6 @@ const TeamPage = () => {
             solutions. Explore more about each team member below and learn about
             the technologies they excel in.
           </p>
-
-          {/* Services Section directly below the description */}
           <section className="mb-16 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
             <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
               <h2 className="text-4xl font-extrabold text-center mb-12 bg-gradient-to-r from-blue-600 to-red-600 bg-clip-text text-transparent dark:from-blue-500 dark:to-red-500 tracking-tight animate-fadeIn">
