@@ -175,7 +175,7 @@ export default function Index() {
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-200 via-purple-200 to-blue-300 min-h-screen flex flex-col items-center justify-center overflow-hidden">
-        <div className="relative max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center z-10 space-y-8 md:space-y-0 md:space-x-8">
+        <div className="relative max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center z-10 space-y-8 md:space-y-0 md:space-x-8 container overflow-hidden">
           
           {/* Hero Text and Buttons */}
           <div className="text-center md:text-left flex-1 space-y-6" data-aos="fade-right">
@@ -188,12 +188,12 @@ export default function Index() {
             
 
             {/* CTA Buttons */}
-            <div className="mt-4 flex justify-center md:justify-start space-x-4">
+            <div className="cta-buttons mt-4 flex justify-center md:justify-start space-x-4">
               <ScrollLink
                 to="getInTouch"
                 smooth
                 duration={500}
-                className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-8 rounded-full shadow-lg transform transition hover:-translate-y-1 hover:shadow-dynamic cursor-pointer"
+                className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-6 rounded-full shadow-lg transform transition hover:-translate-y-1 hover:shadow-dynamic cursor-pointer"
               >
                 Contact Us
               </ScrollLink>
@@ -201,7 +201,7 @@ export default function Index() {
                 to="services"
                 smooth
                 duration={500}
-                className="inline-block bg-white border border-blue-600 text-blue-600 py-3 px-8 rounded-full shadow-lg transform transition hover:-translate-y-1 hover:shadow-dynamic cursor-pointer"
+                className="inline-block bg-white border border-blue-600 text-blue-600 py-2 px-6 rounded-full shadow-lg transform transition hover:-translate-y-1 hover:shadow-dynamic cursor-pointer"
               >
                 Learn More
               </ScrollLink>
@@ -210,7 +210,6 @@ export default function Index() {
 
           {/* Image Container with Crossfade Effect */}
           <div className="image-container">
-            {/* Loop through images and apply the "active" class to the current image */}
             {images.map((img, index) => (
               <img
                 key={index}

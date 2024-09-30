@@ -52,13 +52,16 @@ import recrutinter from '../../../assets/images/service/recrutinter2.png'
 import form from '../../../assets/images/form.pdf'
 
 
-
+// export const teamTitle = "Meet Our Development Team";
+// export const teamDescription = "We are a passionate team of experts dedicated to crafting innovative solutions. Explore more about each team member below and learn about the technologies they excel in.";
+// export const membersTitle = "Our Team Members";
+// export const viewDetails = "View Details";
 
 export const clientDataEN = [
     {
         image:client1,
         clientitle:"What Our Users Say",
-        name:'Calvin Carlo',
+        name:'Calvin Carlo',    
         title:'Manager',
         desc:'" I was blown away by the personalized support I received from this team. Their expertise in global job placement helped me land a fantastic position abroad. Highly recommend their services! "'
     },
