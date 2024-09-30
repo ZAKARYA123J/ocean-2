@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
 import { Link } from "react-router-dom";
 import './i18n';
 import { useTranslation } from 'react-i18next';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const loadClientData = async (lang) => {
   try {
@@ -20,76 +21,6 @@ const loadClientData = async (lang) => {
     return [];
   }
 };
-
-const CTA = styled.button`
-  background-color: #ffffff;
-  color: #3a86ff;
-  padding: 0.5rem 1rem;
-  margin-top: auto;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 15px;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.2s, background-color 0.2s;
-  border: solid 1px #3a86ff;
-  white-space: nowrap;
-
-  &:hover {
-    transform: scale(1.05);
-    background-color: #e0f2fe;
-  }
-
-  &:active {
-    transform: scale(0.95);
-  }
-`;
-
-const Card = styled.div`
-  background-color: #ffffff;
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  }
-`;
-
-const IconWrapper = styled.div`
-  font-size: 4rem;
-  color: #0ea5e9;
-  margin-bottom: 10px;
-`;
-
-const Header = styled.h1`
-  font-size: 2.5rem;
-  color: #4a4a4a;
-  text-align: center;
-  margin-bottom: 2rem;
-`;
-
-const ServiceWrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 20px;
-
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (min-width: 1024px) {
-    grid-template-columns: repeat(4, 1fr);
-  }
-`;
 
 const Services = () => {
   const [serviceData, setServiceData] = useState([]);
@@ -112,42 +43,56 @@ const Services = () => {
     fetchData();
   }, [i18n.language]);
 
-  const limitedItems = serviceData.slice(0, 4);
+  useEffect(() => {
+    AOS.init({
+      offset: 120,
+      duration: 700,
+      easing: 'ease-in-out',
+      delay: 100,
+      once: true,
+    });
+    AOS.refresh();
+  }, []);
+
+  const limitedItems = serviceData.slice(0, 4); // Limiting to 4 items
 
   if (loading) {
-    return <p>Loading services...</p>;
+    return <p className="text-center text-gray-700 dark:text-white">Loading services...</p>;
   }
 
   return (
-    <div className="bg-gray-50 dark:bg-gray-900 dark:text-white py-12 sm:grid sm:place-items-center" id="services">
+    <div className="bg-gray-50 dark:bg-gray-900 dark:text-white py-12" id="services">
       <div className="container mx-auto px-6 lg:px-8">
-      {serviceData.map((item) => (
-  <Header key={item.id}>{t(item.Servicetitle)}</Header>
-))}
-        <ServiceWrapper>
+      {limitedItems.map((skill) => (   
+        <h1 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
+          {t(skill.Servicetitle)}
+        </h1>))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {limitedItems.map((skill) => (
-            <Card
+            <div
               key={skill.id}
+              className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-transform transform hover:-translate-y-1 hover:shadow-xl"
               data-aos="fade-up"
               data-aos-delay={skill.aosDelay}
               role="region"
               aria-labelledby={`service-title-${skill.id}`}
             >
-              <IconWrapper>
-                {skill.icon}
-              </IconWrapper>
-              <h1 id={`service-title-${skill.id}`} className="text-xl font-semibold mt-4 mb-2 text-gray-800 dark:text-white">
-                {t(skill.title)}
-              </h1>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">
-                {t(skill.desc)}
-              </p>
-              <Link to={`/service/${skill.id}`}>
-                <CTA aria-label={t('Learn more about') + ' ' + t(skill.title)}>{t(skill.Bouton)}</CTA>
-              </Link>
-            </Card>
+              <img 
+                src={skill.image} 
+                alt={t(skill.title)} 
+                className="w-full h-40 object-cover"
+              />
+              <div className="p-4 flex justify-between items-center">
+                <h2 id={`service-title-${skill.id}`} className="text-lg font-semibold text-gray-800 dark:text-white">
+                  {t(skill.title)}
+                </h2>
+                <Link to={`/service/${skill.id}`} className="flex items-center justify-center w-10 h-10 bg-blue-500 text-white rounded-full transition-transform transform hover:scale-110">
+                  <i className="mdi mdi-plus"></i>
+                </Link>
+              </div>
+            </div>
           ))}
-        </ServiceWrapper>
+        </div>
       </div>
     </div>
   );
