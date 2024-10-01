@@ -2,10 +2,6 @@ import React, { useEffect, useState, lazy, Suspense } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import styled from "styled-components";
-import { Helmet } from "react-helmet-async";
-
-// Import images directly
 import { useTranslation } from "react-i18next";
 import heroImage1 from '../assets/images/done/TeamDev/service.png';
 import heroImage2 from '../assets/images/done/TeamDev/service1.png';
@@ -31,9 +27,8 @@ const loadClientData = (lang) => {
       return import('../components/locales/en/translation').then(module => module.TitleEN);
   }
 };
-
 export default function Index() {
-  const { i18n } = useTranslation();
+  const { i18n,t } = useTranslation();
   const [clientData, setClientData] = useState([]);
   const images = [heroImage1, heroImage2, heroImage3]; // Array of images
   const [currentIndex, setCurrentIndex] = useState(0); // Track the current image index
@@ -45,6 +40,8 @@ export default function Index() {
   
   }, [i18n.language]);
 
+ 
+
   useEffect(() => {
     AOS.init({
       offset: 120,
@@ -53,7 +50,7 @@ export default function Index() {
       delay: 100,
     });
     AOS.refresh();
-  }, [i18n.language]);
+  }, []);
 
   // Automatically switch between images every few seconds
   useEffect(() => {
@@ -177,25 +174,26 @@ export default function Index() {
       <section className="relative bg-gradient-to-br from-blue-200 via-purple-200 to-blue-300 min-h-screen flex flex-col items-center justify-center overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center z-10 space-y-8 md:space-y-0 md:space-x-8 container overflow-hidden">
           
-          {/* Hero Text and Buttons */}
+          {/* Hero Text and Buttons */}  {clientData.map((item, index) => (
           <div className="text-center md:text-left flex-1 space-y-6" data-aos="fade-right">
-          <p className=" md:mt-0 text-6xl font-extrabold text-gray-900 leading-tight">
-  {clientData.map((item, index) => (
+            <h1 className="hero-text text-5xl md:text-7xl font-extrabold text-gray-900 leading-tight">
+          
     <span key={index}>{i18n.t(item.Title)}</span>
-  ))}
-</p>
-
-            
+ 
+            </h1>
+            {/* <p className="sub-text text-base text-gray-700 max-w-lg mx-auto md:mx-0" data-aos="fade-up" data-aos-delay="200">
+              With our innovative design solutions for global recruitment and training, your business can stand out.
+            </p> */}
 
             {/* CTA Buttons */}
             <div className="cta-buttons mt-4 flex justify-center md:justify-start space-x-4">
               <ScrollLink
-                to="getInTouch"
+                to="contact"
                 smooth
                 duration={500}
                 className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-6 rounded-full shadow-lg transform transition hover:-translate-y-1 hover:shadow-dynamic cursor-pointer"
               >
-                Contact Us
+               {t(item.button)}
               </ScrollLink>
               <ScrollLink
                 to="services"
@@ -203,12 +201,12 @@ export default function Index() {
                 duration={500}
                 className="inline-block bg-white border border-blue-600 text-blue-600 py-2 px-6 rounded-full shadow-lg transform transition hover:-translate-y-1 hover:shadow-dynamic cursor-pointer"
               >
-                Learn More
+               {t(item.Learn)}
               </ScrollLink>
             </div>
           </div>
 
-          {/* Image Container with Crossfade Effect */}
+           ))}
           <div className="image-container">
             {images.map((img, index) => (
               <img
@@ -244,8 +242,7 @@ export default function Index() {
       </section>
 
       <WhatsAppFloatingButton />
-      <section id="contact">
-      <Footer /></section>
+      <Footer />
     </Suspense>
   );
 }

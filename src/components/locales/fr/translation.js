@@ -491,7 +491,9 @@ export const AboutFR=[{
     ask:"Qui sommes-nous ?",
     title:"Nous sommes spécialisés dans le placement international et l'assistance documentaire, offrant un soutien sur mesure en plusieurs langues pour vous aider à naviguer dans les opportunités de carrière internationales.",
     desc:"Notre entreprise fournit des services de placement international et un soutien expert en plusieurs langues. Nous aidons les clients à trouver des opportunités de carrière à l'étranger et offrons une aide complète pour la préparation de documents en diverses langues. Notre objectif est de faciliter une transition fluide et efficace vers des carrières internationales.",
-    year:"Années d'expérience"
+    year:"Années d'expérience",
+     International:"Soutien aux carrières internationales",
+     Services:"Services"
 }]
 export const recruitmentFR = [
     {

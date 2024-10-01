@@ -33,6 +33,7 @@ export default function About() {
 
   return (
     <section className="relative py-24 bg-gradient-to-b from-gray-50 via-blue-50 to-blue-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 overflow-hidden" id="about">
+      {serviceAbout.map((item)=>(
       <div className="container mx-auto px-8 max-w-7xl flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12">
         
         {/* Left Content with Fade-in and 3D effect */}
@@ -46,11 +47,11 @@ export default function About() {
           <div className="flex items-center space-x-3">
             <FaGlobe className="text-blue-600 text-4xl" /> {/* Icon */}
             <h3 className="text-4xl font-bold text-gray-900 dark:text-white">
-              {t('about.title', 'About Ocean Connecting')}
+              {t(item.h1)}
             </h3>
           </div>
           <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-            {t('about.description', 'Our company provides international job placement services and expert support in multiple languages.')}
+            {t(item.title)}
           </p>
         </motion.div>
 
@@ -93,18 +94,18 @@ export default function About() {
           <div className="flex items-center space-x-3">
             <FaFileAlt className="text-blue-600 text-4xl" /> {/* Icon */}
             <h6 className="text-blue-600 text-sm font-semibold uppercase tracking-wide">
-              {t('about.services', 'Services')}
+              {t(item.Services)}
             </h6>
           </div>
           <h4 className="text-3xl font-semibold text-gray-800 dark:text-white">
-            {t('about.support', 'International Career Support')}
+            {t(item.International)}
           </h4>
           <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-            {t('about.supportDescription', 'We offer expert support in preparing documents in various languages to ease the process of international job placements.')}
+            {t(item.desc)}
           </p>
         </motion.div>
 
-      </div>
+      </div>))}
     </section>
   );
 }

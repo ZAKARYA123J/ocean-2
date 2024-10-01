@@ -399,7 +399,9 @@ export const AboutEN=[{
     ask:"Who Are We ?",
     title:"We specialize in global job placement and document assistance,offering tailored support in multiple languagesto help you navigate international career opportunities.",
     desc:"Our company provides international job placement services and expert support in multiple languages. We assist clients in finding global career opportunities and offer comprehensive help with document preparation in various languages. Our goal is to facilitate a smooth and effective transition to international careers.",
-    year:"YearsExperience"
+    year:"YearsExperience",
+    International:"International Career Support",
+    Services:"Services"
 }]
 export const recruitmentEN = [
     {
