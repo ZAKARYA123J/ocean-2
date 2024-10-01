@@ -13,6 +13,7 @@ import GalleryDetail from './components/Gallery/detailgallery';
 import TeamPage from './components/TeamPage';
 import TeamNurse from './components/TeamNurse';
 import ContractPage from './components/ContractPage';
+import TeamGlass from './components/TeamGlass';
 import LanguagesPage from './components/LanguagesPage';
 import { HelmetProvider } from 'react-helmet-async'; // Import HelmetProvider
 import { Events } from 'react-scroll';
@@ -31,9 +32,21 @@ function App() {
         <Route path="/team" element={<TeamPage />} />
         <Route path="/nurse" element={<TeamNurse />} />
         <Route path="/contract" element={<ContractPage />} />
-        <Route path="/languages" element={<LanguagesPage />} /> {/* Fixed component to element */}
+        <Route path="/languages" element={<LanguagesPage />} /> 
       </Routes>
     </HelmetProvider>
+    // <Routes>
+    //   <Route path='/' element={<Index/>}/>
+    //   <Route path='/formation' element={<Formation/>}/>
+    //   <Route path='/formation/:id' element={<IndexFive/>}/>
+    //   <Route path='/service/:id' element={<Service/>}/>
+    //   <Route path='/jobs/:type' element={<Jobs/>}/>
+    //   <Route path='/gallery' element={<Gallery/>}/>
+    //   <Route path='/gallery/:id' element={<GalleryDetail/>}/>
+    //   <Route path="/teamGlass" element={<TeamGlass />} />
+    //   <Route path="/team" element={<TeamPage />} />
+    //   <Route path="/languages" component={LanguagesPage} />
+    // </Routes>
   );
 }
 
