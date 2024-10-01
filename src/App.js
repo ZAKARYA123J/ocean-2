@@ -33,6 +33,7 @@ function App() {
         <Route path="/nurse" element={<TeamNurse />} />
         <Route path="/contract" element={<ContractPage />} />
         <Route path="/languages" element={<LanguagesPage />} /> 
+        {/* <Route path="/languages" element={<LanguagesPage />} /> Fixed component to element */}
       </Routes>
     </HelmetProvider>
     // <Routes>

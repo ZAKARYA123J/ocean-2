@@ -435,9 +435,47 @@ export const serviceDataFR = [
 export const Titlefr=[
     {
         Title:"Études Formation Recrutement National et International",
-        button:"Contactez-nous"
+        button:"Contactez-nous",
+        Learn:" Pour en savoir plus",
     }
 ]
+export const NurseFR = [{
+    title: "Soins infirmiers compatissants auxquels vous pouvez faire confiance",
+    desc: "Notre équipe dévouée d'infirmiers professionnels est là pour fournir des soins de la plus haute qualité avec empathie et respect. Votre santé et votre confort sont notre priorité absolue.",
+    contact: "Contactez-nous dès aujourd'hui",
+    about: "À propos de nous",
+    descab: "Nous sommes une équipe d'infirmiers diplômés et expérimentés dédiée à fournir des soins exceptionnels dans le confort de votre domicile. Des soins post-opératoires à la gestion des maladies chroniques, notre objectif est d'améliorer votre qualité de vie grâce à des services personnalisés et compatissants."
+}];
+export const CardFr = [{
+    title: "Points forts de nos soins infirmiers",
+    Comfort: "Confort du patient",
+    textCom: "Assurer le plus grand confort à nos patients grâce à des soins personnalisés et compatissants.",
+    detail: "DÉTAIL",
+    Caregiver: "Soutien aux aidants",
+    textCare: "Soutenir les aidants familiaux avec les ressources et le répit dont ils ont besoin pour s'occuper de leurs proches.",
+    Safety: "Sécurité et sûreté",
+    textsafe: "Maintenir un environnement sûr et sécurisé pour tous les patients grâce à des mesures de sécurité rigoureuses."
+}]
+export const ServicesSectionFR = [{
+    title: "Nos services de soins",
+    Patient: "Soins aux patients",
+    descp: "Prendre soin du patient pendant sa maladie.",
+    Dressing: "Changement de pansement",
+    descd: "Changement de pansements (chirurgicaux et dermatologiques, etc.).",
+    Injections: "Injections",
+    desci: "Types d'injections intramusculaires et sous-cutanées.",
+    Medical: "Ordonnance médicale",
+    decsm: "Avec une ordonnance médicale (obligatoire).",
+    Umbilical: "Soins du cordon ombilical",
+    descu: "Soins du cordon ombilical pour les bébés.",
+    Postpartum: "Soins post-partum",
+    decccp: "Soins pour la mère après l'accouchement.",
+    IV: "Changement de perfusion",
+    descI: "Changement de perfusion intraveineuse.",
+    Blood: "Pression artérielle & Glucose",
+    decsB: "Surveillance de la pression artérielle et du glucose sanguin."
+}];
+
 export const NavbarFR=[{
     Home:"Accueil",
     Services:"Services",

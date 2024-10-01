@@ -59,9 +59,14 @@ export default function Daitalservice() {
     <section className="relative md:py-24 py-16 bg-gray-50">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 pb-6 text-center">
-          {serviceData.length > 0 ? (
-            <h3 className="font-semibold text-4xl leading-normal mb-8 text-gray-900">{t(serviceData[0].mainTitle)}</h3>
-          ) : null}
+        {serviceData.map((item, index) => (
+          <>
+                     <h3 className="font-semibold text-2xl leading-normal mb-4">{t(item.title2)}</h3>
+                     <p className="text-slate-400 max-w-xl mx-auto">
+                       {t(item.desc2)}
+                     </p>
+                     </>
+                    ))}
         </div>
 
         <div className="grid md:grid-cols-12 grid-cols-1 mt-6 gap-8">

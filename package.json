@@ -1,7 +1,7 @@
 {
-  "name": "upcover",
+  "name": "Ocean connecting",
   "version": "1.0.0",
-  "description": "Upcover - React js Business Landing Page Template",
+  "description": "Global Job Placement & Document Assistance",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.13.0",
