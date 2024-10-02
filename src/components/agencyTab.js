@@ -34,10 +34,6 @@ const Section = styled.section`
   @media (min-width: 768px) {
     padding: 6rem 2rem; /* md:py-24 for medium and large screens */
   }
-
-  @media (prefers-color-scheme: dark) {
-    background-color: #111827; /* bg-gray-900 for dark mode */
-  }
 `;
 
 const Container = styled.div`
@@ -60,10 +56,6 @@ const Sidebar = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-
-  @media (prefers-color-scheme: dark) {
-    background: #1f2937; /* Dark mode for the sidebar */
-  }
 `;
 
 const Tab = styled.div`
@@ -83,11 +75,6 @@ const Tab = styled.div`
     svg {
       animation: ${iconAnimation} 1s ease-in-out;
     }
-  }
-
-  @media (prefers-color-scheme: dark) {
-    background-color: ${({ active }) => (active ? "#2563eb" : "#374151")};
-    color: ${({ active }) => (active ? "#ffffff" : "#d1d5db")};
   }
 `;
 
@@ -109,10 +96,6 @@ const CardWrapper = styled.div`
     padding: 24px; /* Larger padding on medium screens and up */
   }
 
-  @media (prefers-color-scheme: dark) {
-    background-color: #1f2937; /* Dark background for card */
-  }
-
   animation: ${fadeIn} 0.6s ease-out; /* Add content fade-in animation */
 `;
 
@@ -123,30 +106,18 @@ const CardContent = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
-
-  @media (prefers-color-scheme: dark) {
-    background-color: #1f2937; /* Dark mode background inside card */
-  }
 `;
 
 const Title = styled.h2`
   font-size: 2rem;
   color: #1f2937;
   margin-bottom: 1rem;
-
-  @media (prefers-color-scheme: dark) {
-    color: #f3f4f6; /* Dark mode text color */
-  }
 `;
 
 const Description = styled.p`
   color: #6b7280;
   line-height: 1.6;
   margin-bottom: 2rem;
-
-  @media (prefers-color-scheme: dark) {
-    color: #d1d5db; /* Dark mode text color */
-  }
 `;
 
 const CTAButton = styled.button`
