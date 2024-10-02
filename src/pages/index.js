@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import heroImage1 from '../assets/images/done/TeamDev/service.png';
 import heroImage2 from '../assets/images/done/TeamDev/service1.png';
 import heroImage3 from '../assets/images/done/TeamDev/service2.png';
-
+import { SpeedInsights } from '@vercel/speed-insights/react';
 // Lazy Loaded Components
 const Footer = lazy(() => import('../components/footer'));
 const About = lazy(() => import("../components/about"));
@@ -243,6 +243,7 @@ export default function Index() {
 
       <WhatsAppFloatingButton />
       <Footer />
+      <SpeedInsights />
     </Suspense>
   );
 }

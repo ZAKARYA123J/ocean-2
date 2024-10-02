@@ -17,6 +17,7 @@ import TeamGlass from './components/TeamGlass';
 import LanguagesPage from './components/LanguagesPage';
 import { HelmetProvider } from 'react-helmet-async'; // Import HelmetProvider
 import { Events } from 'react-scroll';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 function App() {
   return (
     <HelmetProvider>
@@ -35,6 +36,7 @@ function App() {
         <Route path="/languages" element={<LanguagesPage />} /> 
         {/* <Route path="/languages" element={<LanguagesPage />} /> Fixed component to element */}
       </Routes>
+      <SpeedInsights />
     </HelmetProvider>
     // <Routes>
     //   <Route path='/' element={<Index/>}/>
