@@ -13,7 +13,6 @@ import client2 from '../../../assets/images/team/02.jpg'
 import client3 from '../../../assets/images/team/03.jpg'
 import client4 from '../../../assets/images/team/04.jpg'
 import client5 from '../../../assets/images/team/05.jpg'
-// import formation4 from '../assets/images/formation/formation4.jpg'
 import formation5 from '../../../assets/images/formation/formation05.jpg'
 import formation6 from '../../../assets/images/formation/formation6.jpg'
 import formation17 from '../../../assets/images/formation/formation17.jpg'
@@ -53,13 +52,16 @@ import recrutinter from '../../../assets/images/service/recrutinter2.png'
 import form from '../../../assets/images/form.pdf'
 
 
-
+// export const teamTitle = "Meet Our Development Team";
+// export const teamDescription = "We are a passionate team of experts dedicated to crafting innovative solutions. Explore more about each team member below and learn about the technologies they excel in.";
+// export const membersTitle = "Our Team Members";
+// export const viewDetails = "View Details";
 
 export const clientDataEN = [
     {
         image:client1,
         clientitle:"What Our Users Say",
-        name:'Calvin Carlo',
+        name:'Calvin Carlo',    
         title:'Manager',
         desc:'" I was blown away by the personalized support I received from this team. Their expertise in global job placement helped me land a fantastic position abroad. Highly recommend their services! "'
     },
@@ -397,7 +399,9 @@ export const AboutEN=[{
     ask:"Who Are We ?",
     title:"We specialize in global job placement and document assistance,offering tailored support in multiple languagesto help you navigate international career opportunities.",
     desc:"Our company provides international job placement services and expert support in multiple languages. We assist clients in finding global career opportunities and offer comprehensive help with document preparation in various languages. Our goal is to facilitate a smooth and effective transition to international careers.",
-    year:"YearsExperience"
+    year:"YearsExperience",
+    International:"International Career Support",
+    Services:"Services"
 }]
 export const recruitmentEN = [
     {
@@ -429,7 +433,6 @@ export const recruitmentEN = [
 export const jobsEN = [
     {
         id: 1,
-
         image: resume,
         title: 'Application for an overseas work contract',
         type: 'International',
@@ -522,8 +525,8 @@ export const jobsEN = [
         menu3:"Time Visa :",
         menu4:"Contrat :",
         menu5:"Price Contrat :",
-         menu6:"More :",
-       action : 'To apply',
+        menu6:"More :",
+        action : 'To apply',
     },
     {
         id: 6,
