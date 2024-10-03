@@ -1,4 +1,4 @@
-import React, { useEffect, useState, lazy, Suspense } from "react";
+import React, { useEffect, useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -6,16 +6,16 @@ import { useTranslation } from "react-i18next";
 import heroImage1 from '../assets/images/done/TeamDev/service.png';
 import heroImage2 from '../assets/images/done/TeamDev/service1.png';
 import heroImage3 from '../assets/images/done/TeamDev/service2.png';
+import Footer from '../components/footer';
+import About from "../components/about";
+import Services from "../components/services";
+import AgencyTab from "../components/agencyTab";
+import Blogs from "../components/blog";
+import GetInTouch from "../components/getInTuoch";
+import Navbar from '../components/navbar';
+import WhatsAppFloatingButton from '../components/WhatsAppFloatingButton';
 import { SpeedInsights } from '@vercel/speed-insights/react';
-// Lazy Loaded Components
-const Footer = lazy(() => import('../components/footer'));
-const About = lazy(() => import("../components/about"));
-const Services = lazy(() => import("../components/services"));
-const AgencyTab = lazy(() => import("../components/agencyTab"));
-const Blogs = lazy(() => import("../components/blog"));
-const GetInTouch = lazy(() => import("../components/getInTuoch"));
-const Navbar = lazy(() => import('../components/navbar'));
-const WhatsAppFloatingButton = lazy(() => import('../components/WhatsAppFloatingButton'));
+
 const loadClientData = (lang) => {
   switch (lang) {
     case 'fr':
@@ -27,22 +27,16 @@ const loadClientData = (lang) => {
       return import('../components/locales/en/translation').then(module => module.TitleEN);
   }
 };
+
 export default function Index() {
-  const { i18n,t } = useTranslation();
+  const { i18n, t } = useTranslation();
   const [clientData, setClientData] = useState([]);
   const images = [heroImage1, heroImage2, heroImage3]; // Array of images
   const [currentIndex, setCurrentIndex] = useState(0); // Track the current image index
+  
   useEffect(() => {
-    // Load client data whenever the language changes
     loadClientData(i18n.language).then(data => setClientData(data));
     
-    // Initialize AOS animations
-  
-  }, [i18n.language]);
-
- 
-
-  useEffect(() => {
     AOS.init({
       offset: 120,
       duration: 1000,
@@ -50,24 +44,44 @@ export default function Index() {
       delay: 100,
     });
     AOS.refresh();
-  }, []);
+  }, [i18n.language]);
 
-  // Automatically switch between images every few seconds
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length); // Loop through images
-    }, 3000); // Change image every 3 seconds
+    }, 3000);
 
-    return () => clearInterval(intervalId); // Clear interval when component unmounts
+    return () => clearInterval(intervalId);
   }, [images.length]);
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <>
       <Navbar />
-
-      {/* CSS for Image Crossfade Effect */}
       <style>
         {`
+          /* Loader Styles */
+          .loader-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f3f4f6;
+          }
+
+          .spinner {
+            border: 12px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 12px solid #3498db;
+            width: 80px;
+            height: 80px;
+            animation: spin 1s linear infinite;
+          }
+
+          @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+
           /* Default styles for PC/desktop screens */
           .image-container {
             position: relative;
@@ -97,74 +111,74 @@ export default function Index() {
           @media (max-width: 768px) {
             .image-container {
               position: relative;
-              width: 100%; /* Full width for mobile */
-              height: 250px; /* Fixed height for mobile */
-              max-width: 100%; /* Limit max width */
-              margin-top: 20px; /* Ensure the image is below the text content */
+              width: 100%;
+              height: 250px;
+              max-width: 100%;
+              margin-top: 20px;
             }
 
             .text-center {
               text-align: center;
-              word-wrap: break-word; /* Ensure text wraps properly */
-              overflow-wrap: break-word; /* Prevent overflow of long words */
-              overflow: hidden; /* Prevent content overflow */
-              padding: 0 16px; /* Add padding to prevent text touching edges */
-              max-width: 100%; /* Ensure container doesn't exceed screen */
-              padding-top: 20px; /* Add top padding for mobile to create more space */
+              word-wrap: break-word;
+              overflow-wrap: break-word;
+              overflow: hidden;
+              padding: 0 16px;
+              max-width: 100%;
+              padding-top: 20px;
             }
 
             .md\\:flex-row {
-              flex-direction: column; /* Vertical stacking on mobile */
+              flex-direction: column;
               justify-content: center;
               align-items: center;
             }
 
             .md\\:space-x-8 {
-              margin: 0; /* Remove horizontal space on mobile */
+              margin: 0;
             }
 
             .md\\:text-left {
-              text-align: center; /* Center text on mobile */
+              text-align: center;
             }
 
             .scroll-link {
-              padding: 12px 24px; /* Reduce button padding on mobile */
-              font-size: 12px; /* Further reduce button text size for mobile */
+              padding: 12px 24px;
+              font-size: 12px;
             }
 
             .cta-buttons {
               flex-direction: column;
-              gap: 12px; /* Space between buttons on mobile */
+              gap: 12px;
             }
 
             .hero-text {
-              font-size: 1.8rem; /* Further reduce hero text size for mobile */
-              line-height: 1.2; /* Reduce line height */
-              word-break: break-word; /* Ensure text doesn't overflow */
-              max-width: 100%; /* Ensure text fits within screen */
-              padding-top: 90px; /* Add top padding for mobile to avoid overlap */
+              font-size: 1.8rem;
+              line-height: 1.2;
+              word-break: break-word;
+              max-width: 100%;
+              padding-top: 90px;
             }
 
             .sub-text {
-              font-size: 0.9rem; /* Reduce subtext font size */
+              font-size: 0.9rem;
               margin-top: 1rem;
-              padding: 0 16px; /* Add padding for proper spacing */
-              word-wrap: break-word; /* Ensure long words wrap correctly */
-              overflow: hidden; /* Prevent overflow */
-              max-width: 100%; /* Ensure it fits mobile screen */
+              padding: 0 16px;
+              word-wrap: break-word;
+              overflow: hidden;
+              max-width: 100%;
             }
 
             body {
-              overflow-x: hidden; /* Prevent horizontal scroll on mobile */
+              overflow-x: hidden;
             }
 
             .container {
-              max-width: 100%; /* Ensure the container doesn’t overflow */
-              overflow-x: hidden; /* Prevent horizontal overflow */
+              max-width: 100%;
+              overflow-x: hidden;
             }
 
             .overflow-hidden {
-              overflow: hidden; /* Ensure the content doesn’t overflow */
+              overflow: hidden;
             }
           }
         `}
@@ -173,40 +187,34 @@ export default function Index() {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-200 via-purple-200 to-blue-300 min-h-screen flex flex-col items-center justify-center overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center z-10 space-y-8 md:space-y-0 md:space-x-8 container overflow-hidden">
-          
-          {/* Hero Text and Buttons */}  {clientData.map((item, index) => (
-          <div className="text-center md:text-left flex-1 space-y-6" data-aos="fade-right">
-            <h1 className="hero-text text-5xl md:text-7xl font-extrabold text-gray-900 leading-tight">
-          
-    <span key={index}>{i18n.t(item.Title)}</span>
- 
-            </h1>
-            {/* <p className="sub-text text-base text-gray-700 max-w-lg mx-auto md:mx-0" data-aos="fade-up" data-aos-delay="200">
-              With our innovative design solutions for global recruitment and training, your business can stand out.
-            </p> */}
+          {clientData.map((item, index) => (
+            <div className="text-center md:text-left flex-1 space-y-6" data-aos="fade-right" key={index}>
+              <h1 className="hero-text text-5xl md:text-7xl font-extrabold text-gray-900 leading-tight">
+                {t(item.Title)}
+              </h1>
 
-            {/* CTA Buttons */}
-            <div className="cta-buttons mt-4 flex justify-center md:justify-start space-x-4">
-              <ScrollLink
-                to="contact"
-                smooth
-                duration={500}
-                className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-6 rounded-full shadow-lg transform transition hover:-translate-y-1 hover:shadow-dynamic cursor-pointer"
-              >
-               {t(item.button)}
-              </ScrollLink>
-              <ScrollLink
-                to="services"
-                smooth
-                duration={500}
-                className="inline-block bg-white border border-blue-600 text-blue-600 py-2 px-6 rounded-full shadow-lg transform transition hover:-translate-y-1 hover:shadow-dynamic cursor-pointer"
-              >
-               {t(item.Learn)}
-              </ScrollLink>
+              {/* CTA Buttons */}
+              <div className="cta-buttons mt-4 flex justify-center md:justify-start space-x-4">
+                <ScrollLink
+                  to="contact"
+                  smooth
+                  duration={500}
+                  className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-6 rounded-full shadow-lg transform transition hover:-translate-y-1 hover:shadow-dynamic cursor-pointer"
+                >
+                  {t(item.button)}
+                </ScrollLink>
+                <ScrollLink
+                  to="services"
+                  smooth
+                  duration={500}
+                  className="inline-block bg-white border border-blue-600 text-blue-600 py-2 px-6 rounded-full shadow-lg transform transition hover:-translate-y-1 hover:shadow-dynamic cursor-pointer"
+                >
+                  {t(item.Learn)}
+                </ScrollLink>
+              </div>
             </div>
-          </div>
-
-           ))}
+          ))}
+          
           <div className="image-container">
             {images.map((img, index) => (
               <img
@@ -220,7 +228,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Other Sections Below */}
       <section id="services">
         <Services />
       </section>
@@ -244,6 +251,6 @@ export default function Index() {
       <WhatsAppFloatingButton />
       <Footer />
       <SpeedInsights />
-    </Suspense>
+    </>
   );
 }
