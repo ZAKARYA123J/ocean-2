@@ -6,23 +6,23 @@
     border-top-color: rgba(0, 0, 255, 0.9);
     border-radius: 50%;
     animation: spin 1s linear infinite;
-  }
-  
-  @keyframes spin {
+}
+
+@keyframes spin {
     0% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
     100% {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
-  
-  /* Card Styles */
-  .card-wrapper {
+}
+
+/* Card Styles */
+.card-wrapper {
     perspective: 1000px;
-  }
-  
-  .card {
+}
+
+.card {
     transition: transform 0.5s, box-shadow 0.5s;
     transform-style: preserve-3d;
     transform: rotateY(0);
@@ -30,44 +30,54 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-  }
-  
-  .card:hover {
+}
+
+.card:hover {
     transform: rotateY(10deg);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-  }
-  
-  .card-image img {
+}
+
+.card-image img {
     transition: transform 0.5s;
-  }
-  
-  .card:hover .card-image img {
+}
+
+.card:hover .card-image img {
     transform: scale(1.1);
-  }
-  
-  .card-content {
-    padding: 16px;
+}
+
+.card-content {
+    padding: 8px; /* Minimal padding inside the card content */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    min-height: 150px;
-  }
-  
-  .card h2 {
+    justify-content: flex-start;
+}
+
+/* Adjust Title Style */
+.card h2 {
     font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .card p {
+    margin-bottom: 0; /* Remove margin below the title */
+}
+
+/* Adjust Paragraph Style */
+.card p {
     font-size: 1rem;
     color: #666;
-  }
-  
-  .card-content .text-blue-600 {
-    transition: color 0.3s ease;
-  }
-  
-  .card:hover .text-blue-600 {
+    margin: 0; /* Remove all margins around the paragraph */
+}
+
+/* Adjust Learn More */
+.card-content .text-blue-600 {
+    transition: color 0.3s ease, background-color 0.3s ease; 
+    margin-top: 4px;
+    padding: 8px 12px;
+    display: inline-block;
+    border-radius: 4px;
     color: #3498db;
-  }
-  
+    background-color: transparent;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.card:hover .text-blue-600 {
+    color: #3498db;
+}
