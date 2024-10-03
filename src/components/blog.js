@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react"; 
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import styled, { keyframes } from "styled-components";
-import { FiCalendar, FiClock, FiShare2 } from '../assets/icons/vander'; // Add share icon
+import { FiCalendar, FiClock, FiShare2, FiArrowRight } from 'react-icons/fi'; // Import the arrow icon
 
-// Share button styled component
+// Share button styled component  
 const ShareButton = styled.button`
   background-color: transparent;
   color: #3a86ff;
@@ -81,10 +81,9 @@ export default function Blogs() {
       navigator.share({
         title: item.title,
         text: item.desc,
-        url: window.location.origin + `/blog/${item.id}`,
+        url: window.location.origin + `/formation/${item.id}`,
       }).catch((error) => console.error('Error sharing', error));
     } else {
-      // Fallback - you can display a modal or copy the link
       alert('Share feature is not supported in this browser. Please copy the link manually.');
     }
   };
@@ -93,25 +92,21 @@ export default function Blogs() {
     <section className="relative md:py-24 py-16 bg-gray-50 dark:bg-gray-900" id="blog">
       <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
         <div className="text-center mb-12">
-        {blogData.map((item)=>(
-          <h3 className="text-4xl font-bold text-gray-900 dark:text-white mb-4" key={item.id}>
-            
-            {t(item.Title)}
-          </h3>
+          {blogData.map((item) => (
+            <h3 className="text-4xl font-bold text-gray-900 dark:text-white mb-4" key={item.id}>
+              {t(item.Title)}
+            </h3>
           ))}
-          {/* <p className="text-lg text-gray-600 dark:text-gray-300">
-            {t('Stay updated with our latest news and articles')}
-          </p> */}
         </div>
 
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
           {limitedItems.map((item, index) => (
             <LightEffect key={index} className="group">
               <div className="relative overflow-hidden rounded-t-lg">
-                <img 
-                  src={item.image} 
-                  className="w-full h-48 object-cover transition-transform duration-500" 
-                  alt={t(item.title)} 
+                <img
+                  src={item.image}
+                  className="w-full h-48 object-cover transition-transform duration-500"
+                  alt={t(item.title)}
                 />
               </div>
               <SlideInContent className="p-6">
@@ -127,7 +122,7 @@ export default function Blogs() {
                   </span>
                 </div> */}
 
-                <Link to={`/blog/${item.id}`} className="block">
+                <Link to={`/formation/${item.id}`} className="block">
                   <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-blue-500 transition-colors">
                     {t(item.title)}
                   </h4>
@@ -151,6 +146,16 @@ export default function Blogs() {
               </SlideInContent>
             </LightEffect>
           ))}
+        </div>
+
+        {/* Button to view all trainings with an arrow icon, centered */}
+        <div className="flex justify-center mt-12">
+          <Link to="/formation">
+            <button className="bg-blue-500 text-white rounded-full px-6 py-3 hover:bg-blue-600 transition flex items-center justify-center">
+              {t('See All Trainings')}
+              <FiArrowRight className="ml-2" /> {/* Icon added next to the text */}
+            </button>
+          </Link>
         </div>
       </div>
     </section>

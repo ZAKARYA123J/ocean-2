@@ -131,7 +131,7 @@ i18n
     }
   });
 
-const TeamGlass = [
+const TeamGlassr = [
   { id: 1, name: 'Ahmed El Fassi', photo: profileImage },
   { id: 2, name: 'Sara Haddad', photo: profileImage },
   { id: 3, name: 'Ahmed El Fassi', photo: profileImage },
@@ -148,7 +148,7 @@ const faqs = [
   { question: 'faq.q5', answer: 'faq.a5' }
 ];
 
-const TeamPage = () => {
+const TeamGlass = () => {
   const { t, i18n } = useTranslation();
   const [selectedMember, setSelectedMember] = useState(null);
   const [activeFaq, setActiveFaq] = useState(null);
@@ -180,7 +180,7 @@ const TeamPage = () => {
           
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-            {TeamGlass.map((member) => (
+            {TeamGlassr.map((member) => (
               <div key={member.id} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
                 <div className="flex flex-col items-center">
                   <img
@@ -344,4 +344,4 @@ const TeamPage = () => {
   );
 };
 
-export default TeamPage;
+export default TeamGlass;
