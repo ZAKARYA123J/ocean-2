@@ -116,7 +116,7 @@ export default function Blogs() {
               </div>
               <SlideInContent className="p-6">
                 {/* Meta Information */}
-                <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-4">
+                {/* <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-4">
                   <span className="flex items-center">
                     <FiCalendar className="mr-1.5" />
                     {item.date}
@@ -125,7 +125,7 @@ export default function Blogs() {
                     <FiClock className="mr-1.5" />
                     5 min read
                   </span>
-                </div>
+                </div> */}
 
                 <Link to={`/blog/${item.id}`} className="block">
                   <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-blue-500 transition-colors">

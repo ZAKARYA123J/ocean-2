@@ -54,7 +54,7 @@ const Services = () => {
     AOS.refresh();
   }, []);
 
-  const limitedItems = serviceData.slice(0, 4); // Limiting to 4 items
+  const limitedItems = serviceData.slice(0, 6); // Limiting to 4 items
 
   if (loading) {
     return <p className="text-center text-gray-700 dark:text-white">Loading services...</p>;
@@ -63,7 +63,7 @@ const Services = () => {
   return (
     <div className="bg-gray-50 dark:bg-gray-900 dark:text-white py-12" id="services">
       <div className="container mx-auto px-6 lg:px-8">
-        {limitedItems.map((skill) => (   
+        {serviceData.map((skill) => (   
           <h1 key={skill.id} className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-2">
             {t(skill.Servicetitle)}
           </h1>
@@ -72,7 +72,7 @@ const Services = () => {
           {limitedItems.map((skill) => (
             <Link 
               key={skill.id}
-              to={`/service/${skill.id}`}
+              to={skill.link}
               className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-transform transform hover:-translate-y-1 hover:shadow-xl"
               data-aos="fade-up"
               data-aos-delay={skill.aosDelay}

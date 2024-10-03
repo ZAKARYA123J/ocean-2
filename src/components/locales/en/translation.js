@@ -51,7 +51,7 @@ import recrutocean from '../../../assets/images/service/recrutocean.png'
 import recrutinter from '../../../assets/images/service/recrutinter2.png'
 import form from '../../../assets/images/form.pdf'
 
-
+import heroImage1 from '../../../assets/images/done/TeamDev/service.png';
 // export const teamTitle = "Meet Our Development Team";
 // export const teamDescription = "We are a passionate team of experts dedicated to crafting innovative solutions. Explore more about each team member below and learn about the technologies they excel in.";
 // export const membersTitle = "Our Team Members";
@@ -300,7 +300,7 @@ export const serviceDataEN = [
         para5: "Added Value",
         desc_para5: "Our training stands out for its flexibility and practical approach, incorporating the latest trends and technologies to offer relevant and immediately applicable solutions on the field.",
         Bouton : "Learn more",
-        link:<Link to={"/formation"} className="text-sky-500" >Get Formation <i className="mdi mdi-chevron-right align-middle"></i></Link>,
+        link:"/formation",
 
     },
     {
@@ -320,7 +320,7 @@ export const serviceDataEN = [
         para5: "Added Value",
         desc_para5: "Our expertise in facade cleaning guarantees lasting results and prompt service, while adhering to the strictest environmental and safety standards.",
         Bouton : "Learn more",
-        link:<Link1 to="contact" className="text-sky-500"smooth={true} duration={1000} activeClass='active' spy={true}>Contact Us <i className="mdi mdi-chevron-right align-middle"></i></Link1>,
+        link:"/teamglass"
     },
     {
         id: 3,
@@ -358,7 +358,7 @@ export const serviceDataEN = [
         para5: "Added Value",
         desc_para5: "Our personalized approach and technical expertise ensure results that not only meet but exceed your expectations, offering a functional, aesthetically pleasing, and search-engine-optimized website.",
         Bouton : "Learn more",
-        link:<Link1 to="contact" className="text-sky-500"smooth={true} duration={1000} activeClass='active' spy={true}>Contact Us <i className="mdi mdi-chevron-right align-middle"></i></Link1>,
+        link: "/team" ,
     },
     {
         id: 5,
@@ -375,7 +375,24 @@ export const serviceDataEN = [
         desc_para4: "We use advanced search methods and a global network to source candidates. The process includes a thorough skills assessment, targeted interviews, and proactive management of applications to ensure an optimal match.",
         para5: "Added Value",
         desc_para5: "Our expertise in international recruitment allows us to find talent suited to your company's specific requirements, while offering personalized service and support throughout the recruitment process to ensure a successful integration.",
-        link:<Link to="/jobs/all" className="text-sky-500" >Get an international job <i className="mdi mdi-chevron-right align-middle"></i></Link>,
+        link:"/jobs",
+    },
+    {
+        id: 6,
+        title: "Patient Care Nurse",
+        desc: "We offer employment contract services in Europe. Contact us today to start your journey toward a bright professional future ! ",
+        image: heroImage1,
+        para1: "Recruitment Service",
+        desc_para1: "Our international recruitment service helps companies identify and hire the best talent worldwide. Through our extensive network and HR expertise, we find qualified candidates who perfectly meet your specific requirements. Simplify your recruitment process and strengthen your team with talented professionals from diverse backgrounds.",
+        para2: "Benefits",
+        desc_para2: "This service facilitates access to a pool of highly qualified candidates, improves the efficiency of the recruitment process, and reduces hiring times, while ensuring hires that match each company's specific needs.",
+        para3: "Target Audience",
+        desc_para3: "This service is intended for multinational companies, businesses expanding internationally, and organizations looking to strengthen their team with talented professionals from various global markets.",
+        para4: "Process or Methodology",
+        desc_para4: "We use advanced search methods and a global network to source candidates. The process includes a thorough skills assessment, targeted interviews, and proactive management of applications to ensure an optimal match.",
+        para5: "Added Value",
+        desc_para5: "Our expertise in international recruitment allows us to find talent suited to your company's specific requirements, while offering personalized service and support throughout the recruitment process to ensure a successful integration.",
+        link:"/nurse",
     }
 ]
 export const TitleEN=[

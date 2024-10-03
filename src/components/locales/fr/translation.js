@@ -57,7 +57,7 @@ import form from '../../../assets/images/form.pdf'
 //     },
 //     // Add other members...
 //   ];
-  
+import heroImage1 from '../../../assets/images/done/TeamDev/service.png';
   export const servicesFR = [
     {
       title: "Sécurité",
@@ -431,6 +431,23 @@ export const serviceDataFR = [
 
 
     },  
+    {
+        id: 6,
+        title: "Infirmière de soins aux patients",
+        desc: "We offer employment contract services in Europe. Contact us today to start your journey toward a bright professional future ! ",
+        image: heroImage1,
+        para1: "Recruitment Service",
+        desc_para1: "Our international recruitment service helps companies identify and hire the best talent worldwide. Through our extensive network and HR expertise, we find qualified candidates who perfectly meet your specific requirements. Simplify your recruitment process and strengthen your team with talented professionals from diverse backgrounds.",
+        para2: "Benefits",
+        desc_para2: "This service facilitates access to a pool of highly qualified candidates, improves the efficiency of the recruitment process, and reduces hiring times, while ensuring hires that match each company's specific needs.",
+        para3: "Target Audience",
+        desc_para3: "This service is intended for multinational companies, businesses expanding internationally, and organizations looking to strengthen their team with talented professionals from various global markets.",
+        para4: "Process or Methodology",
+        desc_para4: "We use advanced search methods and a global network to source candidates. The process includes a thorough skills assessment, targeted interviews, and proactive management of applications to ensure an optimal match.",
+        para5: "Added Value",
+        desc_para5: "Our expertise in international recruitment allows us to find talent suited to your company's specific requirements, while offering personalized service and support throughout the recruitment process to ensure a successful integration.",
+        link:"/nurse",
+    }
 ]
 export const Titlefr=[
     {

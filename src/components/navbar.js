@@ -88,7 +88,7 @@ export default function Navbar() {
       [dropdownType]: !prevState[dropdownType],
     }));
   };
-
+const limitedItems=serviceData.slice(1,6)
   return (
     <nav className={`navbar ${scroll ? 'is-sticky' : ''}`} id="navbar">
       <div className="container relative flex flex-wrap items-center justify-between">
@@ -126,10 +126,10 @@ export default function Navbar() {
                 </Link>
                 {dropdowns.servicesOpen && (
                   <ul className={`dropdown-list ${isMobile ? 'block' : 'absolute'} bg-white text-dark shadow-lg rounded-lg p-4 w-80`}>
-                    {serviceData.map((service, idx) => (
+                    {limitedItems.map((skill, idx) => (
                       <li className="nav-item" key={idx}>
-                        <Link className="nav-link" to={`/service/${service.id}`} style={{ padding: '10px 20px', display: 'block' }}>
-                          {service.title}
+                        <Link className="nav-link"  to={skill.link} style={{ padding: '10px 20px', display: 'block' }}>
+                          {skill.title}
                         </Link>
                       </li>
                     ))}
@@ -141,21 +141,22 @@ export default function Navbar() {
               <li className="nav-item ms-0 relative">
                 <Link
                   className="nav-link cursor-pointer flex items-center"
-                  onClick={() => handleDropdownToggle('formationOpen')}
+                  // onClick={() => handleDropdownToggle('formationOpen')}
+                  to={"/formation"}
                 >
-                  {t(item.Formation)} <RiArrowDropDownLine className="ml-1" fontSize={25}/>
+                  {t(item.Formation)} 
                 </Link>
-                {dropdowns.formationOpen && (
+                {/* {dropdowns.formationOpen && (
                   <ul className={`dropdown-list ${isMobile ? 'block' : 'absolute'} bg-white text-dark shadow-lg rounded-lg p-4 w-80 max-h-60 overflow-y-auto`}>
                     {blogData.map((service, idx) => (
                       <li className="nav-item" key={idx}>
-                        <Link className="nav-link" to={`/formation/${service.id}`} style={{ padding: '10px 20px', display: 'block' }}>
+                        <Link className="nav-link" to={"/formation"} style={{ padding: '10px 20px', display: 'block' }}>
                           {service.title}
                         </Link>
                       </li>
                     ))}
                   </ul>
-                )}
+                )} */}
               </li>
 
               {/* Jobs dropdown */}
