@@ -40,7 +40,7 @@ import resume from '../../../assets/images/job/resume.png'
 import recrutocean from '../../../assets/images/service/recrutocean.png'
 import recrutinter from '../../../assets/images/service/recrutinter2.png'
 import form from '../../../assets/images/form.pdf'
-
+import { FaGithub, FaLinkedin, FaLock, FaComments, FaCode } from "react-icons/fa";
 // export const teamTitle = "Rencontrez Notre Équipe de Développement";
 // export const teamDescription = "Nous sommes une équipe passionnée d'experts dédiée à la création de solutions innovantes. Explorez plus sur chaque membre de l'équipe ci-dessous et découvrez les technologies dans lesquelles ils excellent.";
 // export const membersTitle = "Nos Membres de l'Équipe";
@@ -425,6 +425,7 @@ export const serviceDataFR = [
         para4:"Processus ou Méthodologie",
         desc_para4:"Nous utilisons des méthodes de recherche avancées et un réseau mondial pour sourcer des candidats. Le processus inclut une évaluation approfondie des compétences, des entretiens ciblés et une gestion proactive des candidatures pour garantir une correspondance optimale.",
         para5:"Valeur Ajoutée",
+        Bouton : "Apprendre encore plus",
         desc_para5:"Notre expertise en recrutement international permet de trouver des talents adaptés aux exigences spécifiques de votre entreprise, tout en offrant un service personnalisé et un soutien tout au long du processus de recrutement pour assurer une intégration réussie. ",
 
         link:<Link to="/jobs/all" className="text-sky-500" >Obtenez un emploi à l'international <i className="mdi mdi-chevron-right align-middle"></i></Link>,
@@ -445,6 +446,7 @@ export const serviceDataFR = [
         para4: "Process or Methodology",
         desc_para4: "We use advanced search methods and a global network to source candidates. The process includes a thorough skills assessment, targeted interviews, and proactive management of applications to ensure an optimal match.",
         para5: "Added Value",
+        Bouton : "Apprendre encore plus",
         desc_para5: "Our expertise in international recruitment allows us to find talent suited to your company's specific requirements, while offering personalized service and support throughout the recruitment process to ensure a successful integration.",
         link:"/nurse",
     }
@@ -764,8 +766,30 @@ export const GalleryFR=[
             ]
     },
     
+    
 ]
-
+export const DevelopmentFR = [{  
+    title: "Rencontrez notre équipe de développement",  
+    desc: "Nous sommes une équipe passionnée d'experts dédiée à la création de solutions innovantes. Découvrez davantage sur chaque membre de l'équipe ci-dessous et apprenez-en plus sur les technologies dans lesquelles ils excellent.",  
+    title2: "Nos services de développement",  
+    services: [  
+        {  
+            title: "Sécurité",  
+            description: "Assurez la sécurité de vos applications avec les derniers protocoles de sécurité et les meilleures pratiques. Nous proposons des tests de pénétration, des pratiques de codage sécurisées et des évaluations de conformité.",  
+            icon: <FaLock className="text-blue-600" />  
+          },  
+          {  
+            title: "Consultation",  
+            description: "Obtenez des conseils d'experts sur la stratégie technologique, l'architecture des systèmes, et plus encore. Nos services de consultation sont adaptés pour vous aider à naviguer dans des défis techniques complexes.",  
+            icon: <FaComments className="text-green-600" />  
+          },  
+          {  
+            title: "Développement",  
+            description: "De la développement front-end au développement back-end, notre équipe excelle dans la création d'applications robustes et évolutives adaptées aux besoins de votre entreprise.",  
+            icon: <FaCode className="text-purple-600" />  
+          }
+    ]
+}]
 
 
 

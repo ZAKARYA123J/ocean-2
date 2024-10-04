@@ -105,7 +105,7 @@ const Services = () => {
                   </p>
 
                   <div className="text-blue-600 dark:text-blue-400 font-medium">
-                    {t('Learn More')} &rarr;
+                    {t(skill.Bouton)} &rarr;
                   </div>
                 </div>
               </div>

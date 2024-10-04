@@ -2,7 +2,7 @@
 import { CgWebsite } from "react-icons/cg";
 
 
-
+import { FaGithub, FaLinkedin, FaLock, FaComments, FaCode } from "react-icons/fa";
 import { IoHomeOutline } from "react-icons/io5";
 import { MdOutlineCleaningServices } from "react-icons/md";
 import { SlNote } from "react-icons/sl";
@@ -374,6 +374,7 @@ export const serviceDataEN = [
         para4: "Process or Methodology",
         desc_para4: "We use advanced search methods and a global network to source candidates. The process includes a thorough skills assessment, targeted interviews, and proactive management of applications to ensure an optimal match.",
         para5: "Added Value",
+        Bouton : "Learn more",
         desc_para5: "Our expertise in international recruitment allows us to find talent suited to your company's specific requirements, while offering personalized service and support throughout the recruitment process to ensure a successful integration.",
         link:"/jobs",
     },
@@ -391,6 +392,7 @@ export const serviceDataEN = [
         para4: "Process or Methodology",
         desc_para4: "We use advanced search methods and a global network to source candidates. The process includes a thorough skills assessment, targeted interviews, and proactive management of applications to ensure an optimal match.",
         para5: "Added Value",
+        Bouton : "Learn more",
         desc_para5: "Our expertise in international recruitment allows us to find talent suited to your company's specific requirements, while offering personalized service and support throughout the recruitment process to ensure a successful integration.",
         link:"/nurse",
     }
@@ -703,6 +705,32 @@ export const GalleryEN=[
     },
     
 ];
+export const DevelopmentEN=[{
+    title:"Meet Our Development Team",
+    desc:"  We are a passionate team of experts dedicated to crafting innovativesolutions. Explore more about each team member below and learn about the technologies they excel in.",
+    title2:" Our Development Services",
+    services : [
+        {
+          title: "Security",
+          description:
+            "Ensure your applications are secure with the latest security protocols and best practices. We provide penetration testing, secure coding practices, and compliance assessments.",
+          icon: <FaLock className="text-blue-600" />,
+        },
+        {
+          title: "Consultation",
+          description:
+            "Get expert advice on technology strategy, system architecture, and more. Our consultation services are tailored to help you navigate complex technical challenges.",
+          icon: <FaComments className="text-green-600" />,
+        },
+        {
+          title: "Development",
+          description:
+            "From front-end to back-end development, our team excels in building robust and scalable applications tailored to your business needs.",
+          icon: <FaCode className="text-purple-600" />,
+        },
+      ]
+  
+}]
 // export const type=[{
 
 

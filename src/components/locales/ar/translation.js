@@ -24,7 +24,7 @@ import formation15 from '../../../assets/images/formation/15.jpg'
 import formation16 from '../../../assets/images/formation/16.jpg'
 import formation18 from '../../../assets/images/formation/formation18.jpg'
 import formation19 from '../../../assets/images/formation/formation19.jpg'
-
+import { FaGithub, FaLinkedin, FaLock, FaComments, FaCode } from "react-icons/fa";
 import service1 from '../../../assets/images/service/service1.png'
 import service2 from '../../../assets/images/service/service2.png'
 import service3 from '../../../assets/images/service/service3.png'
@@ -413,6 +413,7 @@ export const serviceDataAR = [
         para4: "العملية أو المنهجية",
         desc_para4: "نستخدم طرق بحث متقدمة وشبكة عالمية للعثور على المرشحين. تتضمن العملية تقييمًا دقيقًا للمهارات، ومقابلات موجهة، وإدارة نشطة للطلبات لضمان تطابق مثالي.",
         para5: "القيمة المضافة",
+        Bouton : "تعرف أكثر",
         desc_para5: "تسمح لنا خبرتنا في التوظيف الدولي بالعثور على المواهب المناسبة لمتطلبات شركتك المحددة، مع تقديم خدمة مخصصة ودعم طوال عملية التوظيف لضمان تكامل ناجح.",
         link:<Link to="/jobs/all" className="text-sky-500" > احصل على وظيفة خارجية <i className="mdi mdi-chevron-right align-middle"></i></Link>,
 
@@ -431,6 +432,7 @@ export const serviceDataAR = [
         para4: "Process or Methodology",
         desc_para4: "We use advanced search methods and a global network to source candidates. The process includes a thorough skills assessment, targeted interviews, and proactive management of applications to ensure an optimal match.",
         para5: "Added Value",
+        Bouton : "تعرف أكثر",
         desc_para5: "Our expertise in international recruitment allows us to find talent suited to your company's specific requirements, while offering personalized service and support throughout the recruitment process to ensure a successful integration.",
         link:"/nurse",
     }
@@ -752,7 +754,28 @@ export const GalleryAR=[
     },
     
 ];
-
+export const DevelopmentAR = [{  
+    title: "التقِ بفريق التطوير لدينا",  
+    desc: "نحن فريق شغوف من الخبراء مكرس لصياغة حلول مبتكرة. استكشف المزيد عن كل عضو في الفريق أدناه وتعرّف على التكنولوجيا التي يتميزون بها.",  
+    title2: "خدماتنا في التطوير",  
+    services : [  
+        {  
+            title: "الأمان",  
+            description: "تأكد من أمان تطبيقاتك باستخدام أحدث بروتوكولات الأمان وأفضل الممارسات. نقدم اختبارات الاختراق، وممارسات البرمجة الآمنة، وتقييمات الامتثال.",  
+            icon: <FaLock className="text-blue-600" />  
+          },  
+          {  
+            title: "الاستشارة",  
+            description: "احصل على مشورة خبيرة حول استراتيجية التكنولوجيا، وهندسة الأنظمة، وأكثر من ذلك. خدمات الاستشارة لدينا مصممة لمساعدتك في تجاوز التحديات التقنية المعقدة.",  
+            icon: <FaComments className="text-green-600" />  
+          },  
+          {  
+            title: "التطوير",  
+            description: "من تطوير الواجهة الأمامية إلى تطوير الواجهة الخلفية، يتميز فريقنا في بناء تطبيقات قوية وقابلة للتوسع تناسب احتياجات عملك.",  
+            icon: <FaCode className="text-purple-600" />  
+          } 
+      ]
+}]
 // export const type=[{
    
 // }]
