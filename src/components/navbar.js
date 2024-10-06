@@ -56,7 +56,7 @@ export default function Navbar() {
   const [serviceData, setServiceData] = useState([]);
   const [blogData, setBlogData] = useState([]);
   const isMobile = useIsMobile();
-
+console.log("dssd")
   // Charger les données en fonction de la langue
   useEffect(() => {
     const fetchData = async () => {
