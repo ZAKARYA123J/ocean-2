@@ -19,6 +19,7 @@ import zakaria from './picdev/dev picturs_zakaria2.svg'
 import zakaria2 from './picdev/dev picturs_zakaria.svg'
 import omar from './picdev/dev picturs_omar.svg'
 import mostafa from "./picdev/dev picturs_mostafa.svg"
+import ayoub from "./picdev/dev picturs_ayoub.svg"
 const loadClientData = async (lang) => {
   try {
     switch (lang) {
@@ -76,6 +77,17 @@ const teamMembers = [
     role: "Full stack Developer",
     skills: ["Figma", "Sketch", "Adobe XD"],
     photo: mostafa,
+    details:
+      "Jane is passionate about creating user-friendly and visually appealing designs. She works closely with developers to ensure the best user experience.",
+    github: "https://github.com/jane-smith",
+    linkedin: "https://linkedin.com/in/jane-smith",
+  },
+  {
+    id: 5,
+    name: "AYOUB",
+    role: "Full stack Developer",
+    skills: ["Figma", "Sketch", "Adobe XD"],
+    photo: ayoub,
     details:
       "Jane is passionate about creating user-friendly and visually appealing designs. She works closely with developers to ensure the best user experience.",
     github: "https://github.com/jane-smith",
