@@ -3,13 +3,13 @@
 import React, { useState } from 'react';
 import Navbar from './navbar';
 import Footer from './footer';
-import Modal from './Modall'; // Correct modal import
-import LeafletMap from './LeafletMap'; // Importing the LeafletMap component
+import Modal from './Modall';
+import LeafletMap from './LeafletMap';
 import {
   FaTimes, FaPhoneAlt, FaEnvelope, FaFileAlt, FaClipboardList, FaEnvelopeOpenText, FaCheckCircle,
   FaQuoteLeft, FaMapMarkerAlt, FaCalendarAlt, FaMoneyBillWave, FaLanguage, FaHome, FaMedkit
 } from 'react-icons/fa';
-import { contractData, testimonials } from './data'; // Importing data from data.js
+import { contractData, testimonials } from './data';
 
 const companyInfo = {
   name: "Your Company Name",
@@ -53,11 +53,10 @@ const ContractWorksPage = () => {
   const [showModal, setShowModal] = useState(false);
   const [showConsultationModal, setShowConsultationModal] = useState(false);
 
-  // Filter and Search with safety checks
   const filteredContracts = contracts.filter(contract => {
-    const country = contract.country || ''; // Safe check for undefined
-    const jobTitle = contract.jobTitle || ''; // Safe check for undefined
-    const sector = contract.sector || ''; // Safe check for undefined
+    const country = contract.country || '';
+    const jobTitle = contract.jobTitle || '';
+    const sector = contract.sector || '';
 
     return (
       country.toLowerCase().includes(filterCountry.toLowerCase()) &&

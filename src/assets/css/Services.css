@@ -1,0 +1,83 @@
+/* Pulse Loading Animation */
+.loading-pulse {
+    width: 60px;
+    height: 60px;
+    border: 6px solid rgba(0, 0, 255, 0.3);
+    border-top-color: rgba(0, 0, 255, 0.9);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Card Styles */
+.card-wrapper {
+    perspective: 1000px;
+}
+
+.card {
+    transition: transform 0.5s, box-shadow 0.5s;
+    transform-style: preserve-3d;
+    transform: rotateY(0);
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: rotateY(10deg);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card-image img {
+    transition: transform 0.5s;
+}
+
+.card:hover .card-image img {
+    transform: scale(1.1);
+}
+
+.card-content {
+    padding: 8px; /* Minimal padding inside the card content */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Adjust Title Style */
+.card h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0; /* Remove margin below the title */
+}
+
+/* Adjust Paragraph Style */
+.card p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0; /* Remove all margins around the paragraph */
+}
+
+/* Adjust Learn More */
+.card-content .text-blue-600 {
+    transition: color 0.3s ease, background-color 0.3s ease; 
+    margin-top: 4px;
+    padding: 8px 12px;
+    display: inline-block;
+    border-radius: 4px;
+    color: #3498db;
+    background-color: transparent;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.card:hover .text-blue-600 {
+    color: #3498db;
+}
