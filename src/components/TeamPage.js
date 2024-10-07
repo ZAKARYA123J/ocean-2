@@ -15,8 +15,10 @@ import { useTranslation } from 'react-i18next';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import '../../src/assets/css/Services.css';
-import zakaria from './zakaria.jpeg'
-import omar from './omar.jpeg'
+import zakaria from './picdev/dev picturs_zakaria2.svg'
+import zakaria2 from './picdev/dev picturs_zakaria.svg'
+import omar from './picdev/dev picturs_omar.svg'
+import mostafa from "./picdev/dev picturs_mostafa.svg"
 const loadClientData = async (lang) => {
   try {
     switch (lang) {
@@ -40,7 +42,7 @@ const teamMembers = [
     name: "ENNACHOUM ZAKARIA",
     role: "Full Stack Developer",
     skills: ["React", "Node.js", "SQL"],
-    photo: profileImage1,
+    photo: zakaria2,
     details:
       "Zakaria is an experienced developer with a focus on building scalable web applications. He enjoys working with the latest technologies and frameworks to create efficient and maintainable solutions.",
     github: "https://github.com/Umbrator",
@@ -73,7 +75,7 @@ const teamMembers = [
     name: "Jane Smith",
     role: "UX/UI Designer",
     skills: ["Figma", "Sketch", "Adobe XD"],
-    photo: profileImage4,
+    photo: mostafa,
     details:
       "Jane is passionate about creating user-friendly and visually appealing designs. She works closely with developers to ensure the best user experience.",
     github: "https://github.com/jane-smith",

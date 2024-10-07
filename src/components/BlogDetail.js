@@ -127,7 +127,13 @@ const CTAButton = styled(motion.button)`
   svg {
     margin-left: 8px;
   }
+
+  /* Media query for small screens */
+  @media (max-width: 768px) {
+    margin-bottom: 50px; /* Add margin-bottom for small screens */
+  }
 `;
+
 
 const BlogDetail = () => {
   const { i18n, t } = useTranslation();
