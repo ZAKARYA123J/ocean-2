@@ -92,6 +92,7 @@ const TeamPage = () => {
   const { i18n, t } = useTranslation();
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const fetchData = async () => {
       setLoading(true);
       try {
@@ -223,7 +224,7 @@ const TeamPage = () => {
         </div>
       </section>
       <LanguagesPage />
-      <LogoSlider />
+      {/* <LogoSlider /> */}
       <Footer />
       {selectedMember && <Modal member={selectedMember} onClose={closeModal} />}
     </div>
