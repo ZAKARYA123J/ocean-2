@@ -61,7 +61,7 @@ const teamMembers = [
   },
   {
     id: 3,
-    name: "OMAR ELKADDOURI",
+    name: "Full stack Developer",
     role: "Backend Developer",
     skills: ["Laravel", "Spring", "SQL"],
     photo: omar,
@@ -72,8 +72,8 @@ const teamMembers = [
   },
   {
     id: 4,
-    name: "Jane Smith",
-    role: "UX/UI Designer",
+    name: "MOSTAFA",
+    role: "Full stack Developer",
     skills: ["Figma", "Sketch", "Adobe XD"],
     photo: mostafa,
     details:
