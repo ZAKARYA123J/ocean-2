@@ -642,7 +642,7 @@ export const GalleryEN=[
         desc:"Discover the creativity and passion behind our work through these images. Enjoy the view!",
         image:"https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F2.jpg?alt=media&token=2edf1832-c447-46f8-88af-b496cbaa46fe",
         numberimage:"10 images",
-        datealbum:" 12-12-2024",
+        datealbum:"",
         titlealbum:"Event - Nurses ",
         img: [
             {alt: 'image1', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F1.jpg?alt=media&token=e00fef12-3166-4135-ba8e-cc244533f9c9'},
@@ -661,7 +661,7 @@ export const GalleryEN=[
         id:2,
         image:"https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FglassCleaning-team1%2F1.png?alt=media&token=42c92a0a-9bfe-4b1e-8bb2-5799ba69a1ee",
         numberimage:"5 images",
-        datealbum:"12-12-2024",
+        datealbum:"",
         titlealbum:"glassCleaning-team ",
         img: [
             {alt: 'image1', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FglassCleaning-team1%2F6.jpg?alt=media&token=a6ef683e-9250-4147-acb2-b6a538f16790'},
@@ -675,7 +675,7 @@ export const GalleryEN=[
         id:3,
         image:"https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2Faffiche%20center.png?alt=media&token=0ecace4a-a5c0-453a-acd2-401cdbb8bb84",
         numberimage:"27 images",
-        datealbum:"12-12-2024",
+        datealbum:"",
         titlealbum:"Center-pictures ",
         img: [
             {alt: 'image1', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4075.jpg?alt=media&token=0fbbc107-22b2-4fed-bbfb-f680799d7075'},
