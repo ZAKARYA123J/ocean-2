@@ -310,44 +310,68 @@ const JobListings = () => {
       <Whatp />
       <Footer />
       <Modal
-        isOpen={isModalOpen}
-        onRequestClose={closeModal}
-        contentLabel="Job Steps Modal"
-        style={{
-          overlay: {
-            backgroundColor: 'rgba(0, 0, 0, 0.75)',
-          },
-          content: {
-            margin: 'auto',
-            width: '50%',
-            padding: '2rem',
-            borderRadius: '10px',
-            height :"60%"
-          },
-        }}
-      >
-        {selectedJob && (
-          <>
-            <h2 className='text-[30px] font-bold'>{t(selectedJob.title)}</h2>
-            <p>{t('Follow these steps to complete the job application:')}</p>
-            {/* Add specific steps or instructions for the job */}
-            <ul>
-            <li><span className="font-bold">{t("Step 1:")}</span> {t('Download and fill out the form')}</li>
-<li><span className="font-bold">{t("Step 2:")}</span> {t('Upload required documents')}</li>
-<li><span className="font-bold">{t("Step 3:")}</span> {t('Send the form')}</li>
-<li><span className="font-bold">{t("Step 4:")}</span> {t('Contact us')}</li>
-
-              {/* Add more steps as needed */}
-            </ul>
-            <ButtonLink href={selectedJob.link} download="form">
-              {t('Download Form')} <FaAngleRight />
-            </ButtonLink>
-          </>
-        )}
-        <ButtonLink as="button" onClick={closeModal} className='m-5'>
-          {t('Close')}
-        </ButtonLink>
-      </Modal>
+  isOpen={isModalOpen}
+  onRequestClose={closeModal}
+  contentLabel="Job Steps Modal"
+  style={{
+    overlay: {
+      backgroundColor: 'rgba(0, 0, 0, 0.75)',
+    },
+    content: {
+      margin: 'auto',
+      width: '90%',  // Responsive width
+      maxWidth: '600px', // Max width for larger screens
+      height: '80vh',  // Responsive height (80% of viewport height)
+      padding: '1rem',
+      borderRadius: '10px',
+      overflowY: 'auto',  // Enable scrolling if content overflows
+      boxSizing: 'border-box',
+      display: 'flex', // Make it a flex container to structure content
+      flexDirection: 'column', // Align items vertically
+      '@media (max-width: 768px)': {
+        width: '90%',  // Smaller width on mobile
+        height: '40vh',  // Slightly smaller height on mobile
+        padding: '1rem',
+        margin:"40px"
+      },
+      '@media (min-width: 769px)': {
+        width: '60%',  // Larger width for tablets and up
+        height: '40vh',  // Height set for larger devices
+      },
+    },
+  }}
+>
+  {selectedJob && (
+    <>
+    <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">{t(selectedJob.title)}</h2>
+<p className="text-gray-600 mb-6">{t('Follow these steps to complete the job application:')}</p>
+<ul className="space-y-4 mb-4">
+  <li className="flex items-start space-x-2">
+    <span className="font-bold text-indigo-600">{t("Step 1:")}</span> 
+    <p className="text-gray-600">{t('Download and fill out the form')}</p>
+  </li>
+  <li className="flex items-start space-x-2">
+    <span className="font-bold text-indigo-600">{t("Step 2:")}</span> 
+    <p className="text-gray-600">{t('Upload required documents')}</p>
+  </li>
+  <li className="flex items-start space-x-2">
+    <span className="font-bold text-indigo-600">{t("Step 3:")}</span> 
+    <p className="text-gray-600">{t('Send the form')}</p>
+  </li>
+  <li className="flex items-start space-x-2">
+    <span className="font-bold text-indigo-600">{t("Step 4:")}</span> 
+    <p className="text-gray-600">{t('Contact us')}</p>
+  </li>
+</ul>
+      <ButtonLink  href={selectedJob.link} download="form">
+        {t('Download Form')} <FaAngleRight />
+      </ButtonLink>
+    </>
+  )}
+  <ButtonLink as="button" onClick={closeModal} className='m-5'>
+    {t('Close')}
+  </ButtonLink>
+</Modal>
     </>
   );
 };
