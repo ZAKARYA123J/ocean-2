@@ -69,7 +69,7 @@ const teamMembers = [
     skills: ["Laravel", "Spring", "SQL"],
     photo: omar,
     details:
-      "John focuses on backend development, building robust and scalable server-side applications. He is proficient in designing API services and database management.",
+      "",
     github: "https://github.com/john-doe",
     linkedin: "https://linkedin.com/in/john-doe",
   },
@@ -80,7 +80,7 @@ const teamMembers = [
     skills: ["Figma", "Sketch", "Adobe XD"],
     photo: mostafa,
     details:
-      "Jane is passionate about creating user-friendly and visually appealing designs. She works closely with developers to ensure the best user experience.",
+      "",
     github: "https://github.com/jane-smith",
     linkedin: "https://linkedin.com/in/jane-smith",
   },
@@ -91,7 +91,7 @@ const teamMembers = [
     skills: ["Figma", "Sketch", "Adobe XD"],
     photo: ayoub,
     details:
-      "Jane is passionate about creating user-friendly and visually appealing designs. She works closely with developers to ensure the best user experience.",
+      "",
     github: "https://github.com/jane-smith",
     linkedin: "https://linkedin.com/in/jane-smith",
   },
@@ -102,7 +102,7 @@ const teamMembers = [
     skills: ["Figma", "Sketch", "Adobe XD"],
     photo: kamal,
     details:
-      "Jane is passionate about creating user-friendly and visually appealing designs. She works closely with developers to ensure the best user experience.",
+      "",
     github: "https://github.com/jane-smith",
     linkedin: "https://linkedin.com/in/jane-smith",
   },
@@ -113,7 +113,7 @@ const teamMembers = [
     skills: ["Figma", "Sketch", "Adobe XD"],
     photo: annas,
     details:
-      "Jane is passionate about creating user-friendly and visually appealing designs. She works closely with developers to ensure the best user experience.",
+      "",
     github: "https://github.com/jane-smith",
     linkedin: "https://linkedin.com/in/jane-smith",
   },
