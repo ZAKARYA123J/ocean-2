@@ -6,7 +6,7 @@ import { FaAngleRight, FaBriefcase, FaGlobeAmericas, FaLanguage, FaClock, FaFile
 import Whatp from '../WhatsAppFloatingButton';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
-
+import Modal from 'react-modal'; // Import react-modal
 // Function to dynamically load job data based on the selected language
 import styled from 'styled-components';
 import { motion } from 'framer-motion'; // For smooth animations
@@ -23,7 +23,7 @@ const loadClientData = (lang) => {
       return import('../locales/en/translation').then(module => module.jobsEN);
   }
 };
-
+Modal.setAppElement('#root');
 // Styled Components for JobListings
 const Section = styled.section`
   padding: 4rem 2rem;
@@ -178,7 +178,8 @@ const JobListings = () => {
   const navigate = useNavigate();
   const [jobs, setJob] = useState([]);
   const { i18n, t } = useTranslation();
-
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedJob, setSelectedJob] = useState(null);
   useEffect(() => {
     const fetchData = async () => {
       const data = await loadClientData(i18n.language);
@@ -208,7 +209,16 @@ const JobListings = () => {
     setSelectedType(newType);
     navigate(`/jobs/${newType}`);
   };
+  const openModal = (job) => {
+    setSelectedJob(job);
+    setIsModalOpen(true);
+  };
 
+  // Function to close the modal
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedJob(null);
+  };
   return (
     <>
       <Helmet>
@@ -220,7 +230,7 @@ const JobListings = () => {
       <Section>
         <Container>
           {/* Page Title */}
-          <Title>{t('Job Listings')}</Title>
+          <Title className='mt-10'>{t('Job Listings')}</Title>
           <Subtitle>{t('Find your dream job with us')}</Subtitle>
 
           {/* Dropdown for selecting job type */}
@@ -282,9 +292,15 @@ const JobListings = () => {
                 
                 {/* Button placed at the bottom */}
                 <ButtonWrapper>
-                  <ButtonLink href={job.link} download="form">
-                    {t(job.action)} <FaAngleRight />
-                  </ButtonLink>
+                  {job.model ? (
+                    <ButtonLink as="button" onClick={() => openModal(job)}>
+                      {t(job.action)} <FaAngleRight />
+                    </ButtonLink>
+                  ) : (
+                    <ButtonLink href={job.link} download="form">
+                      {t(job.action)} <FaAngleRight />
+                    </ButtonLink>
+                  )}
                 </ButtonWrapper>
               </JobCard>
             ))}
@@ -293,6 +309,45 @@ const JobListings = () => {
       </Section>
       <Whatp />
       <Footer />
+      <Modal
+        isOpen={isModalOpen}
+        onRequestClose={closeModal}
+        contentLabel="Job Steps Modal"
+        style={{
+          overlay: {
+            backgroundColor: 'rgba(0, 0, 0, 0.75)',
+          },
+          content: {
+            margin: 'auto',
+            width: '50%',
+            padding: '2rem',
+            borderRadius: '10px',
+            height :"60%"
+          },
+        }}
+      >
+        {selectedJob && (
+          <>
+            <h2 className='text-[30px] font-bold'>{t(selectedJob.title)}</h2>
+            <p>{t('Follow these steps to complete the job application:')}</p>
+            {/* Add specific steps or instructions for the job */}
+            <ul>
+            <li><span className="font-bold">{t("Step 1:")}</span> {t('Download and fill out the form')}</li>
+<li><span className="font-bold">{t("Step 2:")}</span> {t('Upload required documents')}</li>
+<li><span className="font-bold">{t("Step 3:")}</span> {t('Send the form')}</li>
+<li><span className="font-bold">{t("Step 4:")}</span> {t('Contact us')}</li>
+
+              {/* Add more steps as needed */}
+            </ul>
+            <ButtonLink href={selectedJob.link} download="form">
+              {t('Download Form')} <FaAngleRight />
+            </ButtonLink>
+          </>
+        )}
+        <ButtonLink as="button" onClick={closeModal} className='m-5'>
+          {t('Close')}
+        </ButtonLink>
+      </Modal>
     </>
   );
 };

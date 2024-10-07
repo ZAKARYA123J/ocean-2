@@ -549,8 +549,9 @@ export const jobsFR = [
         niveaulanguage: "Une photo de vous, une copie de votre passeport, une vidéo et une photo de vous en train d'exercer la profession que vous souhaitez exercer." ,
         menu6:"Plus d'informations :",
         more:' Vous pouvez obtenir le formulaire en cliquant sur le bouton de Télécharger , 🙏🏻 et pour vous faciliter la tâche, vous pouvez nous envoyer les documents originaux (PDF).',
-        action : 'Télécharger',
-        link: form ,    
+        action : 'Demande',
+        link: form ,   
+        model:true 
     },
     
     {

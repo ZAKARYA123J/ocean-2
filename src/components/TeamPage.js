@@ -20,6 +20,8 @@ import zakaria2 from './picdev/dev picturs_zakaria.svg'
 import omar from './picdev/dev picturs_omar.svg'
 import mostafa from "./picdev/dev picturs_mostafa.svg"
 import ayoub from "./picdev/dev picturs_ayoub.svg"
+import kamal from "./picdev/dev pics v2_kamal.svg"
+import annas from "./picdev/dev pics v2_anass.svg"
 const loadClientData = async (lang) => {
   try {
     switch (lang) {
@@ -92,7 +94,30 @@ const teamMembers = [
       "Jane is passionate about creating user-friendly and visually appealing designs. She works closely with developers to ensure the best user experience.",
     github: "https://github.com/jane-smith",
     linkedin: "https://linkedin.com/in/jane-smith",
-  }
+  },
+  {
+    id: 6,
+    name: "KAMAL",
+    role: "Full stack Developer",
+    skills: ["Figma", "Sketch", "Adobe XD"],
+    photo: kamal,
+    details:
+      "Jane is passionate about creating user-friendly and visually appealing designs. She works closely with developers to ensure the best user experience.",
+    github: "https://github.com/jane-smith",
+    linkedin: "https://linkedin.com/in/jane-smith",
+  },
+  {
+    id: 7,
+    name: "ANASS",
+    role: "Full stack Developer",
+    skills: ["Figma", "Sketch", "Adobe XD"],
+    photo: annas,
+    details:
+      "Jane is passionate about creating user-friendly and visually appealing designs. She works closely with developers to ensure the best user experience.",
+    github: "https://github.com/jane-smith",
+    linkedin: "https://linkedin.com/in/jane-smith",
+  },
+
 ];
 
 
