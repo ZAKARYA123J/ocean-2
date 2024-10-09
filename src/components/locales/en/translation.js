@@ -99,7 +99,7 @@ export  const blogDataEN = [
         resrvedatail: "Welcome to our platform tailored for",
         register:"To register, simply click here ",
         resrveButton:"For reservation",
-        title: 'Language',
+        title: 'Languages',
         desc: 'The Ocean Connecting offers a comprehensive language learning program covering...',
         detail: 'The Ocean Connecting offers a comprehensive language learning program covering levels A1 to C2. It features young teachers, engaging activities, educational trips, and flexible schedules. Students benefit from regular level assessments, free access to PCs and Wi-Fi, and air-conditioned classrooms. The program also provides psychological monitoring and guidance, ensuring a supportive learning environment. This program aims to enhance language proficiency through interactive and diverse methods, accommodating different learning paces and needs.',
         type: 'language',
@@ -452,6 +452,8 @@ export const recruitmentEN = [
 export const jobsEN = [
     {
         id: 1,
+        h1:"Job Listings",
+        Find:"Find your dream job with us",
         image: resume,
         title: 'Application for an overseas work contract',
         type: 'International',
@@ -461,8 +463,9 @@ export const jobsEN = [
         niveaulanguage: "A photo of yourself, a copy of your passport, a video and a photo of yourself practicing your chosen profession." ,
         menu6:"More information :",
         more:' You can obtain the form by clicking on the Download button , 🙏🏻 and, for your convenience, you can send us the original documents (PDF).',
-        action : 'Download',
+        action : 'To apply',
         link: form ,
+        model:true
     },
     {
         id: 2,
@@ -577,8 +580,8 @@ export const jobsEN = [
         timevisa:'niveau BAC.',
         contratime:'contrat CDI - CDD .',
         pricecontrat:'Agadir',
-        more:' Knowledge of chemicals - Psychological tolerance - Good communication - Ability to use equipment - Accuracy and attention to detail - Working at height - Physical ability - Safety awareness',
-        link:"#",
+        more:'Knowledge of chemicals - Psychological tolerance - Good communication - Ability to use equipment - Accuracy and attention to detail - Working at height - Physical ability - Safety awareness',
+        link:"https://api.whatsapp.com/send/?phone=%2B212657236635&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A5%D8%B3%D8%A8%D8%A7%D9%86%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
         menu1:"Secteur :",
         menu2:"Niveau Langue :",
         menu3:"Level of education :",
@@ -641,7 +644,7 @@ export const GalleryEN=[
         desc:"Discover the creativity and passion behind our work through these images. Enjoy the view!",
         image:"https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F2.jpg?alt=media&token=2edf1832-c447-46f8-88af-b496cbaa46fe",
         numberimage:"10 images",
-        datealbum:" 12-12-2024",
+        datealbum:"",
         titlealbum:"Event - Nurses ",
         img: [
             {alt: 'image1', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F1.jpg?alt=media&token=e00fef12-3166-4135-ba8e-cc244533f9c9'},
@@ -660,7 +663,7 @@ export const GalleryEN=[
         id:2,
         image:"https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FglassCleaning-team1%2F1.png?alt=media&token=42c92a0a-9bfe-4b1e-8bb2-5799ba69a1ee",
         numberimage:"5 images",
-        datealbum:"12-12-2024",
+        datealbum:"",
         titlealbum:"glassCleaning-team ",
         img: [
             {alt: 'image1', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FglassCleaning-team1%2F6.jpg?alt=media&token=a6ef683e-9250-4147-acb2-b6a538f16790'},
@@ -674,7 +677,7 @@ export const GalleryEN=[
         id:3,
         image:"https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2Faffiche%20center.png?alt=media&token=0ecace4a-a5c0-453a-acd2-401cdbb8bb84",
         numberimage:"27 images",
-        datealbum:"12-12-2024",
+        datealbum:"",
         titlealbum:"Center-pictures ",
         img: [
             {alt: 'image1', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4075.jpg?alt=media&token=0fbbc107-22b2-4fed-bbfb-f680799d7075'},

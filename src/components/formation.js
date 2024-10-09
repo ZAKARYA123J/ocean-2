@@ -132,10 +132,10 @@ const CourseCard = () => {
       <div className="container mx-auto px-6 lg:px-8">
         {/* Title and Description */}
         <div className="grid grid-cols-1 pb-6 text-center">
-          <h3 className="font-semibold text-2xl leading-normal">{t('Courses')}</h3>
+          {/* <h3 className="font-semibold text-2xl leading-normal">{t('Courses')}</h3>
           <p className="text-slate-400 max-w-xl mx-auto mb-8">
             {t('Explore a variety of courses to boost your skills and knowledge.')}
-          </p>
+          </p> */}
 
           {/* Search and Filter Inputs */}
           <div className="relative flex justify-center items-center mt-4">

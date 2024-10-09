@@ -46,7 +46,6 @@ export default function Client() {
             320: { items: 1 },
         },
     };
-
     return (
         <section className="relative md:py-24 py-16" id="review">
             <div className="container relative">

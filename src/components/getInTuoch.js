@@ -148,7 +148,7 @@ export default function GetInTouch() {
   };
 
   return (
-    <Section className="bg-gray-50 dark:bg-gray-900">
+    <Section className="bg-gray-50 dark:bg-gray-900" id="contact">
       <ImageContainer>
         <img src={contact2} alt="Contact" />
       </ImageContainer>

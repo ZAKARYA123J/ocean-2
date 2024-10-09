@@ -15,8 +15,13 @@ import { useTranslation } from 'react-i18next';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import '../../src/assets/css/Services.css';
-import zakaria from './zakaria.jpeg'
-import omar from './omar.jpeg'
+import zakaria from './picdev/dev picturs_zakaria2.svg'
+import zakaria2 from './picdev/dev picturs_zakaria.svg'
+import omar from './picdev/dev picturs_omar.svg'
+import mostafa from "./picdev/dev picturs_mostafa.svg"
+import ayoub from "./picdev/dev picturs_ayoub.svg"
+import kamal from "./picdev/dev pics v2_kamal.svg"
+import annas from "./picdev/dev pics v2_anass.svg"
 const loadClientData = async (lang) => {
   try {
     switch (lang) {
@@ -40,7 +45,7 @@ const teamMembers = [
     name: "ENNACHOUM ZAKARIA",
     role: "Full Stack Developer",
     skills: ["React", "Node.js", "SQL"],
-    photo: profileImage1,
+    photo: zakaria2,
     details:
       "Zakaria is an experienced developer with a focus on building scalable web applications. He enjoys working with the latest technologies and frameworks to create efficient and maintainable solutions.",
     github: "https://github.com/Umbrator",
@@ -59,26 +64,60 @@ const teamMembers = [
   },
   {
     id: 3,
-    name: "OMAR ELKADDOURI",
+    name: "Full stack Developer",
     role: "Backend Developer",
     skills: ["Laravel", "Spring", "SQL"],
     photo: omar,
     details:
-      "John focuses on backend development, building robust and scalable server-side applications. He is proficient in designing API services and database management.",
+      "",
     github: "https://github.com/john-doe",
     linkedin: "https://linkedin.com/in/john-doe",
   },
   {
     id: 4,
-    name: "Jane Smith",
-    role: "UX/UI Designer",
+    name: "MOSTAFA",
+    role: "Full stack Developer",
     skills: ["Figma", "Sketch", "Adobe XD"],
-    photo: profileImage4,
+    photo: mostafa,
     details:
-      "Jane is passionate about creating user-friendly and visually appealing designs. She works closely with developers to ensure the best user experience.",
+      "",
     github: "https://github.com/jane-smith",
     linkedin: "https://linkedin.com/in/jane-smith",
-  }
+  },
+  {
+    id: 5,
+    name: "AYOUB",
+    role: "Full stack Developer",
+    skills: ["Figma", "Sketch", "Adobe XD"],
+    photo: ayoub,
+    details:
+      "",
+    github: "https://github.com/jane-smith",
+    linkedin: "https://linkedin.com/in/jane-smith",
+  },
+  {
+    id: 6,
+    name: "KAMAL",
+    role: "Full stack Developer",
+    skills: ["Figma", "Sketch", "Adobe XD"],
+    photo: kamal,
+    details:
+      "",
+    github: "https://github.com/jane-smith",
+    linkedin: "https://linkedin.com/in/jane-smith",
+  },
+  {
+    id: 7,
+    name: "ANASS",
+    role: "Full stack Developer",
+    skills: ["Figma", "Sketch", "Adobe XD"],
+    photo: annas,
+    details:
+      "",
+    github: "https://github.com/jane-smith",
+    linkedin: "https://linkedin.com/in/jane-smith",
+  },
+
 ];
 
 
@@ -90,6 +129,7 @@ const TeamPage = () => {
   const { i18n, t } = useTranslation();
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const fetchData = async () => {
       setLoading(true);
       try {
@@ -221,7 +261,7 @@ const TeamPage = () => {
         </div>
       </section>
       <LanguagesPage />
-      <LogoSlider />
+      {/* <LogoSlider /> */}
       <Footer />
       {selectedMember && <Modal member={selectedMember} onClose={closeModal} />}
     </div>

@@ -134,7 +134,7 @@ function App() {
                   ease: [0.42, 0, 0.58, 1],
                 }}
               >
-                <Jobs />
+                <Jobs/>
               </motion.div>
             }
           />

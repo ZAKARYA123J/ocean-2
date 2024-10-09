@@ -6,7 +6,7 @@ import { FaAngleRight, FaBriefcase, FaGlobeAmericas, FaLanguage, FaClock, FaFile
 import Whatp from '../WhatsAppFloatingButton';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
-
+import Modal from 'react-modal'; // Import react-modal
 // Function to dynamically load job data based on the selected language
 import styled from 'styled-components';
 import { motion } from 'framer-motion'; // For smooth animations
@@ -23,7 +23,7 @@ const loadClientData = (lang) => {
       return import('../locales/en/translation').then(module => module.jobsEN);
   }
 };
-
+Modal.setAppElement('#root');
 // Styled Components for JobListings
 const Section = styled.section`
   padding: 4rem 2rem;
@@ -178,7 +178,8 @@ const JobListings = () => {
   const navigate = useNavigate();
   const [jobs, setJob] = useState([]);
   const { i18n, t } = useTranslation();
-
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedJob, setSelectedJob] = useState(null);
   useEffect(() => {
     const fetchData = async () => {
       const data = await loadClientData(i18n.language);
@@ -208,7 +209,16 @@ const JobListings = () => {
     setSelectedType(newType);
     navigate(`/jobs/${newType}`);
   };
+  const openModal = (job) => {
+    setSelectedJob(job);
+    setIsModalOpen(true);
+  };
 
+  // Function to close the modal
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedJob(null);
+  };
   return (
     <>
       <Helmet>
@@ -220,11 +230,12 @@ const JobListings = () => {
       <Section>
         <Container>
           {/* Page Title */}
-          <Title>{t('Job Listings')}</Title>
-          <Subtitle>{t('Find your dream job with us')}</Subtitle>
+          {/* <Title className="mt-10">{t(item.h1)}</Title>
+          <Subtitle>{t(item.Find)}</Subtitle> */}
+         
 
           {/* Dropdown for selecting job type */}
-          <FilterContainer>
+          <FilterContainer className='m-10'>
             <FilterSelect value={selectedType} onChange={handleTypeChange}>
               {jobTypes.map((type) => (
                 <option key={type} value={type}>
@@ -282,9 +293,15 @@ const JobListings = () => {
                 
                 {/* Button placed at the bottom */}
                 <ButtonWrapper>
-                  <ButtonLink href={job.link} download="form">
-                    {t(job.action)} <FaAngleRight />
-                  </ButtonLink>
+                  {job.model ? (
+                    <ButtonLink as="button" onClick={() => openModal(job)}>
+                      {t(job.action)} <FaAngleRight />
+                    </ButtonLink>
+                  ) : (
+                    <ButtonLink href={job.link} download="form">
+                      {t(job.action)} <FaAngleRight />
+                    </ButtonLink>
+                  )}
                 </ButtonWrapper>
               </JobCard>
             ))}
@@ -293,6 +310,69 @@ const JobListings = () => {
       </Section>
       <Whatp />
       <Footer />
+      <Modal
+  isOpen={isModalOpen}
+  onRequestClose={closeModal}
+  contentLabel="Job Steps Modal"
+  style={{
+    overlay: {
+      backgroundColor: 'rgba(0, 0, 0, 0.75)',
+    },
+    content: {
+      margin: 'auto',
+      width: '90%',  // Responsive width
+      maxWidth: '600px', // Max width for larger screens
+      height: '80vh',  // Responsive height (80% of viewport height)
+      padding: '1rem',
+      borderRadius: '10px',
+      overflowY: 'auto',  // Enable scrolling if content overflows
+      boxSizing: 'border-box',
+      display: 'flex', // Make it a flex container to structure content
+      flexDirection: 'column', // Align items vertically
+      '@media (max-width: 768px)': {
+        width: '90%',  // Smaller width on mobile
+        height: '40vh',  // Slightly smaller height on mobile
+        padding: '1rem',
+        margin:"40px"
+      },
+      '@media (min-width: 769px)': {
+        width: '60%',  // Larger width for tablets and up
+        height: '40vh',  // Height set for larger devices
+      },
+    },
+  }}
+>
+  {selectedJob && (
+    <>
+    <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">{t(selectedJob.title)}</h2>
+<p className="text-gray-600 mb-6">{t('Follow these steps to complete the job application:')}</p>
+<ul className="space-y-4 mb-4">
+  <li className="flex items-start space-x-2">
+    <span className="font-bold text-indigo-600">{t("Step 1:")}</span> 
+    <p className="text-gray-600">{t('Download and fill out the form')}</p>
+  </li>
+  <li className="flex items-start space-x-2">
+    <span className="font-bold text-indigo-600">{t("Step 2:")}</span> 
+    <p className="text-gray-600">{t('Upload required documents')}</p>
+  </li>
+  <li className="flex items-start space-x-2">
+    <span className="font-bold text-indigo-600">{t("Step 3:")}</span> 
+    <p className="text-gray-600">{t('Send the form')}</p>
+  </li>
+  <li className="flex items-start space-x-2">
+    <span className="font-bold text-indigo-600">{t("Step 4:")}</span> 
+    <p className="text-gray-600">{t('Contact us')}</p>
+  </li>
+</ul>
+      <ButtonLink  href={selectedJob.link} download="form">
+        {t('Download Form')} <FaAngleRight />
+      </ButtonLink>
+    </>
+  )}
+  <ButtonLink as="button" onClick={closeModal} className='m-5'>
+    {t('Close')}
+  </ButtonLink>
+</Modal>
     </>
   );
 };
