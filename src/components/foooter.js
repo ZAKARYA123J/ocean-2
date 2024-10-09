@@ -92,23 +92,39 @@ function Footer() {
           <FooterLinkSection title="Our Services" links={ourServices} />
           <FooterLinkSection title="Our Page " links={pageElements} />
           <FooterLinkSection title="Our Formation" links={pageFormation} />
-          
+
         </div>
         {/* copyright section */}
-        <div className="mt-2 content-center">
-          <hr className="my-4 border-t-2 border-gray-300" />
-          <p className="font-semibold text-md text-center">
-            Copyright © {new Date().getFullYear()}{" "}
-            <Link to="/#" className="text-white hover:text-blue-500">
-              Ocean Connecting
-            </Link>. All Rights Reserved.
-          </p>
+        <div className="mt-2 ">
+          <hr className=" content-center my-4 border-t-2 border-gray-300" />
+          <div>
+            <div className="flex justify-between">
+              <p className="font-semibold text-md ">
+                Copyright © {new Date().getFullYear()}{" "}
+                <Link to="/#" className="text-blue-600 hover:text-white">
+                  Ocean Connecting
+                </Link>. All Rights Reserved.
+              </p>
+              <p className="font-semibold text-md ">
+                
+                <Link to="/#" className=" hover:text-white">
+                  About Us
+                </Link> <spam> - </spam> 
+                <Link to="/#" className=" hover:text-white">
+                  Contact
+                </Link> <spam> - </spam>  
+                <Link to="/#" className=" hover:text-white">
+                  Jobs
+                </Link>
+
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
   );
 }
-
 function FooterLinkSection({ title, links }) {
   return (
     <div className="space-y-2">
