@@ -29,12 +29,12 @@ const TestimonialsSection = () => {
           </a>
           <div className="grid grid-cols-2 gap-4">
             <img
-              src="https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg"
+              src="https://img.freepik.com/free-photo/smiley-little-boy-isolated-pink_23-2148984798.jpg?t=st=1728394683~exp=1728398283~hmac=e90d68e91eb4a375ac375e791c915cb0f3281535513f04dbe72ac3e58b7f7bd8&w=996"
               alt="Student 1"
               className="rounded-lg object-cover w-full h-48"
             />
             <img
-              src="https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg"
+              src="https://img.freepik.com/free-photo/pretty-clever-little-girl-child-with-blond-hairstyle-yellow-t-shirt-overalls-hold-something-palm-introduce-product-blank-white-copy-space-smiling-joyful-brag-what-she-got-b-day-present_176420-36184.jpg?t=st=1728394699~exp=1728398299~hmac=e62e90055c8f75f985a457fa17215bf8cf0a89d66b9121fb3c745bb23ca58ce5&w=996"
               alt="Student 2"
               className="rounded-lg object-cover w-full h-48"
             />
@@ -47,7 +47,7 @@ const TestimonialsSection = () => {
             </div>
             <div className="flex items-start">
               <img
-                src="https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg"
+                src="https://img.freepik.com/free-vector/smiling-man-with-glasses_1308-174409.jpg?t=st=1728394302~exp=1728397902~hmac=fe89cf0467271d2092dea194b663f5884053c9462b5a749d528bb1cc0f2c7d46&w=740"
                 alt="Student"
                 className="w-28 h-28 rounded-lg object-cover shadow-lg -mt-8 mr-6"
                 style={{ marginBottom: "-16px" }}
@@ -76,7 +76,7 @@ const TestimonialsSection = () => {
 
             <div className="flex items-start">
               <img
-                src="https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg"
+                src="https://img.freepik.com/free-vector/smiling-man-with-glasses_1308-174409.jpg?t=st=1728394302~exp=1728397902~hmac=fe89cf0467271d2092dea194b663f5884053c9462b5a749d528bb1cc0f2c7d46&w=740"
                 alt="Student"
                 className="w-28 h-28 rounded-lg object-cover shadow-lg -mt-8 mr-6"
                 style={{ marginBottom: "-16px" }}

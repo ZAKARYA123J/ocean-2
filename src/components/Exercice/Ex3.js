@@ -3,7 +3,8 @@ import { FiCheckCircle } from 'react-icons/fi'; // Icon for modern look
 
 const Ex3 = ({ onScoreUpdate, nextStep, prevStep }) => {
   const [score, setScore] = useState(0);
-  const [inputValue, setInputValue] = useState(''); // Track the input value
+  const [inputValue1, setInputValue1] = useState(''); // Track the input value for question 1
+  const [inputValue2, setInputValue2] = useState(''); // Track the input value for question 2
   const [isInputLocked, setIsInputLocked] = useState(false); // Lock input after submission
   const [disableHover, setDisableHover] = useState(false); // Track hover state
 
@@ -12,10 +13,13 @@ const Ex3 = ({ onScoreUpdate, nextStep, prevStep }) => {
   // Handle form submission and pass score back to parent component
   const handleSubmit = (e) => {
     e.preventDefault();
-    const finalScore = inputValue.toLowerCase() === 'east' ? 10 : 0; // Correct answer is "east"
-    setScore(finalScore); // Set score based on input
+    const score1 = inputValue1.toLowerCase() === 'east' ? 5 : 0; // Correct answer for Q1
+    const score2 = inputValue2.toLowerCase() === 'west' ? 5 : 0; // Correct answer for Q2
+    const finalScore = score1 + score2;
+
+    setScore(finalScore); // Set the total score
     onScoreUpdate('ex3', finalScore); // Send score to parent
-    setIsInputLocked(true); // Lock input after submission
+    setIsInputLocked(true); // Lock inputs after submission
     nextStep(); // Go to next exercise
   };
 
@@ -40,12 +44,15 @@ const Ex3 = ({ onScoreUpdate, nextStep, prevStep }) => {
   }, []);
 
   return (
-    <div ref={pageRef} className="p-6 bg-white rounded-lg shadow-2xl max-w-lg mx-auto mt-10">
-      <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+    <div
+      ref={pageRef}
+      className="p-8 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg shadow-2xl max-w-2xl mx-auto mt-16"
+    >
+      <h2 className="text-3xl font-bold text-[#65A662] mb-6 text-center">
         Exercise 3: <span className="text-blue-500">Reading Comprehension</span>
       </h2>
       <p className="text-lg text-gray-600 mb-4 text-center">
-        Read the short passage and answer the question:
+        Read the short passage and answer the questions:
       </p>
 
       {/* Passage */}
@@ -54,29 +61,44 @@ const Ex3 = ({ onScoreUpdate, nextStep, prevStep }) => {
         energy for life on Earth.
       </p>
 
-      {/* Question */}
-      <p className="text-lg text-gray-700 mb-6 text-center">Question: Where does the sun rise?</p>
-
-      <form onSubmit={handleSubmit} className="space-y-6">
-        {/* Input Field */}
+      {/* Question 1 */}
+      <div className="mb-8">
+        <p className="text-lg text-gray-700 mb-4 text-center">Question 1: Where does the sun rise?</p>
         <input
           type="text"
-          value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
+          value={inputValue1}
+          onChange={(e) => setInputValue1(e.target.value)}
           disabled={isInputLocked} // Lock input after submission
-          className={`w-full p-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+          className={`w-full p-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#65A662] transition-all duration-300 ${
             isInputLocked ? 'bg-gray-200' : 'bg-white'
           }`}
           placeholder="Enter your answer"
         />
+      </div>
 
+      {/* Question 2 */}
+      <div className="mb-8">
+        <p className="text-lg text-gray-700 mb-4 text-center">Question 2: Where does the sun set?</p>
+        <input
+          type="text"
+          value={inputValue2}
+          onChange={(e) => setInputValue2(e.target.value)}
+          disabled={isInputLocked} // Lock input after submission
+          className={`w-full p-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#65A662] transition-all duration-300 ${
+            isInputLocked ? 'bg-gray-200' : 'bg-white'
+          }`}
+          placeholder="Enter your answer"
+        />
+      </div>
+
+      <form onSubmit={handleSubmit} className="space-y-6">
         {/* Buttons */}
-        <div className="flex justify-between">
+        <div className="flex justify-between mt-8">
           {/* Previous Button */}
           <button
             type="button"
-            className={`bg-gray-500 text-white py-2 px-4 rounded-full shadow-lg transition-transform ${
-              !disableHover ? 'hover:scale-110 hover:bg-gray-400' : ''
+            className={`bg-gray-500 text-white py-2 px-4 rounded-full shadow-lg transition-transform duration-300 ${
+              !disableHover ? 'hover:shadow-xl hover:bg-gray-400' : ''
             } focus:outline-none`}
             onClick={prevStep}
           >
@@ -86,8 +108,8 @@ const Ex3 = ({ onScoreUpdate, nextStep, prevStep }) => {
           {/* Submit Button */}
           <button
             type="submit"
-            className={`bg-blue-500 text-white py-2 px-6 rounded-full shadow-lg transition-transform ${
-              !disableHover ? 'hover:scale-110 hover:bg-blue-400' : ''
+            className={`bg-[#65A662] text-white py-2 px-6 rounded-full shadow-lg transition-transform duration-300 ${
+              !disableHover ? 'hover:shadow-xl hover:bg-green-600' : ''
             } focus:outline-none`}
             disabled={isInputLocked} // Disable submit if input is locked
           >

@@ -8,7 +8,7 @@ const WhyUsSection = () => {
         <div className="lg:w-1/2">
           <img
             className="rounded-lg shadow-md object-cover w-full h-[400px] hover:scale-100 transition-none"  // Removed hover effects
-            src="https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg" 
+            src="https://img.freepik.com/free-photo/young-woman-teaching-english-lessons_23-2149019790.jpg?t=st=1728394325~exp=1728397925~hmac=ed065bc6e41ee40916b57c463e615af87ed3330ab5be2122c466e246aacf9c9c&w=996" 
             alt="Why Inlingo English Courses"
           />
         </div>

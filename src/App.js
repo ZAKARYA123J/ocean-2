@@ -15,10 +15,13 @@ import TeamNurse from "./components/TeamNurse";
 import ContractPage from "./components/ContractPage";
 import LanguagesPage from "./components/LanguagesPage";
 import LearnEnglishEx from "./components/English/LearnEnglishEx";
+import LearnEnglish from "./components/LearnEnglish";
+import ScrollToTop from "./components/ScrollToTop";
+import CoursesSection from "./components/English/CoursesSection";
+import CourseDetails from './components/English/CourseDetails';
 import { HelmetProvider } from "react-helmet-async";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { AnimatePresence, motion } from "framer-motion";
-import LearnEnglish from "./components/LearnEnglish";
 
 function App() {
   const location = useLocation();
@@ -53,9 +56,10 @@ function App() {
 
   return (
     <HelmetProvider>
+      <ScrollToTop />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
-          {/* Pages with transitions */}
+          {/* Main Index Page with Transition */}
           <Route
             path="/"
             element={
@@ -71,6 +75,7 @@ function App() {
               </motion.div>
             }
           />
+          {/* Formation Page with Transition */}
           <Route
             path="/formation"
             element={
@@ -89,6 +94,7 @@ function App() {
               </motion.div>
             }
           />
+          {/* Dynamic Formation Page */}
           <Route
             path="/formation/:id"
             element={
@@ -106,6 +112,7 @@ function App() {
               </motion.div>
             }
           />
+          {/* Service Page with Transition */}
           <Route
             path="/service/:id"
             element={
@@ -123,23 +130,7 @@ function App() {
               </motion.div>
             }
           />
-          <Route
-            path="/jobs/:type"
-            element={
-              <motion.div
-                style={pageStyle}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{
-                  duration: 0.8,
-                  ease: [0.42, 0, 0.58, 1],
-                }}
-              >
-                <Jobs />
-              </motion.div>
-            }
-          />
+          {/* Jobs Page */}
           <Route
             path="/jobs"
             element={
@@ -157,6 +148,25 @@ function App() {
               </motion.div>
             }
           />
+          {/* Dynamic Job Type Page */}
+          <Route
+            path="/jobs/:type"
+            element={
+              <motion.div
+                style={pageStyle}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{
+                  duration: 0.8,
+                  ease: [0.42, 0, 0.58, 1],
+                }}
+              >
+                <Jobs />
+              </motion.div>
+            }
+          />
+          {/* Gallery Pages */}
           <Route
             path="/gallery"
             element={
@@ -191,30 +201,48 @@ function App() {
               </motion.div>
             }
           />
-
-          {/* Pages WITHOUT transitions to avoid layout issues */}
+          {/* Courses Section */}
+          <Route
+            path="/courses"
+            element={
+              <motion.div
+                style={pageStyle}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.8 }}
+                transition={{
+                  duration: 0.8,
+                  ease: [0.42, 0, 0.58, 1],
+                }}
+              >
+                <CoursesSection />
+              </motion.div>
+            }
+          />
+          {/* Dynamic Course Detail Route */}
+          <Route
+            path="/course/:courseType"
+            element={
+              <motion.div
+                style={pageStyle}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.8 }}
+                transition={{
+                  duration: 0.8,
+                  ease: [0.42, 0, 0.58, 1],
+                }}
+              >
+                <CourseDetails />
+              </motion.div>
+            }
+          />
+          {/* Other Static Pages */}
           <Route path="/team" element={<TeamPage />} />
           <Route path="/nurse" element={<TeamNurse />} />
           <Route path="/contract" element={<ContractPage />} />
           <Route path="/exercise" element={<LearnEnglishEx />} />
-          Pages with custom transitions
-          <Route
-            path="/contract"
-            element={
-              <motion.div
-                style={pageStyle}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{
-                  duration: 0.7,
-                  ease: [0.42, 0, 0.58, 1],
-                }}
-              >
-                <ContractPage />
-              </motion.div>
-            }
-          />
+          <Route path="/learn-english" element={<LearnEnglish />} />
           <Route
             path="/languages"
             element={
@@ -233,24 +261,6 @@ function App() {
               </motion.div>
             }
           />
-          <Route
-  path="/learn-english"
-  element={
-    <motion.div
-      style={pageStyle}
-      initial="initial"
-      animate="in"
-      exit="out"
-      variants={pageVariants}
-      transition={{
-        duration: 0.6,
-        ease: [0.43, 0.13, 0.23, 0.96],
-      }}
-    >
-      <LearnEnglish />
-    </motion.div>
-  }
-/>
         </Routes>
       </AnimatePresence>
       <SpeedInsights />

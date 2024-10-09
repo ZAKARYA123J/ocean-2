@@ -31,8 +31,8 @@ const loadClientData = (lang) => {
 export default function Index() {
   const { i18n, t } = useTranslation();
   const [clientData, setClientData] = useState([]);
-  const images = [heroImage1, heroImage2, heroImage3]; // Array of images
-  const [currentIndex, setCurrentIndex] = useState(0); // Track the current image index
+  const images = [heroImage1, heroImage2, heroImage3];
+  const [currentIndex, setCurrentIndex] = useState(0);
   
   useEffect(() => {
     loadClientData(i18n.language).then(data => setClientData(data));
@@ -48,7 +48,7 @@ export default function Index() {
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length); // Loop through images
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 3000);
 
     return () => clearInterval(intervalId);
@@ -183,8 +183,6 @@ export default function Index() {
           }
         `}
       </style>
-
-      {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-200 via-purple-200 to-blue-300 min-h-screen flex flex-col items-center justify-center overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center z-10 space-y-8 md:space-y-0 md:space-x-8 container overflow-hidden">
           {clientData.map((item, index) => (
@@ -192,8 +190,6 @@ export default function Index() {
               <h1 className="hero-text text-5xl md:text-7xl font-extrabold text-gray-900 leading-tight">
                 {t(item.Title)}
               </h1>
-
-              {/* CTA Buttons */}
               <div className="cta-buttons mt-4 flex justify-center md:justify-start space-x-4">
                 <ScrollLink
                   to="contact"

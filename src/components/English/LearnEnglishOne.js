@@ -1,27 +1,27 @@
-import React from 'react';
-import { FaChalkboardTeacher, FaAngleDoubleRight } from 'react-icons/fa'; // Import the required icons
+import React, { useState } from 'react';
+import { FaAngleDoubleRight } from 'react-icons/fa';
 
-const LearningOptions = () => {
+const LearnEnglishOne = () => {
   return (
     <section className="py-16 bg-white">
       {/* Offers Section Heading */}
       <div className="text-center mb-12">
-        <h3 className="text-sm font-semibold text-blue-600 mb-2 flex items-center justify-center animate-fadeInUp">
-          <FaAngleDoubleRight className="mr-2" /> {/* Add the icon here */}
+        <h3 className="text-sm font-semibold text-blue-600 mb-2 flex items-center justify-center">
+          <FaAngleDoubleRight className="mr-2" />
           OFFERS
         </h3>
-        <p className="text-gray-500 mt-4 animate-fadeInUp">
+        <p className="text-gray-500 mt-4">
           Discover our exclusive learning options to help you achieve fluency in English.
         </p>
       </div>
 
-      {/* Cards with hover animation */}
+      {/* Cards without "FIND MY TEACHER" button */}
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Card 1 */}
-        <div className="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 animate-fadeInUp">
+        <div className="bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
           <img
             className="w-full h-48 object-cover"
-            src="https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg"
+            src="https://www.upload.ee/image/17214724/teacher-holding-english-class.jpg"
             alt="1-on-1 lessons"
           />
           <div className="p-6">
@@ -29,18 +29,14 @@ const LearningOptions = () => {
             <p className="text-gray-600 mt-2">
               Find teachers from all over the world sharing their languages, dialects, and cultures.
             </p>
-            <a href="#" className="text-[#65A662] font-semibold mt-4 inline-block hover:text-[#4A944E] transition-colors flex items-center">
-              <FaChalkboardTeacher className="mr-2" /> {/* Add teacher icon */}
-              ➤ FIND MY TEACHER
-            </a>
           </div>
         </div>
 
         {/* Card 2 */}
-        <div className="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 animate-fadeInUp">
+        <div className="bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
           <img
             className="w-full h-48 object-cover"
-            src="https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg"
+            src="https://www.upload.ee/image/17214739/back-view-kids-writing-whiteboard.jpg"
             alt="Group Class"
           />
           <div className="p-6">
@@ -48,18 +44,14 @@ const LearningOptions = () => {
             <p className="text-gray-600 mt-2">
               Find teachers from all over the world sharing their languages, dialects, and cultures.
             </p>
-            <a href="#" className="text-[#65A662] font-semibold mt-4 inline-block hover:text-[#4A944E] transition-colors flex items-center">
-              <FaChalkboardTeacher className="mr-2" /> {/* Add teacher icon */}
-              ➤ FIND MY TEACHER
-            </a>
           </div>
         </div>
 
         {/* Card 3 */}
-        <div className="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 animate-fadeInUp">
+        <div className="bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
           <img
             className="w-full h-48 object-cover"
-            src="https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg"
+            src="https://www.upload.ee/image/17214733/english-books-assortment-still-life.jpg"
             alt="Practice for Free"
           />
           <div className="p-6">
@@ -67,15 +59,32 @@ const LearningOptions = () => {
             <p className="text-gray-600 mt-2">
               Find teachers from all over the world sharing their languages, dialects, and cultures.
             </p>
-            <a href="#" className="text-[#65A662] font-semibold mt-4 inline-block hover:text-[#4A944E] transition-colors flex items-center">
-              <FaChalkboardTeacher className="mr-2" /> {/* Add teacher icon */}
-              ➤ FIND MY TEACHER
-            </a>
           </div>
         </div>
       </div>
+
+      {/* Embedded keyframe animations */}
+      <style>{`
+        @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+        @keyframes fadeOut {
+          from { opacity: 1; }
+          to { opacity: 0; }
+        }
+        @keyframes scaleUp {
+          0% { transform: scale(0.7) rotate(-3deg); opacity: 0; }
+          80% { transform: scale(1.05) rotate(3deg); opacity: 1; }
+          100% { transform: scale(1) rotate(0deg); opacity: 1; }
+        }
+        @keyframes scaleDown {
+          from { transform: scale(1); opacity: 1; }
+          to { transform: scale(0.7); opacity: 0; }
+        }
+      `}</style>
     </section>
   );
 };
 
-export default LearningOptions;
+export default LearnEnglishOne;
