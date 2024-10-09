@@ -213,7 +213,7 @@ const limitedItems=serviceData.slice(1,6)
                           to={skill.link}
                           onClick={closeDropdownOnLinkClick}  // Fermer le dropdown après le clic
                         >
-                          {skill.title}
+                          {/* {service.title} */}
                         </Link>
                       </li>
                     ))}

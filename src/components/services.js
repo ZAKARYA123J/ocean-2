@@ -55,7 +55,7 @@ const Services = () => {
     AOS.refresh();
   }, []);
 
-  const limitedItems = serviceData.slice(0, 6);
+  const limitedItems = serviceData.slice(0, 4);
 
   if (loading) {
     return (
@@ -69,10 +69,10 @@ const Services = () => {
   return (
     <div className="bg-gray-50 dark:bg-gray-900 dark:text-white py-16" id="services">
       <div className="container mx-auto px-6 lg:px-8">
-        {serviceData.map((skill)=>(
+        {/* Title section */}
         <h1 className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-10">
-          {t(skill.Servicetitle)}
-        </h1>))}
+          {/* {t(skill.Servicetitle)} */}
+        </h1>
 
         {/* Services grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">

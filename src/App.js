@@ -12,12 +12,16 @@ import Gallery from "./components/Gallery/gallery";
 import GalleryDetail from "./components/Gallery/detailgallery";
 import TeamPage from "./components/TeamPage";
 import TeamNurse from "./components/TeamNurse";
+
 import ContractPage from "./components/ContractPage";
 import LanguagesPage from "./components/LanguagesPage";
+import LearnEnglishEx from "./components/English/LearnEnglishEx";
 import { HelmetProvider } from "react-helmet-async";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { AnimatePresence, motion } from "framer-motion";
 import TeamGlass from "./components/TeamGlass";
+import LearnEnglish from "./components/LearnEnglish";
+
 function App() {
   const location = useLocation();
 
@@ -192,10 +196,13 @@ function App() {
 
           {/* Pages WITHOUT transitions to avoid layout issues */}
           <Route path="/team" element={<TeamPage />} />
+          <Route path="/teamGlass" element={<TeamGlass />} />
           <Route path="/nurse" element={<TeamNurse />} />
           <Route path="/contract" element={<ContractPage />} />
           <Route path="/teamglass" element={<TeamGlass />} />
-          {/* Pages with custom transitions
+          {/* <Pages with custom transitions */}
+          <Route path="/exercise" element={<LearnEnglishEx />} />
+          {/* Pages with custom transitions */}
           <Route
             path="/contract"
             element={
@@ -212,7 +219,7 @@ function App() {
                 <ContractPage />
               </motion.div>
             }
-          /> */}
+          />
           <Route
             path="/languages"
             element={
@@ -231,6 +238,24 @@ function App() {
               </motion.div>
             }
           />
+          <Route
+  path="/learn-english"
+  element={
+    <motion.div
+      style={pageStyle}
+      initial="initial"
+      animate="in"
+      exit="out"
+      variants={pageVariants}
+      transition={{
+        duration: 0.6,
+        ease: [0.43, 0.13, 0.23, 0.96],
+      }}
+    >
+      <LearnEnglish />
+    </motion.div>
+  }
+/>
         </Routes>
       </AnimatePresence>
       <SpeedInsights />
