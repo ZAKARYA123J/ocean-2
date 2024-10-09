@@ -16,19 +16,40 @@ const socialLinks = [
 ];
 
 const contactInfo = [
-  { Icon: HiLocationMarker, title: "Address", content: "789 Inner Lane, Holy park, California, USA" },
-  { Icon: PiPhoneCallFill, title: "Call Us", content: "+09 876 543 210" },
-  { Icon: MdMarkEmailRead, title: "Email Us", content: "support24@rakar.com" },
+  { Icon: HiLocationMarker, title: "Address", content: "Immeubles Coralia, 2ème étage, ISLAN, Hay Mohammadi, AGADIR" },
+  { Icon: PiPhoneCallFill, title: "Call Us", content: "+212 704-309787" },
+  { Icon: MdMarkEmailRead, title: "Email Us", content: "oceanconnecting.ma@gmail.com" },
 ];
 
-const pageElements = ["Home", "Services", "Formation", "About Us", "Contact"];
-const ourServices = ["Development Informatique", "Formation", "Clean facades", "Recruitment", "Domiciliation"];
+const pageElements = [
+  { label: "Home", link: "/Home" },
+  { label: "Services", link: "/Services" },
+  { label: "Formation", link: "/Formation" },
+  { label: "About Us", link: "/About" },
+  { label: "Contact", link: "/Contact" }
+];
+
+const pageFormation = [
+  { label: "English", link: "/Home" },
+  { label: "Spanich", link: "/Services" },
+  { label: "Germany", link: "/Formation" },
+  { label: "Italy", link: "/About" },
+  { label: "Frances", link: "/Contact" }
+];
+
+const ourServices = [
+  { label: "Development Informatique", link: "/Development" },
+  { label: "Formation", link: "/Formation" },
+  { label: "Clean facades", link: "/facades" },
+  { label: "Recruitment", link: "/Recruitment" },
+  { label: "Domiciliation", link: "/Domiciliation" }
+];
 
 function Footer() {
   return (
-    <footer className="bg-[#e0f7fa] py-12 text-black">
+    <footer className="bg-gradient-to-br from-blue-200 via-purple-200 to-blue-300 py-6 text-black pl-10 pt-5">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
-        <div className="mb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="mb-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {contactInfo.map(({ Icon, title, content }) => (
             <div key={title} className="flex items-center space-x-3">
               <div className="bg-[#3a86ff] p-2 rounded-md">
@@ -56,7 +77,7 @@ function Footer() {
             ))}
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <img src={logo} alt="RAKAR Logo" style={{ width: '120px' }} />
@@ -68,8 +89,20 @@ function Footer() {
               aliquam nisl nisl sit amet nisl.
             </p>
           </div>
-          <FooterLinkSection title="Page elements" links={pageElements} />
           <FooterLinkSection title="Our Services" links={ourServices} />
+          <FooterLinkSection title="Our Page " links={pageElements} />
+          <FooterLinkSection title="Our Formation" links={pageFormation} />
+          
+        </div>
+        {/* copyright section */}
+        <div className="mt-2 content-center">
+          <hr className="my-4 border-t-2 border-gray-300" />
+          <p className="font-semibold text-md text-center">
+            Copyright © {new Date().getFullYear()}{" "}
+            <Link to="/#" className="text-white hover:text-blue-500">
+              Ocean Connecting
+            </Link>. All Rights Reserved.
+          </p>
         </div>
       </div>
     </footer>
@@ -81,10 +114,10 @@ function FooterLinkSection({ title, links }) {
     <div className="space-y-2">
       <h3 className="text-xl font-bold">{title}</h3>
       <ul className="space-y-1">
-        {links.map((link) => (
-          <li key={link}>
-            <Link to={`/${link.toLowerCase().replace(/\s+/g, '-')}`} className="text-sm hover:text-[#3a86ff]">
-              {link}
+        {links.map(({ label, link }) => (
+          <li key={label}>
+            <Link to={link} className="text-sm hover:text-[#3a86ff]">
+              {label}
             </Link>
           </li>
         ))}

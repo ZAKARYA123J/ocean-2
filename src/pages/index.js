@@ -165,10 +165,10 @@ export default function Index() {
       </Helmet>
 
       <Navbar />
-      <Section id="home">
+      <Section id="home" className="bg-gradient-to-br from-blue-200 via-purple-200 to-blue-300">
         <ContentWrapper>
           <TextBlock data-aos="fade-right" className="pt-24" >
-            <h1 >
+            <h1 className="sm:ml-20 sm:mb-20">
               {clientData.map((item, index) => (
                 <span key={index}>{i18n.t(item.Title)}</span>
               ))}
@@ -177,11 +177,31 @@ export default function Index() {
               Elevate your business presence with our innovative design solutions
               for global recruitment and training.
             </p> */}
-            <CTAButton>
-              <ScrollLink to="contact" smooth duration={500}>
-                {clientData.length > 0 ? i18n.t(clientData[0].button) : 'Contact Us'} <i className="mdi mdi-chevron-right ms-1"></i>
-              </ScrollLink>
-            </CTAButton>
+            <div className="flex justify-center md:justify-start space-x-4">
+  {clientData.map((item, index) => (
+    <div key={index}>
+      <ScrollLink
+        to="contact"
+        smooth
+        duration={500}
+        className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-8 rounded-full shadow-lg transform transition hover:-translate-y-1 hover:shadow-dynamic cursor-pointer mr-2"
+      >
+        {i18n.t(item.button)}
+      </ScrollLink>
+
+      <ScrollLink
+        to="services"
+        smooth
+        duration={500}
+        className="inline-block bg-white border border-blue-600 text-blue-600 py-3 px-8 rounded-full shadow-lg transform transition hover:-translate-y-1 hover:shadow-dynamic cursor-pointer"
+      >
+        {i18n.t(item.Learn)}
+      </ScrollLink>
+    </div>
+  ))}
+</div>
+
+          
           </TextBlock>
           <ImageWrapper data-aos="fade-left" className="" isVisible>
             <img src={images[currentImage]} alt="Design Team" />

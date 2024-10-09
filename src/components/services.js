@@ -121,7 +121,9 @@ const Services = () => {
   return (
     <div className="bg-gray-50 dark:bg-gray-900 dark:text-white py-12 sm:grid sm:place-items-center" id="services">
       <div className="container mx-auto px-6 lg:px-8">
-        <Header>{t('Services')}</Header>
+      {serviceData.map((item) => (
+  <Header key={item.id}>{t(item.Servicetitle)}</Header>
+))}
         <ServiceWrapper>
           {limitedItems.map((skill) => (
             <Card

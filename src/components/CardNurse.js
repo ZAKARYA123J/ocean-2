@@ -1,10 +1,45 @@
-import React, { useState } from 'react';
+import React, { useState ,useEffect} from 'react';
 import { FaCheckCircle, FaUserShield, FaHandHoldingHeart, FaSmileBeam } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
+const loadClientData = async (lang) => {
+  try {
+    switch (lang) {
+      case 'fr':
+        return (await import('./locales/fr/translation')).CardFr;
+      case 'ar':
+        return (await import('./locales/ar/translation')).CardAr;
+      case 'en':
+      default:
+        return (await import('./locales/en/translation')).CardEn;
+    }
+  } catch (error) {
+    console.error(`Failed to load client data for language ${lang}`, error);
+    return [];
+  }
+};
 const CardNurse = () => {
   const [isModalOpen, setModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState({ title: '', description: '' });
+  const [cardnurse, setCardnurse] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const { i18n, t } = useTranslation();
 
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true);
+      try {
+        const data = await loadClientData(i18n.language);
+        setCardnurse(data);
+      } catch (error) {
+        console.error("Error fetching service data:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, [i18n.language]);
   const fetchDetails = (service) => {
     const details = {
       'Patient Comfort': {
@@ -27,99 +62,107 @@ const CardNurse = () => {
     setModalContent(details[service]);
     setModalOpen(true);
   };
-
+  if (loading) {
+    return <p>Loading services...</p>;
+  }
   const closeModal = () => setModalOpen(false);
 
   return (
     <section className="md-14 bg-white dark:bg-gray-900 relative overflow-hidden">
+      
       <div className="container mx-auto px-6 lg:px-12 max-w-7xl text-center">
-        <h2 className="text-4xl font-bold text-blue-800 dark:text-white mb-12 animate-fade-in">
-          Highlights of Our Nursing Care
-        </h2>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {/* Patient Comfort Card */}
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 transition-transform transform hover:scale-105 hover:shadow-xl">
-            <div
-              className="text-white p-8 flex items-center justify-center service-header transition-colors duration-300"
-              style={{ backgroundColor: 'rgb(54, 172, 255)', height: '120px' }}
-            >
-              <FaSmileBeam className="text-5xl animate-bounce" aria-hidden="true" />
-              <h3 className="ml-4 text-xl font-semibold uppercase text-white">
-                Patient Comfort
-              </h3>
-            </div>
-            <div className="p-6 text-center bg-white transition-colors duration-300 hover:bg-blue-50">
-              <p className="text-gray-800 mb-4 leading-relaxed transition-opacity duration-300 hover:opacity-80">
-                Ensuring the utmost comfort for our patients through personalized and compassionate care.
-              </p>
-              <button
-                className="px-4 py-2 rounded uppercase border-2 transition-transform duration-300 text-white hover:scale-105 text-left"
-                style={{
-                  backgroundColor: 'rgb(54, 172, 255)',
-                  borderColor: 'rgb(54, 172, 255)',
-                }}
-                onClick={() => fetchDetails('Patient Comfort')}
-              >
-                DETAIL
-              </button>
-            </div>
-          </div>
-
-          {/* Caregiver Support Card */}
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 transition-transform transform hover:scale-105 hover:shadow-xl">
-            <div
-              className="text-white p-8 flex items-center justify-center service-header transition-colors duration-300"
-              style={{ backgroundColor: 'rgb(54, 172, 255)', height: '120px' }}
-            >
-              <FaHandHoldingHeart className="text-5xl animate-bounce" aria-hidden="true" />
-              <h3 className="ml-4 text-xl font-semibold uppercase text-white">
-                Caregiver Support
-              </h3>
-            </div>
-            <div className="p-6 text-center bg-white transition-colors duration-300 hover:bg-blue-50">
-              <p className="text-gray-800 mb-4 leading-relaxed transition-opacity duration-300 hover:opacity-80">
-                Supporting family caregivers with the resources and respite they need to care for loved ones.
-              </p>
-              <button
-                className="px-4 py-2 rounded uppercase border-2 transition-transform duration-300 text-white hover:scale-105 text-left"
-                style={{
-                  backgroundColor: 'rgb(54, 172, 255)',
-                  borderColor: 'rgb(54, 172, 255)',
-                }}
-                onClick={() => fetchDetails('Caregiver Support')}
-              >
-                DETAIL
-              </button>
-            </div>
-          </div>
-
-          {/* Safety and Security Card */}
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 transition-transform transform hover:scale-105 hover:shadow-xl">
-            <div
-              className="text-white p-8 flex items-center justify-center service-header transition-colors duration-300"
-              style={{ backgroundColor: 'rgb(54, 172, 255)', height: '120px' }}
-            >
-              <FaUserShield className="text-5xl animate-bounce" aria-hidden="true" />
-              <h3 className="ml-4 text-xl font-semibold uppercase text-white">Safety and Security</h3>
-            </div>
-            <div className="p-6 text-center bg-white transition-colors duration-300 hover:bg-blue-50">
-              <p className="text-gray-800 mb-4 leading-relaxed transition-opacity duration-300 hover:opacity-80">
-                Maintaining a safe and secure environment for all patients through rigorous safety measures.
-              </p>
-              <button
-                className="px-4 py-2 rounded uppercase border-2 transition-transform duration-300 text-white hover:scale-105 text-left"
-                style={{
-                  backgroundColor: 'rgb(54, 172, 255)',
-                  borderColor: 'rgb(54, 172, 255)',
-                }}
-                onClick={() => fetchDetails('Safety and Security')}
-              >
-                DETAIL
-              </button>
-            </div>
-          </div>
+      
+      {cardnurse.map((item,key) => (
+  <div key={key}>
+    <h2 className="text-4xl font-bold text-blue-800 dark:text-white mb-12 animate-fade-in">
+      {t(item.title)}
+    </h2>
+    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      
+      {/* Carte du confort des patients */}
+      <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 transition-transform transform hover:scale-105 hover:shadow-xl">
+        <div
+          className="text-white p-8 flex items-center justify-center service-header transition-colors duration-300"
+          style={{ backgroundColor: 'rgb(54, 172, 255)', height: '120px' }}
+        >
+          <FaSmileBeam className="text-5xl animate-bounce" aria-hidden="true" />
+          <h3 className="ml-4 text-xl font-semibold uppercase text-white">
+          {t(item.Comfort)}
+          </h3>
+        </div>
+        <div className="p-6 text-center bg-white transition-colors duration-300 hover:bg-blue-50">
+          <p className="text-gray-800 mb-4 leading-relaxed transition-opacity duration-300 hover:opacity-80">
+          {t(item.textCom)}
+          </p>
+          <button
+  className="px-4 py-2 rounded uppercase border-2 transition-transform duration-300 text-white hover:scale-105 text-left"
+  style={{
+    backgroundColor: 'rgb(54, 172, 255)',
+    borderColor: 'rgb(54, 172, 255)',
+  }}
+  onClick={() => fetchDetails('Patient Comfort')} >
+  {t(item.detail)}
+</button>
         </div>
       </div>
+
+      {/* Carte du soutien aux aidants */}
+      <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 transition-transform transform hover:scale-105 hover:shadow-xl">
+        <div
+          className="text-white p-8 flex items-center justify-center service-header transition-colors duration-300"
+          style={{ backgroundColor: 'rgb(54, 172, 255)', height: '120px' }}
+        >
+          <FaHandHoldingHeart className="text-5xl animate-bounce" aria-hidden="true" />
+          <h3 className="ml-4 text-xl font-semibold uppercase text-white">
+          {t(item.Caregiver)}
+          </h3>
+        </div>
+        <div className="p-6 text-center bg-white transition-colors duration-300 hover:bg-blue-50">
+          <p className="text-gray-800 mb-4 leading-relaxed transition-opacity duration-300 hover:opacity-80">
+          {t(item.textCare)}
+          </p>
+          <button
+  className="px-4 py-2 rounded uppercase border-2 transition-transform duration-300 text-white hover:scale-105 text-left"
+  style={{
+    backgroundColor: 'rgb(54, 172, 255)',
+    borderColor: 'rgb(54, 172, 255)',
+  }}
+  onClick={() => fetchDetails('Caregiver Support')}
+>
+  {t(item.detail)}
+</button>
+        </div>
+      </div>
+      {/* Carte de sécurité et sûreté */}
+      <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 transition-transform transform hover:scale-105 hover:shadow-xl">
+        <div
+          className="text-white p-8 flex items-center justify-center service-header transition-colors duration-300"
+          style={{ backgroundColor: 'rgb(54, 172, 255)', height: '120px' }}
+        >
+          <FaUserShield className="text-5xl animate-bounce" aria-hidden="true" />
+          <h3 className="ml-4 text-xl font-semibold uppercase text-white">{t(item.Safety)}</h3>
+        </div>
+        <div className="p-6 text-center bg-white transition-colors duration-300 hover:bg-blue-50">
+          <p className="text-gray-800 mb-4 leading-relaxed transition-opacity duration-300 hover:opacity-80">
+          {t(item.textsafe)}
+          </p>
+          <button
+  className="px-4 py-2 rounded uppercase border-2 transition-transform duration-300 text-white hover:scale-105 text-left"
+  style={{
+    backgroundColor: 'rgb(54, 172, 255)',
+    borderColor: 'rgb(54, 172, 255)',
+  }}
+  onClick={() => fetchDetails('Safety and Security')}
+>
+  {t(item.detail)}
+</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+))}
+</div>
 
       {/* Wave Animation */}
       <div className="wave-container">

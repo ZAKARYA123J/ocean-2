@@ -90,7 +90,8 @@ export const blogDataAR = [
         detail: 'تقدم  Ocean Connecting برنامجًا شاملًا لتعلم اللغة يغطي المستويات من A1 إلى C2. يتميز البرنامج بوجود معلمين شباب، وأنشطة ممتعة، ورحلات تعليمية، وجداول زمنية مرنة. يستفيد الطلاب من تقييمات منتظمة للمستوى، والوصول المجاني إلى أجهزة الكمبيوتر والإنترنت، وفصول دراسية مكيفة الهواء. كما يقدم البرنامج مراقبة نفسية وإرشادًا، مما يضمن بيئة تعليمية داعمة. يهدف هذا البرنامج إلى تعزيز إتقان اللغة من خلال أساليب تفاعلية ومتنوعة، تلبي احتياجات وأساليب تعلم مختلفة.',
         type: 'language',
         button:"اقرأ المزيد",
-        reserver: "للحجز"
+        reserver: "للحجز",
+        show:"إظهار الكل"
     },
     {
         id: 2,
@@ -103,7 +104,8 @@ export const blogDataAR = [
         detail: 'يعد تكوين وكيل تسجيل المطار المحترفين لإدارة تسجيل الركاب بفعالية وضمان سير العمليات في المطار بشكل سلس. يشمل التكوين استقبال الركاب، والتحقق من الوثائق، وإدارة الأمتعة، مع استخدام أنظمة الحجز والتحكم في الأمتعة. يتعلم المشاركون أيضًا إجراءات الأمن في المطار، والقوانين الدولية، وتقنيات خدمة العملاء لتقديم تجربة ممتعة. يشمل التكوين محاكاة عملية لتطبيق المعرفة المكتسبة وتطوير مهارات التواصل وإدارة حالات الطوارئ.',
         type: 'Formation',
         button:"اقرأ المزيد",
-        reserver: "للحجز"
+        reserver: "للحجز",
+        show:"إظهار الكل"
     },
     {
         id: 3,
@@ -116,7 +118,8 @@ export const blogDataAR = [
         detail: 'تكوين DJ يعلم المهارات اللازمة لتصبح DJ محترفًا، بما في ذلك تقنيات الخلط، واستخدام المعدات الحديثة مثل الأسطوانات وأجهزة التحكم، وأساسيات الإنتاج الموسيقي لإنشاء ريمكسات وأعمال أصلية. يتعلم المشاركون أيضًا كيفية إدارة الفعاليات، وتنظيم المجموعات الموسيقية، والتفاعل مع الجمهور. بالإضافة إلى الجوانب التقنية، يساعد التكوين على تطوير هوية فنية شخصية، والترويج لأعمالهم عبر الإنترنت وبناء محفظة أعمال. وهو مثالي للمبتدئين و DJs الراغبين في تحسين مهاراتهم ودخول عالم الموسيقى.',
         type: 'Formation',
         button:"اقرأ المزيد",
-        reserver: "للحجز"
+        reserver: "للحجز",
+        show:"إظهار الكل"
     },
     {
         id: 4,
@@ -129,7 +132,8 @@ export const blogDataAR = [
         detail: 'يقدم هذا التكوين تجربة شاملة لعشاق الإبحار، بما في ذلك دروس نظرية وعملية حول السلامة، وتقنيات الإبحار، والملاحة الساحلية والبعيدة. يتم توجيه الجلسات من قبل مدربين ذوي خبرة وتشمل تمارين مكثفة في البحر. يمكن للمشاركين الحصول على شهادات معترف بها، مما يتيح لهم قيادة أنواع مختلفة من القوارب واليخوت. انضم إلينا لتطوير مهاراتك البحرية واستمتع بمغامرة بحرية لا تُنسى!',
         type: 'Formation',
         button:"اقرأ المزيد",
-        reserver: "للحجز"
+        reserver: "للحجز",
+        show:"إظهار الكل"
     },
     {
         id: 5,
@@ -142,7 +146,8 @@ export const blogDataAR = [
         detail: 'تكوين المنزل والعائلة مصمم لتقديم مهارات عملية ومعرفة متعمقة حول إدارة الحياة المنزلية والعلاقات الأسرية. يتناول مواضيع متنوعة من تنظيم المنزل وإدارة الشؤون المالية للعائلة، إلى تقنيات التواصل وحل النزاعات. الهدف هو تزويد المشاركين بالأدوات اللازمة لإنشاء بيئة أسرية متناغمة ومنظمة بشكل جيد.',
         type: 'Formation',
         button:"اقرأ المزيد",
-        reserver: "للحجز"
+        reserver: "للحجز",
+        show:"إظهار الكل"
     },
     {
         id: 6,
@@ -155,7 +160,8 @@ export const blogDataAR = [
         detail: 'تكوين تركيب واستخدام VAR (الموزعين المعتمدين) يهدف إلى تزويد المحترفين بالمهارات اللازمة لتركيب وتكوين واستخدام الحلول التكنولوجية المقدمة من قبل VAR. يشمل التكوين مراحل تركيب المعدات والبرمجيات، والتكوين المتقدم، واستخدام الأدوات والتطبيقات بشكل يومي. يتعلم المشاركون أيضًا تقديم الدعم الفني، وتشخيص وحل المشكلات، وإجراء الصيانة الوقائية، وتحسين أداء الحلول. هذا التكوين ضروري لضمان إدارة فعالة للحلول VAR وضمان أداء أمثل للأنظمة.',
         type: 'Formation',
         button:"اقرأ المزيد",
-        reserver: "للحجز"
+        reserver: "للحجز",
+        show:"إظهار الكل"
     },
     {
         id: 7,
@@ -168,7 +174,8 @@ export const blogDataAR = [
         detail: 'تكوين في الملاحة البحرية يعلم المشاركين المهارات الأساسية للإبحار بأمان في البحر، بما في ذلك استخدام أدوات الملاحة مثل الخرائط البحرية وأنظمة GPS، وفهم القوانين الدولية. يتعلم المشاركون كيفية تخطيط الرحلات، وإدارة الأحوال الجوية، وضمان سلامة السفينة والطواقم. يشمل التكوين أيضًا تقنيات الإنقاذ وإدارة حالات الطوارئ، مما يضمن الإبحار الفعال والآمن مع الالتزام بالقوانين البحرية.',
         type: 'Formation',
         button:"اقرأ المزيد",
-        reserver: "للحجز"
+        reserver: "للحجز",
+        show:"إظهار الكل"
     },
     {
         id: 8,
@@ -181,7 +188,8 @@ export const blogDataAR = [
         detail: 'تكوين حول الأحجار والمعادن الثمينة يقدم فهمًا عميقًا لخصائص وتقييم وصيانة هذه المواد الثمينة. يتعلم المشاركون كيفية تحديد وتقييم الأحجار الثمينة والمعادن الثمينة، باستخدام معايير الجودة والشهادات. يشمل التكوين أيضًا تقنيات المعالجة والصيانة للحفاظ على قيمتها، بالإضافة إلى توجهات السوق والممارسات التجارية. كما يتناول القضايا الأخلاقية والممارسات المستدامة المتعلقة بالاستخراج والتجارة بهذه الموارد.',
         type: 'Formation',
         button:"اقرأ المزيد",
-        reserver: "للحجز"
+        reserver: "للحجز",
+        show:"إظهار الكل"
     },
     {
         id: 9,
@@ -194,7 +202,8 @@ export const blogDataAR = [
         detail: 'تكوين لتطوير الزراعة والصيد يهدف إلى تحسين الممارسات الزراعية والبحرية مع ضمان الاستدامة والربحية. يشمل تقنيات حديثة لزراعة وإدارة التربة، بالإضافة إلى طرق إدارة مستدامة لمخزونات الأسماك والنظم البيئية المائية. يتعلم المشاركون استخدام أحدث التقنيات والابتكارات، وتبني ممارسات صديقة للبيئة، وتطوير استراتيجيات اقتصادية لتحسين الإنتاجية والوصول إلى الأسواق. هذا التكوين ضروري للمزارعين والصيادين ومديري الموارد الطبيعية الذين يرغبون في تحسين ممارساتهم وضمان التنمية المستدامة في قطاعاتهم.',
         type: 'Formation',
         button:"اقرأ المزيد",
-        reserver: "للحجز"
+        reserver: "للحجز",
+        show:"إظهار الكل"
     },
     {
         id: 10,
@@ -207,7 +216,8 @@ export const blogDataAR = [
         detail: 'تكوين في علوم الأرض والزلازل يقدم فهمًا عميقًا للعمليات الجيولوجية، وآليات الزلازل، وتقنيات تقييم المخاطر الزلزالية. يشمل التكوين المبادئ الأساسية للجيولوجيا، وحركات الصفائح التكتونية، وأسباب الزلازل، بالإضافة إلى طرق المراقبة والتنبؤ بالزلازل. يتعلم المشاركون أيضًا تقييم المخاطر الزلزالية، وتطوير استراتيجيات لتقليل المخاطر، وإعداد البنية التحتية والمجتمعات للتأثيرات الناجمة عن الزلازل. هذا التكوين ضروري للباحثين والمهندسين والمحترفين في إدارة المخاطر الذين يرغبون في تعزيز خبراتهم في علم الزلازل وتقليل المخاطر.',
         type: 'Formation',
         button:"اقرأ المزيد",
-        reserver: "للحجز"
+        reserver: "للحجز",
+        show:"إظهار الكل"
     },
     {
         id: 11,
@@ -220,7 +230,8 @@ export const blogDataAR = [
         detail: 'دراسات التكوين والتوظيف الوطني والدولي (EFRNI) هي تكوين متخصص يهدف إلى تطوير المهارات المتقدمة في مجال التوظيف، على المستوى الوطني والدولي. يشمل التكوين القضايا المتعلقة بالتوظيف في سياقات ثقافية وقانونية مختلفة، ويعلم استخدام الأدوات الحديثة لتحديد وجذب المواهب. كما يركز التكوين أيضًا على تحسين عمليات الاختيار وأهمية إدارة المواهب لضمان الاحتفاظ بالموظفين وتطويرهم في منظور عالمي.',
         type: 'Formation',
         button:"اقرأ المزيد",
-        reserver: "للحجز"
+        reserver: "للحجز",
+         show:"إظهار الكل"
     },
     {
         id: 12,
@@ -233,7 +244,8 @@ export const blogDataAR = [
         detail: 'تكوين "تعليم المسرح للأطفال" يقدم للشباب مقدمة في الفن الدرامي من خلال تعزيز ثقتهم بأنفسهم، ومهاراتهم في التواصل، وإبداعهم. من خلال الألعاب التمثيلية، والارتجالات، وتمارين الإبداع، يتعلم الأطفال التعبير عن مشاعرهم وأفكارهم بينما يعززون روح الفريق والقدرة على العمل الجماعي. كما يقدم التكوين أساسيات المسرح، مثل التحدث أمام الجمهور وإدارة توتر المسرح، مما يوفر تجربة غنية تعزز تطويرهم الشخصي ومهاراتهم الاجتماعية.',
         type: 'Formation',
         button:"اقرأ المزيد",
-        reserver: "للحجز"
+        reserver: "للحجز",
+         show:"إظهار الكل"
     },
     {
         id: 13,
@@ -246,7 +258,8 @@ export const blogDataAR = [
         detail: 'تكوين المصاعد مصمم لتوفير فهم شامل لأنظمة المصاعد، من تركيبها إلى صيانتها. يشمل التكوين مبادئ عمل المصاعد، وإجراءات السلامة، وتقنيات استكشاف الأخطاء وإصلاحها. سيتعلم المشاركون كيفية تركيب وصيانة وإصلاح المصاعد مع الالتزام بمعايير السلامة والتشريعات السارية. التكوين مثالي للفنيين والمهندسين وأي شخص يعمل في قطاع المصاعد، حيث يوفر المهارات اللازمة لضمان تشغيل المعدات بأمان وفعالية.',
         type: 'Formation',
         button:"اقرأ المزيد",
-        reserver: "للحجز"
+        reserver: "للحجز",
+         show:"إظهار الكل"
     },
     {
         id: 14,
@@ -259,7 +272,8 @@ export const blogDataAR = [
         detail: 'تكوين قيادة القطارات والترام يعد المشاركين لتشغيل هذه المركبات بأمان وفعالية. يشمل التكوين الجوانب التقنية للقيادة، بما في ذلك التحكم في الأوامر، وإدارة أنظمة الإشارة، واتباع إجراءات السلامة. يتعلم المشاركون أيضًا كيفية إدارة حالات الطوارئ، وتحسين استهلاك الطاقة، وضمان راحة الركاب. يشمل التكوين محاكاة عملية ونظرية لتطوير مهارات عميقة في القيادة وإدارة العمليات السككية والتراموية، مع الالتزام بالمعايير التنظيمية السارية.',
         type: 'تكوين',
         button:"اقرأ المزيد",
-        reserver: "للحجز"
+        reserver: "للحجز",
+         show:"إظهار الكل"
     },
 ]
 export const htmlAR=[
@@ -373,9 +387,47 @@ export const serviceDataAR = [
 export const TitleAR=[
     {
         Title:"التعلم والتدريب مع التوظيف الوطني والدولي",
-        button:"اتصل بنا"
+        button:"اتصل بنا",
+        Learn:"التعرف على المزيد",
     }
 ]
+export const NurseAR = [{
+    title: "رعاية تمريضية متعاطفة يمكنك الوثوق بها",
+    desc: "فريقنا المخصص من الممرضين المحترفين هنا لتقديم أعلى جودة من الرعاية بتعاطف واحترام. صحتك وراحتك هي أولويتنا القصوى.",
+    contact: "اتصل بنا اليوم",
+    about: "من نحن",
+    descab: "نحن فريق من الممرضين المرخصين وذوي الخبرة مكرس لتقديم رعاية استثنائية في راحة منزلك. من الرعاية بعد الجراحة إلى إدارة الأمراض المزمنة، هدفنا هو تحسين جودة حياتك من خلال خدمات مخصصة ورحيمة."
+}];
+export const CardAr = [{
+    title: "أبرز خدمات الرعاية التمريضية لدينا",
+    Comfort: "راحة المريض",
+    textCom: "ضمان أقصى درجات الراحة لمرضانا من خلال الرعاية الشخصية والرحيمة.",
+    detail: "التفاصيل",
+    Caregiver: "دعم مقدمي الرعاية",
+    textCare: "دعم مقدمي الرعاية الأسرية بالموارد والراحة التي يحتاجونها لرعاية أحبائهم.",
+    Safety: "الأمان والحماية",
+    textsafe: "الحفاظ على بيئة آمنة لجميع المرضى من خلال إجراءات أمان صارمة."
+}]
+export const ServicesSectionAR = [{
+    title: "خدمات الرعاية لدينا",
+    Patient: "رعاية المرضى",
+    descp: "العناية بالمريض أثناء مرضه.",
+    Dressing: "تغيير الضمادات",
+    descd: "تغيير الضمادات (الجراحية والجلدية، إلخ).",
+    Injections: "الحقن",
+    desci: "أنواع الحقن العضلية وتحت الجلد.",
+    Medical: "الوصفة الطبية",
+    decsm: "بوجود وصفة طبية (إلزامية).",
+    Umbilical: "العناية بالحبل السري",
+    descu: "العناية بالحبل السري للرضع.",
+    Postpartum: "رعاية ما بعد الولادة",
+    decccp: "العناية بالأم بعد الولادة.",
+    IV: "تغيير السوائل الوريدية",
+    descI: "تغيير السوائل الوريدية.",
+    Blood: "ضغط الدم و الجلوكوز",
+    decsB: "مراقبة ضغط الدم ومستويات الجلوكوز."
+}];
+
 export const NavbarAR=
 [
 {
@@ -581,35 +633,35 @@ export const GalleryAR=[
         id:1,
         title:"مرحباً بكم في معرض الصور!",
         desc:"اكتشف الإبداع والشغف وراء عملنا من خلال هذه الصور. استمتع بالمنظر!",
-        image:"https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F2.jpg?alt=media&token=88735b9b-07a6-4e0b-b952-4389f2c48b15",
+        image:"https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F2.jpg?alt=media&token=2edf1832-c447-46f8-88af-b496cbaa46fe",
         numberimage:"10 صور",
         datealbum:" 12-12-2024",
         titlealbum:"حدث - الممرضين ",
         img: [
-            {alt: 'image1', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F1.jpg?alt=media&token=84676c79-346a-4ce2-8197-902ac615420a'},
-            {alt: 'image2', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F2.jpg?alt=media&token=88735b9b-07a6-4e0b-b952-4389f2c48b15'},
-            {alt: "image3", url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F3.jpg?alt=media&token=158d9836-541c-48b5-8692-0476c1c2c988'},
-            {alt: "image4", url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F4.jpg?alt=media&token=0d91d194-9a78-4ac9-b462-7da342a2c761'},
-            {alt: "image5", url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F5.jpg?alt=media&token=517637e2-1209-461b-a6a9-a583c65e7ad7'},
-            {alt: "image6", url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F7.jpg?alt=media&token=1ea2e5cb-26ef-45c2-976b-dd1676781f3f'},
-            {alt: "image7", url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F7.jpg?alt=media&token=1ea2e5cb-26ef-45c2-976b-dd1676781f3f'},
-            {alt: "image8", url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F8.jpg?alt=media&token=e5a2ba1d-465a-4add-8f7b-0fe513e55eb2'},
-            {alt: "image9", url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F9.jpg?alt=media&token=3e008c82-f4d5-4731-8125-701514fca796'},
-            {alt: "image10", url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F10.jpg?alt=media&token=94188e51-9c92-4eb7-86c2-ac9994bc0899'},
+            {alt: 'image1', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F1.jpg?alt=media&token=e00fef12-3166-4135-ba8e-cc244533f9c9'},
+            {alt: 'image2', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F2.jpg?alt=media&token=2edf1832-c447-46f8-88af-b496cbaa46fe'},
+            {alt: "image3", url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F3.jpg?alt=media&token=1ee28e5c-4382-43a8-8486-70a300389152'},
+            {alt: "image4", url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F4.jpg?alt=media&token=c743a9a4-fd9f-402a-aac8-2a43344d72c8'},
+            {alt: "image5", url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F5.jpg?alt=media&token=3db9b4fe-05de-49e4-a3ba-0c56756ab4b9'},
+            {alt: "image6", url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F6.jpg?alt=media&token=cd3f5727-dd69-495d-be36-a476990c0a1e'},
+            {alt: "image7", url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F7.jpg?alt=media&token=0832fc09-a5ec-4a4c-9a71-e6463c6d9244'},
+            {alt: "image8", url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F8.jpg?alt=media&token=8addc46f-e121-4456-a129-5e44f4bff1c9'},
+            {alt: "image9", url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F9.jpg?alt=media&token=530b17a3-fc1e-4e22-99ec-d8cfa51f71b4'},
+            {alt: "image10", url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F10.jpg?alt=media&token=f840572c-7b17-42da-a413-565daf589f3e'},
         ]
     },
     {
         id:2,
-        image:"https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FglassCleaning-team%2F1.png?alt=media&token=1f6f3b17-5d66-43f1-9af6-e355e3b1e096",
+        image:"https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FglassCleaning-team1%2F1.png?alt=media&token=42c92a0a-9bfe-4b1e-8bb2-5799ba69a1ee",
         numberimage:" 5 صور",
         datealbum:"12-12-2024",
         titlealbum:"فريق تنظيف الزجاج  ",
         img: [
-            {alt: 'image1', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FglassCleaning-team%2F6.jpg?alt=media&token=ac60ba0c-fa73-41ac-89a2-cd3d2dae1d7c'},
-            {alt: 'image2', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FglassCleaning-team%2F2.jpg?alt=media&token=1c1bdf81-1c94-4ff7-9f30-2f3b76ebf9c0'},
-            {alt: 'image3', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FglassCleaning-team%2F3.jpg?alt=media&token=8c041f49-c424-497e-b7df-562be8dd2cef'},
-            {alt: 'image4', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FglassCleaning-team%2F4.jpg?alt=media&token=30010bb7-9d28-4f51-a78d-3e412424d250'},
-            {alt: 'image5', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FglassCleaning-team%2F5.jpg?alt=media&token=fd4d31a0-2761-4b2a-bc0b-c5cd2cbc459d'},
+            {alt: 'image1', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FglassCleaning-team1%2F6.jpg?alt=media&token=a6ef683e-9250-4147-acb2-b6a538f16790'},
+            {alt: 'image2', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FglassCleaning-team1%2F2.jpg?alt=media&token=89f41d86-0294-4ac9-a646-e8127f751d4a'},
+            {alt: 'image3', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FglassCleaning-team1%2F3.jpg?alt=media&token=d9c0d25e-8db6-4ac7-b07d-7641dd174f15'},
+            {alt: 'image4', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FglassCleaning-team1%2F4.jpg?alt=media&token=8e6de772-41b2-4905-aa7e-8f81d3d73c86'},
+            {alt: 'image5', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FglassCleaning-team1%2F5.jpg?alt=media&token=083fe0ff-6226-492c-9974-3f8423efd177'},
             ]
     },
     {

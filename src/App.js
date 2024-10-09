@@ -25,6 +25,7 @@ function App() {
         <Route path='/formation/:id' element={<IndexFive />} />
         <Route path='/service/:id' element={<Service />} />
         <Route path='/jobs/:type' element={<Jobs />} />
+        <Route path='/jobs' element={<Jobs />} />
         <Route path='/gallery' element={<Gallery />} />
         <Route path='/gallery/:id' element={<GalleryDetail />} />
         <Route path="/team" element={<TeamPage />} />

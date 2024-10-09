@@ -7,6 +7,7 @@
     "@emotion/react": "^11.13.0",
     "@emotion/styled": "^11.13.0",
     "@fancyapps/ui": "^5.0.36",
+    "@formkit/auto-animate": "^0.8.2",
     "@material-tailwind/react": "^2.1.9",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -19,8 +20,8 @@
     "react": "^18.2.0",
     "react-countup": "^6.5.0",
     "react-dom": "^18.2.0",
-    "react-helmet-async": "^2.0.5",
     "react-grid-gallery": "^1.0.1",
+    "react-helmet-async": "^2.0.5",
     "react-i18next": "^15.0.1",
     "react-icons": "^5.3.0",
     "react-leaflet": "^4.2.1",
@@ -33,13 +34,13 @@
     "react-slick": "^0.30.2",
     "sass": "^1.70.0",
     "slick-carousel": "^1.8.1",
-    "styled-components": "^6.1.12",
+    "styled-components": "^6.1.13",
     "swiper": "^11.1.12",
     "tiny-slider-react": "^0.5.7",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "set PORT=3006 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
