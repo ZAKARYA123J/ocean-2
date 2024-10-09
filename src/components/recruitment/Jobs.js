@@ -230,11 +230,12 @@ const JobListings = () => {
       <Section>
         <Container>
           {/* Page Title */}
-          <Title className='mt-10'>{t('Job Listings')}</Title>
-          <Subtitle>{t('Find your dream job with us')}</Subtitle>
+          {/* <Title className="mt-10">{t(item.h1)}</Title>
+          <Subtitle>{t(item.Find)}</Subtitle> */}
+         
 
           {/* Dropdown for selecting job type */}
-          <FilterContainer>
+          <FilterContainer className='m-10'>
             <FilterSelect value={selectedType} onChange={handleTypeChange}>
               {jobTypes.map((type) => (
                 <option key={type} value={type}>

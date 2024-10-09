@@ -541,6 +541,8 @@ export const jobsFR = [
     {
         id: 1,
         image: resume,
+        h1: "Offres d'emploi",
+Find: "Trouvez votre emploi de rêve avec nous",
         title: "Demande de contrat de travail à l'étranger ",
         type: 'International',
         menu1: "Documents requis : ",

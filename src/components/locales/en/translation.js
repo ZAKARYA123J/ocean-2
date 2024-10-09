@@ -452,6 +452,8 @@ export const recruitmentEN = [
 export const jobsEN = [
     {
         id: 1,
+        h1:"Job Listings",
+        Find:"Find your dream job with us",
         image: resume,
         title: 'Application for an overseas work contract',
         type: 'International',
