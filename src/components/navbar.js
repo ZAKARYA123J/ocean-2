@@ -8,28 +8,28 @@ import { useTranslation } from "react-i18next";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { motion } from "framer-motion";
 
-// Fonction pour charger les données du client en fonction de la langue
+// Function to load client data based on language
 const loadClientData = async (lang) => {
   try {
     switch (lang) {
       case 'fr':
-        const { serviceDataFR, blogDataFR, NavbarFR } = await import('./locales/fr/translation');
-        return { navbar: NavbarFR, serviceData: serviceDataFR, blogData: blogDataFR };
+        const { serviceDataFR, NavbarFR } = await import('./locales/fr/translation');
+        return { navbar: NavbarFR, serviceData: serviceDataFR };
       case 'ar':
-        const { serviceDataAR, blogDataAR, NavbarAR } = await import('./locales/ar/translation');
-        return { navbar: NavbarAR, serviceData: serviceDataAR, blogData: blogDataAR };
+        const { serviceDataAR, NavbarAR } = await import('./locales/ar/translation');
+        return { navbar: NavbarAR, serviceData: serviceDataAR };
       case 'en':
       default:
-        const { serviceDataEN, blogDataEN, NavbarEN } = await import('./locales/en/translation');
-        return { navbar: NavbarEN, serviceData: serviceDataEN, blogData: blogDataEN };
+        const { serviceDataEN, NavbarEN } = await import('./locales/en/translation');
+        return { navbar: NavbarEN, serviceData: serviceDataEN };
     }
   } catch (error) {
     console.error(`Failed to load client data for language ${lang}`, error);
-    return { navbar: [], serviceData: [], blogData: [] };
+    return { navbar: [], serviceData: [] };
   }
 };
 
-// Hook pour détecter si l'appareil est mobile
+// Hook to detect if the device is mobile
 const useIsMobile = () => {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -50,25 +50,27 @@ const useIsMobile = () => {
 export default function Navbar() {
   const [scroll, setScroll] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [dropdowns, setDropdowns] = useState(null); // Garder la trace des dropdowns ouverts
+  const [dropdowns, setDropdowns] = useState(null);
   const { i18n, t } = useTranslation();
   const [navbar, setNavbar] = useState([]);
   const [serviceData, setServiceData] = useState([]);
-  const [blogData, setBlogData] = useState([]);
   const isMobile = useIsMobile();
-console.log("dssd")
-  // Charger les données en fonction de la langue
+  const location = useLocation();
+
+  // Check if we are on the "/learn-english" page
+  const isLearnEnglishPage = location.pathname === '/learn-english';
+
+  // Load client data based on language
   useEffect(() => {
     const fetchData = async () => {
-      const { navbar, serviceData, blogData } = await loadClientData(i18n.language);
+      const { navbar, serviceData } = await loadClientData(i18n.language);
       setNavbar(navbar);
       setServiceData(serviceData);
-      setBlogData(blogData);
     };
     fetchData();
   }, [i18n.language]);
 
-  // Gérer le changement d'arrière-plan de la navbar en fonction du scroll
+  // Handle navbar background change on scroll
   useEffect(() => {
     const handleScroll = () => {
       setScroll(window.scrollY > 50);
@@ -79,21 +81,16 @@ console.log("dssd")
     };
   }, []);
 
-  const location = useLocation();
   const isHomePage = location.pathname === '/';
 
-  // Fonction pour basculer l'état du dropdown
+  // Toggle dropdown state
   const handleDropdownToggle = (dropdownType) => {
-    if (dropdowns === dropdownType) {
-      setDropdowns(null); // Fermer le dropdown si déjà ouvert
-    } else {
-      setDropdowns(dropdownType); // Ouvrir le dropdown
-    }
+    setDropdowns(dropdowns === dropdownType ? null : dropdownType);
   };
 
-  // Fonction pour fermer les dropdowns lors d'un clic sur un lien
+  // Close dropdowns on link click
   const closeDropdownOnLinkClick = () => {
-    setDropdowns(null); // Fermer les dropdowns
+    setDropdowns(null);
   };
 const limitedItems=serviceData.slice(1,6)
   return (
@@ -122,12 +119,12 @@ const limitedItems=serviceData.slice(1,6)
           opacity: 0;
           transform: translateY(-10px);
           transition: opacity 0.3s ease, transform 0.3s ease;
-          display: none; /* Masquer complètement le dropdown */
+          display: none;
         }
         .nav-item ul.show {
           opacity: 1;
           transform: translateY(0);
-          display: block; /* Afficher le dropdown lorsqu'il est visible */
+          display: block;
         }
         img {
           transition: transform 0.3s ease;
@@ -142,27 +139,22 @@ const limitedItems=serviceData.slice(1,6)
 
       <motion.nav
         className={`navbar fixed top-0 w-full z-50 ${scroll ? "bg-white shadow-lg" : "bg-transparent"}`}
-        initial={{ y: -100 }}  // Position initiale de la navbar hors écran
-        animate={{ 
-          y: 0,  // Faire apparaître la navbar
-          backgroundColor: scroll ? "#fff" : "rgba(0, 0, 0, 0)",  // Changer le fond au scroll
-        }}
-        transition={{ duration: 0.5 }}  // Durée de l'animation
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.5 }}
       >
         <div className="container mx-auto px-4 flex flex-wrap items-center justify-between">
-          {/* Logo */}
           <Link to="/">
             <motion.img
               src={img}
               className="inline-block"
               style={{ width: "120px" }}
               alt="Logo"
-              whileHover={{ scale: 1.1 }}  // Effet hover pour agrandir le logo
+              whileHover={{ scale: 1.1 }}
               transition={{ duration: 0.3 }}
             />
           </Link>
 
-          {/* Language Switcher et Bouton de menu mobile */}
           <div className="nav-icons flex items-center lg_992:order-2 ms-auto md:ms-8">
             <LanguageSwitcher />
             <button
@@ -173,45 +165,39 @@ const limitedItems=serviceData.slice(1,6)
               <span className="sr-only">Navigation Menu</span>
               <motion.i
                 className="mdi mdi-menu text-[24px]"
-                whileHover={{ rotate: 90 }}  // Effet rotation sur hover pour l'icône du menu
+                whileHover={{ rotate: 90 }}
                 transition={{ duration: 0.3 }}
               />
             </button>
           </div>
 
-          {/* Liens de navigation */}
-          <div
-            className={`navigation lg_992:flex ms-auto transition-all ${
-              menuOpen ? "block" : "hidden"
-            }`}
-          >
+          <div className={`navigation lg_992:flex ms-auto ${menuOpen ? "block" : "hidden"}`}>
             {navbar.map((item, index) => (
-              <ul
-                className="navbar-nav flex flex-col lg_992:flex-row space-y-2 lg_992:space-y-0 lg_992:space-x-4"
-                key={index}
-              >
+              <ul className="navbar-nav flex flex-col lg_992:flex-row space-y-2 lg_992:space-y-0 lg_992:space-x-4" key={index}>
                 <li className="nav-item ms-0">
-                  <Link className="nav-link" to="/" onClick={closeDropdownOnLinkClick}>
+                  <Link
+                    className={`nav-link ${isLearnEnglishPage ? "text-[#65A662]" : "text-black"}`}
+                    to="/"
+                    onClick={closeDropdownOnLinkClick}
+                  >
                     {t(item.Home)}
                   </Link>
                 </li>
-
-                {/* Dropdown des Services */}
                 <li className="nav-item ms-0 relative">
                   <button
-                    className="nav-link flex items-center transition duration-300 ease-in-out transform hover:scale-105"
+                    className={`nav-link flex items-center ${isLearnEnglishPage ? "text-[#65A662]" : "text-black"}`}
                     onClick={() => handleDropdownToggle("servicesOpen")}
                   >
                     {t(item.Services)}
                     <RiArrowDropDownLine className="ml-1" fontSize={25} />
                   </button>
-                  <ul className={`bg-white text-dark shadow-lg rounded-lg p-4 ${dropdowns === "servicesOpen" ? "show" : ""}`}>
-                    {limitedItems.map((skill, idx) => (
+                  <ul className={`bg-white text-dark ${dropdowns === "servicesOpen" ? "show" : ""}`}>
+                    {serviceData.map((service, idx) => (
                       <li className="nav-item" key={idx}>
                         <Link
-                          className="nav-link transition duration-200 ease-in-out hover:bg-gray-100 p-2 rounded-md"
-                          to={skill.link}
-                          onClick={closeDropdownOnLinkClick}  // Fermer le dropdown après le clic
+                          className="nav-link"
+                          to={`/service/${service.id}`}
+                          onClick={closeDropdownOnLinkClick}
                         >
                           {/* {service.title} */}
                         </Link>
@@ -219,33 +205,37 @@ const limitedItems=serviceData.slice(1,6)
                     ))}
                   </ul>
                 </li>
-
-                {/* Lien vers la Formation */}
                 <li className="nav-item ms-0">
-                  <Link className="nav-link" to="/formation" onClick={closeDropdownOnLinkClick}>
+                  <Link
+                    className={`nav-link ${isLearnEnglishPage ? "text-[#65A662]" : "text-black"}`}
+                    to="/formation"
+                    onClick={closeDropdownOnLinkClick}
+                  >
                     {t(item.Formation)}
                   </Link>
                 </li>
-
-                {/* Lien vers les Jobs */}
                 <li className="nav-item ms-0">
-                  <Link className="nav-link" to="/jobs" onClick={closeDropdownOnLinkClick}>
+                  <Link
+                    className={`nav-link ${isLearnEnglishPage ? "text-[#65A662]" : "text-black"}`}
+                    to="/jobs"
+                    onClick={closeDropdownOnLinkClick}
+                  >
                     {t(item.Jobs)}
                   </Link>
                 </li>
-
-                {/* Lien vers la Galerie */}
                 <li className="nav-item ms-0">
-                  <Link className="nav-link" to="/gallery" onClick={closeDropdownOnLinkClick}>
+                  <Link
+                    className={`nav-link ${isLearnEnglishPage ? "text-[#65A662]" : "text-black"}`}
+                    to="/gallery"
+                    onClick={closeDropdownOnLinkClick}
+                  >
                     {t(item.gallery)}
                   </Link>
                 </li>
-
-                {/* Lien vers la page "À propos" */}
                 <li className="nav-item ms-0">
                   {isHomePage ? (
                     <ScrollLink
-                      className="nav-link cursor-pointer"
+                      className={`nav-link cursor-pointer ${isLearnEnglishPage ? "text-[#65A662]" : "text-black"}`}
                       to="about"
                       smooth={true}
                       duration={1000}
@@ -256,29 +246,12 @@ const limitedItems=serviceData.slice(1,6)
                       {t(item.About)}
                     </ScrollLink>
                   ) : (
-                    <Link className="nav-link cursor-pointer" to="/" onClick={closeDropdownOnLinkClick}>
-                      {t(item.About)}
-                    </Link>
-                  )}
-                </li>
-
-                {/* Lien vers la page Contact */}
-                <li className="nav-item ms-0">
-                  {isHomePage ? (
-                    <ScrollLink
-                      className="nav-link cursor-pointer"
-                      to="contact"
-                      smooth={true}
-                      duration={1000}
-                      activeClass="active"
-                      spy={true}
+                    <Link
+                      className={`nav-link cursor-pointer ${isLearnEnglishPage ? "text-[#65A662]" : "text-black"}`}
+                      to="/"
                       onClick={closeDropdownOnLinkClick}
                     >
-                      {t(item.Contact)}
-                    </ScrollLink>
-                  ) : (
-                    <Link className="nav-link cursor-pointer" to="/contact" onClick={closeDropdownOnLinkClick}>
-                      {t(item.Contact)}
+                      {t(item.About)}
                     </Link>
                   )}
                 </li>

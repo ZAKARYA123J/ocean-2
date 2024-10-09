@@ -4,7 +4,7 @@ import Footer from "./footer";
 import Modal from "./Modal";
 import LearnEnglishOne from "./English/LearnEnglishOne"
 import LearnEnglishTwo from "./English/LearnEnglishTwo"
-import LearnEnglishThree from "./English/LearnEnglishThree"
+import LearnEnglishThree from "./English/CoursesSection"
 import LearnEnglishFor from "./English/LearnEnglishFor"
 import LearnEnglishFive from "./English/LearnEnglishFive"
 import LearnEnligshSix from "./English/LearnEnligshSix"
@@ -13,20 +13,15 @@ import LearnEnglishModel from "./English/LearnEnglishModel"
 const LearnEnglish = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Dynamic states for the numbers
   const [years, setYears] = useState(0);
   const [recommendedPercentage, setRecommendedPercentage] = useState(0);
   const [students, setStudents] = useState(0);
 
-  // Dynamic text states
   const [yearsText, setYearsText] = useState("");
   const [recommendedText, setRecommendedText] = useState("");
   const [studentsText, setStudentsText] = useState("");
   
-  // Dynamic headline state
-  const [headlineText, setHeadlineText] = useState(""); // For animating the headline
-
-  // Function to animate number increments
+  const [headlineText, setHeadlineText] = useState("");
   useEffect(() => {
     const incrementNumber = (start, end, setter, duration) => {
       let current = start;
@@ -39,8 +34,6 @@ const LearnEnglish = () => {
         }
       }, stepTime);
     };
-
-    // Function to animate text appearance (letter by letter)
     const animateText = (fullText, setter, delay) => {
       let currentText = "";
       let index = 0;
@@ -51,23 +44,20 @@ const LearnEnglish = () => {
         if (index === fullText.length) {
           clearInterval(timer);
         }
-      }, delay); // Set delay between each letter
+      }, delay);
     };
 
-    // Animate numbers: (startValue, endValue, stateSetter, duration)
-    incrementNumber(0, 10, setYears, 2000); // 10 Years in 2 seconds
-    incrementNumber(0, 96, setRecommendedPercentage, 2000); // 96% in 2 seconds
-    incrementNumber(0, 150, setStudents, 2000); // 40K Students in 2 seconds
+    incrementNumber(0, 10, setYears, 2000);
+    incrementNumber(0, 96, setRecommendedPercentage, 2000);
+    incrementNumber(0, 150, setStudents, 2000);
 
-    // Start animating text after numbers begin
     setTimeout(() => animateText("of excellence in education", setYearsText, 50), 500);
     setTimeout(() => animateText("Recommended by students", setRecommendedText, 50), 1000);
     setTimeout(() => animateText("Students from 100 countries", setStudentsText, 50), 1500);
 
-    // Animate headline
-    animateText("Learn English Online with Professional Instructors", setHeadlineText, 50); // 50ms per character
+    animateText("Learn English Online with Professional Instructors", setHeadlineText, 50);
     
-  }, []); // Empty array ensures the effect runs only once
+  }, []);
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -79,32 +69,25 @@ const LearnEnglish = () => {
 
   return (
     <div className="learn-english-page" style={{ fontFamily: '"Public Sans", sans-serif' }}>
-      {/* Navbar */}
       <Navbar />
 
-      {/* Hero Section */}
       <section
         className="hero bg-cover bg-center h-screen text-white relative flex items-center"
         style={{
-          backgroundImage: `url("https://www.upload.ee/image/17200759/fed.PNG")`,
-        }} // Use the direct URL for the background image
+          backgroundImage: `url("https://img.freepik.com/free-photo/medium-shot-smiley-girl-learning-english_23-2149455195.jpg?t=st=1728397652~exp=1728401252~hmac=5316c5ae7eca199ee3d732701b0bf24fcfc166dfed5b83c467ea5f4499d4d0ff&w=996")`,
+        }}
       >
-        {/* Dark overlay */}
         <div className="overlay absolute inset-0 bg-black bg-opacity-60"></div>
 
-        {/* Hero Content */}
         <div className="container mx-auto relative z-10 flex flex-col items-start text-left">
-          {/* Dynamic Headline */}
           <h1 className="text-5xl md:text-6xl font-bold mb-4">
-            {headlineText} {/* Dynamic headline revealed letter by letter */}
+            {headlineText}
           </h1>
 
-          {/* Subheadline */}
           <p className="text-lg md:text-2xl mb-8 max-w-2xl">
             Your English progress is what matters the most to us. If you're not satisfied after 12 weeks of learning, you get your money back.
           </p>
 
-          {/* CTA Button */}
           <button
             onClick={openModal}
             className="hover:bg-green-700 text-white py-3 px-8 rounded-full text-lg"
@@ -122,18 +105,18 @@ const LearnEnglish = () => {
                   <h3
                     className="font-bold"
                     style={{
-                      fontSize: "42px", // Larger font size for numbers
-                      color: "#65A662", // Green color for numbers
+                      fontSize: "42px",
+                      color: "#65A662",
                       fontFamily: '"Public Sans", sans-serif',
                     }}
                   >
-                    {years} {/* Dynamic years value */}
+                    {years}
                   </h3>
                   <span
                     style={{
-                      color: "#FFFFFF", // White for the text next to the number
-                      fontSize: "26px", // Smaller font for the label
-                      marginLeft: "8px", // Small margin between number and text
+                      color: "#FFFFFF",
+                      fontSize: "26px",
+                      marginLeft: "8px",
                       fontFamily: '"Public Sans", sans-serif',
                     }}
                   >
@@ -141,33 +124,29 @@ const LearnEnglish = () => {
                   </span>
                 </div>
                 <p className="text-sm mt-0" style={{ textAlign: "left" }}>
-                  {yearsText} {/* Dynamic years text */}
+                  {yearsText}
                 </p>
               </div>
             </div>
-
-            {/* Vertical Divider */}
             <div className="h-12 border-l-2 border-white mx-8"></div>
-
-            {/* Recommendation Percentage */}
             <div className="flex flex-col items-start mr-8">
               <div className="flex flex-col items-start">
                 <div className="flex items-baseline">
                   <h3
                     className="font-bold"
                     style={{
-                      fontSize: "42px", // Larger font size for numbers
-                      color: "#65A662", // Green color for numbers
+                      fontSize: "42px",
+                      color: "#65A662",
                       fontFamily: '"Public Sans", sans-serif',
                     }}
                   >
-                    {recommendedPercentage}% {/* Dynamic recommendation percentage */}
+                    {recommendedPercentage}%
                   </h3>
                   <span
                     style={{
-                      color: "#FFFFFF", // White for the text next to the number
-                      fontSize: "26px", // Smaller font for the label
-                      marginLeft: "8px", // Small margin between number and text
+                      color: "#FFFFFF",
+                      fontSize: "26px",
+                      marginLeft: "8px",
                       fontFamily: '"Public Sans", sans-serif',
                     }}
                   >
@@ -175,27 +154,24 @@ const LearnEnglish = () => {
                   </span>
                 </div>
                 <p className="text-sm mt-0" style={{ textAlign: "left" }}>
-                  {recommendedText} {/* Dynamic recommendation text */}
+                  {recommendedText}
                 </p>
               </div>
             </div>
-
-            {/* Vertical Divider */}
             <div className="h-12 border-l-2 border-white mx-8"></div>
 
-            {/* Student Count */}
             <div className="flex flex-col items-start">
               <div className="flex flex-col items-start">
                 <div className="flex items-baseline">
                   <h3
                     className="font-bold"
                     style={{
-                      fontSize: "42px", // Larger font size for numbers
-                      color: "#65A662", // Green color for numbers
+                      fontSize: "42px",
+                      color: "#65A662",
                       fontFamily: '"Public Sans", sans-serif',
                     }}
                   >
-                    {students.toLocaleString()} {/* Dynamic student count */}
+                    {students.toLocaleString()}
                   </h3>
                   <span
                     style={{

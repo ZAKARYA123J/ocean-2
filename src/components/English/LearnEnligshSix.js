@@ -41,6 +41,22 @@ const FAQSection = () => {
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch">
+        {/* Image Section */}
+        <div className="relative flex items-center">
+          <img
+            src="https://img.freepik.com/free-photo/portrait-pretty-young-curly-boy-red-wear-yellow-studio-wall_155003-41478.jpg?t=st=1728394774~exp=1728398374~hmac=d230e2a7ad0a579caad13d9376e0405b6f2bb34fc113db7c59341135acd1cc68&w=996"
+            alt="Happy Students"
+            className="w-full h-full rounded-lg shadow-md object-cover"
+            style={{ transform: "none", transition: "none" }}
+          />
+
+          {/* Decorative Squares */}
+          <div className="absolute bottom-0 right-0 flex space-x-1 space-y-1">
+            <div className="w-4 h-4 bg-white"></div>
+            <div className="w-4 h-4 bg-gray-300"></div>
+          </div>
+        </div>
+
         {/* FAQ Section */}
         <div className="text-left flex flex-col justify-center">
           {/* Heading with FaAngleDoubleRight icon */}
@@ -78,22 +94,6 @@ const FAQSection = () => {
               </li>
             ))}
           </ul>
-        </div>
-
-        {/* Image Section */}
-        <div className="relative flex items-center">
-          <img
-            src="https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg"
-            alt="Happy Students"
-            className="w-full h-full rounded-lg shadow-md object-cover"
-            style={{ transform: "none", transition: "none" }} // Disable zoom and transition
-          />
-
-          {/* Decorative Squares */}
-          <div className="absolute bottom-0 right-0 flex space-x-1 space-y-1">
-            <div className="w-4 h-4 bg-white"></div>
-            <div className="w-4 h-4 bg-gray-300"></div>
-          </div>
         </div>
       </div>
     </section>
