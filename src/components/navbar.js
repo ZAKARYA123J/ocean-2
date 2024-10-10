@@ -57,8 +57,9 @@ export default function Navbar() {
   const isMobile = useIsMobile();
   const location = useLocation();
 
-  // Check if we are on the "/learn-english" page
+  // Check if we are on the "/learn-english" or "/learn-spain" page
   const isLearnEnglishPage = location.pathname === '/learn-english';
+  const isLearnSpainPage = location.pathname === '/learn-spain';
 
   // Load client data based on language
   useEffect(() => {
@@ -176,7 +177,7 @@ export default function Navbar() {
               <ul className="navbar-nav flex flex-col lg_992:flex-row space-y-2 lg_992:space-y-0 lg_992:space-x-4" key={index}>
                 <li className="nav-item ms-0">
                   <Link
-                    className={`nav-link ${isLearnEnglishPage ? "text-[#65A662]" : "text-black"}`}
+                    className={`nav-link ${isLearnEnglishPage ? "text-[#65A662]" : isLearnSpainPage ? "text-[#FF5733]" : "text-black"}`}
                     to="/"
                     onClick={closeDropdownOnLinkClick}
                   >
@@ -185,7 +186,7 @@ export default function Navbar() {
                 </li>
                 <li className="nav-item ms-0 relative">
                   <button
-                    className={`nav-link flex items-center ${isLearnEnglishPage ? "text-[#65A662]" : "text-black"}`}
+                    className={`nav-link flex items-center ${isLearnEnglishPage ? "text-[#65A662]" : isLearnSpainPage ? "text-[#FF5733]" : "text-black"}`}
                     onClick={() => handleDropdownToggle("servicesOpen")}
                   >
                     {t(item.Services)}
@@ -207,7 +208,7 @@ export default function Navbar() {
                 </li>
                 <li className="nav-item ms-0">
                   <Link
-                    className={`nav-link ${isLearnEnglishPage ? "text-[#65A662]" : "text-black"}`}
+                    className={`nav-link ${isLearnEnglishPage ? "text-[#65A662]" : isLearnSpainPage ? "text-[#FF5733]" : "text-black"}`}
                     to="/formation"
                     onClick={closeDropdownOnLinkClick}
                   >
@@ -216,7 +217,7 @@ export default function Navbar() {
                 </li>
                 <li className="nav-item ms-0">
                   <Link
-                    className={`nav-link ${isLearnEnglishPage ? "text-[#65A662]" : "text-black"}`}
+                    className={`nav-link ${isLearnEnglishPage ? "text-[#65A662]" : isLearnSpainPage ? "text-[#FF5733]" : "text-black"}`}
                     to="/jobs"
                     onClick={closeDropdownOnLinkClick}
                   >
@@ -225,7 +226,7 @@ export default function Navbar() {
                 </li>
                 <li className="nav-item ms-0">
                   <Link
-                    className={`nav-link ${isLearnEnglishPage ? "text-[#65A662]" : "text-black"}`}
+                    className={`nav-link ${isLearnEnglishPage ? "text-[#65A662]" : isLearnSpainPage ? "text-[#FF5733]" : "text-black"}`}
                     to="/gallery"
                     onClick={closeDropdownOnLinkClick}
                   >
@@ -235,7 +236,7 @@ export default function Navbar() {
                 <li className="nav-item ms-0">
                   {isHomePage ? (
                     <ScrollLink
-                      className={`nav-link cursor-pointer ${isLearnEnglishPage ? "text-[#65A662]" : "text-black"}`}
+                      className={`nav-link cursor-pointer ${isLearnEnglishPage ? "text-[#65A662]" : isLearnSpainPage ? "text-[#FF5733]" : "text-black"}`}
                       to="about"
                       smooth={true}
                       duration={1000}
@@ -247,7 +248,7 @@ export default function Navbar() {
                     </ScrollLink>
                   ) : (
                     <Link
-                      className={`nav-link cursor-pointer ${isLearnEnglishPage ? "text-[#65A662]" : "text-black"}`}
+                      className={`nav-link cursor-pointer ${isLearnEnglishPage ? "text-[#65A662]" : isLearnSpainPage ? "text-[#FF5733]" : "text-black"}`}
                       to="/"
                       onClick={closeDropdownOnLinkClick}
                     >

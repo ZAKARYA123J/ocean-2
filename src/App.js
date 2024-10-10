@@ -19,6 +19,8 @@ import LearnEnglish from "./components/LearnEnglish";
 import ScrollToTop from "./components/ScrollToTop";
 import CoursesSection from "./components/English/CoursesSection";
 import CourseDetails from './components/English/CourseDetails';
+import LearnSpain from './components/LearnSpain';
+import LearnFrench from './components/LearnFrench'
 import { HelmetProvider } from "react-helmet-async";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -243,6 +245,8 @@ function App() {
           <Route path="/contract" element={<ContractPage />} />
           <Route path="/exercise" element={<LearnEnglishEx />} />
           <Route path="/learn-english" element={<LearnEnglish />} />
+          <Route path="/learn-spain" element={<LearnSpain />} />
+          <Route path="/learn-french" element={<LearnFrench />} />
           <Route
             path="/languages"
             element={
