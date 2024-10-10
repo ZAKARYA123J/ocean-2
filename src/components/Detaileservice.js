@@ -80,7 +80,7 @@ export default function Daitalservice() {
                       className={`px-4 py-2 text-start text-base font-medium rounded-md w-full hover:text-sky-500 duration-500 ${activeIndex === item.id ? 'text-white bg-sky-500 hover:text-white' : ''}`}
                       onClick={() => setActiveIndex(item.id)}
                     >
-                      <span className="text-lg mt-2 block text-dark-600 font-semibold shadow-md p-2 rounded text-lg mt-2 block text-center"><strong>{t(item.title)}</strong></span>
+                      <span className="text-lg mt-2 block text-dark-600 font-semibold shadow-md p-2 rounded text-center"><strong>{t(item.title)}</strong></span>
                       <span className="block mt-2">{t(item.desc)}</span>
                     </button>
                   </li>

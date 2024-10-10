@@ -1,69 +1,78 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { HiLocationMarker } from "react-icons/hi";
 import { PiPhoneCallFill, PiInstagramLogoFill } from "react-icons/pi";
 import { MdMarkEmailRead } from "react-icons/md";
 import { FaFacebookF } from "react-icons/fa6";
 import { ImLinkedin2 } from "react-icons/im";
 import { IoLogoYoutube } from "react-icons/io";
-import logo from "../components/ocean3.png";
+import logo from "../components/ocean3.png"; // Ensure correct path for logo
 import { Link } from "react-router-dom";
+import { footerDataEn } from './locales/en/translation';  // Import the JSON data
+import { footerDataFr } from './locales/fr/translation';  // Import the JSON data
+import { footerDataAr } from './locales/ar/translation';  // Import the JSON data
 
-const socialLinks = [
-  { to: "https://www.facebook.com/the.ocean.connecting/", Icon: FaFacebookF, label: "Facebook" },
-  { to: "https://www.instagram.com/oceanconnecting.ma/", Icon: PiInstagramLogoFill, label: "Instagram" },
-  { to: "https://www.youtube.com/@OceanConnecting", Icon: IoLogoYoutube, label: "YouTube" },
-  { to: "https://www.linkedin.com/company/ocean-connecting/?originalSubdomain=ma", Icon: ImLinkedin2, label: "LinkedIn" },
-];
+const loadClientData = (lang) => {
+  switch (lang) {
+    case 'fr':
+      return footerDataFr;
+    case 'ar':
+      return footerDataAr;
+    case 'en':
+    default:
+      return footerDataEn; // Use the imported JSON directly
+  }
+};
 
-const contactInfo = [
-  { Icon: HiLocationMarker, title: "Address", content: "Immeubles Coralia, 2ème étage, ISLAN, Hay Mohammadi, AGADIR" },
-  { Icon: PiPhoneCallFill, title: "Call Us", content: "+212 704-309787" },
-  { Icon: MdMarkEmailRead, title: "Email Us", content: "oceanconnecting.ma@gmail.com" },
-];
+const Footer = () => {
+  const [footerData, setFooterData] = useState({});
+  const { i18n } = useTranslation();
 
-const pageElements = [
-  { label: "Home", link: "/Home" },
-  { label: "Services", link: "/Services" },
-  { label: "Formation", link: "/Formation" },
-  { label: "About Us", link: "/About" },
-  { label: "Contact", link: "/Contact" }
-];
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = loadClientData(i18n.language); // Removed async as the data is already imported
+      setFooterData(data);
+    };
+    fetchData();
+  }, [i18n.language]);
 
-const pageFormation = [
-  { label: "English", link: "/Home" },
-  { label: "Spanich", link: "/Services" },
-  { label: "Germany", link: "/Formation" },
-  { label: "Italy", link: "/About" },
-  { label: "Frances", link: "/Contact" }
-];
+  // Destructure the data from footerData with default values
+  const {
+    socialLinks = [],
+    contactInfo = [],
+    pageElements = [],
+    pagelangague = [],
+    ourFormation = [],
+    ourServices = [],
+    footerText = { logoAlt: "", mainDescription: "", detailedDescription: "", ourServicesTitle: "", ourPageTitle: "", ourlangagueTitle:"" , ourFormationTitle: ""},
+    footerCopyright = { text: "", company: "", allRightsReserved: "", message: "",  }
 
-const ourServices = [
-  { label: "Development Informatique", link: "/Development" },
-  { label: "Formation", link: "/Formation" },
-  { label: "Clean facades", link: "/facades" },
-  { label: "Recruitment", link: "/Recruitment" },
-  { label: "Domiciliation", link: "/Domiciliation" }
-];
+  } = footerData;
+  const { ourServicesTitle, ourPageTitle, ourFormationTitle ,ourlangagueTitle } = footerText;
 
-function Footer() {
   return (
-    <footer className="bg-gradient-to-br from-blue-200 via-purple-200 to-blue-300 py-6 text-black pl-10 pt-5">
+    <footer className="bg-gradient-to-br from-blue-200 via-purple-200 to-blue-300 py-6 text-black  pt-5">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="mb-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {contactInfo.map(({ Icon, title, content }) => (
-            <div key={title} className="flex items-center space-x-3">
-              <div className="bg-[#3a86ff] p-2 rounded-md">
-                <Icon className="h-6 w-6 text-white" />
+          {/* Contact Information */}
+          {contactInfo.map(({ id, Icon, title, content }) => (
+            <div key={id} className="flex items-center space-x-3">
+              <div className="bg-[#3a86ff] p-2 rounded-md mx-1" >
+                {Icon === "HiLocationMarker" && <HiLocationMarker className="h-6 w-6 text-white" />}
+                {Icon === "PiPhoneCallFill" && <PiPhoneCallFill className="h-6 w-6 text-white" />}
+                {Icon === "MdMarkEmailRead" && <MdMarkEmailRead className="h-6 w-6 text-white" />}
               </div>
               <div>
                 <p className="text-sm font-bold">{title}</p>
-                <p className="text-sm font-semibold">{content}</p>
+                <p className="text-sm font-semibold "style={{ direction: 'ltr', unicodeBidi: 'plaintext' }}>{content}</p>
               </div>
             </div>
           ))}
+
+          {/* Social Links */}
           <div className="flex items-center space-x-3">
-            {socialLinks.map(({ to, Icon, label }) => (
-              <div key={label} className="bg-[#3a86ff] p-2 rounded-md">
+            {socialLinks.map(({ id, label, to }) => (
+              <div key={id} className="bg-[#3a86ff] p-2 rounded-md mx-1"> {/* Added mx-1 for horizontal margin */}
                 <Link
                   to={to}
                   target="_blank"
@@ -71,52 +80,49 @@ function Footer() {
                   className="hover:scale-110 transition-transform duration-300 ease-in-out hover:text-blue-500"
                   aria-label={label}
                 >
-                  <Icon className="h-6 w-6 text-white" />
+                  {label === "Facebook" && <FaFacebookF className="h-6 w-6   text-white" />}
+                  {label === "Instagram" && <PiInstagramLogoFill className="h-6 w-6 text-white" />}
+                  {label === "YouTube" && <IoLogoYoutube className="h-6 w-6 text-white" />}
+                  {label === "LinkedIn" && <ImLinkedin2 className="h-6 w-6 text-white" />}
                 </Link>
               </div>
             ))}
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <img src={logo} alt="RAKAR Logo" style={{ width: '120px' }} />
-            </div>
-            <p className="text-sm">WE ARE PROFESSIONAL</p>
-            <p className="text-sm">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              euismod, nisl vel tincidunt lacinia, nisl nisl aliquam nisl, eget
-              aliquam nisl nisl sit amet nisl.
-            </p>
-          </div>
-          <FooterLinkSection title="Our Services" links={ourServices} />
-          <FooterLinkSection title="Our Page " links={pageElements} />
-          <FooterLinkSection title="Our Formation" links={pageFormation} />
 
+        <div className="grid grid-cols-1 lg:grid-cols-4">
+          <div className="space-y-2 lg:col-span-1"> {/* Set to 30% width on large screens */}
+            <div className="flex items-center space-x-2">
+              <img src={logo} alt={footerText.logoAlt} style={{ width: '120px' }} />
+            </div>
+            <p className="text-sm">{footerText.mainDescription}</p>
+            <p className="text-sm">{footerText.detailedDescription}</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:col-span-3"> {/* Set to 70% width on large screens */}
+            <FooterLinkSection title={ourServicesTitle} links={ourServices} />
+            <FooterLinkSection title={ourPageTitle} links={pageElements} />
+            <FooterLinkSection title={ourlangagueTitle} links={pagelangague} />
+            <FooterLinkSection title={ourFormationTitle} links={ourFormation} />
+          </div>
         </div>
-        {/* copyright section */}
-        <div className="mt-2 ">
-          <hr className=" content-center my-4 border-t-2 border-gray-300" />
+
+        {/* Copyright Section */}
+        <div className="mt-2">
+          <hr className="content-center my-4 border-t-2 border-gray-300" />
           <div>
             <div className="flex justify-between">
-              <p className="font-semibold text-md ">
-                Copyright © {new Date().getFullYear()}{" "}
+              <p className="font-semibold text-md">
+                {footerCopyright.text} {new Date().getFullYear()}{" "}
                 <Link to="/#" className="text-blue-600 hover:text-white">
-                  Ocean Connecting
-                </Link>. All Rights Reserved.
+                  {footerCopyright.company}
+                </Link>. {footerCopyright.allRightsReserved}
               </p>
-              <p className="font-semibold text-md ">
-                
-                <Link to="/#" className=" hover:text-white">
-                  About Us
-                </Link> <spam> - </spam> 
-                <Link to="/#" className=" hover:text-white">
-                  Contact
-                </Link> <spam> - </spam>  
-                <Link to="/#" className=" hover:text-white">
-                  Jobs
+              <p className="font-semibold text-md">
+              {footerCopyright.message}
+                <Link to="/#" className="text-blue-600  hover:text-white">
+                  Ocean Connecting
                 </Link>
-
+               
               </p>
             </div>
           </div>
@@ -125,13 +131,15 @@ function Footer() {
     </footer>
   );
 }
+
+// FooterLinkSection component
 function FooterLinkSection({ title, links }) {
   return (
     <div className="space-y-2">
       <h3 className="text-xl font-bold">{title}</h3>
       <ul className="space-y-1">
-        {links.map(({ label, link }) => (
-          <li key={label}>
+        {links.map(({ id, label, link }) => (
+          <li key={id}>
             <Link to={link} className="text-sm hover:text-[#3a86ff]">
               {label}
             </Link>
