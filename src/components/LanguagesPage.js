@@ -203,7 +203,7 @@ const LanguagesPage = () => {
           </div>
 
           {/* Team Description Section Styled Like Reference */}
-          <div className="w-[560px] p-6 bg-white rounded-lg shadow-lg">
+          <div className="w-[500px] p-6 bg-white rounded-lg shadow-lg mx-auto xs:m-20 md:m-0 ">
             <h1 className="text-4xl font-bold text-gray-900 mb-2">
               Meet Our{" "}
               <span className="bg-gradient-to-r from-blue-600 to-red-600 bg-clip-text text-transparent">

@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/navbar";
 import Formation from "../components/formation";
-import Footer from "../components/footer";
+import Footer from "../components/foooter";
 import WhatsAppFloatingButton from '../components/WhatsAppFloatingButton';
 import Switcher from "../components/switcher";
 import { Helmet } from "react-helmet-async";

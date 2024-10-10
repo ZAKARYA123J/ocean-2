@@ -133,7 +133,6 @@ export default function Index() {
   const images = [heroImage1, heroImage2, heroImage4];
 
   useEffect(() => {
-    // Load client data whenever the language changes
     loadClientData(i18n.language).then(data => setClientData(data));
     
     // Initialize AOS animations

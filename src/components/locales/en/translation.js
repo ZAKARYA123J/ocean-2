@@ -2,7 +2,7 @@
 import { CgWebsite } from "react-icons/cg";
 
 
-
+import { FaGithub, FaLinkedin, FaLock, FaComments, FaCode } from "react-icons/fa";
 import { IoHomeOutline } from "react-icons/io5";
 import { MdOutlineCleaningServices } from "react-icons/md";
 import { SlNote } from "react-icons/sl";
@@ -13,7 +13,6 @@ import client2 from '../../../assets/images/team/02.jpg'
 import client3 from '../../../assets/images/team/03.jpg'
 import client4 from '../../../assets/images/team/04.jpg'
 import client5 from '../../../assets/images/team/05.jpg'
-// import formation4 from '../assets/images/formation/formation4.jpg'
 import formation5 from '../../../assets/images/formation/formation05.jpg'
 import formation6 from '../../../assets/images/formation/formation6.jpg'
 import formation17 from '../../../assets/images/formation/formation17.jpg'
@@ -52,16 +51,19 @@ import recrutocean from '../../../assets/images/service/recrutocean.png'
 import recrutinter from '../../../assets/images/service/recrutinter2.png'
 import form from '../../../assets/images/form.pdf'
 
-
-
+import heroImage1 from '../../../assets/images/done/TeamDev/service.png';
+// export const teamTitle = "Meet Our Development Team";
+// export const teamDescription = "We are a passionate team of experts dedicated to crafting innovative solutions. Explore more about each team member below and learn about the technologies they excel in.";
+// export const membersTitle = "Our Team Members";
+// export const viewDetails = "View Details";
 
 export const clientDataEN = [
     {
-        image: client1,
-        clientitle: "What Our Users Say",
-        name: 'Calvin Carlo',
-        title: 'Manager',
-        desc: '" I was blown away by the personalized support I received from this team. Their expertise in global job placement helped me land a fantastic position abroad. Highly recommend their services! "'
+        image:client1,
+        clientitle:"What Our Users Say",
+        name:'Calvin Carlo',    
+        title:'Manager',
+        desc:'" I was blown away by the personalized support I received from this team. Their expertise in global job placement helped me land a fantastic position abroad. Highly recommend their services! "'
     },
     {
         image: client2,
@@ -95,9 +97,9 @@ export const blogDataEN = [
         Title: "Training",
         text: "This administrative management course teaches participants the essential skills to excel in administrative tasks, covering documentation management, optimization of organizational processes, and professional communication. It combines theory and practice for skills that can be applied immediately in the workplace.",
         resrvedatail: "Welcome to our platform tailored for",
-        register: "To register, simply click here ",
-        resrveButton: "For reservation",
-        title: 'Language',
+        register:"To register, simply click here ",
+        resrveButton:"For reservation",
+        title: 'Languages',
         desc: 'The Ocean Connecting offers a comprehensive language learning program covering...',
         detail: 'The Ocean Connecting offers a comprehensive language learning program covering levels A1 to C2. It features young teachers, engaging activities, educational trips, and flexible schedules. Students benefit from regular level assessments, free access to PCs and Wi-Fi, and air-conditioned classrooms. The program also provides psychological monitoring and guidance, ensuring a supportive learning environment. This program aims to enhance language proficiency through interactive and diverse methods, accommodating different learning paces and needs.',
         type: 'language',
@@ -174,9 +176,9 @@ export const blogDataEN = [
         id: 7,
         image: formation12,
         resrvedatail: "Welcome to our platform tailored for",
-        register: "To register, simply click here ",
-        resrveButton: "For reservation",
-        title: 'Maritime Navigation Training',
+        register:"To register, simply click here ",
+        resrveButton:"For reservation",
+        title: 'Maritime Navigat Training',
         desc: 'Maritime navigation training teaches participants the skills...',
         detail: 'Maritime navigation training teaches participants the essential skills to navigate safely at sea, covering the use of navigation tools such as nautical charts and GPS systems, as well as understanding international regulations. Participants learn to plan routes, manage weather conditions, and ensure the safety of the vessel and crew. The training also includes rescue techniques and emergency management, ensuring effective and safe navigation while adhering to maritime rules.',
         type: 'Formation',
@@ -187,9 +189,9 @@ export const blogDataEN = [
         id: 8,
         image: formation13,
         resrvedatail: "Welcome to our platform tailored for",
-        register: "To register, simply click here ",
-        resrveButton: "For reservation",
-        title: 'Precious Stones and Metals',
+        register:"To register, simply click here ",
+        resrveButton:"For reservation",
+        title: 'Precious Stones',
         desc: 'The training on precious stones and metals provides an understanding...',
         detail: 'The training on precious stones and metals provides an in-depth understanding of the characteristics, evaluation, and maintenance of these valuable materials. Participants learn to identify and evaluate precious stones and metals using quality and certification criteria. The training also covers treatment and maintenance techniques to preserve their value, as well as market trends and business practices. Additionally, it addresses ethical issues and sustainable practices related to the extraction and trade of these resources.',
         type: 'Formation',
@@ -297,8 +299,8 @@ export const serviceDataEN = [
         desc_para4: "Each training begins with a needs analysis, followed by a personalized program delivered by experts. We combine theory and practice to ensure effective knowledge absorption.",
         para5: "Added Value",
         desc_para5: "Our training stands out for its flexibility and practical approach, incorporating the latest trends and technologies to offer relevant and immediately applicable solutions on the field.",
-        Bouton: "Learn more",
-        link: <Link to={"/formation"} className="text-sky-500" >Get Formation <i className="mdi mdi-chevron-right align-middle"></i></Link>,
+        Bouton : "Learn more",
+        link:"/formation",
 
     },
     {
@@ -317,8 +319,8 @@ export const serviceDataEN = [
         desc_para4: "We use cleaning techniques suitable for each type of surface, including high-pressure washing and eco-friendly products. We start with a detailed assessment, followed by thorough cleaning and a final quality check.",
         para5: "Added Value",
         desc_para5: "Our expertise in facade cleaning guarantees lasting results and prompt service, while adhering to the strictest environmental and safety standards.",
-        Bouton: "Learn more",
-        link: <Link1 to="contact" className="text-sky-500" smooth={true} duration={1000} activeClass='active' spy={true}>Contact Us <i className="mdi mdi-chevron-right align-middle"></i></Link1>,
+        Bouton : "Learn more",
+        link:"/teamglass"
     },
     {
         id: 3,
@@ -355,8 +357,8 @@ export const serviceDataEN = [
         desc_para4: "We start with a thorough analysis of your needs, followed by the creation of a custom design. Then we develop and test the site to ensure optimal performance before launching.",
         para5: "Added Value",
         desc_para5: "Our personalized approach and technical expertise ensure results that not only meet but exceed your expectations, offering a functional, aesthetically pleasing, and search-engine-optimized website.",
-        Bouton: "Learn more",
-        link: <Link1 to="contact" className="text-sky-500" smooth={true} duration={1000} activeClass='active' spy={true}>Contact Us <i className="mdi mdi-chevron-right align-middle"></i></Link1>,
+        Bouton : "Learn more",
+        link: "/team" ,
     },
     {
         id: 5,
@@ -372,8 +374,27 @@ export const serviceDataEN = [
         para4: "Process or Methodology",
         desc_para4: "We use advanced search methods and a global network to source candidates. The process includes a thorough skills assessment, targeted interviews, and proactive management of applications to ensure an optimal match.",
         para5: "Added Value",
+        Bouton : "Learn more",
         desc_para5: "Our expertise in international recruitment allows us to find talent suited to your company's specific requirements, while offering personalized service and support throughout the recruitment process to ensure a successful integration.",
-        link: <Link to="/jobs/all" className="text-sky-500" >Get an international job <i className="mdi mdi-chevron-right align-middle"></i></Link>,
+        link:"/jobs",
+    },
+    {
+        id: 6,
+        title: "Patient Care Nurse",
+        desc: "We offer employment contract services in Europe. Contact us today to start your journey toward a bright professional future ! ",
+        image: heroImage1,
+        para1: "Recruitment Service",
+        desc_para1: "Our international recruitment service helps companies identify and hire the best talent worldwide. Through our extensive network and HR expertise, we find qualified candidates who perfectly meet your specific requirements. Simplify your recruitment process and strengthen your team with talented professionals from diverse backgrounds.",
+        para2: "Benefits",
+        desc_para2: "This service facilitates access to a pool of highly qualified candidates, improves the efficiency of the recruitment process, and reduces hiring times, while ensuring hires that match each company's specific needs.",
+        para3: "Target Audience",
+        desc_para3: "This service is intended for multinational companies, businesses expanding internationally, and organizations looking to strengthen their team with talented professionals from various global markets.",
+        para4: "Process or Methodology",
+        desc_para4: "We use advanced search methods and a global network to source candidates. The process includes a thorough skills assessment, targeted interviews, and proactive management of applications to ensure an optimal match.",
+        para5: "Added Value",
+        Bouton : "Learn more",
+        desc_para5: "Our expertise in international recruitment allows us to find talent suited to your company's specific requirements, while offering personalized service and support throughout the recruitment process to ensure a successful integration.",
+        link:"/nurse",
     }
 ]
 export const TitleEN = [
@@ -392,12 +413,14 @@ export const NavbarEN = [{
     About: "About",
     Contact_us: "Contact us"
 }]
-export const AboutEN = [{
-    h1: 'About Ocean Connecting ',
-    ask: "Who Are We ?",
-    title: "We specialize in global job placement and document assistance,offering tailored support in multiple languagesto help you navigate international career opportunities.",
-    desc: "Our company provides international job placement services and expert support in multiple languages. We assist clients in finding global career opportunities and offer comprehensive help with document preparation in various languages. Our goal is to facilitate a smooth and effective transition to international careers.",
-    year: "YearsExperience"
+export const AboutEN=[{
+    h1 : 'About Ocean Connecting ',
+    ask:"Who Are We ?",
+    title:"We specialize in global job placement and document assistance,offering tailored support in multiple languagesto help you navigate international career opportunities.",
+    desc:"Our company provides international job placement services and expert support in multiple languages. We assist clients in finding global career opportunities and offer comprehensive help with document preparation in various languages. Our goal is to facilitate a smooth and effective transition to international careers.",
+    year:"YearsExperience",
+    International:"International Career Support",
+    Services:"Services"
 }]
 export const recruitmentEN = [
     {
@@ -429,18 +452,20 @@ export const recruitmentEN = [
 export const jobsEN = [
     {
         id: 1,
-
+        h1:"Job Listings",
+        Find:"Find your dream job with us",
         image: resume,
         title: 'Application for an overseas work contract',
         type: 'International',
         menu1: "Required documents : ",
         secteur: "  The judicial record is obtained from the court and the signature is corrected at the Ministry of Foreign Affairs (Apostil) and translated into English .",
         menu2: "Required images :",
-        niveaulanguage: "A photo of yourself, a copy of your passport, a video and a photo of yourself practicing your chosen profession.",
-        menu6: "More information :",
-        more: ' You can obtain the form by clicking on the Download button , 🙏🏻 and, for your convenience, you can send us the original documents (PDF).',
-        action: 'Download',
-        link: form,
+        niveaulanguage: "A photo of yourself, a copy of your passport, a video and a photo of yourself practicing your chosen profession." ,
+        menu6:"More information :",
+        more:' You can obtain the form by clicking on the Download button , 🙏🏻 and, for your convenience, you can send us the original documents (PDF).',
+        action : 'To apply',
+        link: form ,
+        model:true
     },
     {
         id: 2,
@@ -510,20 +535,20 @@ export const jobsEN = [
         image: italy,
         title: 'Employment contract in Italy',
         type: 'International',
-        secteur: 'Health and nursing/hotels/agriculture',
-        niveaulanguage: 'Language B1 is necessary .',
-        timevisa: 'The visa is valid for 8 months .',
-        contratime: '1-year employment contract.',
-        pricecontrat: 'The contract price is 60,000 DH.',
-        more: 'The contract includes free accommodation and medical treatment...',
-        link: "https://api.whatsapp.com/send/?phone=%2B212657236635&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A5%D9%8A%D8%B7%D8%A7%D9%84%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
-        menu1: "Secteur :",
-        menu2: "Niveau Langue :",
-        menu3: "Time Visa :",
-        menu4: "Contrat :",
-        menu5: "Price Contrat :",
-        menu6: "More :",
-        action: 'To apply',
+        secteur:'Health and nursing/hotels/agriculture',
+        niveaulanguage:'Language B1 is necessary .',
+        timevisa:'The visa is valid for 8 months .',
+        contratime:'1-year employment contract.',
+        pricecontrat:'The contract price is 60,000 DH.',
+        more:'The contract includes free accommodation and medical treatment...',
+        link:"https://api.whatsapp.com/send/?phone=%2B212657236635&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A5%D9%8A%D8%B7%D8%A7%D9%84%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+        menu1:"Secteur :",
+        menu2:"Niveau Langue :",
+        menu3:"Time Visa :",
+        menu4:"Contrat :",
+        menu5:"Price Contrat :",
+        menu6:"More :",
+        action : 'To apply',
     },
     {
         id: 6,
@@ -550,20 +575,20 @@ export const jobsEN = [
         image: facade,
         title: 'Building Facade Cleaner',
         type: 'National',
-        secteur: 'cleaning service',
-        niveaulanguage: 'Language is not necessary .',
-        timevisa: 'niveau BAC.',
-        contratime: 'contrat CDI - CDD .',
-        pricecontrat: 'Agadir',
-        more: ' Knowledge of chemicals - Psychological tolerance - Good communication - Ability to use equipment - Accuracy and attention to detail - Working at height - Physical ability - Safety awareness',
-        link: "#",
-        menu1: "Secteur :",
-        menu2: "Niveau Langue :",
-        menu3: "Level of education :",
-        menu4: "Type Contrat :",
-        menu5: "Region :",
-        menu6: "Key skills :",
-        action: 'To apply',
+        secteur:'cleaning service',
+        niveaulanguage:'Language is not necessary .',
+        timevisa:'niveau BAC.',
+        contratime:'contrat CDI - CDD .',
+        pricecontrat:'Agadir',
+        more:'Knowledge of chemicals - Psychological tolerance - Good communication - Ability to use equipment - Accuracy and attention to detail - Working at height - Physical ability - Safety awareness',
+        link:"https://api.whatsapp.com/send/?phone=%2B212657236635&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A5%D8%B3%D8%A8%D8%A7%D9%86%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+        menu1:"Secteur :",
+        menu2:"Niveau Langue :",
+        menu3:"Level of education :",
+        menu4:"Type Contrat :",
+        menu5:"Region :",
+        menu6:"Key skills :",
+        action : 'To apply',
     },
     // Ensure each job has a unique id
 ];
@@ -614,13 +639,13 @@ export const ServicesSectionEN = [{
 }]
 export const GalleryEN = [
     {
-        id: 1,
-        title: "Welcome to Our Gallery!",
-        desc: "Discover the creativity and passion behind our work through these images. Enjoy the view!",
-        image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F2.jpg?alt=media&token=2edf1832-c447-46f8-88af-b496cbaa46fe",
-        numberimage: "10 images",
-        datealbum: " 12-12-2024",
-        titlealbum: "Event - Nurses ",
+        id:1,
+        title:"Welcome to Our Gallery!",
+        desc:"Discover the creativity and passion behind our work through these images. Enjoy the view!",
+        image:"https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F2.jpg?alt=media&token=2edf1832-c447-46f8-88af-b496cbaa46fe",
+        numberimage:"10 images",
+        datealbum:"",
+        titlealbum:"Event - Nurses ",
         img: [
             { alt: 'image1', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F1.jpg?alt=media&token=e00fef12-3166-4135-ba8e-cc244533f9c9' },
             { alt: 'image2', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2Fevenement%20-%20infermiere%202024-06-02%2F2.jpg?alt=media&token=2edf1832-c447-46f8-88af-b496cbaa46fe' },
@@ -635,11 +660,11 @@ export const GalleryEN = [
         ]
     },
     {
-        id: 2,
-        image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FglassCleaning-team1%2F1.png?alt=media&token=42c92a0a-9bfe-4b1e-8bb2-5799ba69a1ee",
-        numberimage: "5 images",
-        datealbum: "12-12-2024",
-        titlealbum: "glassCleaning-team ",
+        id:2,
+        image:"https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FglassCleaning-team1%2F1.png?alt=media&token=42c92a0a-9bfe-4b1e-8bb2-5799ba69a1ee",
+        numberimage:"5 images",
+        datealbum:"",
+        titlealbum:"glassCleaning-team ",
         img: [
             { alt: 'image1', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FglassCleaning-team1%2F6.jpg?alt=media&token=a6ef683e-9250-4147-acb2-b6a538f16790' },
             { alt: 'image2', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FglassCleaning-team1%2F2.jpg?alt=media&token=89f41d86-0294-4ac9-a646-e8127f751d4a' },
@@ -649,11 +674,11 @@ export const GalleryEN = [
         ]
     },
     {
-        id: 3,
-        image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2Faffiche%20center.png?alt=media&token=0ecace4a-a5c0-453a-acd2-401cdbb8bb84",
-        numberimage: "27 images",
-        datealbum: "12-12-2024",
-        titlealbum: "Center-pictures ",
+        id:3,
+        image:"https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2Faffiche%20center.png?alt=media&token=0ecace4a-a5c0-453a-acd2-401cdbb8bb84",
+        numberimage:"27 images",
+        datealbum:"",
+        titlealbum:"Center-pictures ",
         img: [
             { alt: 'image1', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4075.jpg?alt=media&token=0fbbc107-22b2-4fed-bbfb-f680799d7075' },
             { alt: 'image2', url: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Gallery%2FCenter-pictures%2FIMG_4076.jpg?alt=media&token=4c3ee7dd-e27e-468d-8917-980f9423b292' },
@@ -683,6 +708,32 @@ export const GalleryEN = [
     },
 
 ];
+export const DevelopmentEN=[{
+    title:"Meet Our Development Team",
+    desc:"  We are a passionate team of experts dedicated to crafting innovativesolutions. Explore more about each team member below and learn about the technologies they excel in.",
+    title2:" Our Development Services",
+    services : [
+        {
+          title: "Security",
+          description:
+            "Ensure your applications are secure with the latest security protocols and best practices. We provide penetration testing, secure coding practices, and compliance assessments.",
+          icon: <FaLock className="text-blue-600" />,
+        },
+        {
+          title: "Consultation",
+          description:
+            "Get expert advice on technology strategy, system architecture, and more. Our consultation services are tailored to help you navigate complex technical challenges.",
+          icon: <FaComments className="text-green-600" />,
+        },
+        {
+          title: "Development",
+          description:
+            "From front-end to back-end development, our team excels in building robust and scalable applications tailored to your business needs.",
+          icon: <FaCode className="text-purple-600" />,
+        },
+      ]
+  
+}];
 
 export const footerDataEn = {
     "socialLinks": [ // Changed from array to object
@@ -712,41 +763,44 @@ export const footerDataEn = {
         }
     ],
     "pageElements": [
-        { "id": 1, "label": "Home", "link": "/Home" },
-        { "id": 2, "label": "Services", "link": "/Services" },
-        { "id": 3, "label": "Formation", "link": "/Formation" },
-        { "id": 4, "label": "About Us", "link": "/About" },
-        { "id": 5, "label": "Contact", "link": "/Contact" }
+        { "id": 1, "label": "Home", "link": "/" },
+        { "id": 2, "label": "Formation", "link": "/formation" },
+        { "id": 3, "label": "jobs", "link": "/jobs" },
+        { "id": 4, "label": "Gallery", "link": "/gallery" },
+        { "id": 5, "label": "About Us", "link": "/" },
+        { "id": 6, "label": "Contact", "link": "/Contact" },
+        
     ],
     "pagelangague": [
-        { "id": 1, "label": "English", "link": "/Home" },
-        { "id": 2, "label": "Spanish", "link": "/Services" },
-        { "id": 3, "label": "Germany", "link": "/Formation" },
-        { "id": 4, "label": "Italy", "link": "/About" },
-        { "id": 5, "label": "Frances", "link": "/Contact" }
+        { "id": 1, "label": "English", "link": "/" },
+        { "id": 2, "label": "Spanish", "link": "/" },
+        { "id": 3, "label": "Germany", "link": "/" },
+        { "id": 4, "label": "Italy", "link": "/" },
+        { "id": 5, "label": "Frances", "link": "/" },
     ],
     "ourServices": [
-        { "id": 1, "label": "Development Informatique", "link": "/Development" },
+        { "id": 1, "label": "Development Informatique", "link": "/team" },
         { "id": 2, "label": "Formation", "link": "/Formation" },
-        { "id": 3, "label": "Clean facades", "link": "/facades" },
-        { "id": 4, "label": "Recruitment", "link": "/Recruitment" },
-        { "id": 5, "label": "Domiciliation", "link": "/Domiciliation" }
+        { "id": 3, "label": "Clean facades", "link": "/teamglass" },
+        { "id": 4, "label": "Recruitment", "link": "/jobs" },
+        { "id": 5, "label": "Domiciliation", "link": "/Domiciliation" },
+        { "id": 6, "label": "Nurs", "link": "/nurse" },
     ],
     "ourFormation": [
-        { "id": 1, "label": "First aid", "link": "/Development" },
-        { "id": 2, "label": "Dj training", "link": "/Formation" },
-        { "id": 3, "label": "elevator training", "link": "/facades" },
-        { "id": 4, "label": "airport checkin agent training", "link": "/Recruitment" },
-        { "id": 5, "label": "training in cinematography and directing", "link": "/Domiciliation" }
+        { "id": 1, "label": "First aid", "link": "/" },
+        { "id": 2, "label": "Dj training", "link": "/formation/3" },
+        { "id": 3, "label": "elevator training", "link": "/formation/13" },
+        { "id": 4, "label": "airport checkin agent training", "link": "/formation/2" },
+        { "id": 5, "label": "training in cinematography and directing", "link": "/" },
     ],
     "footerText": {
         "logoAlt": "RAKAR Logo",
         "mainDescription": "WE ARE PROFESSIONAL",
         "detailedDescription": "We specialize in global job placement and document assistance,offering tailored support in multiple languagesto help you navigate international career opportunities.",
-        "ourServicesTitle": "Our Services",
-        "ourPageTitle": "Our Page",
-        "ourlangagueTitle": "Our langague",
-        "ourFormationTitle":"our Formation",
+        "ourServicesTitle": "Our services",
+        "ourPageTitle": "Our pages",
+        "ourlangagueTitle": "Languages we teach",
+        "ourFormationTitle":"Training",
     },
     "footerCopyright": {
         "text": "Copyright © ",

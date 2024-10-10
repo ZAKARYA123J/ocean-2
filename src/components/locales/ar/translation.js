@@ -24,7 +24,7 @@ import formation15 from '../../../assets/images/formation/15.jpg'
 import formation16 from '../../../assets/images/formation/16.jpg'
 import formation18 from '../../../assets/images/formation/formation18.jpg'
 import formation19 from '../../../assets/images/formation/formation19.jpg'
-
+import { FaGithub, FaLinkedin, FaLock, FaComments, FaCode } from "react-icons/fa";
 import service1 from '../../../assets/images/service/service1.png'
 import service2 from '../../../assets/images/service/service2.png'
 import service3 from '../../../assets/images/service/service3.png'
@@ -40,7 +40,41 @@ import resume from '../../../assets/images/job/resume.png'
 import recrutocean from '../../../assets/images/service/recrutocean.png'
 import recrutinter from '../../../assets/images/service/recrutinter2.png'
 import form from '../../../assets/images/form.pdf'
+// export const teamTitle = "تعرف على فريق التطوير لدينا";
+// export const teamDescription = "نحن فريق شغوف من الخبراء مكرس لتطوير حلول مبتكرة. استكشف المزيد عن كل عضو في الفريق أدناه واكتشف التقنيات التي يتقنها.";
+// export const membersTitle = "أعضاء فريقنا";
+// export const viewDetails = "عرض التفاصيل";
 
+// export const teamMembers = [
+//     {
+//       id: 1,
+//       name: "ENNACHOUM زكريا",
+//       role: "مطور كامل",
+//       photo: "path/to/photo1.jpg",
+//       github: "https://github.com/Umbrator",
+//       linkedin: "https://linkedin.com/in/ennachoum-zakaria-264134231/",
+//     },
+//     // Add other members...
+//   ];
+import heroImage1 from '../../../assets/images/done/TeamDev/service.png';
+  export const servicesAR = [
+    {
+      title: "الأمان",
+      description: "تأكد من أن تطبيقاتك آمنة بأحدث البروتوكولات.",
+      icon: "FaLock",
+    },
+    {
+      title: "استشارة",
+      description: "نصيحة خبير في هندسة الأنظمة واستراتيجية التكنولوجيا.",
+      icon: "FaComments",
+    },
+    {
+      title: "التطوير",
+      description: "تطوير الواجهة الأمامية والخلفية حسب احتياجاتك.",
+      icon: "FaCode",
+    },
+  ];
+  
 export const clientDataAR = [
     {
         image: client1,
@@ -302,7 +336,7 @@ export const serviceDataAR = [
         para5: "القيمة المضافة",
         desc_para5: "تتميز تدريباتنا بمرونتها ونهجها العملي، حيث ندمج أحدث الاتجاهات والتقنيات لتقديم حلول ملائمة وقابلة للتطبيق على الفور في الميدان.",
         Bouton : "تعرف أكثر",
-        link:<Link to={"/formation"} className="text-sky-500" >احصل على تدريب <i className="mdi mdi-chevron-right align-middle"></i></Link>,
+        link:"/formation",
 
     },
     {
@@ -322,13 +356,12 @@ export const serviceDataAR = [
         para5: "القيمة المضافة",
         desc_para5: "تضمن خبرتنا في تنظيف الواجهات نتائج طويلة الأمد وتدخل سريع، مع احترام أعلى المعايير البيئية والأمنية.",
         Bouton : "تعرف أكثر",
-        link:<Link1 to="contact" className="text-sky-500"smooth={true} duration={1000} activeClass='active' spy={true}>اتصل بنا <i className="mdi mdi-chevron-right align-middle"></i></Link1>,
-
+link:"/teamglass"
     },
     {
         id: 3,
         icon: <IoHomeOutline />,
-        title: 'التسجيل',
+        title: 'أسّس شركتك',
         desc: 'استفد من توطين الأعمال المهنية في أغادير لتعزيز صورة شركتك ووجودك في السوق.',
         image: service3,
         para1: 'خدمة التسجيل',
@@ -362,7 +395,7 @@ export const serviceDataAR = [
         para5: "القيمة المضافة",
         desc_para5: "تضمن مقاربتنا الشخصية وخبرتنا التقنية تحقيق نتائج لا تقتصر على تلبية توقعاتك بل تتجاوزها، من خلال تقديم موقع ويب وظيفي، وجمالي، ومحسن لمحركات البحث.",
         Bouton : "تعرف أكثر",
-        link:<Link1 to="contact" className="text-sky-500"smooth={true} duration={1000} activeClass='active' spy={true}>اتصل بنا <i className="mdi mdi-chevron-right align-middle"></i></Link1>,
+        link: "/team" ,
 
     },
     {
@@ -379,10 +412,29 @@ export const serviceDataAR = [
         para4: "العملية أو المنهجية",
         desc_para4: "نستخدم طرق بحث متقدمة وشبكة عالمية للعثور على المرشحين. تتضمن العملية تقييمًا دقيقًا للمهارات، ومقابلات موجهة، وإدارة نشطة للطلبات لضمان تطابق مثالي.",
         para5: "القيمة المضافة",
+        Bouton : "تعرف أكثر",
         desc_para5: "تسمح لنا خبرتنا في التوظيف الدولي بالعثور على المواهب المناسبة لمتطلبات شركتك المحددة، مع تقديم خدمة مخصصة ودعم طوال عملية التوظيف لضمان تكامل ناجح.",
-        link:<Link to="/jobs/all" className="text-sky-500" > احصل على وظيفة خارجية <i className="mdi mdi-chevron-right align-middle"></i></Link>,
+        link:"/jobs",
 
     },
+    {
+        id: 6,
+        title: "ممرض رعاية المرضى",
+        desc: "We offer employment contract services in Europe. Contact us today to start your journey toward a bright professional future ! ",
+        image: heroImage1,
+        para1: "Recruitment Service",
+        desc_para1: "Our international recruitment service helps companies identify and hire the best talent worldwide. Through our extensive network and HR expertise, we find qualified candidates who perfectly meet your specific requirements. Simplify your recruitment process and strengthen your team with talented professionals from diverse backgrounds.",
+        para2: "Benefits",
+        desc_para2: "This service facilitates access to a pool of highly qualified candidates, improves the efficiency of the recruitment process, and reduces hiring times, while ensuring hires that match each company's specific needs.",
+        para3: "Target Audience",
+        desc_para3: "This service is intended for multinational companies, businesses expanding internationally, and organizations looking to strengthen their team with talented professionals from various global markets.",
+        para4: "Process or Methodology",
+        desc_para4: "We use advanced search methods and a global network to source candidates. The process includes a thorough skills assessment, targeted interviews, and proactive management of applications to ensure an optimal match.",
+        para5: "Added Value",
+        Bouton : "تعرف أكثر",
+        desc_para5: "Our expertise in international recruitment allows us to find talent suited to your company's specific requirements, while offering personalized service and support throughout the recruitment process to ensure a successful integration.",
+        link:"/nurse",
+    }
 ]
 export const TitleAR=[
     {
@@ -392,7 +444,7 @@ export const TitleAR=[
     }
 ]
 export const NurseAR = [{
-    title: "رعاية تمريضية متعاطفة يمكنك الوثوق بها",
+    title: "رعاية تمريضية  يمكنك الوثوق بها",
     desc: "فريقنا المخصص من الممرضين المحترفين هنا لتقديم أعلى جودة من الرعاية بتعاطف واحترام. صحتك وراحتك هي أولويتنا القصوى.",
     contact: "اتصل بنا اليوم",
     about: "من نحن",
@@ -444,7 +496,9 @@ export const AboutAR=[{
     ask:"من نحن؟",
     title:"نحن متخصصون في التوظيف الدولي ومساعدة الوثائق، نقدم دعمًا مخصصًا بعدة لغات لمساعدتك في التنقل عبر الفرص الوظيفية الدولية.",
     desc:"تقدم شركتنا خدمات التوظيف الدولي ودعمًا خبيرًا بعدة لغات. نساعد العملاء في العثور على فرص عمل عالمية ونوفر مساعدة شاملة في إعداد الوثائق بلغات مختلفة. هدفنا هو تسهيل انتقال سلس وفعّال إلى الوظائف الدولية.",
-    year:"سنوات الخبرة"
+    year:"سنوات الخبرة",
+    International:"الدعم الوظيفي الدولي",
+    Services:"خدمات"
 }]
 export const recruitmentAR = [
     {
@@ -474,6 +528,9 @@ export const jobsAR = [
     {
         id: 1,
         image: resume,
+        
+        h1: "قوائم الوظائف",
+       Find: "ابحث عن وظيفتك المثالية معنا",
         title: 'ملف طلب عقد عمل للخارج',
         type: 'دولي',
         menu1: "الوثائق المطلوبه : ",
@@ -482,10 +539,11 @@ export const jobsAR = [
         niveaulanguage: "   صورة فوتوغرافية ديالك و  صورة من جواز السفر و  فيديو و صورة ديالك وانت كاتزاول المهنة الي بغيتي تخدم فيها",
         menu6:'المزيد :',
         more:' الإستمارة يمكن ليك الحصول عليها بالضغط على زر التحميل  🙏🏻او باش نسهلو عليكم تقدروا تبعتو لنا الوثائق الأصلية (Pdf)',
-        action : 'تحميل',
+        action : 'تقديم الطلب',
         
         
         link: form ,
+        model:true
         // link:"https://api.whatsapp.com/send/?phone=%2B212704309787&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D9%83%D8%B1%D9%88%D8%A7%D8%AA%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
     },
     {
@@ -727,11 +785,12 @@ export const footerDataAr = {
         }
     ],
     "pageElements": [
-        { "id": 1, "label": "الرئيسية", "link": "/Home" },
-        { "id": 2, "label": "خدماتنا", "link": "/Services" },
-        { "id": 3, "label": "التدريبات", "link": "/Formation" },
-        { "id": 4, "label": "من نحن", "link": "/About" },
-        { "id": 5, "label": "تواصل معنا", "link": "/Contact" }
+        { "id": 1, "label": "الرئيسية", "link": "/" },
+        { "id": 2, "label": "التكوينات", "link": "/formation" },
+        { "id": 3, "label": "التوضيف", "link": "/jobs" },
+        { "id": 4, "label": "معرض الصور", "link": "/gallery" },
+        { "id": 5, "label": "من نحن", "link": "/" },
+        { "id": 6, "label": "تواصل معنا", "link": "/Contact" }
     ],
     "pagelangague": [
         { "id": 1, "label": "الإنجليزية", "link": "/Home" },
@@ -741,18 +800,19 @@ export const footerDataAr = {
         { "id": 5, "label": "الفرنسية", "link": "/Contact" }
     ],
     "ourServices": [
-        { "id": 1, "label": "إنشاء المواقع و التطبيقات", "link": "/Development" },
-        { "id": 2, "label": "التدريبات", "link": "/Formation" },
-        { "id": 3, "label": "تنضيف الواجهات", "link": "/facades" },
-        { "id": 4, "label": "التوضيف الخارجي", "link": "/Recruitment" },
-        { "id": 5, "label": "إنشاء شركة", "link": "/Domiciliation" }
+        { "id": 1, "label": "إنشاء المواقع و التطبيقات", "link": "/team" },
+        { "id": 2, "label": "التدريبات", "link": "/team" },
+        { "id": 3, "label": "تنضيف الواجهات", "link": "/teamglass" },
+        { "id": 4, "label": "التوضيف الخارجي", "link": "/jobs" },
+        { "id": 5, "label": "التمريض حتى المنزل", "link": "/nurse" },
+        { "id": 6, "label": "إنشاء شركة", "link": "/" }
     ],
     "ourFormation": [
-        { "id": 1, "label": "تكوين الإسعافات الأولية", "link": "/Development" },
-        { "id": 2, "label": "تكوين الدي جي", "link": "/Formation" },
-        { "id": 3, "label": "تكوين صيانة المصاعد الألية", "link": "/facades" },
-        { "id": 4, "label": "تكوين وكلاء تسجيل الرحلات بالمطار", "link": "/Recruitment" },
-        { "id": 5, "label": "تكوين في الإنتاج السينيمائي و الإخراج", "link": "/Domiciliation" }
+        { "id": 1, "label": "تكوين الإسعافات الأولية", "link": "/" },
+        { "id": 2, "label": "تكوين الدي جي", "link": "/formation/3" },
+        { "id": 3, "label": "تكوين صيانة المصاعد الألية", "link": "/formation/13" },
+        { "id": 4, "label": "تكوين وكلاء تسجيل الرحلات بالمطار", "link": "/formation/2" },
+        { "id": 5, "label": "تكوين في الإنتاج السينيمائي و الإخراج", "link": "/" }
     ],
     "footerText": {
         "logoAlt": "RAKAR Logo",
@@ -760,8 +820,8 @@ export const footerDataAr = {
         "detailedDescription": "نحن متخصصون في التنسيب الوظيفي العالمي والمساعدة في تقديم الوثائق، ونقدم لك دعماً مخصصاً بلغات متعددة لمساعدتك في البحث عن فرص العمل الدولية.",
         "ourServicesTitle": "خدماتنا",
         "ourPageTitle": "صفحاتنا",
-        "ourlangagueTitle": "تكويننا",
-        "ourFormationTitle":"دوراتنا",
+        "ourlangagueTitle": "اللغات التي ندرسها",
+        "ourFormationTitle":"التكوينات",
     },
     "footerCopyright": {
         "text": "حقوق الملكية © ",

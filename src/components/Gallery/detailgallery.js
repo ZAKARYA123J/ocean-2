@@ -33,7 +33,7 @@ const GalleryDetail = () => {
     }, [galleryAlbum]);
 
     if (!galleryAlbum) {
-        return <div className="text-center py-4 text-red-500">Gallery album not found.</div>;
+        return <div className="text-center py-4"></div>;
     }
     return (
         <div className="flex flex-col min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100">

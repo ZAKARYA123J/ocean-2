@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
 import { Link } from "react-router-dom";
 import './i18n';
 import { useTranslation } from 'react-i18next';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import '../../src/assets/css/Services.css';
 
 const loadClientData = async (lang) => {
   try {
@@ -20,76 +22,6 @@ const loadClientData = async (lang) => {
     return [];
   }
 };
-
-const CTA = styled.button`
-  background-color: #ffffff;
-  color: #3a86ff;
-  padding: 0.5rem 1rem;
-  margin-top: auto;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 15px;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.2s, background-color 0.2s;
-  border: solid 1px #3a86ff;
-  white-space: nowrap;
-
-  &:hover {
-    transform: scale(1.05);
-    background-color: #e0f2fe;
-  }
-
-  &:active {
-    transform: scale(0.95);
-  }
-`;
-
-const Card = styled.div`
-  background-color: #ffffff;
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  }
-`;
-
-const IconWrapper = styled.div`
-  font-size: 4rem;
-  color: #0ea5e9;
-  margin-bottom: 10px;
-`;
-
-const Header = styled.h1`
-  font-size: 2.5rem;
-  color: #4a4a4a;
-  text-align: center;
-  margin-bottom: 2rem;
-`;
-
-const ServiceWrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 20px;
-
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (min-width: 1024px) {
-    grid-template-columns: repeat(4, 1fr);
-  }
-`;
 
 const Services = () => {
   const [serviceData, setServiceData] = useState([]);
@@ -112,42 +44,74 @@ const Services = () => {
     fetchData();
   }, [i18n.language]);
 
-  const limitedItems = serviceData.slice(0, 4);
+  useEffect(() => {
+    AOS.init({
+      offset: 120,
+      duration: 700,
+      easing: 'ease-in-out',
+      delay: 100,
+      once: true,
+    });
+    AOS.refresh();
+  }, []);
+
+  const limitedItems = serviceData.slice(0, 6);
 
   if (loading) {
-    return <p>Loading services...</p>;
+    return (
+      <div className="flex justify-center items-center min-h-screen">
+        {/* Pulse effect for loading */}
+        <div className="loading-pulse"></div>
+      </div>
+    );
   }
 
   return (
-    <div className="bg-gray-50 dark:bg-gray-900 dark:text-white py-12 sm:grid sm:place-items-center" id="services">
+    <div className="bg-gray-50 dark:bg-gray-900 dark:text-white py-16" id="services">
       <div className="container mx-auto px-6 lg:px-8">
-      {serviceData.map((item) => (
-  <Header key={item.id}>{t(item.Servicetitle)}</Header>
-))}
-        <ServiceWrapper>
+        {serviceData.map((skill)=>(
+        <h1 className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-10">
+          {t(skill.Servicetitle)}
+        </h1>))}
+
+        {/* Services grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {limitedItems.map((skill) => (
-            <Card
+            <Link
+              to={skill.link}
               key={skill.id}
+              className="card-wrapper"
               data-aos="fade-up"
               data-aos-delay={skill.aosDelay}
-              role="region"
-              aria-labelledby={`service-title-${skill.id}`}
             >
-              <IconWrapper>
-                {skill.icon}
-              </IconWrapper>
-              <h1 id={`service-title-${skill.id}`} className="text-xl font-semibold mt-4 mb-2 text-gray-800 dark:text-white">
-                {t(skill.title)}
-              </h1>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">
-                {t(skill.desc)}
-              </p>
-              <Link to={`/service/${skill.id}`}>
-                <CTA aria-label={t('Learn more about') + ' ' + t(skill.title)}>{t(skill.Bouton)}</CTA>
-              </Link>
-            </Card>
+              <div className="card">
+                <div className="card-image">
+                  {/* Image */}
+                  <img 
+                    src={skill.image} 
+                    alt={t(skill.title)} 
+                    className="w-full h-48 object-cover"
+                  />
+                </div>
+
+                <div className="card-content">
+                  {/* Card content */}
+                  <h2 id={`service-title-${skill.id}`} className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
+                    {t(skill.title)}
+                  </h2>
+
+                  <p className="text-gray-600 dark:text-gray-300 mb-2">
+                    {t(skill.description)}
+                  </p>
+
+                  <div className="text-blue-600 dark:text-blue-400 font-medium">
+                    {t(skill.Bouton)} &rarr;
+                  </div>
+                </div>
+              </div>
+            </Link>
           ))}
-        </ServiceWrapper>
+        </div>
       </div>
     </div>
   );

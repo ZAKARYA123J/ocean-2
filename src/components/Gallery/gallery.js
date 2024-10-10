@@ -6,6 +6,8 @@ import WhatsAppFloatingButton from '../WhatsAppFloatingButton';
 import Switcher from "../switcher";
 import { useTranslation } from 'react-i18next';
 import { FaImages } from "react-icons/fa";
+import { motion } from 'framer-motion';
+import styled from 'styled-components';
 
 const fetchAPIData = async () => {
     const response = await fetch('https://hono-on-vercel123-54cp.vercel.app/api/galleries');
