@@ -59,7 +59,7 @@ const Gallery = () => {
                                             </h2>
                                         </div>
                                     </div>
-                                    <div className="p-3 mx-4">
+                                    <div className="p-3 ">
                                         <div className="flex items-center space-x-3 ">
                                             <FaImages className="text-sky-500 text-2xl" />
                                             <span className="text-lg text-gray-700 dark:text-gray-300">
