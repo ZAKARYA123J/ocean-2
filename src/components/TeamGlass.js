@@ -9,7 +9,7 @@ import { FaUsers, FaShieldAlt } from 'react-icons/fa';
 import { IoMdRocket } from 'react-icons/io';  
 import { MdCleaningServices } from 'react-icons/md';  
 import Navbar from './navbar';
-import Footer from './footer';
+import Footer from './foooter';
 import Modal from './Modal';
 import LogoServesGlass from './LogoServesGlass';
 import projectAlphaLogo from '../assets/images/done/glass4.png';

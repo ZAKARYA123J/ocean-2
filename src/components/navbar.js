@@ -141,7 +141,7 @@ const limitedItems=serviceData.slice(1,6)
       `}</style>
 
       <motion.nav
-        className={`navbar fixed top-0 w-full z-50 ${scroll ? "bg-white shadow-lg" : "bg-transparent"}`}
+        className={`navbar fixed top-0 w-full z-50 transition-all duration-300  ${scroll ? "bg-white shadow-lg" : "bg-transparent"}`}
         initial={{ y: -100 }}  // Position initiale de la navbar hors écran
         animate={{ 
           y: 0,  // Faire apparaître la navbar

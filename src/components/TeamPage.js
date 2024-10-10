@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./navbar";
-import Footer from "./footer";
+import Footer from "./foooter";
 import Modal from "./Modal";
 import profileImage1 from "../assets/images/done/TeamDev/01.6ac85de7298319b1f8d5.jpg";
 import profileImage2 from "../assets/images/done/04.35463172278c4051b5f4.jpg";

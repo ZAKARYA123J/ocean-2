@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Navbar from '../navbar';
-import Footer from '../footer';
+import Footer from '../foooter';
 import { FaAngleRight, FaBriefcase, FaGlobeAmericas, FaLanguage, FaClock, FaFileAlt } from 'react-icons/fa'; // Professional icons
 import Whatp from '../WhatsAppFloatingButton';
 import { useTranslation } from 'react-i18next';
@@ -223,8 +223,8 @@ const JobListings = () => {
     <>
       <Helmet>
         <title>Jobs | Ocean Connecting</title>
-        <meta name="description" content="Learn more about the Jobs we offer for international career and document assistance." />
-        <meta name="keywords" content="international services, career support, document assistance" />
+        <meta name="description" content="Learn mornce." />
+        <meta name="keywords" content="international services, career support, document assistae about the Jobs we offer for international career and document assistance" />
       </Helmet>
       <Navbar />
       <Section>

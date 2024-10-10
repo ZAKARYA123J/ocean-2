@@ -1,6 +1,6 @@
 import React, { useEffect, useRef,useState } from 'react';
 import Navbar from './navbar';
-import Footer from './footer';
+import Footer from './foooter';
 import nurseVideo from '../assets/images/done/TeamNurse/nurse2.mp4';
 import CardNurse from './CardNurse';
 import ContactForm from './ContactForm';

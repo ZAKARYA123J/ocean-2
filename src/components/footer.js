@@ -38,7 +38,7 @@ export default function Footer() {
                     <div className="lg:col-span-3 md:text-start text-center mb-6 md:mb-0">
                         <Link to="/" className="focus:outline-none">
                             <img 
-                                src={img} 
+                                src={img}
                                 className="mx-auto md:me-auto md:ms-0" 
                                 alt="Ocean Connect Logo" 
                                 style={{ width: "150px", transition: 'transform 0.3s' }}
