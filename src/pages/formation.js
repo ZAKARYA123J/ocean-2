@@ -6,7 +6,7 @@ import WhatsAppFloatingButton from '../components/WhatsAppFloatingButton';
 import Switcher from "../components/switcher";
 import { Helmet } from "react-helmet-async";
 
-
+console.log("fdfd")
 export default function IndexSix(){
     return(
         <>
