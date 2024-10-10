@@ -1,76 +1,75 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { FaBook, FaChalkboardTeacher, FaCalendarAlt, FaUserGraduate } from 'react-icons/fa';
+import { FaCalendarAlt, FaUserGraduate } from 'react-icons/fa';
 
 const courseData = {
-  "general-english": {
-    title: "General English",
-    description: "Our Business English course is designed to build a strong foundation in the core areas of English: reading, writing, listening, and speaking.",
+  "general-french": {
+    title: "Français Général",
+    description: "Notre cours de français général est conçu pour bâtir une base solide dans les compétences fondamentales : lecture, écriture, écoute, et expression orale.",
     image: "https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg",
     levels: [
       {
-        level: 'Beginner Level',
-        description: 'Focuses on basic grammar and business-related vocabulary. You will learn how to conduct simple conversations and write basic emails.',
+        level: 'Niveau Débutant',
+        description: 'Se concentre sur la grammaire de base et le vocabulaire. Vous apprendrez à tenir des conversations simples et à rédiger des textes de base.',
         topics: [
-          'Introduction to basic grammar and professional vocabulary',
-          'Simple business dialogues and phone conversations',
-          'Writing and responding to basic emails',
-          'Practicing common phrases used in business settings',
+          'Introduction à la grammaire de base et au vocabulaire quotidien',
+          'Dialogues simples et conversations',
+          'Rédaction et réponse aux messages de base',
+          'Pratique des phrases courantes dans les contextes quotidiens',
         ],
       },
     ],
     objectives: [
-      'Achieve fluency and confidence in professional English communication',
-      'Develop effective listening skills through real-life business scenarios',
-      'Expand vocabulary for business, social, and networking events',
+      'Atteindre la fluidité et la confiance en communication quotidienne',
+      'Développer des compétences d’écoute à travers des scénarios réels',
+      'Élargir le vocabulaire pour divers contextes',
     ],
     schedule: [
-      { day: "Monday - Thursday", session: "Morning Session", time: "10:00 AM - 12:00 PM" },
-      { day: "Monday - Thursday", session: "Evening Session", time: "6:00 PM - 8:00 PM" },
+      { day: "Lundi - Jeudi", session: "Session du Matin", time: "10:00 - 12:00" },
+      { day: "Lundi - Jeudi", session: "Session du Soir", time: "18:00 - 20:00" },
     ],
     fee: 300,
-    prerequisites: "There are no specific prerequisites for the beginner level. Students enrolling in higher levels should have a basic understanding of English grammar and vocabulary.",
+    prerequisites: "Aucun prérequis spécifique pour le niveau débutant. Les étudiants des niveaux supérieurs doivent avoir une connaissance de base de la grammaire et du vocabulaire français.",
     faq: [
-      { question: 'What materials are provided?', answer: 'A comprehensive coursebook, handouts, and online resources.' },
-      { question: 'Can I switch between morning and evening classes?', answer: 'Yes, by contacting us one week in advance.' },
-      { question: 'Is there a certificate upon completion?', answer: 'Yes, you will receive a certificate upon passing the final assessment.' },
+      { question: 'Quels matériaux sont fournis ?', answer: 'Un manuel complet, des supports de cours et des ressources en ligne.' },
+      { question: 'Puis-je changer entre les cours du matin et du soir ?', answer: 'Oui, en nous contactant une semaine à l’avance.' },
+      { question: 'Y a-t-il un certificat après la fin du cours ?', answer: 'Oui, un certificat sera délivré après avoir réussi l’évaluation finale.' },
     ],
   },
-  "business-english": {
-    title: "Business English",
-    description: "Our Private Lessons are tailored to meet your individual learning needs and objectives. We focus on the core areas of English with a personalized approach.",
+  "business-french": {
+    title: "Français des Affaires",
+    description: "Améliorez vos compétences en communication professionnelle en français grâce à notre cours dédié aux affaires.",
     image: "https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg",
     levels: [
       {
-        level: 'Beginner Level',
-        description: 'Focuses on basic grammar and vocabulary. You will learn how to have simple conversations and write basic texts.',
+        level: 'Niveau Débutant',
+        description: 'Apprenez le vocabulaire et la grammaire nécessaires pour des situations professionnelles. Vous apprendrez à écrire des e-mails et à participer à des réunions.',
         topics: [
-          'Introduction to basic grammar and everyday vocabulary',
-          'Simple dialogues and conversations',
-          'Writing and responding to basic messages',
-          'Practicing common phrases used in everyday settings',
+          'Introduction à la grammaire professionnelle et au vocabulaire',
+          'Dialogues et conversations en entreprise',
+          'Rédaction et réponse à des e-mails professionnels',
+          'Pratique des phrases courantes dans des contextes professionnels',
         ],
       },
-      // ... other levels
     ],
     objectives: [
-      'Achieve fluency and confidence in daily English communication',
-      'Develop listening skills through personalized lessons',
-      'Expand vocabulary for various contexts',
+      'Atteindre la fluidité et la confiance en communication professionnelle en français',
+      'Développer des compétences d’écoute à travers des scénarios d’affaires réels',
+      'Élargir le vocabulaire pour les événements professionnels et les réseaux',
     ],
     schedule: [
-      { day: "Monday - Thursday", session: "Morning Session", time: "9:00 AM - 11:00 AM" },
-      { day: "Monday - Thursday", session: "Afternoon Session", time: "1:00 PM - 3:00 PM" },
+      { day: "Lundi - Vendredi", session: "Session du Matin", time: "9:00 - 11:00" },
+      { day: "Lundi - Vendredi", session: "Session de l’Après-midi", time: "13:00 - 15:00" },
     ],
-    fee: 350,
-    prerequisites: "No specific prerequisites for beginners. Intermediate and advanced students should have a basic understanding of English grammar.",
+    fee: 400,
+    prerequisites: "Connaissance de base de la grammaire et du vocabulaire français requise pour les niveaux supérieurs.",
     faq: [
-      { question: 'What materials are provided?', answer: 'A personalized course plan, handouts, and access to online resources.' },
-      { question: 'Can I schedule lessons at different times?', answer: 'Yes, by contacting us in advance, you can adjust your schedule.' },
-      { question: 'Is there a certification after completion?', answer: 'Yes, upon successful completion, a certificate is provided.' },
+      { question: 'Quels matériaux sont fournis ?', answer: 'Un manuel personnalisé, des documents de cours et des ressources en ligne.' },
+      { question: 'Puis-je ajuster mon emploi du temps ?', answer: 'Oui, en nous contactant à l’avance, vous pouvez ajuster votre emploi du temps.' },
+      { question: 'Un certificat est-il fourni après le cours ?', answer: 'Oui, un certificat est fourni après la réussite de l’évaluation finale.' },
     ],
   },
-  "exam-preparation": {
+  "delf-exam-preparation": {
     title: "Exam Preparation",
     description: "Our Private Lessons are tailored to meet your individual learning needs and objectives. We focus on the core areas of English with a personalized approach.",
     image: "https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg",
@@ -104,7 +103,7 @@ const courseData = {
       { question: 'Is there a certification after completion?', answer: 'Yes, upon successful completion, a certificate is provided.' },
     ],
   },
-  "english-for-kids": {
+  "french-for-kids": {
     title: "English For Kids",
     description: "Our Private Lessons are tailored to meet your individual learning needs and objectives. We focus on the core areas of English with a personalized approach.",
     image: "https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg",
@@ -138,7 +137,7 @@ const courseData = {
       { question: 'Is there a certification after completion?', answer: 'Yes, upon successful completion, a certificate is provided.' },
     ],
   },
-  "private-lessons": {
+  "private-french-lessons": {
     title: "Private Lessons",
     description: "Our Private Lessons are tailored to meet your individual learning needs and objectives. We focus on the core areas of English with a personalized approach.",
     image: "https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg",
@@ -172,7 +171,7 @@ const courseData = {
       { question: 'Is there a certification after completion?', answer: 'Yes, upon successful completion, a certificate is provided.' },
     ],
   },
-  "self-study-courses": {
+  "self-study-french-courses": {
     title: "self Study Courses",
     description: "Our Private Lessons are tailored to meet your individual learning needs and objectives. We focus on the core areas of English with a personalized approach.",
     image: "https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg",
@@ -219,7 +218,7 @@ const CourseDetails = () => {
   return (
     <div className="container mx-auto p-8 lg:p-16 bg-white shadow-xl rounded-lg">
       {/* Header Section */}
-      <div className="relative text-center mb-16 bg-gradient-to-r from-green-500 to-green-700 rounded-lg shadow-md p-6 lg:p-8 mt-0">
+      <div className="relative text-center mb-16 bg-gradient-to-r from-[#0052A5] to-[#EF4135] rounded-lg shadow-md p-6 lg:p-8 mt-0">
         <h1 className="text-5xl font-bold text-white mb-4 drop-shadow-lg">{course.title}</h1>
         <p className="text-lg text-gray-100 mb-8 max-w-4xl mx-auto leading-relaxed">{course.description}</p>
         <img
@@ -230,10 +229,10 @@ const CourseDetails = () => {
       </div>
 
       {/* Curriculum Breakdown */}
-      <div className="bg-gradient-to-br from-white to-gray-50 p-10 rounded-lg shadow-lg mb-12">
+      <div className="bg-gradient-to-br from-white to-gray-100 p-10 rounded-lg shadow-lg mb-12">
         {course.levels.map((item, idx) => (
           <div key={idx} className="mb-8">
-            <h3 className="text-xl font-semibold text-[#65A662] mb-2">{item.level}</h3>
+            <h3 className="text-xl font-semibold text-[#0052A5] mb-2">{item.level}</h3>
             <p className="text-gray-700 mb-4">{item.description}</p>
             <ul className="list-disc pl-6 text-gray-700 space-y-2">
               {item.topics.map((topic, i) => (
@@ -245,10 +244,10 @@ const CourseDetails = () => {
       </div>
 
       {/* Course Objectives */}
-      <div className="bg-gradient-to-br from-white to-gray-50 p-10 rounded-lg shadow-lg mb-12">
+      <div className="bg-gradient-to-br from-white to-gray-100 p-10 rounded-lg shadow-lg mb-12">
         <div className="flex items-center mb-4">
-          <FaUserGraduate className="text-[#65A662] text-2xl mr-2" />
-          <h2 className="text-3xl font-bold text-[#65A662]">Course Objectives</h2>
+          <FaUserGraduate className="text-[#0052A5] text-2xl mr-2" />
+          <h2 className="text-3xl font-bold text-[#0052A5]">Objectifs du Cours</h2>
         </div>
         <ul className="list-disc pl-6 text-gray-700 space-y-2">
           {course.objectives.map((objective, idx) => (
@@ -258,17 +257,17 @@ const CourseDetails = () => {
       </div>
 
       {/* Timetable and Pricing */}
-      <div className="bg-gradient-to-br from-white to-gray-50 p-10 rounded-lg shadow-lg mb-12">
+      <div className="bg-gradient-to-br from-white to-gray-100 p-10 rounded-lg shadow-lg mb-12">
         <div className="flex items-center mb-4">
-          <FaCalendarAlt className="text-[#65A662] text-2xl mr-2" />
-          <h2 className="text-3xl font-bold text-[#65A662]">Timetable and Pricing</h2>
+          <FaCalendarAlt className="text-[#0052A5] text-2xl mr-2" />
+          <h2 className="text-3xl font-bold text-[#0052A5]">Horaires et Tarifs</h2>
         </div>
         <table className="w-full text-left border-collapse">
           <thead>
-            <tr className="bg-[#65A662] text-white">
-              <th className="p-3">Day</th>
+            <tr className="bg-[#0052A5] text-white">
+              <th className="p-3">Jour</th>
               <th className="p-3">Session</th>
-              <th className="p-3">Time</th>
+              <th className="p-3">Heure</th>
             </tr>
           </thead>
           <tbody className="bg-white text-gray-700">
@@ -282,23 +281,23 @@ const CourseDetails = () => {
           </tbody>
         </table>
         <p className="text-gray-700 mt-6">
-          The course fee for each level is <strong>${course.fee}</strong>, including all course materials and access to our online resources.
+          Le tarif pour chaque niveau est de <strong>${course.fee}</strong>, incluant tous les supports de cours et l’accès à nos ressources en ligne.
         </p>
       </div>
 
       {/* Prerequisites */}
-      <div className="bg-gradient-to-br from-white to-gray-50 p-10 rounded-lg shadow-lg mb-12">
-        <h2 className="text-3xl font-bold text-[#65A662] mb-6">Prerequisites</h2>
+      <div className="bg-gradient-to-br from-white to-gray-100 p-10 rounded-lg shadow-lg mb-12">
+        <h2 className="text-3xl font-bold text-[#0052A5] mb-6">Prérequis</h2>
         <p className="text-gray-700">{course.prerequisites}</p>
       </div>
 
       {/* FAQ Section */}
-      <div className="bg-gradient-to-br from-white to-gray-50 p-10 rounded-lg shadow-lg mb-12">
-        <h2 className="text-3xl font-bold text-[#65A662] mb-6">Frequently Asked Questions (FAQ)</h2>
+      <div className="bg-gradient-to-br from-white to-gray-100 p-10 rounded-lg shadow-lg mb-12">
+        <h2 className="text-3xl font-bold text-[#0052A5] mb-6">Questions Fréquemment Posées (FAQ)</h2>
         <div className="space-y-8">
           {course.faq.map((faq, idx) => (
             <div key={idx}>
-              <h3 className="text-xl font-semibold text-[#65A662]">{faq.question}</h3>
+              <h3 className="text-xl font-semibold text-[#0052A5]">{faq.question}</h3>
               <p className="text-gray-700">{faq.answer}</p>
             </div>
           ))}

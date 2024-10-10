@@ -1,8 +1,9 @@
+// App.js
 import "./App.css";
 import "./assets/css/tailwind.css";
 import "./assets/css/materialdesignicons.min.css";
 import "leaflet/dist/leaflet.css";
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation, useParams } from "react-router-dom";
 import Index from "./pages";
 import Formation from "./pages/formation";
 import Service from "./pages/service";
@@ -18,9 +19,11 @@ import LearnEnglishEx from "./components/English/LearnEnglishEx";
 import LearnEnglish from "./components/LearnEnglish";
 import ScrollToTop from "./components/ScrollToTop";
 import CoursesSection from "./components/English/CoursesSection";
-import CourseDetails from './components/English/CourseDetails';
+import CourseDetailsEnglish from './components/English/CourseDetails';
+import CourseDetailsFrench from './components/French/CourseDetails';
+import CourseDetailsSpain from './components/Spain/CourseDetails';
 import LearnSpain from './components/LearnSpain';
-import LearnFrench from './components/LearnFrench'
+import LearnFrench from './components/LearnFrench';
 import { HelmetProvider } from "react-helmet-async";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -48,7 +51,7 @@ function App() {
 
   const pageTransition = {
     duration: 0.8,
-    ease: [0.42, 0, 0.58, 1],
+    ease: [0.42, 0.58, 0.42, 1],
   };
 
   const pageStyle = {
@@ -61,7 +64,6 @@ function App() {
       <ScrollToTop />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
-          {/* Main Index Page with Transition */}
           <Route
             path="/"
             element={
@@ -77,7 +79,6 @@ function App() {
               </motion.div>
             }
           />
-          {/* Formation Page with Transition */}
           <Route
             path="/formation"
             element={
@@ -96,7 +97,6 @@ function App() {
               </motion.div>
             }
           />
-          {/* Dynamic Formation Page */}
           <Route
             path="/formation/:id"
             element={
@@ -114,7 +114,6 @@ function App() {
               </motion.div>
             }
           />
-          {/* Service Page with Transition */}
           <Route
             path="/service/:id"
             element={
@@ -132,7 +131,6 @@ function App() {
               </motion.div>
             }
           />
-          {/* Jobs Page */}
           <Route
             path="/jobs"
             element={
@@ -143,14 +141,13 @@ function App() {
                 exit={{ opacity: 0, x: 200 }}
                 transition={{
                   duration: 0.5,
-                  ease: [0.42, 0, 0.58, 1],
+                  ease: [0.42, 0.58, 0.42, 1],
                 }}
               >
                 <Jobs />
               </motion.div>
             }
           />
-          {/* Dynamic Job Type Page */}
           <Route
             path="/jobs/:type"
             element={
@@ -158,17 +155,16 @@ function App() {
                 style={pageStyle}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
+                exit={{ opacity: 0, scale: 0.8 }}
                 transition={{
                   duration: 0.8,
-                  ease: [0.42, 0, 0.58, 1],
+                  ease: [0.42, 0.58, 0.42, 1],
                 }}
               >
                 <Jobs />
               </motion.div>
             }
           />
-          {/* Gallery Pages */}
           <Route
             path="/gallery"
             element={
@@ -196,14 +192,13 @@ function App() {
                 exit={{ opacity: 0, x: 150 }}
                 transition={{
                   duration: 0.8,
-                  ease: [0.42, 0, 0.58, 1],
+                  ease: [0.42, 0.58, 0.42, 1],
                 }}
               >
                 <GalleryDetail />
               </motion.div>
             }
           />
-          {/* Courses Section */}
           <Route
             path="/courses"
             element={
@@ -214,14 +209,13 @@ function App() {
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{
                   duration: 0.8,
-                  ease: [0.42, 0, 0.58, 1],
+                  ease: [0.42, 0.58, 0.42, 1],
                 }}
               >
                 <CoursesSection />
               </motion.div>
             }
           />
-          {/* Dynamic Course Detail Route */}
           <Route
             path="/course/:courseType"
             element={
@@ -232,14 +226,13 @@ function App() {
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{
                   duration: 0.8,
-                  ease: [0.42, 0, 0.58, 1],
+                  ease: [0.42, 0.58, 0.42, 1],
                 }}
               >
-                <CourseDetails />
+                <CourseDetailComponent />
               </motion.div>
             }
           />
-          {/* Other Static Pages */}
           <Route path="/team" element={<TeamPage />} />
           <Route path="/nurse" element={<TeamNurse />} />
           <Route path="/contract" element={<ContractPage />} />
@@ -270,6 +263,20 @@ function App() {
       <SpeedInsights />
     </HelmetProvider>
   );
+}
+
+function CourseDetailComponent() {
+  const { courseType } = useParams();
+
+  if (courseType.includes("french")) {
+    return <CourseDetailsFrench courseType={courseType} />;
+  } else if (courseType.includes("english")) {
+    return <CourseDetailsEnglish courseType={courseType} />;
+  } else if (courseType.includes("spanish")) { // Correction ici
+    return <CourseDetailsSpain courseType={courseType} />;
+  } else {
+    return <div>Course not found!</div>;
+  }
 }
 
 export default App;
