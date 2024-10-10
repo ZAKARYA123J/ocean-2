@@ -15,12 +15,15 @@ import TeamNurse from "./components/TeamNurse";
 import TeamGlass from "./components/TeamGlass";
 import ContractPage from "./components/ContractPage";
 import LanguagesPage from "./components/LanguagesPage";
-import LearnEnglishEx from "./components/English/LearnEnglishEx";
+import LearnEnglishEx from "./components/English/LearnEnglishEx.js";
+import LearnEnglish from "./components/LearnEnglish.js";
+import LearnGermanEx from "./components/german/LearnGermanEx.js";
+import CourseDetails from "./components/german/CourseDetails.js";
 import { HelmetProvider } from "react-helmet-async";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { AnimatePresence, motion } from "framer-motion";
-import LearnEnglish from "./components/LearnEnglish";
-
+import LearnGerman from "./components/LearnGerman";
+import LearnItaly from "./components/LearnItaly";
 function App() {
   const location = useLocation();
 
@@ -87,11 +90,28 @@ function App() {
                 }}
               >
                 <Formation />
-              </motion.div>
+              </motion.div  >
             }
           />
           <Route
             path="/formation/:id"
+            element={
+              <motion.div
+                style={pageStyle}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.8 }}
+                transition={{
+                  duration: 0.8,
+                  ease: [0.25, 0.46, 0.45, 0.94],
+                }}
+              >
+                <IndexFive />
+              </motion.div>
+            }
+          />
+          <Route
+            path="/Details/:id"
             element={
               <motion.div
                 style={pageStyle}
@@ -137,7 +157,7 @@ function App() {
                   ease: [0.42, 0, 0.58, 1],
                 }}
               >
-                <Jobs />
+                <Jobs/>
               </motion.div>
             }
           />
@@ -198,8 +218,11 @@ function App() {
           <Route path="/teamGlass" element={<TeamGlass />} />
           <Route path="/nurse" element={<TeamNurse />} />
           <Route path="/contract" element={<ContractPage />} />
-          <Route path="/exercise" element={<LearnEnglishEx />} />
-          Pages with custom transitions
+          <Route path="/LearnGerman" element={<LearnGerman />} />
+          <Route path="/CourseDetails/:id" element={<CourseDetails />} />
+          <Route path="/LearnItaly" element={<LearnItaly />} />
+          <Route path="/LearnGermanEx" element={<LearnGermanEx />} />
+          {/* Pages with custom transitions */}
           <Route
             path="/contract"
             element={
@@ -257,7 +280,7 @@ function App() {
       </AnimatePresence>
       <SpeedInsights />
     </HelmetProvider>
-  );
-}
+  ); }
+
 
 export default App;
