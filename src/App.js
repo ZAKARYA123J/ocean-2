@@ -12,7 +12,7 @@ import Gallery from "./components/Gallery/gallery";
 import GalleryDetail from "./components/Gallery/detailgallery";
 import TeamPage from "./components/TeamPage";
 import TeamNurse from "./components/TeamNurse";
-import ContractPage from "./components/ContractPage";
+import ContractPage from "./components/Contrat/ContractPage";
 import LanguagesPage from "./components/LanguagesPage";
 import { HelmetProvider } from "react-helmet-async";
 import { SpeedInsights } from "@vercel/speed-insights/react";

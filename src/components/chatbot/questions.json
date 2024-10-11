@@ -1,0 +1,20 @@
+{
+    "questions": [
+      {
+        "id": 1,
+        "question": "What is your name?",
+        "answers": ["John", "Jane", "Doe"]
+      },
+      {
+        "id": 2,
+        "question": "What is your favorite color?",
+        "answers": ["Red", "Blue", "Green"]
+      },
+      {
+        "id": 3,
+        "question": "Where do you live?",
+        "answers": ["New York", "London", "Tokyo"]
+      }
+    ]
+  }
+  

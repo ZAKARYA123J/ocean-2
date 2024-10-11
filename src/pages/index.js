@@ -13,6 +13,7 @@ import "aos/dist/aos.css";
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
+import ChatBot from '../components/chatbot/ChatBot';
 
 // Import images directly
 import heroImage1 from '../assets/images/done/TeamDev/service.png';
@@ -213,6 +214,7 @@ export default function Index() {
       <AgencyTab />
       <About />
       <GetInTouch />
+      {/* <ChatBot/> */}
       <WhatsAppFloatingButton />
       <Footer />
     </>

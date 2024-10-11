@@ -1,15 +1,18 @@
 // src/components/ContractWorksPage.js
 
 import React, { useState } from 'react';
-import Navbar from './navbar';
-import Footer from './footer';
-import Modal from './Modall';
-import LeafletMap from './LeafletMap';
+import Navbar from '../navbar';
+import Footer from '../foooter';
+import Modal from '../Modal';
+import HeroSection from './hero';
+import ContractCardSection from './card'
+
 import {
   FaTimes, FaPhoneAlt, FaEnvelope, FaFileAlt, FaClipboardList, FaEnvelopeOpenText, FaCheckCircle,
   FaQuoteLeft, FaMapMarkerAlt, FaCalendarAlt, FaMoneyBillWave, FaLanguage, FaHome, FaMedkit
 } from 'react-icons/fa';
-import { contractData, testimonials } from './data';
+import { contractData, testimonials ,faqs } from './data';
+
 
 const companyInfo = {
   name: "Your Company Name",
@@ -18,133 +21,24 @@ const companyInfo = {
   phone: "+123 456 7890",
 };
 
-const faqs = [
-  {
-    question: 'What documents are required to apply for a contract?',
-    answer: 'You will need to provide your identification documents, proof of qualifications, and any relevant certificates. Specific requirements may vary depending on the contract and country.',
-  },
-  {
-    question: 'How long does it take to process my application?',
-    answer: 'The processing time can vary, but it typically takes between 2 to 4 weeks. You will be notified via email once your application status is updated.',
-  },
-  {
-    question: 'Is knowledge of a foreign language mandatory for all contracts?',
-    answer: 'Not all contracts require knowledge of a foreign language. Please review the specific language requirements listed in the contract details.',
-  },
-  {
-    question: 'What support will I receive after securing a contract?',
-    answer: 'We provide ongoing support including help with visa applications, travel arrangements, and local orientation to ensure a smooth transition.',
-  },
-  {
-    question: 'Are there any fees involved in applying for a contract?',
-    answer: 'Yes, there are application fees which vary depending on the contract and country. The contract price listed includes all applicable fees.',
-  },
-  {
-    question: 'Can I apply for multiple contracts at the same time?',
-    answer: 'Yes, you can apply for multiple contracts. However, we recommend focusing on the ones that best match your skills and qualifications.',
-  },
-];
+
 
 const ContractWorksPage = () => {
-  const [contracts] = useState(contractData);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [filterCountry, setFilterCountry] = useState('');
+
   const [selectedContract, setSelectedContract] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [showConsultationModal, setShowConsultationModal] = useState(false);
 
-  const filteredContracts = contracts.filter(contract => {
-    const country = contract.country || '';
-    const jobTitle = contract.jobTitle || '';
-    const sector = contract.sector || '';
 
-    return (
-      country.toLowerCase().includes(filterCountry.toLowerCase()) &&
-      (jobTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        sector.toLowerCase().includes(searchTerm.toLowerCase()))
-    );
-  });
-
-  const openModal = (contract) => {
-    setSelectedContract(contract);
-    setShowModal(true);
-  };
 
   const closeModal = () => setShowModal(false);
 
   return (
+    <>
+    <Navbar  />
+    <HeroSection />
+    <ContractCardSection/>
     <div className="flex flex-col min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100">
-      <Navbar />
-
-      {/* Hero Section with Map */}
-      <section className="relative flex flex-col items-center justify-center h-screen text-white text-center bg-gradient-to-r from-blue-400 to-blue-600">
-        <LeafletMap contracts={contractData} />
-        <div className="relative z-10 p-8">
-          <h1 className="text-5xl font-extrabold mb-4 animate-fadeIn">Explore Contract Opportunities Abroad</h1>
-          <p className="text-xl mb-8 max-w-2xl mx-auto animate-slideUp">
-            Discover global job opportunities tailored to your skills. Apply now and start your journey with our trusted contracts.
-          </p>
-          <a href="#apply" className="bg-white text-blue-600 px-6 py-3 rounded-md font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
-            Get Started Today
-          </a>
-        </div>
-      </section>
-
-      {/* Search and Filter Section */}
-      <section className="py-8 bg-white dark:bg-gray-800">
-        <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
-          <div className="flex justify-center mb-8">
-            <input
-              type="text"
-              placeholder="Search by job title or sector..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="px-4 py-2 mr-4 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <select
-              value={filterCountry}
-              onChange={(e) => setFilterCountry(e.target.value)}
-              className="px-4 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              <option value="">All Countries</option>
-              <option value="Croatia">Croatia</option>
-              <option value="Germany">Germany</option>
-              <option value="Belgium">Belgium</option>
-              <option value="Italy">Italy</option>
-              <option value="Spain">Spain</option>
-            </select>
-          </div>
-        </div>
-      </section>
-
-      {/* Contract Cards */}
-      <section className="py-8 bg-gray-100 dark:bg-gray-900">
-        <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
-          <ul className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {filteredContracts.map((contract) => (
-              <li
-                key={contract.id}
-                className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-2"
-              >
-                <div className="flex items-center mb-4">
-                  <FaMapMarkerAlt className="text-2xl text-blue-600 mr-2" />
-                  <h3 className="text-xl font-semibold">{contract.country}</h3>
-                </div>
-                <p className="text-gray-700 dark:text-gray-300 mb-2"><strong>Secteur:</strong> {contract.sector}</p>
-                <p className="text-gray-700 dark:text-gray-300 mb-2"><FaLanguage className="inline-block mr-2 text-blue-600" /> <strong>Niveau Langue:</strong> {contract.language}</p>
-                <p className="text-gray-700 dark:text-gray-300 mb-2"><FaCalendarAlt className="inline-block mr-2 text-blue-600" /> <strong>Visa Duration:</strong> {contract.visaDuration}</p>
-                <p className="text-gray-700 dark:text-gray-300 mb-2"><FaCalendarAlt className="inline-block mr-2 text-blue-600" /> <strong>Contract Duration:</strong> {contract.contractDuration}</p>
-                <p className="text-gray-700 dark:text-gray-300 mb-2"><FaMoneyBillWave className="inline-block mr-2 text-blue-600" /> <strong>Price:</strong> {contract.contractPrice}</p>
-                <p className="text-gray-700 dark:text-gray-300 mb-4"><FaHome className="inline-block mr-2 text-blue-600" /><FaMedkit className="inline-block mr-2 text-blue-600" /> <strong>More:</strong> {contract.additionalInfo}</p>
-                <button onClick={() => openModal(contract)} className="mt-4 px-4 py-2 bg-gradient-to-r from-blue-600 to-red-600 text-white rounded-full shadow-md hover:from-blue-500 hover:to-red-500 transition-colors duration-300">
-                  View Details
-                </button>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
       {/* Success Stories Section */}
       <section className="py-16 bg-white dark:bg-gray-800 text-center">
         <h2 className="text-4xl font-bold mb-12 bg-gradient-to-r from-blue-600 to-red-600 bg-clip-text text-transparent dark:from-blue-500 dark:to-red-500 tracking-tight animate-slideDown">
@@ -318,6 +212,7 @@ const ContractWorksPage = () => {
 
       <Footer />
     </div>
+    </>
   );
 };
 
