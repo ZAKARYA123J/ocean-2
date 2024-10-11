@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import Navbar from "./navbar";
 import Footer from "./footer";
 import Modal from "./Modal";
-import LearnEnglishOne from "./English/LearnEnglishOne"
-import LearnEnglishTwo from "./English/LearnEnglishTwo"
-import LearnEnglishThree from "./English/CoursesSection"
-import LearnEnglishFor from "./English/LearnEnglishFor"
-import LearnEnglishFive from "./English/LearnEnglishFive"
-import LearnEnligshSix from "./English/LearnEnligshSix"
-import LearnEnglishModel from "./English/LearnEnglishModel"
+import LearnEnglishOne from "./English/LearnEnglishOne";
+import LearnEnglishTwo from "./English/LearnEnglishTwo";
+import LearnEnglishThree from "./English/CoursesSection";
+import LearnEnglishFor from "./English/LearnEnglishFor";
+import LearnEnglishFive from "./English/LearnEnglishFive";
+import LearnEnligshSix from "./English/LearnEnligshSix";
+import LearnEnglishModel from "./English/LearnEnglishModel";
 
 const LearnEnglish = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -22,6 +22,7 @@ const LearnEnglish = () => {
   const [studentsText, setStudentsText] = useState("");
   
   const [headlineText, setHeadlineText] = useState("");
+  
   useEffect(() => {
     const incrementNumber = (start, end, setter, duration) => {
       let current = start;
@@ -56,7 +57,6 @@ const LearnEnglish = () => {
     setTimeout(() => animateText("Students from 100 countries", setStudentsText, 50), 1500);
 
     animateText("Learn English Online with Professional Instructors", setHeadlineText, 50);
-    
   }, []);
 
   const openModal = () => {
@@ -91,15 +91,15 @@ const LearnEnglish = () => {
           <button
             onClick={openModal}
             className="hover:bg-green-700 text-white py-3 px-8 rounded-full text-lg"
-            style={{ backgroundColor: "#65A662" }} // Button background color
+            style={{ backgroundColor: "#65A662" }}
           >
             Start Now
           </button>
 
           {/* Stats Section */}
-          <div className="mt-10 flex justify-between w-full max-w-4xl text-left text-white items-start">
+          <div className="mt-10 flex flex-col md:flex-row justify-between w-full max-w-4xl text-left text-white items-start">
             {/* Years of Experience */}
-            <div className="flex flex-col items-start mr-8">
+            <div className="flex flex-col items-start mb-6 md:mr-8">
               <div className="flex flex-col items-start">
                 <div className="flex items-baseline">
                   <h3
@@ -128,8 +128,8 @@ const LearnEnglish = () => {
                 </p>
               </div>
             </div>
-            <div className="h-12 border-l-2 border-white mx-8"></div>
-            <div className="flex flex-col items-start mr-8">
+            <div className="h-12 border-l-2 border-white mx-8 md:block"></div>
+            <div className="flex flex-col items-start mb-6 md:mr-8">
               <div className="flex flex-col items-start">
                 <div className="flex items-baseline">
                   <h3
@@ -158,9 +158,9 @@ const LearnEnglish = () => {
                 </p>
               </div>
             </div>
-            <div className="h-12 border-l-2 border-white mx-8"></div>
+            <div className="h-12 border-l-2 border-white mx-8 md:block"></div>
 
-            <div className="flex flex-col items-start">
+            <div className="flex flex-col items-start mb-6">
               <div className="flex flex-col items-start">
                 <div className="flex items-baseline">
                   <h3
@@ -175,9 +175,9 @@ const LearnEnglish = () => {
                   </h3>
                   <span
                     style={{
-                      color: "#FFFFFF", // White for the text next to the number
-                      fontSize: "26px", // Smaller font for the label
-                      marginLeft: "8px", // Small margin between number and text
+                      color: "#FFFFFF",
+                      fontSize: "26px",
+                      marginLeft: "8px",
                       fontFamily: '"Public Sans", sans-serif',
                     }}
                   >
@@ -185,20 +185,21 @@ const LearnEnglish = () => {
                   </span>
                 </div>
                 <p className="text-sm mt-0" style={{ textAlign: "left" }}>
-                  {studentsText} {/* Dynamic students text */}
+                  {studentsText}
                 </p>
               </div>
             </div>
           </div>
         </div>
       </section>
-       <LearnEnglishOne/>
-       <LearnEnglishTwo/>
-       <LearnEnglishModel/>
-       <LearnEnglishThree/>
-       <LearnEnglishFor/>
-       <LearnEnglishFive/>
-       <LearnEnligshSix/>
+      
+      <LearnEnglishOne />
+      <LearnEnglishTwo />
+      <LearnEnglishModel />
+      <LearnEnglishThree />
+      <LearnEnglishFor />
+      <LearnEnglishFive />
+      <LearnEnligshSix />
       {/* Footer */}
       <Footer />
 

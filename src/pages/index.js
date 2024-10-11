@@ -13,8 +13,10 @@ import AgencyTab from "../components/agencyTab";
 import Blogs from "../components/blog";
 import GetInTouch from "../components/getInTuoch";
 import Navbar from '../components/navbar';
+import OfflineChat from "../components/OfflineChat";
 import WhatsAppFloatingButton from '../components/WhatsAppFloatingButton';
 import { SpeedInsights } from '@vercel/speed-insights/react';
+
 
 const loadClientData = (lang) => {
   switch (lang) {
@@ -243,7 +245,7 @@ export default function Index() {
       <section id="getInTouch">
         <GetInTouch />
       </section>
-
+            <OfflineChat/>
       <WhatsAppFloatingButton />
       <Footer />
       <SpeedInsights />

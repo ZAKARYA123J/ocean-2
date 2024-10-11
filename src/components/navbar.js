@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import { useLocation } from "react-router-dom";
@@ -56,6 +56,7 @@ export default function Navbar() {
   const [serviceData, setServiceData] = useState([]);
   const isMobile = useIsMobile();
   const location = useLocation();
+  const dropdownRef = useRef(null);
 
   // Check if we are on the "/learn-english" or "/learn-spain" page
   const isLearnEnglishPage = location.pathname === '/learn-english';
@@ -93,6 +94,19 @@ export default function Navbar() {
   const closeDropdownOnLinkClick = () => {
     setDropdowns(null);
   };
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdowns(null);
+      }
+    };
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
 
   return (
     <>
@@ -172,7 +186,7 @@ export default function Navbar() {
             </button>
           </div>
 
-          <div className={`navigation lg_992:flex ms-auto ${menuOpen ? "block" : "hidden"}`}>
+          <div className={`navigation lg_992:flex ms-auto ${menuOpen ? "block" : "hidden"}`} ref={dropdownRef}>
             {navbar.map((item, index) => (
               <ul className="navbar-nav flex flex-col lg_992:flex-row space-y-2 lg_992:space-y-0 lg_992:space-x-4" key={index}>
                 <li className="nav-item ms-0">

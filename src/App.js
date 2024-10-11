@@ -232,6 +232,7 @@ function App() {
                 <CourseDetailComponent />
               </motion.div>
             }
+            
           />
           <Route path="/team" element={<TeamPage />} />
           <Route path="/nurse" element={<TeamNurse />} />
@@ -272,7 +273,7 @@ function CourseDetailComponent() {
     return <CourseDetailsFrench courseType={courseType} />;
   } else if (courseType.includes("english")) {
     return <CourseDetailsEnglish courseType={courseType} />;
-  } else if (courseType.includes("spanish")) { // Correction ici
+  } else if (courseType.includes("spanish")) {
     return <CourseDetailsSpain courseType={courseType} />;
   } else {
     return <div>Course not found!</div>;
