@@ -44,15 +44,22 @@ const Footer = () => {
     pagelangague = [],
     ourFormation = [],
     ourServices = [],
-    footerText = { logoAlt: "", mainDescription: "", detailedDescription: "", ourServicesTitle: "", ourPageTitle: "", ourlangagueTitle:"" , ourFormationTitle: ""},
-    footerCopyright = { text: "", company: "", allRightsReserved: "", message: "",  }
+    footerText = { logoAlt: "", mainDescription: "", detailedDescription: "", ourServicesTitle: "", ourPageTitle: "", ourlangagueTitle: "", ourFormationTitle: "" },
+    footerCopyright = { text: "", company: "", allRightsReserved: "", message: "", }
 
   } = footerData;
-  const { ourServicesTitle, ourPageTitle, ourFormationTitle ,ourlangagueTitle } = footerText;
+  const { ourServicesTitle, ourPageTitle, ourFormationTitle, ourlangagueTitle } = footerText;
 
   return (
     <footer className="bg-gradient-to-br from-blue-200 via-purple-200 to-blue-300 py-6 text-black  pt-5">
-      <div className="container mx-auto px-4 md:px-6 lg:px-8">
+      {/* <div className="absolute top-0 right-0 overflow-hidden lg:inset-y-0">
+        <img
+          className="w-auto h-full"
+          src="https://d33wubrfki0l68.cloudfront.net/1e0fc04f38f5896d10ff66824a62e466839567f8/699b5/images/hero/3/background-pattern.png"
+          alt="Background Pattern"
+        />
+      </div> */}
+      <div className="container mx-auto px-4 md:px-6 lg:px-8" style={{ backgroundImage: 'url("https://d33wubrfki0l68.cloudfront.net/1e0fc04f38f5896d10ff66824a62e466839567f8/699b5/images/hero/3/background-pattern.png")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="mb-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Contact Information */}
           {contactInfo.map(({ id, Icon, title, content }) => (
@@ -64,7 +71,7 @@ const Footer = () => {
               </div>
               <div>
                 <p className="text-sm font-bold">{title}</p>
-                <p className="text-sm font-semibold "style={{ direction: 'ltr', unicodeBidi: 'plaintext' }}>{content}</p>
+                <p className="text-sm font-semibold " style={{ direction: 'ltr', unicodeBidi: 'plaintext' }}>{content}</p>
               </div>
             </div>
           ))}
@@ -118,11 +125,11 @@ const Footer = () => {
                 </Link>. {footerCopyright.allRightsReserved}
               </p>
               <p className="font-semibold text-md">
-              {footerCopyright.message}
+                {footerCopyright.message}
                 <Link to="/#" className="text-blue-600  hover:text-white">
                   Ocean Connecting
                 </Link>
-               
+
               </p>
             </div>
           </div>
