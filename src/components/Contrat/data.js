@@ -9,88 +9,190 @@ import iconcroiti from './icon/croiti.svg';
 import iconitaly from './icon/italy.svg';
 import iconspain from './icon/spain.svg';
 import iconbulgim from './icon/bulgim.svg';
+import { MdOutlineConnectWithoutContact } from "react-icons/md";
+import { GrDocumentUser } from "react-icons/gr";
+import { FaPlaneDeparture ,FaPassport  } from "react-icons/fa6";
 
-
-export const contractData = [
+export const contractCardSectionContent = {
+  title: 'Countries available for overseas job search',
+  description: 'You will find job opportunities all over Europe. At OceanConnecting, we provide access to labor markets in several European countries and support you in obtaining a work contract and the necessary documents. Join us and start your career in Europe smoothly and easily.',
+  contracts: [
     {
-        id: 1,
-        imageUrl:croatie ,
-        country: 'Croatia',
-        sector: 'Construction / Blacksmithing / Joinery / Painting / Electrical mechanic / Air conditioning / Driver license D / Butcher / hotel service',
-        language: 'Language not required',
-        visaDuration: '5 months',
-        contractDuration: '1-year employment contract',
-        contractPrice: '60,000 DH',
-        additionalInfo: 'The contract includes free accommodation and medical treatment.',
-        international: 'International',
-        latitude: 45.1,
-        longitude: 15.2,
-        icon:iconcroiti ,
+      id: 1,
+      imageUrl:croatie ,
+      country: 'Croatia',
+      sector: 'Construction / Blacksmithing / Joinery / Painting / Electrical mechanic / Air conditioning / Driver license D / Butcher / hotel service',
+      language: 'Language not required',
+      visaDuration: '5 months',
+      contractDuration: '1-year employment contract',
+      contractPrice: '60,000 DH',
+      additionalInfo: 'Housing, medical care, renewable for 5 years, and citizenship assistance.',
+      international: 'International',
+      latitude: 45.1,
+      longitude: 15.2,
+      icon:iconcroiti ,
+      label:'Croatia' ,
+    },
+    {
+      id: 2,
+      imageUrl:germany ,
+      country: 'Germany',
+      sector: 'Health and Nursing / Hotels / Programming',
+      language: 'Required language B1',
+      visaDuration: '8 months',
+      contractDuration: '1-year employment contract',
+      contractPrice: '80,000 DH',
+      additionalInfo: 'Housing, medical care, renewable for 5 years, and citizenship assistance.',
+      international: 'International',
+      latitude: 51.1657,
+      longitude: 10.4515,
+      icon:icongermany ,
+      label:'Germany' ,
+    },
+    {
+      id: 3,
+      imageUrl:bulgim ,
+      country: 'Belgium',
+      sector: 'Health and Nursing / Hotels / Programming',
+      language: 'Language B1 is necessary',
+      visaDuration: '8 months',
+      contractDuration: '1-year employment contract',
+      contractPrice: '60,000 DH',
+      additionalInfo: 'Housing, medical care, renewable for 5 years, and citizenship assistance.',
+      international: 'International',
+      latitude: 50.8503,
+      longitude: 4.3517,
+      icon:iconbulgim ,
+      label:'Belgium' ,
+    },
+    {
+      id: 4,
+      imageUrl:italy ,
+      country: 'Italy',
+      sector: 'Health and Nursing / Hotels / Agriculture',
+      language: 'Language B1 is necessary',
+      visaDuration: '8 months',
+      contractDuration: '1-year employment contract',
+      contractPrice: '60,000 DH',
+      additionalInfo: 'Housing, medical care, renewable for 5 years, and citizenship assistance.',
+      international: 'International',
+      latitude: 41.8719,
+      longitude: 12.5674,
+      icon:iconitaly ,
+      label:'Italy' ,
+    },
+    {
+      id: 5,
+      imageUrl:spain ,
+      country: 'Spain',
+      sector: 'Health and Nursing / Hotels / Agriculture',
+      language: 'Language B1 is necessary',
+      visaDuration: '8 months',
+      contractDuration: '1-year employment contract',
+      contractPrice: '60,000 DH',
+      additionalInfo: 'Housing, medical care, renewable for 5 years, and citizenship assistance.',
+      international: 'International',
+      latitude: 40.4637,
+      longitude: -3.7492,
+      icon:iconspain ,
+      label:'Spain' ,
+    },
+    // Add more contracts as needed
+  ]
+};
+
+export const questionSectionContent = {
+  title: 'Questions & Answers',
+  description: 'Explore the common questions and answers about Celebration',
+  questions: [
+    {
+      question: 'Contract length?',
+      answer: 'The contract is for one year and renewable for up to five, ensuring long-term stability and growth.',
+    },
+    {
+      question: 'Is accommodation provided?',
+      answer: 'Accommodation and medical care are provided to ensure your comfort and health.',
+    },
+    {
+      question: 'Is the service available in all cities or only in Agadir and Casablanca?',
+      answer: 'Yes, we handle requests for all cities, not just Casablanca, ensuring that our services are accessible no matter where you are.',
+    },
+    {
+      question: 'Has anyone used your service before?',
+      answer: 'Yes, many individuals have successfully utilized our services and found meaningful employment opportunities in Europe.',
+    },
+  ],
+  footer: {
+    text: 'Didn’t find the answer you are looking for?',
+    linkText: 'Contact our support',
+  },
+};
+
+export const stepsSectionContent = {
+  heading: 'How It Works',
+  title: 'Stages of providing an offshore contract to our clients',
+  description: 'Get your contract with the best companies in Europe in just 4 easy steps',
+  steps: [
+    {
+      icon: MdOutlineConnectWithoutContact,
+      title: 'Contact us',
+      description: 'Use your own Notion databases or duplicate ours.',
+    },
+    {
+      icon: GrDocumentUser,
+      title: 'Receive the file with documents',
+      description: 'Map your Notion fields with Feather fields.',
+    },
+    {
+      icon: FaPassport,
+      title: 'Contract and Visa',
+      description: 'Choose a domain or a subdomain for your blog.',
+    },
+    {
+      icon: FaPlaneDeparture,
+      title: 'Travel',
+      description: 'That\'s it. You will get back a professional blog.',
+    },
+  ],
+};
+
+export const heroSectionContent = {
+  title: 'Get a work contract in Europe as soon as possible',
+  description: 'Welcome to OceanConnecting! We\'re here to help you find fulfilling job opportunities in Europe, providing job contracts and handling all necessary documents for a smooth transition. Let us guide you to meaningful employment across the continent.',
+  avatars: [
+    {
+      src: 'https://d33wubrfki0l68.cloudfront.net/3bfa6da479d6b9188c58f2d9a8d33350290ee2ef/301f1/images/hero/3/avatar-male.png',
+      alt: 'Avatar 1',
+    },
+    {
+      src: 'https://d33wubrfki0l68.cloudfront.net/b52fa09a115db3a80ceb2d52c275fadbf84cf8fc/7fd8a/images/hero/3/avatar-female-1.png',
+      alt: 'Avatar 2',
+    },
+    {
+      src: 'https://d33wubrfki0l68.cloudfront.net/8a2efb13f103a5ae2909e244380d73087a9c2fc4/31ed6/images/hero/3/avatar-female-2.png',
+      alt: 'Avatar 3',
+    },
+  ],
+  joinText1: 'Join with ',
+  joinText2: '600+ Workers abroad ',
+  joinText3: ' and start realizing your dreams and desires with OceanConnecting',
+  buttons: [
+    {
+      text: 'Contact US',
+      link: '/contract',
+      className: 'inline-flex items-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gradient-to-r from-blue-600 to-red-600 border rounded-xl font-pj hover:bg-gray-600 hover:to-red-500 transform hover:scale-105',
+    },
+    {
+      text: 'Download Form',
+      link: '/contract',
+      className: 'inline-flex items-center px-4 py-4 text-lg font-bold transition-all duration-200 bg-transparent border rounded-xl hover:bg-gradient-to-r from-blue-600 to-red-600 hover:text-white hover:to-red-500 transform hover:scale-105',
+      icon: {
+        svgPath: 'M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4',
       },
-      {
-        id: 2,
-        imageUrl:germany ,
-        country: 'Germany',
-        sector: 'Health and Nursing / Hotels / Programming',
-        language: 'Required language B1',
-        visaDuration: '8 months',
-        contractDuration: '1-year employment contract',
-        contractPrice: '80,000 DH',
-        additionalInfo: 'The contract includes free accommodation, medical treatment, and language courses.',
-        international: 'International',
-        latitude: 51.1657,
-        longitude: 10.4515,
-        icon:icongermany ,
-      },
-      {
-        id: 3,
-        imageUrl:bulgim ,
-        country: 'Belgium',
-        sector: 'Health and Nursing / Hotels / Programming',
-        language: 'Language B1 is necessary',
-        visaDuration: '8 months',
-        contractDuration: '1-year employment contract',
-        contractPrice: '60,000 DH',
-        additionalInfo: 'The contract includes free accommodation, transportation allowances, and medical insurance.',
-        international: 'International',
-        latitude: 50.8503,
-        longitude: 4.3517,
-        icon:iconbulgim ,
-      },
-      {
-        id: 4,
-        imageUrl:italy ,
-        country: 'Italy',
-        sector: 'Health and Nursing / Hotels / Agriculture',
-        language: 'Language B1 is necessary',
-        visaDuration: '8 months',
-        contractDuration: '1-year employment contract',
-        contractPrice: '60,000 DH',
-        additionalInfo: 'The contract includes free accommodation, meals, and access to medical care.',
-        international: 'International',
-        latitude: 41.8719,
-        longitude: 12.5674,
-        icon:iconitaly ,
-      },
-      {
-        id: 5,
-        imageUrl:spain ,
-        country: 'Spain',
-        sector: 'Health and Nursing / Hotels / Agriculture',
-        language: 'Language B1 is necessary',
-        visaDuration: '8 months',
-        contractDuration: '1-year employment contract',
-        contractPrice: '60,000 DH',
-        additionalInfo: 'The contract includes free accommodation, flight tickets, and comprehensive health coverage.',
-        international: 'International',
-        latitude: 40.4637,
-        longitude: -3.7492,
-        icon:iconspain ,
-      },
-    
-    
-  ];
-  
+    },
+  ],
+};
+
   export const testimonials = [
     {
         name: 'Sarah L.',
