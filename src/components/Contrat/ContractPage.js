@@ -9,12 +9,7 @@ import ContractCardSection from './card';
 import QuestionSection from './questions';
 import StepsSection from './steps';
 import GetInTouch from '../getInTuoch';
-
-import {
-  FaTimes, FaPhoneAlt, FaEnvelope, FaFileAlt, FaClipboardList, FaEnvelopeOpenText, FaCheckCircle,
-  FaQuoteLeft, FaMapMarkerAlt, FaCalendarAlt, FaMoneyBillWave, FaLanguage, FaHome, FaMedkit
-} from 'react-icons/fa';
-import { contractData, testimonials, faqs } from './data';
+import FormSection from './formdetail';
 
 
 
@@ -34,12 +29,13 @@ const ContractWorksPage = () => {
     <>
       <Navbar />
       <HeroSection />
+      <FormSection/>
       <ContractCardSection />
       <StepsSection/>
       <QuestionSection />
-      <div className="flex flex-col min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100">
+      {/* <div className="flex flex-col min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100"> */}
         {/* Success Stories Section */}
-        <section className="py-16 bg-white dark:bg-gray-800 text-center">
+        {/* <section className="py-16 bg-white dark:bg-gray-800 text-center">
           <h2 className="text-4xl font-bold mb-12 bg-gradient-to-r from-blue-600 to-red-600 bg-clip-text text-transparent dark:from-blue-500 dark:to-red-500 tracking-tight animate-slideDown">
             Success Stories
           </h2>
@@ -59,7 +55,7 @@ const ContractWorksPage = () => {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Application Process Section */}
         {/* <section className="py-16 bg-gray-100 dark:bg-gray-900 text-center">
@@ -112,7 +108,7 @@ const ContractWorksPage = () => {
         )}
 
         <Footer />
-      </div>
+      {/* </div> */}
     </>
   );
 };

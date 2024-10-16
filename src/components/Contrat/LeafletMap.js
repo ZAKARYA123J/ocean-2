@@ -75,7 +75,7 @@ const LeafletMap = ({ contracts }) => {
   return (
     <div
       ref={mapContainerRef}
-      className="w-full h-[400px] rounded-xl shadow-lg overflow-hidden"
+      className="w-full h-[200px] md:h-[400px] rounded-xl shadow-lg overflow-hidden"
       style={{ borderRadius: '20px' }}
     />
   );

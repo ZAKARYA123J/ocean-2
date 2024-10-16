@@ -13,190 +13,152 @@ import { MdOutlineConnectWithoutContact } from "react-icons/md";
 import { GrDocumentUser } from "react-icons/gr";
 import { FaPlaneDeparture ,FaPassport  } from "react-icons/fa6";
 
-
-const formSectionData = {
-  title: "How to place the file and what documentation is required ?",
-  subtitle: "HERE WE ARE",
-  content: [
-    {
-      text: "We offer specialized services in providing employment contracts in various European countries, along with visa and travel assistance. Our streamlined process ensures a hassle-free experience.",
-    },
-    {
-      text: "Required documents:",
-      isBold: true
-    },
-    {
-      icon: true,
-      text: "The judicial record is obtained from the court, signature correction at the Ministry of Foreign Affairs (Apostil) and translated into English."
-    },
-    {
-      icon: true,
-      text: "A photograph of you."
-    },
-    {
-      icon: true,
-      text: "A copy of your passport."
-    },
-    {
-      icon: true,
-      text: "The form which can be obtained by clicking on the download button below."
-    },
-    {
-      icon: true,
-      text: "Video and photo of you practicing the profession in which you want to serve 🙏🏻 or to make it easier for you, you can send us the original documents (PDF)."
-    },
-  ],
-  downloadText: "Download the following file",
-  buttonText:"Download Form",
-};
-
-export default formSectionData;
 export const contractCardSectionContent = {
-  title: 'Countries available for overseas job search',
-  description: 'You will find job opportunities all over Europe. At OceanConnecting, we provide access to labor markets in several European countries and support you in obtaining a work contract and the necessary documents. Join us and start your career in Europe smoothly and easily.',
+  title: "Pays disponibles pour la recherche d'emploi à l'étranger",
+  description: "Vous trouverez des opportunités d'emploi dans toute l'Europe. Chez OceanConnecting, nous vous donnons accès aux marchés du travail de plusieurs pays européens et nous vous aidons à obtenir un contrat de travail et les documents nécessaires. Rejoignez-nous et commencez votre carrière en Europe facilement et en douceur.",
   contracts: [
     {
       id: 1,
       imageUrl:croatie ,
-      country: 'Croatia',
-      sector: 'Construction / Blacksmithing / Joinery / Painting / Electrical mechanic / Air conditioning / Driver license D / Butcher / hotel service',
-      language: 'Language not required',
-      visaDuration: '5 months',
-      contractDuration: '1-year employment contract',
+      country: 'Croatie',
+      sector: 'Construction / Forge / Menuiserie / Peinture / Mécanique électrique / Climatisation / Permis de conduire D / Boucherie / Hôtellerie',
+      language: 'Langue non requise',
+      visaDuration: '5 mois',
+      contractDuration: "Contrat de travail d'un 1 an",
       contractPrice: '60,000 DH',
-      additionalInfo: 'Housing, medical care, renewable for 5 years, and citizenship assistance.',
+      additionalInfo: 'Logement, soins médicaux, renouvelables pour 5 ans, et aide à la citoyenneté.',
       international: 'International',
       latitude: 45.1,
       longitude: 15.2,
       icon:iconcroiti ,
-      label:'Croatia' ,
+      label:'Croatie' ,
     },
     {
       id: 2,
       imageUrl:germany ,
-      country: 'Germany',
-      sector: 'Health and Nursing / Hotels / Programming',
-      language: 'Required language B1',
-      visaDuration: '8 months',
-      contractDuration: '1-year employment contract',
+      country: 'Allemagne',
+      sector: 'Santé et soins infirmiers / Hôtels / Programmation',
+      language: 'Langue requise B1',
+      visaDuration: '8 mois',
+      contractDuration: "Contrat de travail d'un 1 an",
       contractPrice: '80,000 DH',
-      additionalInfo: 'Housing, medical care, renewable for 5 years, and citizenship assistance.',
+      additionalInfo: 'Logement, soins médicaux, renouvelables pour 5 ans, et aide à la citoyenneté.',
       international: 'International',
       latitude: 51.1657,
       longitude: 10.4515,
       icon:icongermany ,
-      label:'Germany' ,
+      label:'Allemagne' ,
     },
     {
       id: 3,
       imageUrl:bulgim ,
-      country: 'Belgium',
-      sector: 'Health and Nursing / Hotels / Programming',
-      language: 'Language B1 is necessary',
-      visaDuration: '8 months',
-      contractDuration: '1-year employment contract',
+      country: 'Belgique',
+      sector: 'Santé et soins infirmiers / Hôtels / Programmation',
+      language: 'Langue requise B1',
+      visaDuration: '8 mois',
+      contractDuration: "Contrat de travail d'un 1 an",
       contractPrice: '60,000 DH',
-      additionalInfo: 'Housing, medical care, renewable for 5 years, and citizenship assistance.',
+      additionalInfo: 'Logement, soins médicaux, renouvelables pour 5 ans, et aide à la citoyenneté.',
       international: 'International',
       latitude: 50.8503,
       longitude: 4.3517,
       icon:iconbulgim ,
-      label:'Belgium' ,
+      label:'Belgique' ,
     },
     {
       id: 4,
       imageUrl:italy ,
-      country: 'Italy',
-      sector: 'Health and Nursing / Hotels / Agriculture',
-      language: 'Language B1 is necessary',
-      visaDuration: '8 months',
-      contractDuration: '1-year employment contract',
+      country: 'Italie',
+      sector: 'Santé et soins infirmiers / Hôtellerie / Agriculture',
+      language: 'Langue requise B1',
+      visaDuration: '8 mois',
+      contractDuration: "Contrat de travail d'un 1 an",
       contractPrice: '60,000 DH',
-      additionalInfo: 'Housing, medical care, renewable for 5 years, and citizenship assistance.',
+      additionalInfo: 'Logement, soins médicaux, renouvelables pour 5 ans, et aide à la citoyenneté.',
       international: 'International',
       latitude: 41.8719,
       longitude: 12.5674,
       icon:iconitaly ,
-      label:'Italy' ,
+      label:'Italie' ,
     },
     {
       id: 5,
       imageUrl:spain ,
-      country: 'Spain',
-      sector: 'Health and Nursing / Hotels / Agriculture',
-      language: 'Language B1 is necessary',
-      visaDuration: '8 months',
-      contractDuration: '1-year employment contract',
+      country: 'Espagne',
+      sector: 'Santé et soins infirmiers / Hôtellerie / Agriculture',
+      language: 'Langue requise B1',
+      visaDuration: '8 mois',
+      contractDuration: "Contrat de travail d'un 1 an",
       contractPrice: '60,000 DH',
-      additionalInfo: 'Housing, medical care, renewable for 5 years, and citizenship assistance.',
+      additionalInfo: 'Logement, soins médicaux, renouvelables pour 5 ans, et aide à la citoyenneté.',
       international: 'International',
       latitude: 40.4637,
       longitude: -3.7492,
       icon:iconspain ,
-      label:'Spain' ,
+      label:'Espagne' ,
     },
     // Add more contracts as needed
   ]
 };
 
 export const questionSectionContent = {
-  title: 'Questions & Answers',
-  description: 'Explore the common questions and answers about Celebration',
+  title: 'Questions & réponses',
+  description: 'Découvrez les questions et réponses les plus courantes sur la Célébration',
   questions: [
     {
-      question: 'Contract length?',
-      answer: 'The contract is for one year and renewable for up to five, ensuring long-term stability and growth.',
+      question: 'Durée du contrat ?',
+      answer: "Le contrat est d'une durée d'un an et peut être renouvelé jusqu'à cinq ans, ce qui garantit une stabilité et une croissance à long terme.",
     },
     {
-      question: 'Is accommodation provided?',
-      answer: 'Accommodation and medical care are provided to ensure your comfort and health.',
+      question: 'Un hébergement est-il prévu ?',
+      answer: "L'hébergement et les soins médicaux sont fournis pour assurer votre confort et votre santé.",
     },
     {
-      question: 'Is the service available in all cities or only in Agadir and Casablanca?',
-      answer: 'Yes, we handle requests for all cities, not just Casablanca, ensuring that our services are accessible no matter where you are.',
+      question: 'Le service est-il disponible dans toutes les villes ou seulement à Agadir et Casablanca ?',
+      answer: 'Oui, nous traitons les demandes pour toutes les villes, pas seulement Casablanca, ce qui garantit que nos services sont accessibles où que vous soyez.',
     },
     {
-      question: 'Has anyone used your service before?',
-      answer: 'Yes, many individuals have successfully utilized our services and found meaningful employment opportunities in Europe.',
+      question: "Quelqu'un a-t-il déjà eu recours à vos services ?",
+      answer: "Oui, de nombreuses personnes ont utilisé nos services avec succès et ont trouvé des opportunités d'emploi intéressantes en Europe.",
     },
   ],
   footer: {
-    text: 'Didn’t find the answer you are looking for?',
-    linkText: 'Contact our support',
+    text: "Vous n'avez pas trouvé la réponse que vous cherchiez ?",
+    linkText: "Contactez notre service d'assistance",
   },
 };
 
 export const stepsSectionContent = {
-  heading: 'How It Works',
-  title: 'Stages of providing an offshore contract to our clients',
-  description: 'Get your contract with the best companies in Europe in just 4 easy steps',
+  heading: 'Comment ça marche',
+  title: "Étapes de la fourniture d'un contrat offshore à nos clients",
+  description: "Obtenez votre contrat avec les meilleures entreprises d'Europe en seulement 4 étapes simples",
   steps: [
     {
       icon: MdOutlineConnectWithoutContact,
-      title: 'Contact us',
-      description: 'Use your own Notion databases or duplicate ours.',
+      title: 'Contactez nous',
+      description: 'Utilisez vos propres bases de données Notion ou reproduisez les nôtres.',
     },
     {
       icon: GrDocumentUser,
-      title: 'Receive the file with documents',
-      description: 'Map your Notion fields with Feather fields.',
+      title: 'Recevoir le dossier avec les documents',
+      description: 'Mettez en correspondance vos champs Notion avec les champs Plume.',
     },
     {
       icon: FaPassport,
-      title: 'Contract and Visa',
-      description: 'Choose a domain or a subdomain for your blog.',
+      title: 'Contrat et visa',
+      description: 'Choisissez un domaine ou un sous-domaine pour votre blog.',
     },
     {
       icon: FaPlaneDeparture,
-      title: 'Travel',
-      description: 'That\'s it. You will get back a professional blog.',
+      title: 'Voyage',
+      description: "C'est tout. Vous obtiendrez un blog professionnel.",
     },
   ],
 };
 
 export const heroSectionContent = {
   title: 'Get a work contract in Europe as soon as possible',
-  description: 'Welcome to OceanConnecting! We\'re here to help you find fulfilling job opportunities in Europe, providing job contracts and handling all necessary documents for a smooth transition. Let us guide you to meaningful employment across the continent.',
+  description: "Bienvenue à OceanConnecting ! Nous sommes là pour vous aider à trouver des opportunités d'emploi satisfaisantes en Europe, en vous fournissant des contrats de travail et en nous occupant de tous les documents nécessaires pour une transition en douceur. Laissez-nous vous guider vers un emploi intéressant à travers le continent.",
   avatars: [
     {
       src: 'https://d33wubrfki0l68.cloudfront.net/3bfa6da479d6b9188c58f2d9a8d33350290ee2ef/301f1/images/hero/3/avatar-male.png',
@@ -211,9 +173,9 @@ export const heroSectionContent = {
       alt: 'Avatar 3',
     },
   ],
-  joinText1: 'Join with ',
-  joinText2: '600+ Workers abroad ',
-  joinText3: ' and start realizing your dreams and desires with OceanConnecting',
+  joinText1: "S'associer à ",
+  joinText2: "Plus de 600 travailleurs à l'étranger ",
+  joinText3: ' et commencez à réaliser vos rêves et vos désirs avec OceanConnecting',
   buttons: [
     {
       text: 'Contact US',
@@ -221,7 +183,7 @@ export const heroSectionContent = {
       className: 'inline-flex items-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gradient-to-r from-blue-600 to-red-600 border rounded-xl font-pj hover:bg-gray-600 hover:to-red-500 transform hover:scale-105',
     },
     {
-      text: 'Download Form',
+      text: 'Télécharger le formulaire',
       link: '/contract',
       className: 'inline-flex items-center px-4 py-4 text-lg font-bold transition-all duration-200 bg-transparent border rounded-xl hover:bg-gradient-to-r from-blue-600 to-red-600 hover:text-white hover:to-red-500 transform hover:scale-105',
       icon: {

@@ -13,44 +13,6 @@ import { MdOutlineConnectWithoutContact } from "react-icons/md";
 import { GrDocumentUser } from "react-icons/gr";
 import { FaPlaneDeparture ,FaPassport  } from "react-icons/fa6";
 
-
-const formSectionData = {
-  title: "How to place the file and what documentation is required ?",
-  subtitle: "HERE WE ARE",
-  content: [
-    {
-      text: "We offer specialized services in providing employment contracts in various European countries, along with visa and travel assistance. Our streamlined process ensures a hassle-free experience.",
-    },
-    {
-      text: "Required documents:",
-      isBold: true
-    },
-    {
-      icon: true,
-      text: "The judicial record is obtained from the court, signature correction at the Ministry of Foreign Affairs (Apostil) and translated into English."
-    },
-    {
-      icon: true,
-      text: "A photograph of you."
-    },
-    {
-      icon: true,
-      text: "A copy of your passport."
-    },
-    {
-      icon: true,
-      text: "The form which can be obtained by clicking on the download button below."
-    },
-    {
-      icon: true,
-      text: "Video and photo of you practicing the profession in which you want to serve 🙏🏻 or to make it easier for you, you can send us the original documents (PDF)."
-    },
-  ],
-  downloadText: "Download the following file",
-  buttonText:"Download Form",
-};
-
-export default formSectionData;
 export const contractCardSectionContent = {
   title: 'Countries available for overseas job search',
   description: 'You will find job opportunities all over Europe. At OceanConnecting, we provide access to labor markets in several European countries and support you in obtaining a work contract and the necessary documents. Join us and start your career in Europe smoothly and easily.',
@@ -174,22 +136,22 @@ export const stepsSectionContent = {
     {
       icon: MdOutlineConnectWithoutContact,
       title: 'Contact us',
-      description: 'Use your own Notion databases or duplicate ours.',
+      description: 'You can contact us via WhatsApp, email or phone to get all the necessary information.',
     },
     {
       icon: GrDocumentUser,
-      title: 'Receive the file with documents',
-      description: 'Map your Notion fields with Feather fields.',
+      title: 'Place the file with the documents',
+      description: 'Receive the file with the necessary documents and fill out the form with all the required information and then place it in the agency.',
     },
     {
       icon: FaPassport,
-      title: 'Contract and Visa',
-      description: 'Choose a domain or a subdomain for your blog.',
+      title: 'Contract and visa',
+      description: 'After providing the contract, signing it and handing over the dues, a visa application is placed in Rabat.',
     },
     {
       icon: FaPlaneDeparture,
       title: 'Travel',
-      description: 'That\'s it. You will get back a professional blog.',
+      description: 'After obtaining the visa, the outstanding dues are delivered and the travel is done after 3 days, and after arrival you start working the next day.',
     },
   ],
 };
