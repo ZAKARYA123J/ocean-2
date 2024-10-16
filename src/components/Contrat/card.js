@@ -34,11 +34,11 @@ const ContractCardSection = () => {
   }, [currentLanguage]);
 
   if (!contractContent) {
-    return <div>Loading...</div>; // Show loading state while fetching content
+    return <div></div>; 
   }
 
   if (!contractContent.contracts || contractContent.contracts.length === 0) {
-    return <div>No contracts available</div>; // Handle empty or undefined contracts array
+    return <div></div>; 
   }
 
   return (
@@ -58,7 +58,7 @@ const ContractCardSection = () => {
                 className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-2"
               >
                 <img
-                  src={contract?.imageUrl || '/path-to-default-image.jpg'} // Fallback to default image
+                  src={contract?.imageUrl || '/path-to-default-image.jpg'} 
                   alt={contract?.country || 'Unknown'}
                   className="w-full h-48 object-cover rounded-t-lg mb-4"
                 />

@@ -13,6 +13,43 @@ import { MdOutlineConnectWithoutContact } from "react-icons/md";
 import { GrDocumentUser } from "react-icons/gr";
 import { FaPlaneDeparture ,FaPassport  } from "react-icons/fa6";
 
+
+export const formSectionData = {
+  title: "How to place the file and what documentation is required ?",
+  subtitle: "HERE WE ARE",
+  content: [
+    {
+      text: "We offer specialized services in providing employment contracts in various European countries, along with visa and travel assistance. Our streamlined process ensures a hassle-free experience.",
+    },
+    {
+      text: "Required documents:",
+      isBold: true
+    },
+    {
+      icon: true,
+      text: "The judicial record is obtained from the court, signature correction at the Ministry of Foreign Affairs (Apostil) and translated into English."
+    },
+    {
+      icon: true,
+      text: "A photograph of you."
+    },
+    {
+      icon: true,
+      text: "A copy of your passport."
+    },
+    {
+      icon: true,
+      text: "The form which can be obtained by clicking on the download button below."
+    },
+    {
+      icon: true,
+      text: "Video and photo of you practicing the profession in which you want to serve 🙏🏻 or to make it easier for you, you can send us the original documents (PDF)."
+    },
+  ],
+  downloadText: "Download the following file",
+  buttonText:"Download Form",
+};
+
 export const contractCardSectionContent = {
   title: "Pays disponibles pour la recherche d'emploi à l'étranger",
   description: "Vous trouverez des opportunités d'emploi dans toute l'Europe. Chez OceanConnecting, nous vous donnons accès aux marchés du travail de plusieurs pays européens et nous vous aidons à obtenir un contrat de travail et les documents nécessaires. Rejoignez-nous et commencez votre carrière en Europe facilement et en douceur.",
