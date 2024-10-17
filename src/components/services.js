@@ -1,35 +1,10 @@
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
 import { Link } from "react-router-dom";
 import './i18n';
 import { useTranslation } from 'react-i18next';
-
-const CTA = styled.button`
-  background-color: var(--white);
-  color: #3a86ff;
-  padding: 0.5rem 1rem;
-  margin-top: 1rem;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 15px;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  transition: transform 0.2s;
-  border: solid 1px blue;
-
-  @media only screen and (max-width: 48em) {
-    padding: 0.2rem 1rem;
-  }
-
-  &:hover {
-    transform: scale(1.1);
-  }
-
-  &:active {
-    transform: scale(0.9);
-  }
-`;
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import '../../src/assets/css/Services.css';
 
 const loadClientData = async (lang) => {
   try {
@@ -48,76 +23,93 @@ const loadClientData = async (lang) => {
   }
 };
 
-// const loadHTML = async (lang) => {
-//   try {
-//     switch (lang) {
-//       case 'fr':
-//         return (await import('./locales/fr/translation')).htmlFR;
-//       case 'ar':
-//         return (await import('./locales/ar/translation')).htmlAR;
-//       case 'en':
-//       default:
-//         return (await import('./locales/en/translation')).htmlEN;
-//     }
-//   } catch (error) {
-//     console.error(`Failed to load HTML for language ${lang}`, error);
-//     return [];
-//   }
-// };
-
 const Services = () => {
   const [serviceData, setServiceData] = useState([]);
+  const [loading, setLoading] = useState(true);
   const { i18n, t } = useTranslation();
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await loadClientData(i18n.language);
-      setServiceData(data);
-
-
+      setLoading(true);
+      try {
+        const data = await loadClientData(i18n.language);
+        setServiceData(data);
+      } catch (error) {
+        console.error("Error fetching service data:", error);
+      } finally {
+        setLoading(false);
+      }
     };
 
     fetchData();
   }, [i18n.language]);
 
-  const limitedItems = serviceData.slice(0, 4);
+  useEffect(() => {
+    AOS.init({
+      offset: 120,
+      duration: 700,
+      easing: 'ease-in-out',
+      delay: 100,
+      once: true,
+    });
+    AOS.refresh();
+  }, []);
 
-  return (      
-    <div className="bg-white-100 dark:bg-black dark:text-white py-12 sm:grid sm:place-items-center" id="services">
-      <div className="container">
-        {/* Header */}
-        <div className="pb-12 text-center space-y-3">
-          {serviceData.map((title, index) => (
-            <h1
-              key={index}
-              data-aos="fade-up"
-              className="text-3xl font-semibold sm:text-3xl text-violet-950 dark:text-primary"
-            >
-              {t(title.Servicetitle)}
-            </h1>
-          ))}
-        </div>
+  const limitedItems = serviceData.slice(0, 6);
 
-        {/* Services cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center min-h-screen">
+        {/* Pulse effect for loading */}
+        <div className="loading-pulse"></div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="bg-gray-50 dark:bg-gray-900 dark:text-white py-16" id="services">
+      <div className="container mx-auto px-6 lg:px-8">
+        {serviceData.map((skill)=>(
+        <h1 className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-10">
+          {t(skill.Servicetitle)}
+        </h1>))}
+
+        {/* Services grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {limitedItems.map((skill) => (
-            <div
+            <Link
+              to={skill.link}
               key={skill.id}
+              className="card-wrapper"
               data-aos="fade-up"
               data-aos-delay={skill.aosDelay}
-              className="card space-y-3 sm:space-y-4 p-4"
             >
-              <div style={{ color: 'skyblue' }} className="text-4xl text-primary">
-                {skill.icon}
+              <div className="card">
+                <div className="card-image">
+                  {/* Image */}
+                  <img 
+                    src={skill.image} 
+                    alt={t(skill.title)} 
+                    className="w-full h-48 object-cover"
+                  />
+                </div>
+
+                <div className="card-content">
+                  {/* Card content */}
+                  <h2 id={`service-title-${skill.id}`} className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
+                    {t(skill.title)}
+                  </h2>
+
+                  <p className="text-gray-600 dark:text-gray-300 mb-2">
+                    {t(skill.description)}
+                  </p>
+
+                  <div className="text-blue-600 dark:text-blue-400 font-medium">
+                    {t(skill.Bouton)} &rarr;
+                  </div>
+                </div>
               </div>
-              <h1 className="text-lg font-semibold">{t(skill.title)}</h1>
-              <p className="text-gray-600 dark:text-gray-400">
-                {t(skill.desc)}
-              </p>
-              <Link to={`/service/${skill.id}`}>
-                <CTA>{t(skill.Button)}</CTA>
-              </Link>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

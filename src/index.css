@@ -2,14 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
-ul li{
-    -webkit-margin-start: 0.25rem;
-            margin-inline-start: 0.25rem;
-  }
-  ul li:first-child{
-    -webkit-margin-start: 0px;
-            margin-inline-start: 0px;
-  }
-  html {
-        scroll-behavior: smooth;
-      }
+ul li {
+  -webkit-margin-start: 0.25rem;
+  margin-inline-start: 0.25rem;
+}
+
+ul li:first-child {
+  -webkit-margin-start: 0px;
+  margin-inline-start: 0px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.chatbot-container {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.chat-window {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.message {
+  margin: 10px 0;
+}
+
+.message.bot {
+  text-align: left;
+  color: #333;
+}
+
+.message.user {
+  text-align: right;
+  color: #007bff;
+}
+
+.input-box {
+  width: calc(100% - 70px);
+  padding: 10px;
+}
+
+.questions-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.question-button {
+  margin: 5px 0;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
