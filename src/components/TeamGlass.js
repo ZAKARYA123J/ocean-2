@@ -13,7 +13,7 @@ import Footer from './foooter';
 import Modal from './Modal';
 import LogoServesGlass from './LogoServesGlass';
 import projectAlphaLogo from '../assets/images/done/glass4.png';
-import projectBetaLogo1 from '../assets/images/done/glass2.png';
+import projectBetaLogo1 from '../assets/images/team/glass.jpg';
 import projectBetaLogo2 from '../assets/images/done/glass5.png';
 
 // Translation resources
@@ -176,9 +176,6 @@ const TeamGlass = () => {
             alt="Team"
             className="w-full h-80 object-cover rounded-lg mb-12 shadow-md"
           />
-
-          
-
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
             {TeamGlassr.map((member) => (
               <div key={member.id} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
