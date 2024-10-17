@@ -56,7 +56,7 @@ const HeroSection = () => {
   }, [currentLanguage]);
 
   if (!heroContent || !contractContent) {
-    return <div>Loading...</div>; // Show loading state while fetching content
+    return <div></div>; // Show loading state while fetching content
   }
 
   return (
@@ -96,15 +96,21 @@ const HeroSection = () => {
                 </div>
               </div>
               <div className="mt-8 sm:flex sm:items-center sm:justify-center lg:justify-start sm:space-x-5 lg:mt-12">
-                {heroContent?.buttons?.map((button, index) => (
                   <a
-                    key={index}
-                    href={button?.link || '#'}
-                    title=""
-                    className={button?.className || 'default-button-class'}
-                    role="button"
-                  >
-                    {button?.icon && (
+                  href={heroContent?.link1 || '#'}
+                  title=""
+                  className={heroContent?.className1 || 'default-button-class'}
+                  role="button"
+                >
+                    {heroContent?.text1 || 'Click'}
+                  </a>
+                  <a
+                  href={heroContent?.link2 || '#'}
+                  title=""
+                  className={heroContent?.className2 || 'default-button-class'}
+                  role="button"
+                  download="form"
+                >
                       <svg
                         className="w-5 h-5 mr-2"
                         xmlns="http://www.w3.org/2000/svg"
@@ -116,13 +122,11 @@ const HeroSection = () => {
                           strokeLinecap="round"
                           strokeLinejoin="round"
                           strokeWidth="2.5"
-                          d={button?.icon?.svgPath}
+                          d={heroContent?.icon?.svgPath}
                         ></path>
                       </svg>
-                    )}
-                    {button?.text || 'Click'}
+                    {heroContent?.text2 || 'Click'}
                   </a>
-                ))}
               </div>
             </div>
             <div className="w-full lg:w-1/2 lg:pl-8 flex justify-center lg:justify-end mt-8 lg:mt-0">

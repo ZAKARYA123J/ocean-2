@@ -13,6 +13,7 @@ import GalleryDetail from "./components/Gallery/detailgallery";
 import TeamPage from "./components/TeamPage";
 import TeamNurse from "./components/TeamNurse";
 import ContractPage from "./components/Contrat/ContractPage";
+import DeatailFormation from "./components/formmation/detailformation";
 import LanguagesPage from "./components/LanguagesPage";
 import { HelmetProvider } from "react-helmet-async";
 import { SpeedInsights } from "@vercel/speed-insights/react";
@@ -193,7 +194,25 @@ function App() {
           {/* Pages WITHOUT transitions to avoid layout issues */}
           <Route path="/team" element={<TeamPage />} />
           <Route path="/nurse" element={<TeamNurse />} />
-          <Route path="/contract" element={<ContractPage />} />
+
+          <Route
+            path="/contract"
+            element={
+              <motion.div
+                style={pageStyle}
+                initial={{ opacity: 0, x: -200 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 200 }}
+                transition={{
+                  duration: 0.5,
+                  ease: [0.42, 0, 0.58, 1],
+                }}
+              >
+                <ContractPage />
+              </motion.div>
+            }
+          />
+          <Route path="/detail" element={<DeatailFormation />} />
           <Route path="/teamglass" element={<TeamGlass />} />
           {/* Pages with custom transitions
           <Route

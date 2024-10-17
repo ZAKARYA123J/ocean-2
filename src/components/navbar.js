@@ -229,7 +229,7 @@ const limitedItems=serviceData.slice(1,6)
 
                 {/* Lien vers les Jobs */}
                 <li className="nav-item ms-0">
-                  <Link className="nav-link" to="/jobs" onClick={closeDropdownOnLinkClick}>
+                  <Link className="nav-link" to="/contract" onClick={closeDropdownOnLinkClick}>
                     {t(item.Jobs)}
                   </Link>
                 </li>

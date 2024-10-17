@@ -9,6 +9,7 @@ import iconcroiti from './icon/croiti.svg';
 import iconitaly from './icon/italy.svg';
 import iconspain from './icon/spain.svg';
 import iconbulgim from './icon/bulgim.svg';
+import form from '../../assets/images/form.pdf';
 import { MdOutlineConnectWithoutContact } from "react-icons/md";
 import { GrDocumentUser } from "react-icons/gr";
 import { FaPlaneDeparture ,FaPassport  } from "react-icons/fa6";
@@ -48,11 +49,12 @@ export const formSectionData = {
   ],
   downloadText: "Download the following file",
   buttonText:"Download Form",
+  link:form ,
 };
 
 export const contractCardSectionContent = {
   title: 'Countries available for overseas job search',
-  description: 'You will find job opportunities all over Europe. At OceanConnecting, we provide access to labor markets in several European countries and support you in obtaining a work contract and the necessary documents. Join us and start your career in Europe smoothly and easily.',
+  description: 'You will find job opportunities all over Europe. At Ocean Connecting, we provide access to labor markets in several European countries and support you in obtaining a work contract and the necessary documents. Join us and start your career in Europe smoothly and easily.',
   button:'To Apply',
   contracts: [
     {
@@ -60,9 +62,9 @@ export const contractCardSectionContent = {
       imageUrl:croatie ,
       country: 'Croatia',
       sector: 'Construction / Blacksmithing / Joinery / Painting / Electrical mechanic / Air conditioning / Driver license D / Butcher / hotel service',
-      language: 'Language not required',
-      visaDuration: '5 months',
-      contractDuration: '1-year employment contract',
+      language: 'Language is not required',
+      visaDuration: 'The duration of the visa is 5 months.',
+      contractDuration: 'A 1-year employment contract',
       contractPrice: 'The contract price is 60,000 DH.',
       additionalInfo: 'Housing, medical care, renewable for 5 years, and citizenship assistance.',
       international: 'International',
@@ -78,8 +80,8 @@ export const contractCardSectionContent = {
       country: 'Germany',
       sector: 'Health and Nursing / Hotels / Programming',
       language: 'Required language B1',
-      visaDuration: '8 months',
-      contractDuration: '1-year employment contract',
+      visaDuration: 'The duration of the visa is 8 months.',
+      contractDuration: 'A 1-year employment contract',
       contractPrice: 'The contract price is 80,000 DH.',
       additionalInfo: 'Housing, medical care, renewable for 5 years, and citizenship assistance.',
       international: 'International',
@@ -95,8 +97,8 @@ export const contractCardSectionContent = {
       country: 'Belgium',
       sector: 'Health and Nursing / Hotels / Programming',
       language: 'Language B1 is necessary',
-      visaDuration: '8 months',
-      contractDuration: '1-year employment contract',
+      visaDuration: 'The duration of the visa is 8 months.',
+      contractDuration: 'A 1-year employment contract',
       contractPrice: 'The contract price is 60,000 DH.',
       additionalInfo: 'Housing, medical care, renewable for 5 years, and citizenship assistance.',
       international: 'International',
@@ -112,8 +114,8 @@ export const contractCardSectionContent = {
       country: 'Italy',
       sector: 'Health and Nursing / Hotels / Agriculture',
       language: 'Language B1 is necessary',
-      visaDuration: '8 months',
-      contractDuration: '1-year employment contract',
+      visaDuration: 'The duration of the visa is 8 months.',
+      contractDuration: 'A 1-year employment contract',
       contractPrice: 'The contract price is 60,000 DH.',
       additionalInfo: 'Housing, medical care, renewable for 5 years, and citizenship assistance.',
       international: 'International',
@@ -129,8 +131,8 @@ export const contractCardSectionContent = {
       country: 'Spain',
       sector: 'Health and Nursing / Hotels / Agriculture',
       language: 'Language B1 is necessary',
-      visaDuration: '8 months',
-      contractDuration: '1-year employment contract',
+      visaDuration: 'The duration of the visa is 8 months.',
+      contractDuration: 'A 1-year employment contract',
       contractPrice: 'The contract price is 60,000 DH.',
       additionalInfo: 'Housing, medical care, renewable for 5 years, and citizenship assistance.',
       international: 'International',
@@ -183,7 +185,7 @@ export const stepsSectionContent = {
     {
       icon: GrDocumentUser,
       title: 'Place the file with the documents',
-      description: 'Receive the file with the necessary documents and fill out the form with all the required information and then place it in the agency.',
+      description: 'Receive the file with the necessary documents, fill out the required form, and submit it to the agency.',
     },
     {
       icon: FaPassport,
@@ -193,14 +195,14 @@ export const stepsSectionContent = {
     {
       icon: FaPlaneDeparture,
       title: 'Travel',
-      description: 'After obtaining the visa, the outstanding dues are delivered and the travel is done after 3 days, and after arrival you start working the next day.',
+      description: 'After obtaining the visa, the outstanding dues are delivered, and travel is arranged for 3 days later; you will start working the next day after arrival.',
     },
   ],
 };
 
 export const heroSectionContent = {
   title: 'Get a work contract in Europe as soon as possible',
-  description: 'Welcome to OceanConnecting! We\'re here to help you find fulfilling job opportunities in Europe, providing job contracts and handling all necessary documents for a smooth transition. Let us guide you to meaningful employment across the continent.',
+  description: 'Welcome to Ocean Connecting! We\'re here to help you find fulfilling job opportunities in Europe, providing job contracts and handling all necessary documents for a smooth transition. Let us guide you to meaningful employment across the continent.',
   avatars: [
     {
       src: 'https://d33wubrfki0l68.cloudfront.net/3bfa6da479d6b9188c58f2d9a8d33350290ee2ef/301f1/images/hero/3/avatar-male.png',
@@ -215,24 +217,18 @@ export const heroSectionContent = {
       alt: 'Avatar 3',
     },
   ],
-  joinText1: 'Join with ',
-  joinText2: '600+ Workers abroad ',
-  joinText3: ' and start realizing your dreams and desires with OceanConnecting',
-  buttons: [
-    {
-      text: 'Contact US',
-      link: '/contract',
-      className: 'inline-flex items-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gradient-to-r from-blue-600 to-red-600 border rounded-xl font-pj hover:bg-gray-600 hover:to-red-500 transform hover:scale-105',
-    },
-    {
-      text: 'Download Form',
-      link: '/contract',
-      className: 'inline-flex items-center px-4 py-4 text-lg font-bold transition-all duration-200 bg-transparent border rounded-xl hover:bg-gradient-to-r from-blue-600 to-red-600 hover:text-white hover:to-red-500 transform hover:scale-105',
-      icon: {
-        svgPath: 'M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4',
-      },
-    },
-  ],
+  joinText1: 'Join over ',
+  joinText2: '600 workers abroad ',
+  joinText3: ' and start realizing your dreams and desires with Ocean Connecting',
+  text1: 'Contact US',
+  link1: '/contract',
+  className1: 'inline-flex items-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gradient-to-r from-blue-600 to-red-600 border rounded-xl font-pj hover:bg-gray-600 hover:to-red-500 transform hover:scale-105',
+  text2: 'Download Form',
+  link2: form ,
+  className2: 'inline-flex items-center px-4 py-4 text-lg font-bold transition-all duration-200 bg-transparent border rounded-xl hover:bg-gradient-to-r from-blue-600 to-red-600 hover:text-white hover:to-red-500 transform hover:scale-105',
+  icon: {
+    svgPath: 'M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4',
+  },
 };
 
   export const testimonials = [

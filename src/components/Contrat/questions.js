@@ -26,7 +26,7 @@ const QuestionSection = () => {
   }, [currentLanguage]);
 
   if (!content) {
-    return <div>Loading...</div>; 
+    return <div></div>; 
   }
 
   return (

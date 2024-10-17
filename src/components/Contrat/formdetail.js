@@ -67,10 +67,11 @@ const FormSection = () => {
                             <h3 className="mb-4 font-semibold text-gray-400">{FormData.downloadText}</h3>
                             <div className="mt-4 sm:flex sm:items-center sm:justify-center lg:justify-start sm:space-x-5 lg:mt-12">
                                 <a
-                                    href='#'
+                                    href={FormData?.link}
                                     title="Download Form"
                                     className='inline-flex items-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gradient-to-r from-blue-600 to-red-600 border rounded-xl font-pj hover:bg-gray-600 hover:to-red-500 transform hover:scale-105'
-                                    role="button"
+                                    role="button" 
+                                    download="form"
                                 >
                                     <svg
                                         className="w-5 h-5 mr-2"

@@ -26,7 +26,7 @@ const StepsSection = () => {
   }, [currentLanguage]);
 
   if (!stepsContent) {
-    return <div>Loading...</div>; // Show a loading state until content is loaded
+    return <div></div>; // Show a loading state until content is loaded
   }
 
   return (
