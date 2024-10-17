@@ -13,7 +13,7 @@ import Footer from './foooter';
 import Modal from './Modal';
 import LogoServesGlass from './LogoServesGlass';
 import projectAlphaLogo from '../assets/images/done/glass4.png';
-import projectBetaLogo1 from '../assets/images/done/glass2.png';
+import projectBetaLogo1 from '../assets/images/team/glass.jpg';
 import projectBetaLogo2 from '../assets/images/done/glass5.png';
 
 // Translation resources
@@ -21,7 +21,7 @@ const resources = {
   en: {
     translation: {
       title: "Window Cleaning",
-      description: "Noble Business operates in Agadir, offering a variety of cleaning services. Choose us for our reputation of excellence.",
+      description: "operates in Agadir, offering a variety of cleaning services. Choose us for our reputation of excellence.",
       why_choose_us: "Why Choose Our Cleaning Company?",
       assurance_quality: "QUALITY ASSURANCE",
       reliable_teams: "RELIABLE TEAMS",
@@ -54,7 +54,7 @@ const resources = {
   fr: {
     translation: {
       title: "Nettoyage de vitres",
-      description: "L’entreprise Noble Business opère à Agadir et propose une variété de services de nettoyage. Choisissez-nous en raison de notre réputation d’excellence.",
+      description: "L’entreprise opère à Agadir et propose une variété de services de nettoyage. Choisissez-nous en raison de notre réputation d’excellence.",
       why_choose_us: "Pourquoi Choisir Notre Société de Nettoyage?",
       assurance_quality: "ASSURANCE QUALITÉ",
       reliable_teams: "DES ÉQUIPES FIABLES",
@@ -87,7 +87,7 @@ const resources = {
   ar: {
     translation: {
       title: "تنظيف النوافذ",
-      description: "تعمل شركة Noble Business في أغادير وتقدم مجموعة متنوعة من خدمات التنظيف. اخترنا بفضل سمعتنا في التميز.",
+      description: "تعمل شركة  في أغادير وتقدم مجموعة متنوعة من خدمات التنظيف. اخترنا بفضل سمعتنا في التميز.",
       why_choose_us: "لماذا تختار شركتنا للتنظيف؟",
       assurance_quality: "ضمان الجودة",
       reliable_teams: "فرق موثوقة",
@@ -176,9 +176,6 @@ const TeamGlass = () => {
             alt="Team"
             className="w-full h-80 object-cover rounded-lg mb-12 shadow-md"
           />
-
-          
-
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
             {TeamGlassr.map((member) => (
               <div key={member.id} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">

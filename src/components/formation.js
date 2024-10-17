@@ -139,7 +139,7 @@ const CourseCard = () => {
 
           {/* Search and Filter Inputs */}
           <div className="relative flex justify-center items-center mt-4">
-            <div className="relative flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4 p-6">
+            {/* <div className="relative flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4 p-6">
               <FilterInput
                 type="text"
                 placeholder="Search by title"
@@ -157,7 +157,7 @@ const CourseCard = () => {
                   <option key={option.value} value={option.value}>{t(option.label)}</option>
                 ))}
               </FilterSelect>
-            </div>
+            </div> */}
           </div>
         </div>
 
