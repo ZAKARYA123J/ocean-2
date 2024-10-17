@@ -15,44 +15,45 @@ import { FaPlaneDeparture ,FaPassport  } from "react-icons/fa6";
 
 
 export const formSectionData = {
-  title: "How to place the file and what documentation is required ?",
-  subtitle: "HERE WE ARE",
+  title: "Comment placer le dossier et quelle est la documentation requise ?",
+  subtitle: "NOUS SOMMES ICI",
   content: [
     {
-      text: "We offer specialized services in providing employment contracts in various European countries, along with visa and travel assistance. Our streamlined process ensures a hassle-free experience.",
+      text: "Nous offrons des services spécialisés dans la fourniture de contrats de travail dans divers pays européens, ainsi qu'une assistance en matière de visa et de voyage. Notre processus simplifié garantit une expérience sans tracas.",
     },
     {
-      text: "Required documents:",
+      text: "Documents requis :",
       isBold: true
     },
     {
       icon: true,
-      text: "The judicial record is obtained from the court, signature correction at the Ministry of Foreign Affairs (Apostil) and translated into English."
+      text: "Le dossier judiciaire est obtenu auprès du tribunal, la correction de la signature auprès du ministère des affaires étrangères (Apostille) et la traduction en anglais."
     },
     {
       icon: true,
-      text: "A photograph of you."
+      text: "Une photo de vous."
     },
     {
       icon: true,
-      text: "A copy of your passport."
+      text: "Une copie de votre passeport."
     },
     {
       icon: true,
-      text: "The form which can be obtained by clicking on the download button below."
+      text: "Le formulaire peut être obtenu en cliquant sur le bouton de téléchargement ci-dessous."
     },
     {
       icon: true,
-      text: "Video and photo of you practicing the profession in which you want to serve 🙏🏻 or to make it easier for you, you can send us the original documents (PDF)."
+      text: "Vidéo et photo de vous exerçant la profession dans laquelle vous souhaitez servir 🙏🏻 ou, pour vous faciliter la tâche, vous pouvez nous envoyer les documents originaux (PDF)."
     },
   ],
-  downloadText: "Download the following file",
-  buttonText:"Download Form",
+  downloadText: "Télécharger le fichier suivant",
+  buttonText:"Télécharger le formulaire",
 };
 
 export const contractCardSectionContent = {
   title: "Pays disponibles pour la recherche d'emploi à l'étranger",
   description: "Vous trouverez des opportunités d'emploi dans toute l'Europe. Chez OceanConnecting, nous vous donnons accès aux marchés du travail de plusieurs pays européens et nous vous aidons à obtenir un contrat de travail et les documents nécessaires. Rejoignez-nous et commencez votre carrière en Europe facilement et en douceur.",
+  button:'To Apply',
   contracts: [
     {
       id: 1,
@@ -69,6 +70,7 @@ export const contractCardSectionContent = {
       longitude: 15.2,
       icon:iconcroiti ,
       label:'Croatie' ,
+      link:"https://api.whatsapp.com/send/?phone=%2B212657236635&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D9%83%D8%B1%D9%88%D8%A7%D8%AA%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
     },
     {
       id: 2,
@@ -85,6 +87,8 @@ export const contractCardSectionContent = {
       longitude: 10.4515,
       icon:icongermany ,
       label:'Allemagne' ,
+      link: "https://api.whatsapp.com/send/?phone=%2B212657236635&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A3%D9%84%D9%85%D8%A7%D9%86%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+
     },
     {
       id: 3,
@@ -101,6 +105,8 @@ export const contractCardSectionContent = {
       longitude: 4.3517,
       icon:iconbulgim ,
       label:'Belgique' ,
+      link: "https://api.whatsapp.com/send/?phone=%2B212657236635&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A8%D9%84%D8%AC%D9%8A%D9%83%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+
     },
     {
       id: 4,
@@ -117,6 +123,8 @@ export const contractCardSectionContent = {
       longitude: 12.5674,
       icon:iconitaly ,
       label:'Italie' ,
+      link:"https://api.whatsapp.com/send/?phone=%2B212657236635&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A5%D9%8A%D8%B7%D8%A7%D9%84%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",
+
     },
     {
       id: 5,
@@ -133,6 +141,8 @@ export const contractCardSectionContent = {
       longitude: -3.7492,
       icon:iconspain ,
       label:'Espagne' ,
+      link: "https://api.whatsapp.com/send/?phone=%2B212657236635&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+Ocean+Connecting+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85+%D8%A8%D8%B7%D9%84%D8%A8+%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84+%D8%B9%D9%84%D9%89+%D8%B9%D9%82%D8%AF+%D8%B9%D9%85%D9%84+%D8%A8%D8%AF%D9%88%D9%84%D8%A9+%D8%A5%D8%B3%D8%A8%D8%A7%D9%86%D9%8A%D8%A7+https%3A%2F%2Foceanconnecting.ma%2Fnos-services&type=phone_number&app_absent=0",   
+
     },
     // Add more contracts as needed
   ]

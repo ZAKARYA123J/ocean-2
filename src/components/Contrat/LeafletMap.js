@@ -51,11 +51,11 @@ const LeafletMap = ({ contracts }) => {
                 </a>
               </div>
               <div class="w-3/5 p-2 bg-white" style="border-radius: 0 0.375rem 0.375rem 0;">
-                <a href="#">
+                <a href=${contract.link}>
                   <h3 class="text-md font-bold bg-gradient-to-r from-blue-600 to-red-600 bg-clip-text text-transparent">${contract.country}</h3>
                 </a>
                 <p class="text-sm text-gray-600 mb-1">${contract.sector}</p>
-                <a href="#">
+                <a href=href=${contract.link}>
                   <p class="text-md font-bold bg-gradient-to-r from-blue-600 to-red-600 bg-clip-text text-transparent">${contract.contractDuration}</p>
                 </a>
               </div>

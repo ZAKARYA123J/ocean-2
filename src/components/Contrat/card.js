@@ -3,6 +3,7 @@ import { FaMapMarkerAlt, FaLanguage, FaCalendarAlt, FaMoneyBillWave, FaMedkit } 
 import { MdDomainAdd } from "react-icons/md";
 import { GrFormNext } from "react-icons/gr";
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 const loadContractData = async (lang) => {
   try {
@@ -67,25 +68,27 @@ const ContractCardSection = () => {
                   <h3 className="text-xl font-semibold">{contract?.country || 'Unknown'}</h3>
                 </div>
                 <p className="text-gray-700 dark:text-gray-300 mb-2">
-                  <MdDomainAdd className="inline-block mr-2 text-blue-600" /><strong>Secteur:</strong> {contract?.sector || 'N/A'}
+                  <MdDomainAdd className="inline-block mr-2 text-blue-600" />{contract?.sector || 'N/A'}
                 </p>
                 <p className="text-gray-700 dark:text-gray-300 mb-2">
-                  <FaLanguage className="inline-block mr-2 text-blue-600" /> <strong>Niveau Langue:</strong> {contract?.language || 'N/A'}
+                  <FaLanguage className="inline-block mr-2 text-blue-600" />{contract?.language || 'N/A'}
                 </p>
                 <p className="text-gray-700 dark:text-gray-300 mb-2">
-                  <FaCalendarAlt className="inline-block mr-2 text-blue-600" /> <strong>Contract Duration:</strong> {contract?.contractDuration || 'N/A'}
+                  <FaCalendarAlt className="inline-block mr-2 text-blue-600" />{contract?.contractDuration || 'N/A'}
                 </p>
                 <p className="text-gray-700 dark:text-gray-300 mb-2">
-                  <FaMoneyBillWave className="inline-block mr-2 text-blue-600" /> <strong>Price:</strong> {contract?.contractPrice || 'N/A'}
+                  <FaMoneyBillWave className="inline-block mr-2 text-blue-600" />{contract?.contractPrice || 'N/A'}
                 </p>
                 <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  <FaMedkit className="inline-block mr-2 text-blue-600" /> <strong>More:</strong> {contract?.additionalInfo || 'N/A'}
+                  <FaMedkit className="inline-block mr-2 text-blue-600" />{contract?.additionalInfo || 'N/A'}
                 </p>
-                <button className="mt-2 px-8 py-2 bg-gradient-to-r from-blue-600 to-red-600 text-white rounded-full shadow-md hover:from-blue-500 hover:to-red-500 transition-colors duration-300">
+                <Link to={contract?.link}>
+                <button  className="mt-2 px-8 py-2 bg-gradient-to-r from-blue-600 to-red-600 text-white rounded-full shadow-md hover:from-blue-500 hover:to-red-500 transition-colors duration-300">
                   <span className="flex items-center font-bold">
-                    To apply <GrFormNext className='font-bold' />
+                    {contractContent?.button} <GrFormNext className='font-bold' />
                   </span>
                 </button>
+                </Link>
               </li>
             ) : null
           ))}
