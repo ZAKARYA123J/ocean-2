@@ -21,7 +21,7 @@ const resources = {
   en: {
     translation: {
       title: "Window Cleaning",
-      description: "Noble Business operates in Agadir, offering a variety of cleaning services. Choose us for our reputation of excellence.",
+      description: "operates in Agadir, offering a variety of cleaning services. Choose us for our reputation of excellence.",
       why_choose_us: "Why Choose Our Cleaning Company?",
       assurance_quality: "QUALITY ASSURANCE",
       reliable_teams: "RELIABLE TEAMS",
@@ -54,7 +54,7 @@ const resources = {
   fr: {
     translation: {
       title: "Nettoyage de vitres",
-      description: "L’entreprise Noble Business opère à Agadir et propose une variété de services de nettoyage. Choisissez-nous en raison de notre réputation d’excellence.",
+      description: "L’entreprise opère à Agadir et propose une variété de services de nettoyage. Choisissez-nous en raison de notre réputation d’excellence.",
       why_choose_us: "Pourquoi Choisir Notre Société de Nettoyage?",
       assurance_quality: "ASSURANCE QUALITÉ",
       reliable_teams: "DES ÉQUIPES FIABLES",
@@ -87,7 +87,7 @@ const resources = {
   ar: {
     translation: {
       title: "تنظيف النوافذ",
-      description: "تعمل شركة Noble Business في أغادير وتقدم مجموعة متنوعة من خدمات التنظيف. اخترنا بفضل سمعتنا في التميز.",
+      description: "تعمل شركة  في أغادير وتقدم مجموعة متنوعة من خدمات التنظيف. اخترنا بفضل سمعتنا في التميز.",
       why_choose_us: "لماذا تختار شركتنا للتنظيف؟",
       assurance_quality: "ضمان الجودة",
       reliable_teams: "فرق موثوقة",
