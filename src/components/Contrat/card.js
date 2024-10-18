@@ -76,9 +76,9 @@ const ContractCardSection = () => {
                 <p className="text-gray-700 dark:text-gray-300 mb-2">
                   <FaCalendarAlt className="inline-block mr-2 text-blue-600" />{contract?.contractDuration || 'N/A'}
                 </p>
-                <p className="text-gray-700 dark:text-gray-300 mb-2">
+                {/* <p className="text-gray-700 dark:text-gray-300 mb-2">
                   <FaMoneyBillWave className="inline-block mr-2 text-blue-600" />{contract?.contractPrice || 'N/A'}
-                </p>
+                </p> */}
                 <p className="text-gray-700 dark:text-gray-300 mb-4">
                   <FaMedkit className="inline-block mr-2 text-blue-600" />{contract?.additionalInfo || 'N/A'}
                 </p>

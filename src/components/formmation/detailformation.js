@@ -4,8 +4,10 @@ import Footer from '../foooter';
 import Doctor from '../../assets/images/1.jpg';
 import For from '../../assets/images/formation/formation8.jpg';
 import { CheckCircle, Clock, MapPin, Calendar, Award, User, Book } from "lucide-react";
+import 'react-slideshow-image/dist/styles.css'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Slide } from 'react-slideshow-image';
 import Slider from "react-slick";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa"; // Icons for the navigation buttons
 
@@ -23,6 +25,14 @@ const imageList = [
 ];
 
 
+
+const divStyle = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  backgroundSize: 'cover',
+  height: '400px'
+}
 
 
 
@@ -119,17 +129,25 @@ function FirstAidEssentials() {
           {/* Part 2 */}
           <div className="space-y-6">
             <div className="overflow-hidden rounded-lg">
-                {imageList.map((image, index) => (
+              {/* {imageList.map((image, index) => (
+                <div key={index}>
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    width={800}
+                    height={200}
+                    className="object-cover"
+                  />
+                </div>
+              ))} */}
+              <Slide>
+                {imageList.map((imageList, index) => (
                   <div key={index}>
-                    <img
-                      src={image.src}
-                      alt={image.alt}
-                      width={800}
-                      height={200}
-                      className="object-cover"
-                    />
+                    <div style={{ ...divStyle, 'backgroundImage': `url(${imageList.src})` }}>
+                    </div>
                   </div>
                 ))}
+              </Slide>
             </div>
             <Card>
               <CardHeader>
