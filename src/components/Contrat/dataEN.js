@@ -205,15 +205,15 @@ export const heroSectionContent = {
   description: 'Welcome to Ocean Connecting! We\'re here to help you find fulfilling job opportunities in Europe, providing job contracts and handling all necessary documents for a smooth transition. Let us guide you to meaningful employment across the continent.',
   avatars: [
     {
-      src: 'https://d33wubrfki0l68.cloudfront.net/3bfa6da479d6b9188c58f2d9a8d33350290ee2ef/301f1/images/hero/3/avatar-male.png',
-      alt: 'Avatar 1',
-    },
-    {
-      src: 'https://d33wubrfki0l68.cloudfront.net/b52fa09a115db3a80ceb2d52c275fadbf84cf8fc/7fd8a/images/hero/3/avatar-female-1.png',
+      src: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Site%20ocean%2Fcontracts-03.jpg?alt=media&token=4e3dd626-33aa-4aa4-9dc8-826c96ccdc59',
       alt: 'Avatar 2',
     },
     {
-      src: 'https://d33wubrfki0l68.cloudfront.net/8a2efb13f103a5ae2909e244380d73087a9c2fc4/31ed6/images/hero/3/avatar-female-2.png',
+      src: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Site%20ocean%2Fcontracts-01.jpg?alt=media&token=be349650-9c42-4faa-b0d6-97f658115750',
+      alt: 'Avatar 1',
+    },
+    {
+      src: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Site%20ocean%2Fcontracts-04.jpg?alt=media&token=80e6a85a-6816-47a1-b7b4-c7eea5b9687d',
       alt: 'Avatar 3',
     },
   ],

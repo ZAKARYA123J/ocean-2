@@ -80,7 +80,7 @@ const HeroSection = () => {
                   {heroContent?.description || 'Default description'}
                 </p>
                 <div className="mt-8 lg:mt-12 flex lg:items-center">
-                  <div className="flex justify-center lg:justify-start -space-x-4 overflow-hidden">
+                  <div className="flex justify-center lg:justify-start -space-x-3 overflow-hidden">
                     {heroContent?.avatars?.map((avatar, index) => (
                       <img
                         key={index}
