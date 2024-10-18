@@ -1,136 +1,94 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FiCheckCircle } from 'react-icons/fi';
 
 const Ex1 = ({ onScoreUpdate, nextStep }) => {
-  const [score, setScore] = useState(0);
-  const [selectedOption, setSelectedOption] = useState(null); // Track selected option
-  const [disableHover, setDisableHover] = useState(false); // Track hover state
-  const [isOptionLocked, setIsOptionLocked] = useState(false); // Lock option after selection
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [selectedOptionIndex, setSelectedOptionIndex] = useState(null);
+  const [correctCount, setCorrectCount] = useState(0);
+  const [incorrectCount, setIncorrectCount] = useState(0);
+  const [answered, setAnswered] = useState(false);
 
-  const pageRef = useRef(null); // Reference to the page wrapper
+  const questions = [
+    { question: 'What is the capital of France?', options: [{ text: 'Paris', correct: true }, { text: 'Lyon', correct: false }] },
+    { question: 'Which is a synonym for "happy"?', options: [{ text: 'Joyful', correct: true }, { text: 'Sad', correct: false }] },
+    { question: 'What is 2 + 2?', options: [{ text: '4', correct: true }, { text: '5', correct: false }] },
+    { question: 'Choose the correct sentence:', options: [{ text: 'She like coffee.', correct: false }, { text: 'She likes coffee.', correct: true }] },
+    { question: 'What is the opposite of "fast"?', options: [{ text: 'Slow', correct: true }, { text: 'Quick', correct: false }] },
+    { question: 'Which one is a verb?', options: [{ text: 'Run', correct: true }, { text: 'Quickly', correct: false }] },
+    { question: 'Choose the correct form of the verb: "She ______ the book yesterday."', options: [{ text: 'Readed', correct: false }, { text: 'Read', correct: true }] },
+    { question: 'What is the plural of "child"?', options: [{ text: 'Children', correct: true }, { text: 'Childs', correct: false }] },
+    { question: 'Which one is a fruit?', options: [{ text: 'Apple', correct: true }, { text: 'Potato', correct: false }] },
+    { question: 'Which is the correct question form?', options: [{ text: 'Do you like pizza?', correct: true }, { text: 'You do like pizza?', correct: false }] },
+  ];
 
-  // Handle form submission and pass score back to parent component
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    onScoreUpdate('ex1', score); // Send score to parent
-    nextStep(); // Go to next exercise
-  };
+  const handleOptionSelect = (index) => {
+    if (answered) return;
+    setSelectedOptionIndex(index);
 
-  // Add scroll event listener to detect scrolling and disable hover effects while scrolling
-  useEffect(() => {
-    let timeoutId;
+    const isCorrect = questions[currentQuestionIndex].options[index].correct;
 
-    const handleScroll = () => {
-      setDisableHover(true); // Disable hover effect during scroll
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(() => {
-        setDisableHover(false); // Re-enable hover effect after scroll stops
-      }, 500); // Re-enable hover 500ms after scrolling stops
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      clearTimeout(timeoutId);
-    };
-  }, []);
-
-  // Handle option selection and lock it
-  const handleOptionSelect = (option, scoreValue) => {
-    if (!isOptionLocked) {
-      setSelectedOption(option); // Set selected option
-      setScore(scoreValue); // Update score
-      setIsOptionLocked(true); // Lock the selection
+    if (isCorrect) {
+      setCorrectCount((prev) => prev + 1);
+    } else {
+      setIncorrectCount((prev) => prev + 1);
     }
+
+    setAnswered(true);
   };
+
+  const handleSubmit = () => {
+    setAnswered(false);
+    setSelectedOptionIndex(null);
+    setCurrentQuestionIndex((prev) => prev + 1);
+  };
+
+  useEffect(() => {
+    if (correctCount >= 3) {
+      onScoreUpdate(3);
+      nextStep();
+    }
+  }, [correctCount, onScoreUpdate, nextStep]);
 
   return (
-    <div
-      ref={pageRef}
-      className="p-8 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg shadow-2xl max-w-2xl mx-auto mt-16"
-    >
-      <h2 className="text-3xl font-bold text-[#65A662] mb-6 text-center">
-        Exercise 1: <span className="text-blue-500">Grammar</span>
+    <div className="p-8 bg-white rounded-lg shadow-lg max-w-3xl mx-auto mt-16">
+      <h2 className="text-4xl font-bold text-center text-[#65A662] mb-6">
+        Level A1: English Proficiency Quiz
       </h2>
-      <p className="text-lg text-gray-600 mb-8 text-center">
-        Choose the correct sentence to complete the exercise:
+
+      <p className="text-lg text-gray-500 mb-4 text-center">
+        Answer the following questions to proceed to the next level.
       </p>
 
-      <form onSubmit={handleSubmit} className="space-y-6">
-        {/* Option 1 */}
-        <div
-          className={`p-4 border-2 rounded-lg cursor-pointer transition-all duration-300 ${
-            !disableHover ? 'hover:shadow-lg' : ''
-          } ${selectedOption === 'wrong' ? 'bg-red-100 border-red-400' : 'bg-white border-gray-300'}`}
-          onClick={() => handleOptionSelect('wrong', 0)}
-        >
-          <label className="flex items-center space-x-3">
-            <input
-              type="radio"
-              name="grammar"
-              value="wrong"
-              checked={selectedOption === 'wrong'}
-              disabled={isOptionLocked}
-              className="form-radio h-5 w-5 text-blue-500"
-            />
-            <span className="text-gray-800">She don't like apples.</span>
-          </label>
-        </div>
+      <div className="mb-8">
+        <p className="text-xl text-gray-800 mb-6 text-center font-medium">
+          {questions[currentQuestionIndex].question}
+        </p>
+        {questions[currentQuestionIndex].options.map((option, idx) => (
+          <button
+            key={idx}
+            onClick={() => handleOptionSelect(idx)}
+            disabled={answered} // Disable selection after answering
+            className={`border-2 p-3 rounded-lg mb-4 block w-full text-left transition-all duration-300 ${
+              selectedOptionIndex === idx
+                ? option.correct
+                  ? 'bg-green-100 border-green-500' // Show green if correct
+                  : 'bg-red-100 border-red-500' // Show red if incorrect
+                : 'bg-gray-100 border-gray-300 hover:bg-gray-200'
+            }`}
+          >
+            {option.text}
+          </button>
+        ))}
+      </div>
 
-        {/* Option 2 */}
-        <div
-          className={`p-4 border-2 rounded-lg cursor-pointer transition-all duration-300 ${
-            !disableHover ? 'hover:shadow-lg' : ''
-          } ${selectedOption === 'correct' ? 'bg-green-100 border-green-400' : 'bg-white border-gray-300'}`}
-          onClick={() => handleOptionSelect('correct', 10)}
-        >
-          <label className="flex items-center space-x-3">
-            <input
-              type="radio"
-              name="grammar"
-              value="correct"
-              checked={selectedOption === 'correct'}
-              disabled={isOptionLocked}
-              className="form-radio h-5 w-5 text-blue-500"
-            />
-            <span className="text-gray-800">She doesn't like apples.</span>
-          </label>
-        </div>
-
-        {/* New Option 3 */}
-        <div
-          className={`p-4 border-2 rounded-lg cursor-pointer transition-all duration-300 ${
-            !disableHover ? 'hover:shadow-lg' : ''
-          } ${selectedOption === 'neutral' ? 'bg-yellow-100 border-yellow-400' : 'bg-white border-gray-300'}`}
-          onClick={() => handleOptionSelect('neutral', 0)}
-        >
-          <label className="flex items-center space-x-3">
-            <input
-              type="radio"
-              name="grammar"
-              value="neutral"
-              checked={selectedOption === 'neutral'}
-              disabled={isOptionLocked}
-              className="form-radio h-5 w-5 text-blue-500"
-            />
-            <span className="text-gray-800">She isn’t like apples.</span>
-          </label>
-        </div>
-
-        {/* Submit Button */}
-        <button
-          type="submit"
-          className={`mt-8 bg-[#65A662] text-white py-3 px-6 rounded-full shadow-lg transition-all duration-300 ${
-            !disableHover ? 'hover:shadow-xl hover:bg-green-600' : ''
-          } focus:outline-none`}
-        >
-          <div className="flex items-center justify-center">
-            <FiCheckCircle className="mr-2" />
-            Submit & Next
-          </div>
-        </button>
-      </form>
+      <button
+        onClick={handleSubmit}
+        disabled={selectedOptionIndex === null}
+        className="bg-[#65A662] text-white py-3 px-8 rounded-full shadow-md hover:shadow-lg hover:bg-green-600 transition-transform duration-300 focus:outline-none"
+      >
+        <FiCheckCircle className="mr-2" />
+        Submit Answer
+      </button>
     </div>
   );
 };

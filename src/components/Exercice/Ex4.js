@@ -1,203 +1,115 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { FiCheckCircle } from 'react-icons/fi'; // Icon for modern look
+import React, { useState, useEffect } from 'react';
+import { FiCheckCircle } from 'react-icons/fi';
 
-const Ex4 = ({ onScoreUpdate, nextStep, prevStep }) => {
-  const [score, setScore] = useState(0);
-  const [selectedOption1, setSelectedOption1] = useState(null); // Track selected option for Q1
-  const [selectedOption2, setSelectedOption2] = useState(null); // Track selected option for Q2
-  const [isOptionLocked, setIsOptionLocked] = useState(false); // Lock options after submission
-  const [disableHover, setDisableHover] = useState(false); // Track hover state
+const Ex4 = ({ onScoreUpdate, nextStep }) => {
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [selectedOptionIndex, setSelectedOptionIndex] = useState(null);
+  const [correctCount, setCorrectCount] = useState(0);
+  const [incorrectCount, setIncorrectCount] = useState(0);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [hasPassed, setHasPassed] = useState(false);
 
-  const pageRef = useRef(null); // Reference to the page wrapper
+  // Array of B2 level questions
+  const questions = [
+    { question: 'What is the correct usage of "nevertheless"?', options: [{ text: 'The weather was bad; nevertheless, we went to the park.', correct: true }, { text: 'The weather was bad, nevertheless we went to the park.', correct: false }] },
+    { question: 'Choose the correct form of reported speech:', options: [{ text: 'She said she will come.', correct: false }, { text: 'She said she would come.', correct: true }] },
+    { question: 'Which sentence uses a future perfect tense?', options: [{ text: 'I will have finished my work by 6 PM.', correct: true }, { text: 'I will finish my work by 6 PM.', correct: false }] },
+    { question: 'What is the synonym of "alleviate"?', options: [{ text: 'Aggravate', correct: false }, { text: 'Relieve', correct: true }] },
+    { question: 'Which one is a correct conditional sentence?', options: [{ text: 'If I would have seen him, I would have told you.', correct: false }, { text: 'If I had seen him, I would have told you.', correct: true }] },
+    { question: 'Complete the sentence: "Hardly _______ the train left the station when the passengers arrived."', options: [{ text: 'did', correct: true }, { text: 'has', correct: false }] },
+    { question: 'What is the opposite of "mandatory"?', options: [{ text: 'Optional', correct: true }, { text: 'Necessary', correct: false }] },
+    { question: 'Which one is grammatically correct?', options: [{ text: 'It’s important that she goes to the meeting.', correct: false }, { text: 'It’s important that she go to the meeting.', correct: true }] },
+    { question: 'What is a synonym for "resilient"?', options: [{ text: 'Tough', correct: true }, { text: 'Fragile', correct: false }] },
+    { question: 'Choose the correct question tag:', options: [{ text: 'You’ve finished, haven’t you?', correct: true }, { text: 'You’ve finished, didn’t you?', correct: false }] },
+  ];
 
-  // Handle form submission and pass score back to parent component
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const score1 = selectedOption1 === 'present' ? 5 : 0;
-    const score2 = selectedOption2 === 'future' ? 5 : 0;
-    const finalScore = score1 + score2;
-
-    setScore(finalScore); // Set the total score
-    onScoreUpdate('ex4', finalScore); // Send score to parent
-    setIsOptionLocked(true); // Lock the selection after submission
-    nextStep(); // Go to next exercise
+  const handleOptionSelect = (index) => {
+    setSelectedOptionIndex(index);
   };
 
-  // Add scroll event listener to detect scrolling and disable hover effects while scrolling
+  const handleSubmit = () => {
+    if (selectedOptionIndex === null) return;
+
+    const isCorrect = questions[currentQuestionIndex].options[selectedOptionIndex].correct;
+
+    if (isCorrect) {
+      setCorrectCount((prev) => prev + 1);
+    } else {
+      setIncorrectCount((prev) => prev + 1);
+    }
+
+    setIsSubmitting(true);
+
+    setTimeout(() => {
+      setSelectedOptionIndex(null);
+      setCurrentQuestionIndex((prev) => prev + 1);
+      setIsSubmitting(false);
+    }, 500);
+  };
+
+  // Handle passing logic (4 correct answers for B2)
   useEffect(() => {
-    let timeoutId;
+    if (correctCount >= 4 && !hasPassed) {
+      setHasPassed(true);
+      onScoreUpdate(4); // B2 level requires 4 correct answers to pass
+    }
+  }, [correctCount, hasPassed, onScoreUpdate]);
 
-    const handleScroll = () => {
-      setDisableHover(true); // Disable hover effect during scroll
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(() => {
-        setDisableHover(false); // Re-enable hover effect after scroll stops
-      }, 500); // Re-enable hover 500ms after scrolling stops
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      clearTimeout(timeoutId);
-    };
-  }, []);
+  // Render logic
+  if (hasPassed) {
+    return (
+      <div className="p-8 bg-white rounded-lg shadow-lg max-w-3xl mx-auto mt-16 text-center">
+        <h2 className="text-4xl font-bold text-[#65A662] mb-6">Congratulations!</h2>
+        <p className="text-xl text-gray-800 mb-4">
+          You have completed Level B2.<br /> Level C1 is now unlocked!
+        </p>
+        <button
+          onClick={nextStep}
+          className="bg-[#65A662] text-white py-3 px-8 rounded-full shadow-md hover:shadow-lg hover:bg-green-600 transition-transform duration-300 focus:outline-none"
+        >
+          Proceed to Level C1
+        </button>
+      </div>
+    );
+  }
 
   return (
-    <div ref={pageRef} className="p-8 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg shadow-2xl max-w-2xl mx-auto mt-16">
-      <h2 className="text-3xl font-bold text-[#65A662] mb-6 text-center">
-        Exercise 4: <span className="text-blue-500">Verb Tenses</span>
+    <div className="p-8 bg-white rounded-lg shadow-lg max-w-3xl mx-auto mt-16">
+      <h2 className="text-4xl font-bold text-center text-[#65A662] mb-6">
+        Level B2: English Proficiency Quiz
       </h2>
 
-      {/* Question 1 */}
+      <p className="text-lg text-gray-500 mb-4 text-center">
+        Answer the following questions to proceed to the next level.
+      </p>
+
       <div className="mb-8">
-        <p className="text-lg text-gray-600 mb-4 text-center">Question 1: Choose the correct verb tense:</p>
-        <p className="text-lg text-gray-700 mb-6 text-center">They __________ (to go) to the park every Saturday.</p>
-
-        {/* Option 1 for Question 1 */}
-        <div
-          className={`p-4 border-2 rounded-lg cursor-pointer transition-transform ${
-            !disableHover ? 'hover:scale-105' : ''
-          } ${
-            selectedOption1 === 'past' ? 'bg-red-100 border-red-400 shadow-sm' : 'bg-gray-50 border-gray-300'
-          }`}
-          onClick={() => {
-            if (!isOptionLocked) {
-              setSelectedOption1('past');
-              setScore(0);
-            }
-          }}
-        >
-          <label className="flex items-center space-x-3">
-            <input
-              type="radio"
-              name="tense1"
-              value="past"
-              checked={selectedOption1 === 'past'}
-              disabled={isOptionLocked} // Disable after submission
-              className="form-radio h-5 w-5 text-[#65A662]"
-            />
-            <span className="text-gray-700">went</span>
-          </label>
-        </div>
-
-        {/* Option 2 for Question 1 */}
-        <div
-          className={`p-4 border-2 rounded-lg cursor-pointer transition-transform ${
-            !disableHover ? 'hover:scale-105' : ''
-          } ${
-            selectedOption1 === 'present' ? 'bg-green-100 border-green-400 shadow-sm' : 'bg-gray-50 border-gray-300'
-          }`}
-          onClick={() => {
-            if (!isOptionLocked) {
-              setSelectedOption1('present');
-              setScore(5);
-            }
-          }}
-        >
-          <label className="flex items-center space-x-3">
-            <input
-              type="radio"
-              name="tense1"
-              value="present"
-              checked={selectedOption1 === 'present'}
-              disabled={isOptionLocked} // Disable after submission
-              className="form-radio h-5 w-5 text-[#65A662]"
-            />
-            <span className="text-gray-700">go</span>
-          </label>
-        </div>
+        <p className="text-xl text-gray-800 mb-6 text-center font-medium">
+          {questions[currentQuestionIndex].question}
+        </p>
+        {questions[currentQuestionIndex].options.map((option, idx) => (
+          <button
+            key={idx}
+            onClick={() => handleOptionSelect(idx)}
+            className={`border-2 p-3 rounded-lg mb-4 block w-full text-left transition-all duration-300 ${
+              selectedOptionIndex === idx
+                ? 'bg-green-100 border-green-500'
+                : 'bg-gray-100 border-gray-300 hover:bg-gray-200'
+            }`}
+          >
+            {option.text}
+          </button>
+        ))}
       </div>
 
-      {/* Question 2 */}
-      <div className="mb-8">
-        <p className="text-lg text-gray-600 mb-4 text-center">Question 2: Choose the correct verb tense:</p>
-        <p className="text-lg text-gray-700 mb-6 text-center">She __________ (to visit) her grandmother next Sunday.</p>
-
-        {/* Option 1 for Question 2 */}
-        <div
-          className={`p-4 border-2 rounded-lg cursor-pointer transition-transform ${
-            !disableHover ? 'hover:scale-105' : ''
-          } ${
-            selectedOption2 === 'past' ? 'bg-red-100 border-red-400 shadow-sm' : 'bg-gray-50 border-gray-300'
-          }`}
-          onClick={() => {
-            if (!isOptionLocked) {
-              setSelectedOption2('past');
-              setScore(0);
-            }
-          }}
-        >
-          <label className="flex items-center space-x-3">
-            <input
-              type="radio"
-              name="tense2"
-              value="past"
-              checked={selectedOption2 === 'past'}
-              disabled={isOptionLocked} // Disable after submission
-              className="form-radio h-5 w-5 text-[#65A662]"
-            />
-            <span className="text-gray-700">visited</span>
-          </label>
-        </div>
-
-        {/* Option 2 for Question 2 */}
-        <div
-          className={`p-4 border-2 rounded-lg cursor-pointer transition-transform ${
-            !disableHover ? 'hover:scale-105' : ''
-          } ${
-            selectedOption2 === 'future' ? 'bg-green-100 border-green-400 shadow-sm' : 'bg-gray-50 border-gray-300'
-          }`}
-          onClick={() => {
-            if (!isOptionLocked) {
-              setSelectedOption2('future');
-              setScore(5);
-            }
-          }}
-        >
-          <label className="flex items-center space-x-3">
-            <input
-              type="radio"
-              name="tense2"
-              value="future"
-              checked={selectedOption2 === 'future'}
-              disabled={isOptionLocked} // Disable after submission
-              className="form-radio h-5 w-5 text-[#65A662]"
-            />
-            <span className="text-gray-700">will visit</span>
-          </label>
-        </div>
-      </div>
-
-      <form onSubmit={handleSubmit} className="space-y-6">
-        {/* Buttons */}
-        <div className="flex justify-between mt-8">
-          {/* Previous Button */}
-          <button
-            type="button"
-            className={`bg-gray-500 text-white py-2 px-4 rounded-full shadow-lg transition-transform duration-300 ${
-              !disableHover ? 'hover:shadow-xl hover:bg-gray-400' : ''
-            } focus:outline-none`}
-            onClick={prevStep}
-          >
-            Previous
-          </button>
-
-          {/* Submit Button */}
-          <button
-            type="submit"
-            className={`bg-[#65A662] text-white py-2 px-6 rounded-full shadow-lg transition-transform duration-300 ${
-              !disableHover ? 'hover:shadow-xl hover:bg-green-600' : ''
-            } focus:outline-none`}
-            disabled={isOptionLocked} // Disable submit after submission
-          >
-            <div className="flex items-center justify-center">
-              <FiCheckCircle className="mr-2" />
-              Submit & Next
-            </div>
-          </button>
-        </div>
-      </form>
+      <button
+        onClick={handleSubmit}
+        disabled={selectedOptionIndex === null || isSubmitting}
+        className="bg-[#65A662] text-white py-3 px-8 rounded-full shadow-md hover:shadow-lg hover:bg-green-600 transition-transform duration-300 focus:outline-none"
+      >
+        <FiCheckCircle className="mr-2" />
+        Submit Answer
+      </button>
     </div>
   );
 };

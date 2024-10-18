@@ -1,155 +1,115 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { FiCheckCircle } from 'react-icons/fi';
 
-const Ex5 = ({ onScoreUpdate, prevStep, calculateFinalScore }) => {
-  const [score, setScore] = useState(0);
-  const [selectedOption1, setSelectedOption1] = useState(null);
-  const [selectedOption2, setSelectedOption2] = useState(null);
+const Ex5 = ({ onScoreUpdate, nextStep }) => {
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [selectedOptionIndex, setSelectedOptionIndex] = useState(null);
+  const [correctCount, setCorrectCount] = useState(0);
+  const [incorrectCount, setIncorrectCount] = useState(0);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [hasPassed, setHasPassed] = useState(false);
 
-  // Lock the state for each question separately
-  const [isLocked1, setIsLocked1] = useState(false); // Lock options for Question 1
-  const [isLocked2, setIsLocked2] = useState(false); // Lock options for Question 2
+  // Array of C1 level questions
+  const questions = [
+    { question: 'Which sentence uses a correct inversion structure?', options: [{ text: 'Never before had I seen such a sight.', correct: true }, { text: 'Never I had seen such a sight before.', correct: false }] },
+    { question: 'Choose the correct relative clause form:', options: [{ text: 'The woman, which I met yesterday, was kind.', correct: false }, { text: 'The woman, whom I met yesterday, was kind.', correct: true }] },
+    { question: 'What is a synonym for "quintessential"?', options: [{ text: 'Typical', correct: true }, { text: 'Uncommon', correct: false }] },
+    { question: 'Complete the sentence with the correct conditional form: "Had I known about the event, I _______ have gone."', options: [{ text: 'would', correct: true }, { text: 'will', correct: false }] },
+    { question: 'Which sentence uses a correct idiomatic expression?', options: [{ text: 'I’m in the ball.', correct: false }, { text: 'I’m on the ball.', correct: true }] },
+    { question: 'Choose the sentence that uses a cleft structure:', options: [{ text: 'It was John who fixed the car.', correct: true }, { text: 'John was fixing the car.', correct: false }] },
+    { question: 'Which sentence contains an advanced phrasal verb?', options: [{ text: 'She came up with a brilliant idea.', correct: true }, { text: 'She made a brilliant idea.', correct: false }] },
+    { question: 'Choose the correct word to complete the sentence: "He was ______ to the proposal, showing no interest."', options: [{ text: 'indifferent', correct: true }, { text: 'engaged', correct: false }] },
+    { question: 'Which one is an example of an advanced conditional sentence?', options: [{ text: 'If he had studied, he would have passed.', correct: true }, { text: 'If he studied, he will pass.', correct: false }] },
+    { question: 'Choose the sentence that correctly uses passive causative:', options: [{ text: 'I had my car repaired yesterday.', correct: true }, { text: 'I repaired my car myself yesterday.', correct: false }] },
+  ];
 
-  // Handle form submission and pass score back to parent component
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const score1 = selectedOption1 === 'joyful' ? 5 : 0;
-    const score2 = selectedOption2 === 'large' ? 5 : 0;
-    const finalScore = score1 + score2;
-
-    setScore(finalScore);
-    onScoreUpdate('ex5', finalScore);
-    calculateFinalScore();
+  const handleOptionSelect = (index) => {
+    setSelectedOptionIndex(index);
   };
 
-  // Handle option selection for Question 1
-  const handleOptionSelect1 = (option) => {
-    if (!isLocked1) {
-      setSelectedOption1(option);
-      setIsLocked1(true); // Lock Question 1 options after selection
+  const handleSubmit = () => {
+    if (selectedOptionIndex === null) return;
+
+    const isCorrect = questions[currentQuestionIndex].options[selectedOptionIndex].correct;
+
+    if (isCorrect) {
+      setCorrectCount((prev) => prev + 1);
+    } else {
+      setIncorrectCount((prev) => prev + 1);
     }
+
+    setIsSubmitting(true);
+
+    setTimeout(() => {
+      setSelectedOptionIndex(null);
+      setCurrentQuestionIndex((prev) => prev + 1);
+      setIsSubmitting(false);
+    }, 500);
   };
 
-  // Handle option selection for Question 2
-  const handleOptionSelect2 = (option) => {
-    if (!isLocked2) {
-      setSelectedOption2(option);
-      setIsLocked2(true); // Lock Question 2 options after selection
+  // Handle passing logic (4 correct answers for C1)
+  useEffect(() => {
+    if (correctCount >= 4 && !hasPassed) {
+      setHasPassed(true);
+      onScoreUpdate(4); // C1 level requires 4 correct answers to pass
     }
-  };
+  }, [correctCount, hasPassed, onScoreUpdate]);
+
+  // Render logic
+  if (hasPassed) {
+    return (
+      <div className="p-8 bg-white rounded-lg shadow-lg max-w-3xl mx-auto mt-16 text-center">
+        <h2 className="text-4xl font-bold text-[#65A662] mb-6">Congratulations!</h2>
+        <p className="text-xl text-gray-800 mb-4">
+          You have completed Level C1. You’ve reached a high level of proficiency!
+        </p>
+        <button
+          onClick={nextStep}
+          className="bg-[#65A662] text-white py-3 px-8 rounded-full shadow-md hover:shadow-lg hover:bg-green-600 transition-transform duration-300 focus:outline-none"
+        >
+          Continue
+        </button>
+      </div>
+    );
+  }
 
   return (
-    <div className="p-8 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg shadow-2xl max-w-2xl mx-auto mt-16">
-      <h2 className="text-3xl font-bold text-[#65A662] mb-6 text-center">
-        Exercise 5: <span className="text-blue-500">Synonyms/Antonyms</span>
+    <div className="p-8 bg-white rounded-lg shadow-lg max-w-3xl mx-auto mt-16">
+      <h2 className="text-4xl font-bold text-center text-[#65A662] mb-6">
+        Level C1: English Proficiency Quiz
       </h2>
 
-      {/* Question 1 */}
-      <div className="mb-8">
-        <p className="text-lg text-gray-600 mb-4 text-center">
-          Question 1: Choose the correct synonym of "happy":
-        </p>
-
-        {/* Option 1 for Question 1 */}
-        <div
-          className={`p-4 border-2 rounded-lg cursor-pointer transition-transform ${
-            !isLocked1 ? 'hover:bg-green-50 hover:scale-105' : ''
-          } ${selectedOption1 === 'sad' ? 'bg-red-100 border-red-400 shadow-sm' : 'bg-gray-50 border-gray-300'}`}
-          onClick={() => handleOptionSelect1('sad')}
-        >
-          <label className="flex items-center space-x-3">
-            <input
-              type="radio"
-              name="synonym1"
-              value="sad"
-              checked={selectedOption1 === 'sad'}
-              disabled={isLocked1}
-              className="form-radio h-5 w-5 text-[#65A662]"
-            />
-            <span className="text-gray-700">Sad</span>
-          </label>
-        </div>
-
-        <div
-          className={`p-4 border-2 rounded-lg cursor-pointer transition-transform ${
-            !isLocked1 ? 'hover:bg-green-50 hover:scale-105' : ''
-          } ${selectedOption1 === 'joyful' ? 'bg-green-100 border-green-400 shadow-sm' : 'bg-gray-50 border-gray-300'}`}
-          onClick={() => handleOptionSelect1('joyful')}
-        >
-          <label className="flex items-center space-x-3">
-            <input
-              type="radio"
-              name="synonym1"
-              value="joyful"
-              checked={selectedOption1 === 'joyful'}
-              disabled={isLocked1}
-              className="form-radio h-5 w-5 text-[#65A662]"
-            />
-            <span className="text-gray-700">Joyful</span>
-          </label>
-        </div>
-      </div>
+      <p className="text-lg text-gray-500 mb-4 text-center">
+        Answer the following questions to demonstrate your advanced proficiency.
+      </p>
 
       <div className="mb-8">
-        <p className="text-lg text-gray-600 mb-4 text-center">
-          Question 2: Choose the correct synonym of "big":
+        <p className="text-xl text-gray-800 mb-6 text-center font-medium">
+          {questions[currentQuestionIndex].question}
         </p>
-        <div
-          className={`p-4 border-2 rounded-lg cursor-pointer transition-transform ${
-            !isLocked2 ? 'hover:bg-green-50 hover:scale-105' : ''
-          } ${selectedOption2 === 'small' ? 'bg-red-100 border-red-400 shadow-sm' : 'bg-gray-50 border-gray-300'}`}
-          onClick={() => handleOptionSelect2('small')}
-        >
-          <label className="flex items-center space-x-3">
-            <input
-              type="radio"
-              name="synonym2"
-              value="small"
-              checked={selectedOption2 === 'small'}
-              disabled={isLocked2}
-              className="form-radio h-5 w-5 text-[#65A662]"
-            />
-            <span className="text-gray-700">Small</span>
-          </label>
-        </div>
-
-        {/* Option 2 for Question 2 */}
-        <div
-          className={`p-4 border-2 rounded-lg cursor-pointer transition-transform ${
-            !isLocked2 ? 'hover:bg-green-50 hover:scale-105' : ''
-          } ${selectedOption2 === 'large' ? 'bg-green-100 border-green-400 shadow-sm' : 'bg-gray-50 border-gray-300'}`}
-          onClick={() => handleOptionSelect2('large')}
-        >
-          <label className="flex items-center space-x-3">
-            <input
-              type="radio"
-              name="synonym2"
-              value="large"
-              checked={selectedOption2 === 'large'}
-              disabled={isLocked2}
-              className="form-radio h-5 w-5 text-[#65A662]"
-            />
-            <span className="text-gray-700">Large</span>
-          </label>
-        </div>
+        {questions[currentQuestionIndex].options.map((option, idx) => (
+          <button
+            key={idx}
+            onClick={() => handleOptionSelect(idx)}
+            className={`border-2 p-3 rounded-lg mb-4 block w-full text-left transition-all duration-300 ${
+              selectedOptionIndex === idx
+                ? 'bg-green-100 border-green-500'
+                : 'bg-gray-100 border-gray-300 hover:bg-gray-200'
+            }`}
+          >
+            {option.text}
+          </button>
+        ))}
       </div>
-      <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="flex justify-between mt-8">
-          <button
-            type="button"
-            className="bg-gray-500 text-white px-4 py-2 rounded-lg shadow-lg transition-transform duration-300 hover:bg-gray-600 hover:scale-105 focus:outline-none"
-            onClick={prevStep}
-          >
-            Previous
-          </button>
-          <button
-            type="submit"
-            className="bg-[#65A662] text-white px-4 py-2 rounded-lg shadow-lg transition-transform duration-300 hover:bg-green-600 hover:scale-105 focus:outline-none"
-            disabled={!selectedOption1 || !selectedOption2}
-          >
-            Submit & Finish
-          </button>
-        </div>
-      </form>
+
+      <button
+        onClick={handleSubmit}
+        disabled={selectedOptionIndex === null || isSubmitting}
+        className="bg-[#65A662] text-white py-3 px-8 rounded-full shadow-md hover:shadow-lg hover:bg-green-600 transition-transform duration-300 focus:outline-none"
+      >
+        <FiCheckCircle className="mr-2" />
+        Submit Answer
+      </button>
     </div>
   );
 };

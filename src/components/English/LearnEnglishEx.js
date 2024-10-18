@@ -1,50 +1,69 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Ex1 from '../Exercice/Ex1';
 import Ex2 from '../Exercice/Ex2';
 import Ex3 from '../Exercice/Ex3';
 import Ex4 from '../Exercice/Ex4';
 import Ex5 from '../Exercice/Ex5';
-import Confetti from 'react-confetti';
+import Levels from '../Exercice/Levels';
 
 const LearnEnglishEx = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [scores, setScores] = useState({ ex1: 0, ex2: 0, ex3: 0, ex4: 0, ex5: 0 });
-  const [showModal, setShowModal] = useState(false);
-  const [finalScore, setFinalScore] = useState(0);
-  const [level, setLevel] = useState("");
+  const [unlockedLevels, setUnlockedLevels] = useState({ A1: true, A2: false, B1: false, B2: false, C1: false });
+  const [showCompletionModal, setShowCompletionModal] = useState(false);
+  const [nextLevel, setNextLevel] = useState('');
+  const [fade, setFade] = useState('fade-in');
+
+  useEffect(() => {
+    const savedStep = localStorage.getItem('currentStep');
+    const savedScores = localStorage.getItem('scores');
+    const savedUnlockedLevels = localStorage.getItem('unlockedLevels');
+
+    if (savedStep) setCurrentStep(Number(savedStep));
+    if (savedScores) setScores(JSON.parse(savedScores));
+    if (savedUnlockedLevels) setUnlockedLevels(JSON.parse(savedUnlockedLevels));
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('currentStep', currentStep);
+    localStorage.setItem('scores', JSON.stringify(scores));
+    localStorage.setItem('unlockedLevels', JSON.stringify(unlockedLevels));
+  }, [currentStep, scores, unlockedLevels]);
 
   const handleScoreUpdate = (exercise, score) => {
     setScores((prevScores) => ({ ...prevScores, [exercise]: score }));
   };
 
-  const calculateFinalScore = () => {
-    const totalScore = Object.values(scores).reduce((acc, score) => acc + score, 0);
-    setFinalScore(totalScore);
-    determineLevel(totalScore);
-    setShowModal(true);
+  const nextStep = () => {
+    if (showCompletionModal) return;
+
+    const currentExercise = `ex${currentStep}`;
+    const requiredScore = currentStep === 1 ? 3 : 4;
+
+    if (scores[currentExercise] >= requiredScore) {
+      const nextLvl = `A${currentStep + 1}`;
+      setUnlockedLevels((prev) => ({ ...prev, [nextLvl]: true }));
+      setNextLevel(currentStep === 1 ? 'A2' : nextLvl);
+      setShowCompletionModal(true);
+    }
   };
 
-  const determineLevel = (score) => {
-    if (score <= 10) setLevel("A1");
-    else if (score <= 20) setLevel("A2");
-    else if (score <= 30) setLevel("B1");
-    else if (score <= 40) setLevel("B2");
-    else if (score <= 45) setLevel("C1");
-    else setLevel("C2");
+  const closeCompletionModal = () => {
+    setFade('fade-out');
+    setTimeout(() => {
+      setShowCompletionModal(false);
+      setCurrentStep((prev) => prev + 1);
+      setFade('fade-in');
+      setScores((prevScores) => ({ ...prevScores, [`ex${currentStep + 1}`]: 0 }));
+    }, 500);
   };
-
-  const nextStep = () => setCurrentStep((prev) => prev + 1);
-  const prevStep = () => setCurrentStep((prev) => prev - 1);
 
   const progressPercentage = (currentStep / 5) * 100;
 
   return (
     <div className="min-h-screen flex flex-col justify-center items-center bg-gray-100 py-10">
-      <h1 className="text-5xl font-bold mb-10 text-center text-[#65A662] animate-slideDown">
-        English Language Proficiency Test
-      </h1>
+      <h1 className="text-5xl font-bold mb-10 text-center text-[#65A662]">English Language Proficiency Test</h1>
 
-      {/* Progress Bar */}
       <div className="w-full max-w-4xl bg-gray-300 rounded-full h-4 mb-10 shadow-lg overflow-hidden relative">
         <div
           className="bg-gradient-to-r from-[#43cea2] to-[#185a9d] h-full rounded-full shadow-lg transition-all duration-700 ease-in-out"
@@ -52,77 +71,35 @@ const LearnEnglishEx = () => {
         ></div>
       </div>
 
-      {/* Render exercises based on the current step */}
-      {!showModal && (
-        <div className="transition-all duration-700 transform card-container">
-          {currentStep === 1 && <Ex1 onScoreUpdate={handleScoreUpdate} nextStep={nextStep} />}
-          {currentStep === 2 && <Ex2 onScoreUpdate={handleScoreUpdate} nextStep={nextStep} prevStep={prevStep} />}
-          {currentStep === 3 && <Ex3 onScoreUpdate={handleScoreUpdate} nextStep={nextStep} prevStep={prevStep} />}
-          {currentStep === 4 && <Ex4 onScoreUpdate={handleScoreUpdate} nextStep={nextStep} prevStep={prevStep} />}
-          {currentStep === 5 && (
-            <Ex5
-              onScoreUpdate={handleScoreUpdate}
-              prevStep={prevStep}
-              calculateFinalScore={calculateFinalScore}
-            />
-          )}
-        </div>
-      )}
+      <Levels currentStep={currentStep} unlockedLevels={unlockedLevels} scores={scores} />
 
-      {/* Modal to show after the final exercise */}
-      {showModal && (
+      <div className={`transition-container ${fade}`}>
+        {currentStep === 1 && <Ex1 onScoreUpdate={(score) => handleScoreUpdate('ex1', score)} nextStep={nextStep} />}
+        {currentStep === 2 && unlockedLevels.A2 && <Ex2 onScoreUpdate={(score) => handleScoreUpdate('ex2', score)} nextStep={nextStep} />}
+        {currentStep === 3 && unlockedLevels.B1 && <Ex3 onScoreUpdate={(score) => handleScoreUpdate('ex3', score)} nextStep={nextStep} />}
+        {currentStep === 4 && unlockedLevels.B2 && <Ex4 onScoreUpdate={(score) => handleScoreUpdate('ex4', score)} nextStep={nextStep} />}
+        {currentStep === 5 && unlockedLevels.C1 && <Ex5 onScoreUpdate={(score) => handleScoreUpdate('ex5', score)} nextStep={nextStep} />}
+      </div>
+
+      {showCompletionModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
-          <Confetti width={window.innerWidth} height={window.innerHeight} numberOfPieces={200} gravity={0.05} />
-          <div className="bg-white rounded-lg shadow-2xl p-8 max-w-md w-full text-center transform animate-flipIn">
+          <div className="bg-white rounded-lg shadow-2xl p-8 max-w-md w-full text-center animated-modal">
             <h2 className="text-4xl font-bold text-green-500 mb-6">Congratulations!</h2>
             <p className="text-lg text-gray-700 mb-4">
-              You have completed the test. Your English level is <strong>{level}</strong>!
+              You have completed Level {currentStep === 1 ? 'A1' : `A${currentStep}`}.
             </p>
-            <div className="mt-6 flex justify-center space-x-4">
-              <button
-                onClick={() => {
-                  const message = `I just finished the English language test and my level is ${level}!`;
-                  window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`);
-                }}
-                className="bg-green-500 text-white py-2 px-4 rounded-full shadow-lg hover:bg-green-600 transform transition-transform duration-300 hover:scale-105"
-              >
-                Share on WhatsApp
-              </button>
-              <button
-                onClick={() => {
-                  const message = `I just finished the English language test and my level is ${level}!`;
-                  window.open(`sms:?body=${encodeURIComponent(message)}`);
-                }}
-                className="bg-blue-500 text-white py-2 px-4 rounded-full shadow-lg hover:bg-blue-600 transform transition-transform duration-300 hover:scale-105"
-              >
-                Share via SMS
-              </button>
-            </div>
+            <p className="text-lg text-gray-700 mb-4">Level {nextLevel} is now unlocked!</p>
+            <button
+              onClick={closeCompletionModal}
+              className="bg-green-500 text-white py-2 px-4 rounded-full shadow-lg hover:bg-green-600 transform transition-transform duration-300 hover:scale-105"
+            >
+              Proceed to Next Level
+            </button>
           </div>
         </div>
       )}
 
       <style>{`
-        /* Keyframe Animations */
-        @keyframes slideDown {
-          0% { transform: translateY(-50px); opacity: 0; }
-          100% { transform: translateY(0); opacity: 1; }
-        }
-
-        @keyframes flipIn {
-          0% { transform: rotateY(-90deg); opacity: 0; }
-          100% { transform: rotateY(0); opacity: 1; }
-        }
-
-        /* Animation Classes */
-        .animate-slideDown {
-          animation: slideDown 1s ease-out forwards;
-        }
-
-        .animate-flipIn {
-          animation: flipIn 0.8s ease-out forwards;
-        }
-
         .card-container {
           background: white;
           border-radius: 16px;
@@ -130,13 +107,53 @@ const LearnEnglishEx = () => {
           padding: 2rem;
           max-width: 600px;
           margin: auto;
-          transform: perspective(1000px) rotateX(0deg);
-          transition: transform 0.5s ease, box-shadow 0.5s ease;
         }
 
-        .card-container:hover {
-          transform: perspective(1000px) rotateX(3deg);
-          box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+        .animated-modal {
+          animation: modalFadeIn 0.7s ease-out;
+        }
+
+        @keyframes modalFadeIn {
+          0% {
+            opacity: 0;
+            transform: scale(0.8);
+          }
+          100% {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+
+        /* Fade In and Fade Out keyframes for exercise transitions */
+        @keyframes fadeIn {
+          0% {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes fadeOut {
+          0% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+          100% {
+            opacity: 0;
+            transform: translateY(-20px);
+          }
+        }
+
+        /* Apply fade animation based on the transition state */
+        .fade-in {
+          animation: fadeIn 0.5s forwards;
+        }
+
+        .fade-out {
+          animation: fadeOut 0.5s forwards;
         }
       `}</style>
     </div>
